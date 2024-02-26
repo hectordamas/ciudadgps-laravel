@@ -1,0 +1,791 @@
+AWSTATS DATA FILE 7.7 (build 20161204)
+# If you remove this file, all statistics for date 202304 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.ciudadgps.com.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 1996                
+POS_TIME 2676                
+POS_VISITOR 11811               
+POS_DAY 18885               
+POS_DOMAIN 3638                
+POS_LOGIN 4145                
+POS_ROBOT 4300                
+POS_WORMS 5239                
+POS_EMAILSENDER 5370                
+POS_EMAILRECEIVER 5513                
+POS_SESSION 19583               
+POS_SIDER 19791               
+POS_FILETYPES 5648                
+POS_DOWNLOADS 5984                
+POS_OS 6057                
+POS_BROWSER 6322                
+POS_SCREENSIZE 7547                
+POS_UNKNOWNREFERER 7621                
+POS_UNKNOWNREFERERBROWSER 8320                
+POS_ORIGIN 8624                
+POS_SEREFERRALS 8766                
+POS_PAGEREFS 8944                
+POS_SEARCHWORDS 9151                
+POS_KEYWORDS 9303                
+POS_MISC 2339                
+POS_ERRORS 9362                
+POS_CLUSTER 4001                
+POS_SIDER_404 9569                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20230424042832 31077 7840932 0
+FirstTime 20230401030537
+LastTime 20230424042832
+LastUpdate 20230424044245 31077 30654 421 2 0
+TotalVisits 226                 
+TotalUnique 166                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 184                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 72 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 109 129 2104740 146 261 21471155
+1 41 51 1017643 189 439 30238641
+2 13 14 814157 157 361 26469263
+3 10 19 518401 131 337 27066226
+4 2 2 17083 131 330 43126016
+5 10 80 17979538 326 646 32037772
+6 2 2 17095 157 499 40120746
+7 14 14 109957 179 452 25212119
+8 32 279 74640014 246 496 32806584
+9 23 201 53222263 150 357 40837234
+10 24 48 2265238 144 310 24515275
+11 451 787 82061905 248 310 10336342
+12 969 1201 36340944 415 664 40545184
+13 814 1070 36538042 246 466 53403517
+14 913 1228 108438708 156 316 11297282
+15 467 843 33657783 210 379 25754678
+16 99 117 9597619 229 427 8949984
+17 454 609 43818812 199 283 21615206
+18 806 1233 80082224 131 244 17162708
+19 747 826 25038823 148 446 49376070
+20 240 252 10715558 146 380 31823291
+21 5 5 32131 172 312 46350995
+22 128 200 31970414 212 315 14571371
+23 176 223 7017285 239 423 19961973
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 20
+ve 6201 7910 348213596
+us 182 583 75450822
+ca 73 785 168602267
+fr 30 90 1415448
+se 14 14 119658
+cn 13 13 111122
+be 10 10 85480
+ph 7 7 347538
+de 5 5 42707
+sg 3 3 25638
+il 2 2 17092
+es 0 1 37865
+ru 1 1 6493
+au 2 2 17066
+ro 2 2 17066
+gb 1 1 0
+unknown 1 1 6493
+co 0 1 765035
+fi 1 1 8546
+ke 1 1 6493
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 21
+AhrefsBot/ 4417 527412398 20230424033330 66
+BLEXBot/ 462 3210101 20230421054913 16
+link 314 2225089 20230402134800 1
+CFNetwork 280 18659663 20230420170451 0
+Googlebot/ 278 2671534 20230423154943 22
+Dalvik/ 228 14307103 20230418184810 0
+bingbot/ 222 10840706 20230423190852 22
+dataprovider\.com 89 17042498 20230417084204 1
+Applebot/ 69 29823308 20230421060613 7
+oBot/ 53 386994 20230420010414 1
+Googlebot\-Image/ 19 15223291 20230412144354 0
+no_user_agent 10 581166 20230423063717 0
+bingpreview 5 319480 20230406200611 0
+ips\-agent 12 67667 20230417121725 3
+unknown 8 259 20230422192227 8
+curl 4 83582 20230422051529 0
+urllib 3 173832 20230423142348 0
+python 1 8546 20230406225339 0
+bot[\s_+:,\.\;\/\\-] 2 8601 20230403130752 1
+facebookexternalhit/ 5 50818 20230418143334 0
+crawl 12 81228 20230407023433 1
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 13
+css 312 2015241 0 0
+webp 18 702814 0 0
+jfif 65 6071955 0 0
+png 724 40487730 0 0
+ttf 22 2273920 0 0
+woff2 75 4092156 0 0
+woff 44 10133816 0 0
+mp4 1 65531113 0 0
+html 186 2123653 0 0
+js 753 20070033 0 0
+jpg 982 413071430 0 0
+jpeg 112 11800063 0 0
+Unknown 6139 16922501 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 1
+/video.mp4 3 59 71153435
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 15
+linuxandroid 213 45
+winxp 2 0
+macosx6 1 1
+winlong 1 1
+macosx11 1 1
+unix 1 1
+ios_iphone 8 8
+linux 300 67
+win7 177 14
+macosx 129 36
+macosx9 4 1
+win8.1 11 9
+win10 1971 299
+Unknown 6672 6065
+macosx8 1 1
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 59
+safari7.0.3 3 0
+chrome111.0.5563.116 2 0
+chrome99.0.4859.172 1 1
+firefox52.0 1 1
+firefox110.0 1 1
+chrome79.0.3945.79 642 64
+chrome112.0.0.0 97 17
+chrome91.0.4472.101 1 1
+chrome85.0.4183.121 1 1
+opera12.0 2 0
+msie11 2 0
+chrome83.0.4103.97 36 36
+chrome111.0.3770.0 1 1
+msie8.0 1 1
+chrome103.0.0.0 17 16
+chrome96.0.4664.104 1 0
+firefox73.0 1 1
+chrome111.0.5563.64 169 16
+chrome79.0.3945.130 6 6
+chrome83.0.4103.61 168 8
+chrome91.0.4472.114 1 1
+chrome111.0.5563.146 2 2
+chrome74.0.3729.169 4 4
+firefox108.0 1 1
+opera84.0.4316.14 1 1
+msie9.0 1 1
+chrome106.0.0.0 52 12
+safari13.0.3 5 5
+Unknown 6656 6052
+chrome108.0.0.0 3 3
+chrome94.0.4606.81 85 5
+firefox50.0 1 0
+chrome111.0.0.0 1356 221
+edge17 2 2
+firefox48.0 1 1
+safari15.6.1 2 2
+chrome80.0.3987.162 1 1
+firefox111.0 2 2
+chrome95.0.4638.54 1 1
+chrome102.0.0.0 8 8
+chrome110.0.0.0 1 0
+chrome91.0.4472.124 1 1
+chrome109.0.0.0 2 0
+safari16.3 1 1
+chrome74.0.3694.0 80 8
+chrome112.0.5615.101 1 0
+mozilla 14 11
+chrome89.0.4389.82 2 2
+safari5.0.4 1 1
+netscape5.0 3 3
+chrome81.0.4044.138 3 3
+chrome94.0.4606.61 1 1
+safari16.0 21 1
+msie10.0 2 0
+safari5.1 1 1
+firefox51.0 1 1
+chrome105.0.0.0 17 17
+chrome102.0.5005.63 1 1
+safari15.5 1 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 12
+Mozilla/5.0_(compatible;_InternetMeasurement/1.0;__https://internet-measurement.com/) 20230416203432
+Google-Firebase 20230416122247
+Go-http-client/2.0 20230423165501
+okhttp/4.9.2 20230423122849
+Mozilla/5.0_(compatible;_CensysInspect/1.1;__https://about.censys.io/) 20230420184422
+PlayStore-Google 20230423154730
+Mozilla/5.0_researchscan.comsys.rwth-aachen.de 20230412174451
+Mozilla/5.0_(compatible;_AhrefsBot/7.0;__http://ahrefs.com/robot/) 20230405144828
+WhatsApp/2.23.6.76_A 20230411190623
+axios/1.3.5 20230421204933
+Go-http-client/1.1 20230401061716
+Mozilla/5.0_(compatible;_Dataprovider.com) 20230417084204
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 7
+Google-Firebase 20230416122247
+Go-http-client/2.0 20230423165501
+okhttp/4.9.2 20230423122849
+WhatsApp/2.23.6.76_A 20230411190623
+axios/1.3.5 20230421204933
+Go-http-client/1.1 20230401061716
+PlayStore-Google 20230423154730
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 6219 6835
+From1 0 0
+From2 3 11
+From3 2 2
+From4 325 2644
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 2
+google_com 2 2
+www_google_com 1 9
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 2
+https://trafficinstantly.co 1 1
+https://m.facebook.com 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 10
+503 52 4659408
+206 6 516919
+400 2 89562
+302 29 33041
+499 6 0
+405 1 887665
+500 7 1198321
+422 2 288
+404 2430 44383385
+301 353 56700
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 54
+/api/v2/api-docs 1 -
+/__/hosting/verification 21 -
+/sftp-config.json 1 -
+/api-docs.yaml 1 -
+/humans.txt 3 http://ciudadgps.com/humans.txt
+/api-docs 1 -
+/swagger.json 1 -
+/sitemap.txt 12 -
+/categories/panaderia.png%0D%0A 19 -
+/asset-manifest.json 1 https://ciudadgps.com/
+/dup-installer/main.installer.php 1 http://ciudadgps.com/dup-installer/main.installer.php
+/v1/swagger.json 1 -
+/3.php 1 https://ciudadgps.com/3.php
+/sitemap 10 -
+/swagger-ui 1 -
+/px.js 4 -
+/api/v1/api-docs 1 -
+/swagger/v2/swagger.json 1 -
+/wp-content/plugins/elementor-pro/assets/css/preview.css 3 -
+/categories/reposteria.png%0D%0A 18 -
+/swagger.yaml 1 -
+/.well-known/acme-challenge/VrdNcb0N1s7GjdIAaSDm-_uSLNm6Rqmq6QY7cgGVaRM 672 -
+/docs/swagger.json 1 -
+/swagger/api/swagger.json 1 -
+/v2/swagger.json 1 -
+/ads.txt 31 -
+/v3/api-docs 1 -
+/comercios/102/show 1 -
+/openapi.yaml 1 -
+/1.php 1 https://ciudadgps.com/1.php
+/comercios/101/show 2 -
+/cart 2 -
+/v2/api-docs 1 -
+/api/v3/api-docs 1 -
+/.well-known/security.txt 1 -
+/v1/api-docs 1 -
+/.well-known/acme-challenge/GBQmZr9pOfkvsQIwgYHVB4JRqbwWnNsRzCj_8j-IRvw 516 -
+//wp-includes/css/buttons.css 1 http://ciudadgps.com//wp-includes/css/buttons.css
+/categories/redes.png%0D%0A 19 -
+/swagger/v3/swagger.json 1 -
+/logos/1676314159logo%20la%20casa%20de%20las%20pilas.jpg 1 -
+/comercios/LINKTR.EE/GRUPOVETRINARIOINTEGRAL 3 -
+/.well-known/acme-challenge/YaRpxWhhePAA-uHh2sBT4UAfOy-DCsL_g4obB2GCXKQ 441 -
+/swagger/v1/swagger.json 1 -
+/main.js 1 -
+/security.txt 1 http://www.ciudadgps.com/security.txt
+/wp-content/plugins/woocommerce-payments/dist/blocks-checkout.css 1 -
+/.well-known/acme-challenge/mzJa3QZFcnDilolSRC6NlFenslomoxgaKZ1CkKlKsyQ 440 -
+/categories/electrodomesticos.png%0D%0A 18 -
+/assetsPublic/images/ajax-loader.gif 15 https://ciudadgps.com/assetsPublic/css/slick-theme.css
+/wp-login.php 1 http://www.ciudadgps.com/wp-login.php
+/categories/iluminacion.png%0D%0A 19 -
+/openapi.json 1 -
+/app-ads.txt 129 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 184
+45.185.16.89 5531 6879 270137124 20230421193757
+200.8.49.224 360 431 23289511 20230411221631
+201.221.115.170 177 239 18856225 20230406230534
+186.185.87.7 43 44 154188 20230405205053
+108.177.7.81 31 76 6435225 20230412120120
+200.75.117.118 28 65 22411687 20230401223049
+186.185.113.233 23 118 3596117 20230415183917
+34.68.194.70 19 19 44666 20230412120555
+200.75.117.169 18 105 4002134 20230423122849
+65.154.226.168 16 169 39047533 20230417111351
+193.235.141.114 1 1 8546 20230421035400
+193.235.141.17 1 1 8546 20230418124055
+35.85.62.56 1 1 8546 20230421215410
+35.87.9.57 1 1 8546 20230403123305
+107.178.207.141 2 2 12986 20230421204933
+54.202.220.110 1 1 8546 20230412123833
+51.77.111.99 1 1 8550 20230412072509
+51.158.73.116 1 21 394923 20230417192342
+94.247.172.129 1 1 8550 20230424042832 20230424042832 /
+217.182.192.90 1 1 57923 20230410173827
+163.172.170.221 1 1 7424 20230417172149
+51.158.121.163 2 2 14561 20230417182621
+34.216.86.146 1 1 0 20230422124438
+190.94.212.148 0 2 193909 
+52.10.4.128 0 1 161136 
+51.15.193.40 1 1 6855 20230417180756
+109.239.58.107 1 1 8533 20230422132422
+146.70.166.232 2 2 17066 20230407174837
+51.15.136.30 2 2 14618 20230417181840
+34.239.154.66 1 21 1715381 20230403184525
+205.169.39.120 9 101 19860216 20230414144224
+54.244.203.109 1 1 8546 20230411121047
+186.185.111.245 0 1 347123 
+52.41.104.17 1 1 8549 20230402121255
+186.185.44.173 13 40 2424097 20230417153954
+74.125.218.25 2 2 17536 20230412170429
+34.212.100.117 0 1 40884 
+44.193.220.153 1 1 6493 20230409053750
+54.70.184.175 1 1 8546 20230410225628
+205.169.39.246 9 102 22592067 20230416081121
+186.185.77.83 7 7 12694 20230406225607
+167.248.133.189 1 1 8546 20230413121307
+144.91.106.14 2 2 17100 20230422135416
+51.15.220.246 1 1 7376 20230417193214
+54.212.53.41 0 1 2698 
+54.188.159.213 1 1 8549 20230402121430
+178.170.46.189 2 2 12991 20230419141255
+172.245.33.192 1 1 57923 20230404101645
+188.166.185.118 1 1 8546 20230408063510
+185.88.100.230 1 1 6493 20230406215023
+51.15.202.73 1 1 7962 20230417185702
+205.169.39.249 9 101 19860216 20230417111111
+190.206.194.0 0 1 765035 
+139.59.231.182 1 1 8546 20230420192014
+35.87.95.0 1 1 8546 20230421124309
+167.94.138.51 2 2 17096 20230416003436
+51.158.124.189 1 1 6073 20230417180410
+35.85.136.218 1 1 8546 20230409122738
+34.211.193.106 1 1 8546 20230412123836
+35.92.185.30 1 1 8546 20230403123550
+35.92.236.71 1 1 8546 20230418122545
+38.122.112.147 1 1 8546 20230415181013
+193.235.141.60 1 1 8546 20230405052216
+167.94.138.35 1 1 8550 20230415205200
+20.55.35.11 1 1 8549 20230402074826
+35.90.52.48 1 1 8546 20230403123437
+54.202.68.225 1 1 8546 20230416122813
+35.187.60.55 1 1 8546 20230420204655
+34.212.21.196 0 1 2498 
+35.88.60.229 1 1 8549 20230402122038
+54.214.111.205 0 1 8354 
+144.217.135.198 0 2 648473 
+163.172.171.157 1 1 8082 20230417193238
+34.215.156.100 1 1 8546 20230422124403
+3.236.250.211 1 21 1715381 20230406105918
+93.158.91.203 1 1 8546 20230404163653
+34.210.6.215 1 1 8546 20230416122800
+162.142.125.226 1 1 8550 20230420090313
+140.246.136.252 1 1 8546 20230409122738
+54.191.106.35 1 1 8546 20230418122730
+51.79.177.154 1 1 8546 20230412085441
+34.78.128.19 1 1 8546 20230407125823
+74.125.218.75 1 1 8768 20230421023654
+35.205.29.116 1 1 8550 20230420204656
+169.150.201.10 2 2 17066 20230408132208
+51.158.102.169 1 1 8103 20230417174736
+104.237.156.169 1 1 8546 20230422185610
+35.91.205.206 1 1 8546 20230418122535
+35.90.239.242 0 1 8290 
+18.237.247.241 1 1 8549 20230402122004
+51.158.121.213 1 21 395146 20230417183540
+3.80.249.90 1 21 1715381 20230422000253
+34.222.230.39 1 1 8546 20230411122445
+35.93.29.14 0 1 18972 
+163.172.147.42 1 1 8028 20230417180703
+5.100.255.107 2 2 17092 20230417224232
+52.12.219.190 1 1 8546 20230411121614
+137.226.113.44 2 2 17074 20230412174451
+34.220.44.71 1 1 8546 20230411121259
+74.125.218.77 1 1 8768 20230423154730
+149.56.150.179 1 1 58380 20230417084121
+95.39.201.116 0 1 37865 
+163.172.142.223 1 1 6565 20230417194915
+16.170.207.27 1 1 8546 20230419130915
+162.142.125.224 1 1 8546 20230414025700
+117.33.227.207 1 1 8546 20230403135141
+93.158.91.214 1 1 8546 20230422192231
+59.36.175.46 1 1 8550 20230418132414
+167.248.133.52 1 1 8550 20230420184422
+42.83.147.56 2 2 17092 20230418165018
+87.236.176.71 1 1 8550 20230406103803
+82.157.160.183 1 1 8546 20230407001946
+212.102.33.150 16 17 2895801 20230401112311
+14.116.156.77 1 1 8550 20230416132701
+92.205.8.54 1 1 8533 20230421042149
+74.125.218.31 1 1 8768 20230403161801
+34.140.127.233 2 2 17092 20230420204645
+190.74.76.127 0 1 488943 
+185.65.135.163 1 1 8549 20230402092456
+34.210.170.224 0 1 14610 
+186.167.250.179 0 1 765035 
+35.87.35.90 1 1 8546 20230422130126
+186.169.200.91 0 1 765035 
+185.65.135.152 1 1 8550 20230418143310
+193.235.141.146 1 1 8546 20230407201803
+20.163.231.137 1 1 8533 20230423165501
+51.158.66.220 1 1 6073 20230417180312
+51.15.249.116 1 1 6554 20230417194827
+54.184.135.17 1 1 8546 20230403123631
+34.219.172.1 1 1 8546 20230407121959
+42.83.147.53 2 2 17092 20230408032022
+103.108.229.75 1 1 8533 20230410200753
+65.21.6.144 1 1 8546 20230420204951
+103.108.229.61 1 1 8533 20230405141601
+194.26.135.17 1 1 6493 20230409070848
+18.236.243.50 8 80 17381562 20230401053721
+54.202.210.170 1 1 8549 20230402122147
+54.184.163.18 1 1 8546 20230412123915
+54.187.164.249 1 1 8546 20230411121128
+41.139.129.47 1 1 6493 20230408083038
+51.15.232.201 1 1 6496 20230417193732
+14.29.223.121 1 1 8550 20230421150651
+74.125.215.25 1 1 172 20230404074743
+34.77.187.65 2 2 17100 20230420204646
+18.237.131.117 1 1 8546 20230411121547
+163.172.148.142 1 1 8257 20230417190914
+205.234.21.92 1 1 8549 20230401061716
+162.142.125.13 1 1 8546 20230408114003
+87.236.176.175 1 1 8546 20230416203432
+35.88.80.162 1 1 8549 20230402122128
+13.58.132.59 3 3 25647 20230401201028
+51.15.253.73 1 1 6075 20230417201102
+205.169.39.247 9 102 20198936 20230417111107
+163.172.173.73 1 1 6548 20230417192057
+54.191.167.253 0 2 11839 
+186.185.6.52 0 1 765035 
+35.203.128.4 16 38 951094 20230412120457
+34.68.194.66 1 24 888278 20230412120219
+74.125.218.79 2 2 17536 20230421162411
+18.236.117.48 1 1 8546 20230407121958
+51.158.125.178 2 2 0 20230415161804
+115.85.30.27 7 7 347538 20230411192342
+52.91.129.200 1 21 1715381 20230420190528
+205.169.39.138 9 101 21819409 20230419093129
+34.220.46.58 1 1 8546 20230418122742
+34.221.13.249 1 1 8546 20230411121049
+170.64.181.26 1 1 57923 20230410110248
+205.169.39.134 9 101 19860216 20230423083530
+54.71.46.253 1 1 8546 20230416122804
+52.11.43.6 1 1 8546 20230422124558
+74.125.218.23 1 1 8768 20230412120546
+87.236.176.236 1 1 8550 20230405183701
+124.221.186.82 3 3 25650 20230412131159
+193.235.141.143 1 1 8546 20230410121843
+18.168.201.174 1 1 0 20230416211835
+205.169.39.107 9 101 21884945 20230414144237
+193.235.141.134 2 2 17092 20230423204510
+34.220.105.101 1 1 8546 20230403123123
+64.233.172.79 1 1 177 20230416122247
+193.235.141.90 1 1 8549 20230402133836
+51.158.71.15 1 1 6481 20230417181253
+190.153.84.12 1 1 4739 20230405000349
+51.158.69.104 1 21 395251 20230417192504
+205.169.39.206 9 101 21819409 20230419093132
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 24
+20230401 56 161 47203406 7
+20230402 85 112 23023978 11
+20230403 800 945 9940592 11
+20230404 538 564 8638693 11
+20230405 151 324 37311277 10
+20230406 156 229 10974490 8
+20230407 7 7 109186 7
+20230408 8 8 66511 8
+20230409 13 13 56152 5
+20230410 595 860 70567811 8
+20230411 580 776 64398535 14
+20230412 966 1434 82244710 15
+20230413 688 712 7669472 3
+20230414 40 395 70078729 4
+20230415 28 125 3815668 5
+20230416 38 277 53837710 12
+20230417 627 986 83133945 32
+20230418 572 572 1465526 12
+20230419 21 199 53201063 4
+20230420 373 393 2644741 12
+20230421 178 196 1627062 12
+20230422 10 30 1783744 9
+20230423 18 114 24214826 5
+20230424 1 1 8550 1
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 19
+5mn-15mn 8
+15mn-30mn 4
+30s-2mn 3
+2mn-5mn 8
+0s-30s 175
+30mn-1h 8
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 143
+/api/home 3591 13088303 50 32
+/api/getAppStoresVersion 790 48856 0 5
+/api/showCommerce/101 609 981397 0 2
+/api/getCommerces 489 1552406 0 5
+/ 186 2123653 142 127
+/api/showCommerce/162 91 65822 0 1
+/api/showCommerce/124 43 39796 0 0
+/logos/1680108447D_TOHj6XoAE_J5g.jfif 31 5304725 0 2
+/api/showCommerce/134 26 27090 0 0
+/api/showCommerce/178 25 21425 0 0
+/comercios/187/redirect 1 532 0 0
+/comercios/categorias/17 2 10842 1 1
+/api/showCommerce/171 4 3506 0 0
+/commerces/188/update 1 954 0 0
+/api/showCommerce/125 10 8467 0 0
+/api/showCommerce/103 3 2838 0 0
+/api/showCommerce/161 3 2381 0 0
+/commerces/102/edit 1 5701 0 0
+/api/comments 3 1003 0 0
+/api/auth/comercios/asociados 6 8301 0 0
+/api/users/1/edit 2 548 0 0
+/commerces 8 55312 0 0
+/api/showCommerce/109 20 37115 1 0
+/comercios/categorias/12 1 5933 0 0
+/photos/1679939062xrec.jpg.pagespeed.ic.hxfdg8DP9U%20(1).webp 1 20702 0 0
+/api/showCommerce/175 10 8466 0 0
+/api/showCommerce/184 8 6914 0 0
+/comercios/categorias/4 3 16699 1 1
+/api/showCommerce/188 5 5540 0 1
+/assets/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 4 53104 0 0
+/api/showCommerce/136 13 12360 0 0
+/logos/16799189151549574758583.jfif 10 37240 1 2
+/comercios/186 1 6132 0 1
+/api/showCommerce/121 9 13179 0 0
+/comercios/categorias/20 2 11892 1 0
+/images-upload 7 322 0 0
+/login 5 23707 1 1
+/politicas-de-privacidad 8 70144 8 8
+/api/showCommerce/166 9 7599 0 0
+/photos/16732805244px-BW84_n0QJGVPszge3NRBsKw-2VcOifrJIjPYFYkOtaCZxxXQ2UDWBi7ZgX4SSdoMMKjg1oep82YcxxmQUiLiq9Bcc9TIt00muAoQvV79CqJK9i_9iw.webp 1 18276 0 0
+/assets/vendor/fontawesome-free/webfonts/fa-brands-400.woff2 1 76764 0 0
+/comercios/categorias/14 2 10858 1 1
+/logos/1679516983xAcj6M1S6OhapXIkXRV9_9VxVKdbybw44e6SW.jfif 13 395376 0 0
+/api/showCommerce/146 5 5968 0 0
+/commerces/store 2 1675 0 0
+/photos/1679950175xipc.jpg.pagespeed.ic.S921zps9QZ.webp 1 32540 0 0
+/comercios/categorias/10 1 5154 0 0
+/api/showCommerce/144 4 4046 0 0
+/comercios/categorias/24 1 7962 1 1
+/api/showCommerce/186 17 15960 0 0
+/api/showCommerce/153 4 3845 0 0
+/comercios 11 74679 0 1
+/registrar-comercio 4 26286 1 3
+/comercios/188 5 33063 0 0
+/api/showCommerce/123 4 5959 0 0
+/comercios/categorias/8 1 4767 0 0
+/photos/1679498482centro-comercial-lider.webp 5 123020 0 0
+/comercios/categorias/28 1 4783 0 0
+/comercios/101 3 21034 2 3
+/comercios/categorias/2 2 11701 1 1
+/comercios/categorias/22 1 6481 1 1
+/photos/1679488296Epa.webp 1 175470 0 0
+/api/showCommerce/139 7 7439 0 0
+/api/showCommerce/155 4 4286 0 0
+/photos/1679949495xcsi.jpg.pagespeed.ic.oajBJ41KSN.webp 1 41498 0 0
+/photos/1679938625xtln.jpg.pagespeed.ic.KmV8PiXYqp.webp 2 72504 0 0
+/api/showCommerce/131 6 5413 0 0
+/comercios/categorias/6 3 19938 1 1
+/photos/1679940595xsbc.jpg.pagespeed.ic.hDCWf-NjWy.webp 1 30070 0 0
+/commerces/create 3 14304 0 0
+/assetsPublic/fonts/fa-solid-900.woff2 22 1634952 0 0
+/.well-known/acme-challenge/mzJa3QZFcnDilolSRC6NlFenslomoxgaKZ1CkKlKsyQ 1 172 1 1
+/logos/16797684461679516983xAcj6M1S6OhapXIkXRV9_9VxVKdbybw44e6SW.jfif 10 263584 0 0
+/api/category/commerces 15 10646 0 0
+/api/auth/getUserInfo 1 1089 0 0
+/comercios/124/redirect 1 542 0 0
+/api/showCommerce/159 8 7244 0 0
+/api/showCommerce/181 6 6622 0 0
+/comercios/159 1 6100 0 0
+/comercios/categorias/13 3 17642 1 1
+/comercios/categorias/27 2 9551 0 0
+/comercios/categorias/21 1 8028 1 1
+/api/showCommerce/151 2 2324 0 1
+/comercios/categorias/9 1 5092 0 0
+/api/showCommerce/156 4 3571 0 0
+/api/showCommerce/158 4 3550 0 0
+/comercios/categorias/18 1 4769 0 0
+/comercios/categorias/7 3 16831 1 1
+/api/showCommerce/120 7 6889 0 0
+/comercios/102 2 14380 2 2
+/api/auth/login 1 1133 0 0
+/photos/1679918930fc68cdfe-c28b-4f12-92de-9e95553cdeb3.jfif 1 71030 0 0
+/comercios/174 1 6022 0 0
+/comercios/categorias/26 1 6072 1 1
+/api/showCommerce/185 6 6032 0 0
+/api/showCommerce/140 3 3157 0 0
+/api/showCommerce/104 6 3543 0 0
+/comercios/categorias/31 1 4768 0 0
+/commerces/filter 3 10329 0 0
+/comercios/176 1 6330 0 0
+/comercios/categorias/3 2 11700 1 1
+/comercios/179 1 6660 0 0
+/comercios/categorias/15 1 4784 0 0
+/comercios/181 1 6787 0 0
+/.well-known/acme-challenge/GBQmZr9pOfkvsQIwgYHVB4JRqbwWnNsRzCj_8j-IRvw 1 177 1 1
+/api/showCommerce/172 5 4614 0 0
+/assetsPublic/fonts/ionicons.ttf 22 2273920 0 0
+/api/showCommerce/129 9 8232 0 0
+/api/showCommerce/132 2 1088 0 0
+/home 3 19995 0 0
+/api/searchCommerces 7 4846 0 0
+/administrador 6 26856 0 0
+/api/likes 3 3223 0 0
+/api/showCommerce/179 2 2100 0 0
+/comercios/178 1 6071 0 0
+/faq 4 24927 1 2
+/api/showCommerce/130 23 21219 0 0
+/photos/16800061044px-BW84_n0QJGVPszge3NRBsKw-2VcOifrJIjPYFYkOtaCZxxXQ2fmFkoyN0k24oL_kWPXpZhZrJVFOvtgAbVNIkZWC2bpmm3jAPedalvUB_xhQlEZeJw.webp 2 114088 0 0
+/api/showCommerce/122 21 17633 0 0
+/assetsPublic/fonts/Linearicons.woff 22 8899440 0 2
+/api/showCommerce/187 23 23963 0 0
+/api/auth/logout 2 142 0 0
+/api/newStory 1 62 0 0
+/comercios/categorias/29 1 4779 0 0
+/photos/1680005530xbvg.jpg.pagespeed.ic.FYrbKCtHbX.webp 2 41692 0 0
+/commerces/188/edit 2 11403 0 0
+/assetsPublic/fonts/fa-regular-400.woff2 20 271520 0 1
+/api/showCommerce/145 5 4841 0 0
+/assetsPublic/fonts/themify.woff 22 1234376 0 4
+/comercios/categorias/11 1 5404 0 0
+/api/showCommerce/173 4 2990 0 0
+/comercios/categorias/1 2 13026 1 1
+/comercios/categorias/16 1 5114 0 0
+/api/showCommerce/119 3 3261 0 0
+/api/showCommerce/152 4 3478 0 0
+/photos/1680004713xhat.jpg.pagespeed.ic.e76e-ov-K8.webp 1 32954 0 0
+/assetsPublic/fonts/fa-brands-400.woff2 22 1586640 0 2
+/api/getCommercesDestacados 3 10739 0 0
+/comercios/categorias/23 1 4771 0 0
+/assets/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 6 469176 0 1
+/comercios/187 3 19750 0 0
+/api/commerce/110/edit 2 2733 0 0
+/comercios/categorias/5 3 15622 1 1
+END_SIDER

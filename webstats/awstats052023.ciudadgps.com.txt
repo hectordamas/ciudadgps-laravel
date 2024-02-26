@@ -1,0 +1,1047 @@
+AWSTATS DATA FILE 7.7 (build 20161204)
+# If you remove this file, all statistics for date 202305 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.ciudadgps.com.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 1996                
+POS_TIME 2676                
+POS_VISITOR 22368               
+POS_DAY 30229               
+POS_DOMAIN 3626                
+POS_LOGIN 4244                
+POS_ROBOT 4399                
+POS_WORMS 5456                
+POS_EMAILSENDER 5587                
+POS_EMAILRECEIVER 5730                
+POS_SESSION 31078               
+POS_SIDER 31286               
+POS_FILETYPES 5865                
+POS_DOWNLOADS 6320                
+POS_OS 6452                
+POS_BROWSER 6740                
+POS_SCREENSIZE 8238                
+POS_UNKNOWNREFERER 8312                
+POS_UNKNOWNREFERERBROWSER 9414                
+POS_ORIGIN 9877                
+POS_SEREFERRALS 10017               
+POS_PAGEREFS 10195               
+POS_SEARCHWORDS 10393               
+POS_KEYWORDS 10545               
+POS_MISC 2339                
+POS_ERRORS 10604               
+POS_CLUSTER 4100                
+POS_SIDER_404 10809               
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20230601000436 21417 5622899 16360823267710
+FirstTime 0
+LastTime 20230531201242
+LastUpdate 20230601044935 21417 20797 615 2 2
+TotalVisits 260                 
+TotalUnique 197                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 202                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 79 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 23 78 19931164 271 732 72339735
+1 37 108 2065105 231 599 37830671
+2 8 8 92375 254 683 50452043
+3 15 84 22601814 396 649 27102701
+4 14 14 75348 362 631 34221293
+5 24 202 45489894 282 670 48601711
+6 13 83 22530535 224 552 76365197
+7 12 12 300180 299 550 32757422
+8 4 9 267089 289 501 47177583
+9 4 24 412565 252 691 51280299
+10 5 6 17522 297 638 58161791
+11 16 86 22868160 334 715 106773572
+12 46 264 24741977 281 506 29689272
+13 199 661 52869227 286 650 30815214
+14 149 413 33247409 246 477 50726449
+15 63 216 26788134 249 567 40957644
+16 53 225 29688918 272 874 80233455
+17 92 302 27715689 331 1075 100381355
+18 47 210 49322929 473 842 32644996
+19 138 511 64642204 294 826 50460826
+20 67 338 57029064 361 891 63968953
+21 77 390 40403204 252 794 59251230
+22 10 10 60151 304 755 59577122
+23 84 420 72000451 273 871 55728581
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 28
+ve 880 3549 391651902
+us 144 407 44859117
+ca 40 396 80249576
+cn 20 20 149678
+se 13 13 102520
+es 11 124 21982038
+gb 11 16 271553
+sg 11 13 16345
+ru 10 10 322003
+de 10 10 68370
+ua 1 1 124
+ph 1 1 57878
+tw 1 1 57944
+no 2 2 17036
+fr 9 9 110317
+unknown 6 6 666
+tn 1 1 124
+in 2 2 58071
+id 1 1 124
+vn 2 2 248
+bg 1 1 8510
+hk 5 17 436814
+cz 1 1 124
+ar 4 53 1276599
+nl 6 11 222609
+fi 1 1 8546
+lt 1 1 8546
+be 5 5 45398
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 24
+AhrefsBot/ 9633 1081178174 20230531235207 104
+bingbot/ 617 33507119 20230531184024 42
+BLEXBot/ 616 3301075 20230519033355 18
+Googlebot/ 499 4829756 20230531224440 31
+CFNetwork 298 54471959 20230530205637 0
+Dalvik/ 176 6427443 20230524194821 0
+Applebot/ 147 2219690 20230531010154 14
+dataprovider\.com 89 17042498 20230518174929 1
+crawl 33 221027 20230522105307 2
+Apache\-HttpClient/ 21 2638 20230520222014 0
+Googlebot\-Image/ 2 708674 20230514131126 0
+no_user_agent 11 639038 20230528063313 0
+bingpreview 5 319480 20230505205225 0
+ips\-agent 4 22556 20230503121709 1
+unknown 11 695 20230530123318 11
+curl 1 0 20230528065754 0
+urllib 4 231738 20230524124536 0
+link 1 8546 20230515045637 0
+python 3 8787 20230531172950 0
+java 1 8546 20230514162012 0
+bot[\s_+:,\.\;\/\\-] 8 261168 20230522152220 0
+Googlebot\-Mobile/ 1 8546 20230516051403 0
+^mozilla\/5\.0$ 1 8512 20230523184217 0
+facebookexternalhit/ 5 56210 20230527164726 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 21
+css 592 3618140 0 0
+webp 13 361886 0 0
+ttf 33 3320225 0 0
+woff2 88 4647096 0 0
+txt 2 256 0 0
+woff 70 16407328 0 0
+json 11 1396 0 0
+map 1 77245 0 0
+php 30 3704 0 0
+mp4 1 23428530 0 0
+bak 2 246 0 0
+html 232 2655349 0 0
+jpg 1250 382364877 0 0
+jfif 102 5722621 0 0
+png 726 27339085 0 0
+env 11 1328 0 0
+yml 2 245 0 0
+old 1 125 0 0
+js 858 16491009 0 0
+jpeg 45 1996183 0 0
+Unknown 604 3681420 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 3
+/video.mp4 7 82 90159982
+/sitemap.txt 2 0 248
+//wp-includes/ID3/license.txt 2 0 256
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 17
+linuxandroid 495 71
+macosx6 6 6
+winxp 3 0
+macosx11 1 1
+winlong 7 7
+ios_iphone 371 43
+win2000 1 0
+macosx9 1 1
+win8 4 4
+unix 34 32
+macosx5 1 0
+linux 222 47
+win7 100 20
+macosx 212 38
+Unknown 643 496
+win10 2650 429
+win8.1 5 5
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 73
+chrome95.0.4638.69 5 3
+chrome34.0.1847.137 1 0
+firefox60.0.2 1 1
+chrome112.0.5615.121 76 6
+chrome24.0.1295.0 1 1
+chrome79.0.3945.79 320 32
+firefox102.0 1 1
+chrome112.0.0.0 7 4
+safari5.0 1 1
+safari16.5 137 13
+chrome83.0.4103.97 19 19
+chrome89.0.4389.114 3 2
+firefox59.0 1 1
+msie7.0 1 1
+chrome91.0.4472.114 4 4
+firefox65.0 1 1
+chrome111.0.5563.146 1 1
+chrome66.0.3359.181 1 1
+safari16.4 100 13
+chrome110.0.5481.154 54 4
+chrome108.0.0.0 26 6
+chrome90.0.4430.85 2 2
+edge17 34 32
+chrome80.0.3987.162 1 1
+firefox112.0 6 1
+firefox77.0 5 5
+chrome63.0.3239.132 1 1
+chrome60.0.3112.107 2 2
+firefox47.0 1 1
+firefox90.0 1 1
+firefox96 26 23
+mozilla 37 22
+safari5.0.4 2 2
+chrome104.0.0.0 4 4
+netscape5.0 5 5
+safari15.6 1 1
+chrome113.0.5672.132 78 8
+chrome84.0.4147.105 2 2
+safari15.5 1 1
+safari 131 11
+chrome83.0.4103.116 51 4
+firefox52.0.2 1 1
+android 2 2
+firefox106.0 1 1
+firefox63.0 2 1
+iphone 82 8
+chrome103.0.0.0 4 4
+chrome34.0.1847.116 7 7
+chrome83.0.4103.61 84 4
+chrome74.0.3729.169 7 7
+firefox108.0 22 2
+safari13.0.3 7 7
+chrome106.0.0.0 2 2
+msie9.0 1 1
+Unknown 611 470
+chrome111.0.0.0 44 17
+chrome70.0.3538.77 1 1
+safari16.2 6 1
+chrome110.0.5481.177 81 8
+chrome85.0.4183.102 1 1
+chrome54.0.2840.99 1 1
+chrome102.0.0.0 3 3
+chrome109.0.0.0 3 1
+chrome113.0.0.0 2528 375
+chrome74.0.3694.0 80 8
+opera54.0.2952.54 1 1
+msie11.0 1 1
+chrome89.0.4389.82 2 2
+chrome81.0.4044.138 2 2
+msie10.0 1 1
+chrome89.0.4389.90 1 1
+chrome105.0.0.0 9 9
+chrome103.0.5060.114 6 6
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 15
+Mozilla/5.0_(compatible;_InternetMeasurement/1.0;__https://internet-measurement.com/) 20230530120545
+Mozilla/5.0_(compatible;_Googlebot/2.1;__http://www.google.com/bot.html) 20230509204424
+cpp-httplib/0.10.9 20230529072427
+Go-http-client/2.0 20230518174655
+okhttp/4.9.2 20230531172656
+WhatsApp/2.23.10.77_A 20230531151749
+Mozilla/5.0_(compatible;_CensysInspect/1.1;__https://about.censys.io/) 20230528023905
+PlayStore-Google 20230526162456
+Mozilla/5.0_researchscan.comsys.rwth-aachen.de 20230531153343
+Mozilla/5.0_AppleWebKit/537.36_(KHTML,_like_Gecko;_compatible;_bingbot/2.0;__http://www.bing.com/bingbot.htm)_Chrome/112.0.0.0_Safari/537.36 20230515210251
+Mozilla/5.0_(compatible;_AhrefsBot/7.0;__http://ahrefs.com/robot/) 20230523231139
+HubSpot_Connect_2.0_(http://dev.hubspot.com/)_(namespace:_domainValidationHttpClient)_-_BizOpsCompanies-Tq2-BizCoDomainValidationAudit 20230527054539
+axios/1.3.5 20230502214142
+Mozilla/5.0_(compatible;_Dataprovider.com) 20230518174929
+Download_Demon/3.5.0.11 20230518214628
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 8
+HubSpot_Connect_2.0_(http://dev.hubspot.com/)_(namespace:_domainValidationHttpClient)_-_BizOpsCompanies-Tq2-BizCoDomainValidationAudit 20230527054539
+cpp-httplib/0.10.9 20230529072427
+Go-http-client/2.0 20230518174655
+okhttp/4.9.2 20230531172656
+WhatsApp/2.23.10.77_A 20230531151749
+axios/1.3.5 20230502214142
+PlayStore-Google 20230526162456
+Download_Demon/3.5.0.11 20230518214628
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 711 874
+From1 4 4
+From2 8 12
+From3 6 6
+From4 471 3860
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 2
+google_com 5 5
+www_google_com 3 7
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 2
+https://linktr.ee 5 5
+http://35.208.249.77:80 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 9
+403 1 68
+503 31 2541791
+206 32 7878177
+400 29 2327294
+302 22 19870
+405 4 3547472
+500 40 10228311
+404 3725 65321832
+301 589 95256
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 236
+/.well-known/acme-challenge/6V84r5IOCZmZjDXoA0mQjYbgOfXcfKRPCWQmi_Q46m4 662 -
+/photos/16844341432022-04-18.jpg 2 -
+/logos/1684596688341889530_594332345969572_5071400417988453157_n.jpg 2 -
+/logos/168462069566978204_609376046254252_3269156314885914624_n.jpg 1 https://ciudadgps.com/comercios
+/logos/168432713381409459_1576005709217044_9105347362057879552_n.jpg 2 -
+/logos/1684524231Logo_TLS_NEGRO_e25a25e0-4085-41fd-b802-3101bc641bf4.webp 1 https://ciudadgps.com/comercios
+/.well-known/apple-app-site-association 16 -
+/assetspublic/js/isotope.min.js 1 -
+/wp-admin/install.php 1 -
+/assetspublic/owlcarousel/css/owl.theme.css 1 -
+/logos/1684326532moka.jpg 2 -
+/logos/1684425518128861628_378499490126997_2638681297546250266_n.jpg 2 -
+/photos/16845966932019-09-29.jpg 1 -
+/logos/1684596131337088127_590932439585519_2210340046684363532_n.jpg 2 -
+/photos/16844341422023-03-09.jpg 2 -
+/.well-known/acme-challenge/JKwwUsxQeq1MDZn3nnswhUrYoj_OgAr14mgkb6rSCLc 672 -
+/categories/reposteria.png%0D%0A 24 -
+/logos/1684419783331344344_1338891826896415_5405865112675108027_n.jpg 1 -
+/assetspublic/css/magnific-popup.css 1 -
+/logos/1684435550images.png 2 -
+/photos/16844341412022-07-14.jpg 2 -
+/assetspublic/js/imagesloaded.pkgd.min.js 1 -
+/photos/1684419856la-flor-de-altamira-tiene.jpg 1 -
+/assets/vendor/datatables/datatables.bootstrap4.js 1 -
+/photos/16844478442022-10-03.jpg 2 -
+/logos/1684328721328753154_713441947025045_8863780794914945855_n.jpg 2 -
+/logos/168432993421227753_128273461133922_8617630134557474816_a.jpg 2 -
+/photos/16845066002022-01-30.jpg 1 -
+/photos/1684432350IMG_20210630_112346.jpg 2 -
+/logos/1684426412271459687_5236934286318979_1219726424702001721_n.jpg 2 -
+/photos/16845041482018-05-20.jpg 2 -
+/comercios/101/show 2 -
+/photos/1684328748Captura%20de%20pantalla%202023-05-17%20090449.png 1 -
+/photos/16844261412022-05-17.jpg 2 -
+/photos/1684260310IMG_20211124_145905.jpg 1 -
+/assetspublic/owlcarousel/css/owl.theme.default.min.css 1 -
+/wp-content/plugins/mstore-api/assets/js/mstore-inspireui.js 1 -
+/photos/168443475920220423_184403.jpg 2 -
+/photos/16845054522017-06-21.jpg 1 -
+/photos/1684435569IMG_6844.jpg 2 -
+/assetspublic/css/slick-theme.css 1 -
+/assets/logo 2 -
+/logos/1684505500109250754_332578301068228_55882183899875854_n.jpg 1 -
+/photos/16844267322021-07-15.jpg 2 -
+/logos/1684329368325267013_101449102829704_5211752002810378464_n.jpg 2 -
+/logos/1684432321tUFGeWniRrmggak7Fzy2_I44Q4XNaHsZMn6C5.png 2 -
+/logos/1684352509logo3932551.jpg 1 -
+/comercios/73/show 1 -
+/photos/16844193252022-11-21.jpg 1 -
+/photos/16843294472021-02-19.jpg 1 -
+/photos/1684447843descarga.jpg 2 -
+/blog/wp-json/wp/v2/users 1 -
+/wp-login.php 2 http://ciudadgps.com/wp-login.php
+/photos/16843306992022-06-22.jpg 1 -
+/wp-json/wp/v2/users 1 -
+/assets/about.jpg 2 https://ciudadgps.com/nosotros
+/photos/16843259342022-03-25.jpg 4 -
+/photos/16844193282021-12-27.jpg 1 -
+/__/hosting/verification 31 -
+/logos/1684431385DqRXogwUSAm63JRxpcSm_Esl8FK4dx2coeAJ8.jfif 2 -
+/photos/16845961602022-01-12.jpg 1 -
+/logosMasivos/boleitas.png 2 -
+/photos/1684596692IMG-20210828-WA0045.jpg 2 -
+/comercios/57/show 1 -
+/photos/16843265670.jpg 2 -
+/photos/1684684266photo_2021-08-31_11-11-08.jpg 1 https://ciudadgps.com/comercios
+/photos/16843276402022-12-21.jpg 2 -
+/photos/16844264292023-01-01.jpg 2 -
+/logos/1684448855X6Wey8i6RpC2fJ4DS2bq_dEJExbYlI2nrG6fK.jpg 2 -
+/categories/rest.png 4 -
+/photos/1684328745Captura%20de%20pantalla%202023-05-17%20090417.png 2 -
+/.well-known/acme-challenge/nnymHjMpdG9OJJnV0S-nKwhvrfzcZyKVEvP2mS_k0Ag 38 -
+/photos/16845057712022-10-25.jpg 1 -
+/photos/16844201812023-04-26.jpg 2 -
+/logos/1684507743138730196_10158106200393391_6698540252216851284_n.png 2 -
+/license.txt 1 -
+/photos/16844201832023-04-26%20(1).jpg 1 -
+/photos/16844320052021-08-16.jpg 2 -
+/logos/1684503232327915161_584600929845557_8536340797139011965_n.jpg 1 -
+/.well-known/acme-challenge/D7V3UtflnXqeglh4ufTxNfQRnWX5Z9jCGnDZtiuhEsk 249 -
+/photos/16844355702023-01-07.jpg 2 -
+/logos/1684434129310186236_848060813089313_1844011778257974617_n.jpg 2 -
+/logos/1684506902vV6fMnpl_400x400.jpg 1 -
+/nos 1 -
+/photos/16845961592022-02-01.jpg 2 -
+/logos/1684503617R9dmLNuYSQa9T6G4vWjT_tw7UUkou634K7N92.png 1 -
+/photos/16845963772021-05-29%20(1).jpg 1 -
+/photos/16845963762021-05-29.jpg 2 -
+/sitemaps.xml 3 -
+/static/admin/javascript/hetong.js 3 -
+/photos/1684330698IMG_20210329_152416.jpg 2 -
+/ads.txt 47 -
+/photos/16844338562021-11-18%20(2).jpg 2 -
+/photos/16844267312021-11-09.jpg 2 -
+/photos/1684432351IMG_20210630_112412.jpg 2 -
+/photos/1684503654unnamed%20(1).jpg 1 -
+/wp-content/plugins/essential-addons-for-elementor-lite/assets/admin/css/cloud.css 4 -
+/readme.html 1 -
+/logos/1684521461Iglesia-Nuestra-Sen%CC%83ora-de-las-Mercedes_YPM-DESTACADA.jpg 13 https://ciudadgps.com/commerces
+/photos/16844320032021-06-23.jpg 2 -
+/comercios/97/show 1 -
+/photos/16844323532023-03-19.jpg 2 -
+/security.txt 1 http://www.ciudadgps.com/security.txt
+/faqs 1 -
+/sitemap.xml.gz 3 -
+/comercios/19/show 1 -
+/photos/16844208072018-08-01.jpg 1 -
+/photos/16844193262022-11-10.jpg 1 -
+/photos/168442643220200320_105551.jpg 2 -
+/photos/1684587249Imagen%20de%20WhatsApp%202023-05-20%20a%20las%2008.53.27.jpg 1 -
+/assetspublic/css/linearicons.css 1 -
+/logos/1684504536292238057_406820524798473_2076028545331893036_n.png 1 -
+/photos/1684329399bienvenidos_slider_amelie.jpg 2 -
+/logos/16845238571684523080tml6Xrb6QKyXENqQe4ir_0001-1006717957.png 1 https://ciudadgps.com/comercios
+/assetspublic/css/simple-line-icons.css 1 -
+/photos/1684503310edif-los-llano-chacao-1.webp 1 -
+/logos/1684433821174866359_124141703069084_4756085992069734881_n.jpg 2 -
+/assetspublic/css/themify-icons.css 1 -
+/logos/168450575867345153_496151457804651_3161303295172018176_n.jpg 1 -
+/photos/16845077662022-07-01.jpg 2 -
+/photos/16844201822021-10-30.jpg 1 -
+/photos/1684524249WhatsApp%20Image%202021-12-03%20at%2000.08.14.jpeg 1 https://ciudadgps.com/comercios
+/sitemap.txt 13 -
+/photos/1684435572IMG-20220713-WA0025.jpg 2 -
+/photos/16846839662021-01-10.jpg 1 https://ciudadgps.com/comercios
+/asset-manifest.json 1 https://ciudadgps.com/
+/comercios/30/show 1 -
+/logos/1684330663309194871_528977635898107_253997502015056023_n.jpg 2 -
+/logos/1684490376269458680_427399252257707_1841958729458494933_n.jpg 2 -
+/photos/16845238612023-01-20.jpg 1 https://ciudadgps.com/comercios
+/.well-known/acme-challenge/Ec42A8EtZC_yZRaMpPDT0loNOvTYeUC1HDyxscMdSkU 672 -
+/dup-installer/main.installer.php 1 http://ciudadgps.com/dup-installer/main.installer.php
+/photos/1684352514ccsjw-pool-0048-hor-clsc.webp 1 -
+/photos/168444784720220828_090300.jpg 2 -
+/photos/1684448904BACHACCS-13.jpg 2 -
+/assetspublic/js/parallax.js 1 -
+/assetspublic/css/all.min.css 1 -
+/logos/1684431907DqRXogwUSAm63JRxpcSm_Esl8FK4dx2coeAJ8.jfif 2 -
+/photos/1684503653unnamed.png 1 -
+/assets/vendor/datatables/jquery.datatables.js 1 -
+/logos/1684259697242803755_197346755703940_4176351649359531859_n.jpg 1 -
+/logos/1684506197JuGtDmoG_400x400.jpg 1 -
+/comercios/105/show 1 -
+/photos/1684506919descarga%20(5).jfif 1 -
+/logos/1684596362306952202_461062909386367_6199775407861835336_n.jpg 2 -
+/logos/1684447759LHlsr5VyQsKO4TIHfB4U_4OCH1YgTMnY9ONLk.png 2 -
+/photos/1684327643original_e2cfb32b-acc5-400a-99bd-85f11590d5a8_PXL_20210701_175011043.jpg 1 -
+/photos/16844347582022-11-03.jpg 2 -
+/assetspublic/css/ionicons.min.css 1 -
+/.well-known/security.txt 1 -
+/photos/16843265672023-05-08.jpg 1 -
+/logos/1684325106paramo.jpg 4 -
+/photos/16844261402022-12-14.jpg 2 -
+/photos/16844482672021-08-30.jpg 2 -
+/categories/redes.png%0D%0A 15 -
+/apple-touch-icon-120x120.png 1 -
+/logos/1684586643IPLuiXRIT1C5HIVzXVC2_RSlkyH0KWxqKUjDt.jpg 3 -
+/photos/16844338542021-11-18.jpg 2 -
+/photos/1684587246Imagen%20de%20WhatsApp%202023-05-20%20a%20las%2008.53.29.jpg 3 -
+/comercios/LINKTR.EE/GRUPOVETRINARIOINTEGRAL 1 -
+/logos/1684420770272629059_652789809396764_5767572854287572847_n.jpg 2 -
+/photos/16844261432022-05-17%20(1).jpg 2 -
+/imagesComercios/boleitas.jpg 2 -
+/logos/1684504141306091408_450868983751124_4905797711963291479_n.jpg 2 -
+/.well-known/acme-challenge/vx3RuOOF1S8gkH06a3cfaoFUekwQWNwksi2Q5ynsrfY 672 -
+/apple-touch-icon-120x120-precomposed.png 1 -
+/photos/16846826902018-09-19.jpg 1 https://ciudadgps.com/comercios
+/photos/16844347572022-12-20.jpg 2 -
+/logos/1684434694a-IAbWwu_400x400.jpg 2 -
+/photos/16844341442023-01-23.jpg 2 -
+/categories/electrodomesticos.png%0D%0A 15 -
+/logos/1684426716ZBYO2xfBSWS49CiEjjpo_9Xn7uGpdh3099Mp9.png 2 -
+/photos/1684503656unnamed%20(2).jpg 1 -
+/app-ads.txt 175 -
+/photos/168441906920210310_141546.jpg 1 -
+/photos/16843276412023-02-13.jpg 1 -
+/photos/16843271622021-09-02.jpg 2 -
+/apple-touch-icon.png 1 -
+/humans.txt 3 http://ciudadgps.com/humans.txt
+/photos/16844320062021-10-27.jpg 2 -
+/logos/1684682670owDCfyjtSweraFZ8jYuZ_iziFwLrS90FLmYPD.png 1 https://ciudadgps.com/comercios
+/logos/1684506595descarga%20(4).jfif 1 -
+/logos/1684683937247626553_2439357032862727_767187495535422407_n.png 1 https://ciudadgps.com/comercios
+/assetspublic/js/jquery.elevatezoom.js 1 -
+/assetspublic/css/flaticon.css 1 -
+/categories/panaderia.png%0D%0A 24 -
+/.well-known/assetlinks.json 7 -
+/assetspublic/js/jquery.dd.min.js 1 -
+/comercios/51/show 1 -
+/logos/1684327575325913429_696838758515366_2583389751750798553_n.jpg 2 -
+/sitemap 11 -
+/logos/1684419048160608124_294883921997097_6414360159586621957_n.jpg 1 -
+/photos/168444826520181027_171203.jpg 2 -
+/photos/16845049561%20(1).jpg 1 -
+/logos/1684684261JdyE89rNRgGFnPOuy5OZ_13YwsYQJ5mMbb71d.jpg 1 https://ciudadgps.com/comercios
+/logos/1684448242213086937_454491240158910_8763455584452277777_n.jpg 2 -
+/photos/16844489052023-03-12.jpg 2 -
+/photos/16844255432020-07-27.jpg 2 -
+/assetspublic/owlcarousel/css/owl.carousel.min.css 1 -
+/photos/16845062282022-02-19.jpg 1 -
+/photos/16845045212020-08-27.jpg 1 -
+/assets/mision.jpg 2 https://ciudadgps.com/nosotros
+/photos/16844478462022-10-03%20(1).jpg 2 -
+/apple-touch-icon-precomposed.png 1 -
+/photos/1684420805IMG_20220128_150917.jpg 2 -
+/assetspublic/js/jquery.countdown.min.js 1 -
+/comercios/95/show 1 -
+/photos/16843271632022-11-30.jpg 1 -
+/Public/home/js/check.js 3 -
+/photos/16843259362022-03-25%20(1).jpg 2 -
+/no 1 -
+/photos/16844264302022-05-13.jpg 2 -
+/photos/168443141620220516_130310.jpg 2 -
+/logos/1684420140343187839_1356400794904426_3054657990144454914_n.jpg 2 -
+/comercios/54/show 2 -
+/photos/1684329986restaurante.epiko-cafe_1_foto-r-0.jpg 2 -
+/photos/1684259702cine-citta-entrada-del.jpg 1 -
+/logos/1684260306324546620_722244339220977_8262726562725753214_n.jpg 1 -
+/sitemap_index.xml 2 -
+/photos/16844338552021-11-18%20(1).jpg 2 -
+/comercios/49/show 1 -
+/logos/1684504908305656109_454465370052190_64205812046032347_n%20(1).png 1 -
+/vendor/laravel-filemanager/js/filemanager.js 3 -
+/assetspublic/css/responsive.css 1 -
+/photos/1684490401IMG_20220219_143232.jpg 2 -
+/wp-admin/setup-config.php 1 -
+/logos/1684426095images.jfif 2 -
+/atom.xml 3 -
+/photos/16846207042018-11-26.jpg 1 https://ciudadgps.com/comercios
+/assets/vision.jpg 2 https://ciudadgps.com/nosotros
+/assetsPublic/images/ajax-loader.gif 16 https://ciudadgps.com/comercios/180
+/assetspublic/css/style.css 1 -
+/photos/168443142220220516_125103.jpg 2 -
+/categories/iluminacion.png%0D%0A 14 -
+/logos/1684419293271280064_212383284437060_6552988332354326232_n.jpg 1 -
+/assetspublic/js/scripts.js 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 202
+45.185.16.89 628 2336 237771055 20230531201242
+200.8.48.116 99 587 72512260 20230531003045
+201.221.115.170 66 124 12102268 20230529140143
+20.81.44.145 32 34 4252 20230515194635
+190.142.252.20 13 48 1146630 20230531171546
+190.153.84.41 12 94 23223982 20230509193453
+205.169.39.68 9 101 19896167 20230518054334
+205.169.39.166 9 101 19860216 20230518054330
+205.169.39.174 9 101 19860216 20230511183134
+77.208.172.177 9 86 21191340 20230504192934
+124.223.196.50 2 2 17092 20230510004617
+134.209.23.73 1 1 8546 20230518182227
+94.46.220.95 1 6 213617 20230506130027
+34.87.168.19 1 1 6470 20230525133449
+185.245.80.185 1 1 86 20230520113152
+193.235.141.142 2 2 17092 20230518063257
+34.212.36.47 3 3 173800 20230522151908
+92.204.184.3 1 1 124 20230522170959
+94.247.172.129 1 1 8550 20230508115552
+45.87.104.123 1 1 57923 20230513140945
+35.93.111.35 1 1 8546 20230518224211
+193.56.113.47 1 1 94 20230531044346
+167.248.133.188 1 1 8546 20230514234223
+167.248.133.34 1 1 8550 20230509174300
+167.248.133.185 1 1 8546 20230518162230
+188.234.43.231 2 2 188 20230519061919
+45.137.192.64 1 1 124 20230526184943
+167.248.133.187 1 1 8550 20230503205908
+51.83.238.159 5 5 257305 20230529072427
+167.172.17.249 1 1 8510 20230524181644
+43.133.46.195 1 1 133 20230518174655
+178.254.29.124 1 1 8497 20230530101003
+35.87.110.195 1 1 8510 20230527160744
+209.38.245.24 1 1 8546 20230512181326
+142.44.158.131 1 1 124 20230531170815
+199.244.88.228 1 1 8533 20230501171037
+190.73.178.118 0 1 4218152 
+74.125.216.28 1 1 8768 20230521135209
+102.214.22.66 2 2 230 20230519172425
+15.204.182.106 2 2 17096 20230508005204
+178.128.211.77 2 2 252 20230512065418
+15.188.232.14 1 1 123 20230518214628
+144.91.106.14 2 2 17032 20230523172053
+186.167.202.77 8 78 1796277 20230526011134
+146.59.62.151 1 1 124 20230519183122
+143.198.130.26 1 1 8510 20230530191736
+46.101.9.216 7 7 49223 20230517043338
+185.221.181.174 1 1 124 20230509174630
+130.255.166.80 1 1 8546 20230511164139
+82.162.52.76 1 1 94 20230523220336
+52.11.8.82 1 1 8546 20230518224137
+42.83.147.55 2 2 17092 20230516040525
+128.90.136.126 1 1 8546 20230519223313
+193.235.141.164 1 1 8546 20230515133447
+36.40.66.38 1 1 8546 20230520121104
+35.217.37.67 1 1 8546 20230504034802
+167.248.133.36 1 1 8550 20230508031012
+54.200.144.96 1 1 8546 20230520125113
+34.145.165.227 1 1 57944 20230503135924
+190.74.102.79 4 4 25148 20230531181449
+188.166.191.57 2 3 336 20230525100537
+52.32.174.87 1 1 8546 20230516210027
+89.117.58.87 1 1 8546 20230519024104
+209.97.170.16 2 2 252 20230522180823
+47.89.193.162 1 1 8546 20230507002334
+193.235.141.145 1 1 8546 20230521004042
+162.142.125.223 1 1 8506 20230524162845
+167.248.133.38 1 1 8506 20230527230639
+42.83.147.34 1 1 8510 20230526053635
+65.154.226.168 6 76 139475 20230518145727
+157.245.205.59 1 2 232 20230516100740
+35.85.226.41 1 1 57944 20230518180737
+64.227.144.69 1 1 124 20230529135003
+107.178.207.51 2 2 12986 20230502214142
+47.254.74.59 1 1 8550 20230507002334
+35.85.152.15 1 1 8546 20230510152945
+109.123.248.61 1 1 124 20230521075958
+167.94.138.36 3 3 25606 20230528023905
+3.94.167.98 2 2 17100 20230512190926
+144.217.135.201 1 1 58380 20230518174859
+20.254.49.75 1 1 116 20230512135003
+200.75.117.46 4 4 11129 20230506115716
+71.6.134.234 1 1 8512 20230524075527
+20.193.153.0 1 1 127 20230515135400
+186.185.71.222 6 25 962767 20230527162215
+185.98.136.187 1 1 124 20230528140527
+84.17.46.183 2 2 228 20230524082335
+95.179.207.34 1 1 81 20230510124250
+113.108.9.38 2 2 17056 20230529124228
+54.185.198.0 1 1 8510 20230524165720
+49.51.52.237 1 1 127 20230520151904
+40.77.189.103 0 1 2811161 
+52.40.58.33 1 1 8510 20230524165710
+162.142.125.14 1 1 8546 20230518182004
+167.94.138.127 1 1 8550 20230519075235
+128.90.186.186 1 1 57944 20230506130027
+170.81.145.50 0 1 765035 
+223.247.178.167 1 1 8516 20230523125811
+35.88.217.51 1 1 57899 20230531132746
+8.218.212.177 1 1 124 20230525160623
+193.235.141.125 1 1 8546 20230504152231
+34.222.239.39 1 1 8546 20230518224108
+34.219.225.192 1 1 8510 20230531150114
+167.248.133.184 1 1 8546 20230507171648
+172.241.171.130 1 1 8546 20230518070612
+87.236.176.156 1 1 8550 20230507144912
+51.222.30.235 1 1 124 20230518052732
+137.226.113.44 4 4 34060 20230531153343
+47.88.78.6 1 1 8546 20230507002403
+14.116.157.23 2 2 17092 20230514134309
+34.235.95.70 1 1 124 20230510185657
+54.70.145.116 1 1 8510 20230531150031
+87.236.176.146 1 1 8550 20230505184210
+74.125.218.77 1 1 8768 20230526162456
+167.94.138.126 3 3 25602 20230524164722
+35.88.139.78 1 1 8546 20230502155226
+186.182.207.46 4 53 1276599 20230524124131
+35.91.50.69 1 1 8546 20230510094305
+54.186.221.104 1 1 8546 20230516210027
+185.104.44.73 1 1 124 20230516180921
+87.236.176.208 1 1 8510 20230530120545
+34.76.226.12 1 1 11242 20230523195130
+101.32.239.57 1 1 8546 20230515164038
+104.255.169.110 1 6 213617 20230506130027
+167.248.133.52 1 1 8550 20230509145355
+141.94.168.191 1 1 94 20230519152050
+131.153.142.170 1 1 8546 20230514102714
+35.161.26.165 1 1 8546 20230510122704
+183.91.11.200 1 1 124 20230513095143
+42.83.147.56 3 3 25534 20230531164434
+190.200.37.145 0 1 765035 
+45.115.7.38 1 1 57944 20230511081839
+35.89.176.124 1 1 57944 20230503231342
+185.148.147.42 1 1 8510 20230528124332
+54.158.5.38 4 51 1248799 20230503003157
+54.190.122.224 1 1 57944 20230518204805
+45.178.167.178 8 82 18594798 20230528115646
+102.219.177.21 1 1 124 20230512024037
+183.136.225.44 2 2 208 20230514022503
+82.165.184.76 1 1 124 20230519162142
+193.235.141.147 1 1 8546 20230507092303
+42.83.147.53 1 1 8546 20230509041724
+83.145.36.70 1 1 0 20230530155925
+45.140.207.227 1 1 6493 20230521015430
+74.125.216.24 1 1 8768 20230522171507
+103.175.206.43 1 1 124 20230516155325
+167.248.133.51 1 1 8546 20230507220305
+18.236.117.96 1 1 8546 20230505134909
+51.195.190.62 1 1 124 20230515185235
+185.27.99.143 1 1 8510 20230530123322
+65.154.226.171 1 1 8546 20230512050057
+111.90.150.28 1 1 124 20230523181720
+190.73.78.47 4 54 1617136 20230529140519
+194.26.135.242 2 2 188 20230523073050
+43.156.17.11 2 2 12940 20230531164600
+193.235.141.157 1 1 8546 20230510025235
+35.91.68.54 1 1 8546 20230510152942
+37.120.215.170 1 2 10711 20230523175108
+185.181.60.12 1 1 8503 20230522071108
+184.94.240.88 1 1 58335 20230524204202
+87.236.176.115 1 1 8546 20230519040144
+35.92.170.114 1 1 57944 20230512132244
+54.174.58.227 8 81 19588783 20230509033359
+66.249.87.159 1 1 8768 20230524145046
+186.167.203.203 4 54 1617136 20230530232602
+54.174.58.254 1 1 0 20230527054539
+35.160.15.241 1 1 8546 20230503143543
+198.44.127.26 1 1 124 20230522193623
+146.190.244.105 1 1 8546 20230503070352
+146.59.52.85 2 2 109510 20230527030821
+52.12.222.126 1 1 8546 20230503143540
+47.242.105.176 2 14 436421 20230507084812
+223.240.101.111 1 1 8546 20230517132745
+115.85.30.27 1 1 57878 20230525161022
+185.166.174.177 1 21 395349 20230520131905
+185.27.99.123 1 1 8546 20230502010657
+141.94.175.140 1 1 94 20230515232209
+150.95.112.79 1 1 124 20230510203728
+185.181.60.189 1 1 8533 20230514224311
+35.211.201.14 1 1 8546 20230504035737
+52.36.243.1 8 80 19643283 20230501061911
+149.56.150.148 0 3 714009 
+50.62.182.245 1 1 124 20230526220016
+3.85.134.162 2 2 17092 20230512190158
+186.167.206.241 3 3 4938 20230528231918
+74.125.218.23 1 1 8768 20230524163106
+198.211.125.40 1 1 124 20230514223332
+124.40.255.186 1 1 124 20230525182531
+185.159.41.101 1 21 395349 20230509092802
+62.141.44.236 1 1 8533 20230507150317
+45.154.98.214 3 3 393 20230514041116
+200.8.186.77 5 15 3979186 20230529200243
+54.186.164.134 1 1 8546 20230506150138
+201.234.237.33 4 4 575 20230518105534
+143.244.41.191 1 6 213617 20230506130027
+35.88.98.40 1 1 57944 20230512053725
+160.238.246.19 9 83 6178152 20230525172437
+186.185.11.167 3 6 4360243 20230519233029
+193.235.141.90 1 1 8546 20230501230118
+205.169.39.194 9 101 19860216 20230502233859
+35.87.18.239 1 1 8546 20230508152936
+209.38.235.147 1 1 8516 20230523111443
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 31
+20230501 10 80 22530172 3
+20230502 25 114 22720412 5
+20230503 12 59 1415962 9
+20230504 12 85 25666541 4
+20230505 27 29 255865 3
+20230506 10 32 945954 7
+20230507 10 15 285846 10
+20230508 6 6 51292 5
+20230509 35 271 73379262 9
+20230510 12 14 177419 10
+20230511 43 238 47853725 6
+20230512 21 21 198552 12
+20230513 4 4 61815 3
+20230514 11 11 43442 8
+20230515 45 116 31803864 7
+20230516 10 19 676825 8
+20230517 9 9 66306 3
+20230518 62 438 83637746 22
+20230519 15 19 11053242 12
+20230520 5 25 412654 5
+20230521 15 89 23273098 6
+20230522 64 364 32166141 9
+20230523 56 185 44228202 12
+20230524 390 962 23706933 19
+20230525 16 86 7860927 7
+20230526 61 330 55940474 9
+20230527 46 99 12246513 6
+20230528 14 84 22853447 5
+20230529 74 454 33041844 12
+20230530 33 265 27975135 9
+20230531 47 151 8631498 15
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 3
+5mn-15mn 7
+2mn-5mn 1
+15mn-30mn 6
+0s-30s 219
+30s-2mn 17
+30mn-1h 7
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 152
+/api/home 254 2220188 18 16
+/ 227 2654783 181 151
+/assetsPublic/fonts/Linearicons.woff 37 14611872 1 4
+/api/searchCommerces 35 24032 0 0
+/assetsPublic/fonts/ionicons.ttf 33 3320225 0 0
+/assetsPublic/fonts/themify.woff 33 1795456 0 8
+/api/getAppStoresVersion 33 2046 0 3
+/logos/1680108447D_TOHj6XoAE_J5g.jfif 30 4554273 2 5
+/nosotros 28 180801 7 5
+/assetsPublic/fonts/fa-solid-900.woff2 25 1783584 0 0
+/wp-content/plugins/dzs-zoomsounds/savepng.php 1 167 1 0
+//wp-content/themes/seotheme/db.php 1 133 1 1
+/api/.env 1 120 0 0
+/sftp-config.json 4 504 2 1
+/photos/1684851912Torre_Delta2_480x480.webp 2 125020 0 0
+/logos/1684524231Logo_TLS_NEGRO_e25a25e0-4085-41fd-b802-3101bc641bf4.webp 5 119710 0 0
+/comercios/368 2 12316 0 0
+/laravel/.env 1 124 0 0
+/aws.yml 1 119 0 0
+/commerces/176/update 1 1093 0 0
+/api/showCommerce/273 3 2433 0 0
+/api/auth/getJobs 2 6360 0 0
+/api/auth/comercios/asociados 11 14116 0 1
+/api/comments 1 231 0 0
+/wp-config.php.old 1 125 0 0
+/assets/vendor/bootstrap/js/bootstrap.bundle.min.js.map 1 77245 0 0
+/api/users/1/edit 1 274 0 0
+/_profiler/phpinfo 1 129 0 0
+/commerces 5 71558 0 0
+/api/showCommerce/109 1 2068 0 0
+/comercios/categorias/12 2 51227 0 1
+/api/showCommerce/184 17 15263 0 0
+/api/getCommerces 14 45584 0 0
+/prevlaravel/sftp-config.json 1 136 0 0
+/assets/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 5 66380 0 1
+/config/config.json 1 126 0 0
+/logos/16799189151549574758583.jfif 5 18620 1 0
+/commerces/116/update 1 1290 0 0
+/comercios/categorias/25 2 4767 0 0
+/logos/1684417186descarga%20(1).jfif 3 17097 0 0
+/wp-config.php.bak 1 127 0 0
+/api/auth/jobs/298/edit 1 1545 0 0
+/api/auth/jobs 12 145668 0 0
+/.env.bak 1 119 0 0
+/api/showCommerce/133 3 4203 0 0
+/login 7 28577 1 0
+/wp-login.php 23 2852 23 23
+/politicas-de-privacidad 7 63837 7 6
+/logos/16843511837CywKpfKRuqhcoqt1DFK_SJ7Arr1RcN2dbrlG.jfif 3 175980 0 0
+/phpinfo.php 1 121 0 0
+/.aws/credentials 1 126 0 0
+/assets/vendor/fontawesome-free/webfonts/fa-brands-400.woff2 3 230292 0 0
+/comercios/categorias/14 2 4772 0 0
+/api/showCommerce/272 1 736 0 0
+/logos/1684431385DqRXogwUSAm63JRxpcSm_Esl8FK4dx2coeAJ8.jfif 3 27078 0 0
+/logos/1679516983xAcj6M1S6OhapXIkXRV9_9VxVKdbybw44e6SW.jfif 6 164740 0 0
+/api/showCommerce/110 1 1701 0 0
+/commerces/store 1 353 0 0
+/laravel/core/.env 1 129 0 0
+/comercios/109 1 6926 1 0
+/comercios/categorias/10 3 64487 0 0
+/api/showCommerce/416 7 3233 0 0
+/prod/.env 1 121 0 0
+/comercios 16 105500 1 5
+/comercios/180 1 6005 0 0
+/registrar-comercio 6 24256 0 1
+/comercios/389 2 6222 0 0
+/comercios/categorias/8 1 6074 0 1
+/logos/1684497207OiUyPBK2STC5OxnrySyn_07c69Yp1bFD9f2SE.jfif 4 53720 0 0
+/api/showCommerce/101 8 13867 0 0
+/comercios/categorias/32 1 4767 1 0
+/photos/1679498482centro-comercial-lider.webp 1 24604 0 0
+/api/auth/jobs/309/edit 1 1187 0 0
+/commerces/116/edit 1 5939 0 0
+/beta/.env 1 122 0 0
+/comercios/390 1 6036 0 0
+/logos/1684778750descarga%20(1).jfif 3 12777 0 0
+/comercios/374 1 6371 0 0
+/comercios/categorias/6 2 13857 0 0
+/api/showCommerce/131 1 1215 0 0
+/commerces/create 7 33513 0 0
+/logos/16797684461679516983xAcj6M1S6OhapXIkXRV9_9VxVKdbybw44e6SW.jfif 5 98844 0 0
+/api/showCommerce/267 1 769 0 0
+/api/category/commerces 5 12282 0 0
+//feed/ 3 312 3 3
+/comercios/categorias/30 1 4765 0 1
+/commerces/117/update 1 1120 0 0
+/.ssh/sftp-config.json 1 131 0 0
+/api/showCommerce/252 1 1033 0 0
+/comercios/categorias/27 2 4769 0 0
+/api/showCommerce/412 1 1023 0 0
+/comercios/categorias/9 7 31975 0 0
+/config/aws.yml 1 126 0 0
+/photos/1684521610103154_848446c1d19a4f7b86464029bcaf9684~mv2.webp 2 80792 0 0
+/comercios/categorias/7 2 13216 0 0
+/api/like 1 138 0 0
+/comercios/185 2 13203 0 0
+/commerces/139/edit 1 5864 0 0
+/commerces/117/edit 1 5814 0 0
+/.git/config 1 123 1 1
+/logos/1684431907DqRXogwUSAm63JRxpcSm_Esl8FK4dx2coeAJ8.jfif 3 27078 0 0
+/commerces/176/edit 1 5905 0 0
+/symfony/_profiler/phpinfo 1 136 0 0
+/photos/1684506919descarga%20(5).jfif 2 32408 0 0
+/adminer.php 1 86 1 1
+/api/stories 6 22145 0 0
+/commerces/filter 3 10236 0 0
+/kczxupnr.php 1 120 0 1
+/comercios/181 1 6338 1 0
+/api/showCommerce/274 1 700 0 0
+/logos/1684861335osvzbyyo.jfif 16 285320 1 6
+/api/showCommerce/124 1 1204 0 0
+/logos/1684773439blTneMrORsKb9twPOjLl_1s4NxQ9H1EQ0Qtsq.jfif 3 90792 0 0
+/api/categories 1 1530 0 0
+/home 6 39816 0 0
+/.vscode/sftp.json 3 378 0 2
+/mi-cuenta 1 5126 0 0
+/public/client/planinfo 1 133 0 0
+/public/.env 1 122 0 0
+/administrador 9 40124 1 3
+/commerces/139/update 1 1137 0 0
+/api/auth/getProducts 7 9978 0 0
+/sftp.json 1 121 0 0
+/faq 1 5967 0 0
+/logos/1684506595descarga%20(4).jfif 3 11160 0 0
+/wp-admin/css/ 2 254 2 2
+/api/showCommerce/187 7 7484 0 0
+/logos/1684769177bffrWEtbRweeBVtqnHtc_JvKjxk6Ot3G6X9S5.jfif 3 82044 0 0
+/kyc/.env 1 121 0 0
+/comercios/categorias/29 2 4766 0 0
+/admin/.env 1 121 0 0
+/.env 3 348 2 2
+/assetsPublic/fonts/fa-regular-400.woff2 24 325824 0 0
+/imagesComercios/farmatodo_la_carlota.jfif 1 10606 0 0
+/info.php 1 119 0 0
+/comercios/categorias/11 2 58010 0 0
+/comercios/categorias/1 4 109531 0 2
+/comercios/categorias/16 1 6451 0 0
+/wp-plain.php 1 106 0 0
+/logos/1684499650Pgnz8QmSzS9rcpYVbwW7_YI0ATqtorbvB6C36.jfif 3 24249 0 0
+/assetsPublic/fonts/fa-brands-400.woff2 25 1771840 0 3
+/logos/1684426095images.jfif 3 15123 0 0
+/comercios/184 2 12162 0 0
+/logos/1684339238IMG_8654%203_PNG.webp 3 11760 0 0
+/assets/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 6 469176 0 0
+/api/showCommerce/141 1 1078 0 0
+/api/commerce/110/edit 1 1392 0 0
+/comercios/281 1 6178 0 0
+/logos/16843503063P1R5htTi08FRlMcHFMw_image.jfif 3 20712 0 0
+/api/auth/visits 3 4350 0 0
+/comercios/categorias/5 1 6582 0 0
+/phpinfo 1 118 0 0
+END_SIDER
