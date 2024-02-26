@@ -85,7 +85,7 @@
                         <li><a class="nav-link nav_item" href="<?php echo e(url('registrar-comercio')); ?>">Registrar Local</a></li> 
                         <li><a class="nav-link nav_item" href="<?php echo e(url('empleos')); ?>">Empleos</a></li> 
                         <li><a class="nav-link nav_item" href="<?php echo e(url('nosotros')); ?>">Nosotros</a></li> 
-                        <li><a class="nav-link nav_item" href="<?php echo e(url('planes')); ?>">Planes</a></li> 
+                        <!--<li><a class="nav-link nav_item" href="<?php echo e(url('planes')); ?>">Planes</a></li> -->
                         <?php if(auth()->guard()->guest()): ?>
                         <li><a class="nav-link nav_item" href="<?php echo e(route('login')); ?>">Inicia Sesión</a></li> 
                         <li><a class="nav-link nav_item" href="<?php echo e(route('register')); ?>">Regístrate</a></li> 
@@ -349,7 +349,7 @@
                                 <i class="fab fa-google-play text-light fa-4x"></i>
                             </div>
                             <div class="col-9 py-3">
-                                <h4 class="text-light mb-4 font-weight-light">Disponible en Play Store</h4>
+                                <h4 class="text-light mb-4 font-weight-light"><em>Disponible en Play Store</em></h4>
 
                                 <a href="https://play.google.com/store/apps/details?id=com.ciudadgps.app" target="blank" class="btn btn-fill-out btn-radius btn-sm">
                                     <i class="fas fa-download"></i> Descargar
@@ -367,7 +367,7 @@
                                 <i class="fab fa-app-store text-light fa-4x"></i>
                             </div>
                             <div class="col-9 py-3">
-                                <h4 class="text-light mb-4 font-weight-light">Disponible en App Store</h4>
+                                <h4 class="text-light mb-4 font-weight-light"><em>Disponible en App Store</em></h4>
 
                                 <a href="https://apps.apple.com/app/ciudad-gps/id1643027976" target="blank" class="btn btn-fill-out btn-radius btn-sm">
                                     <i class="fas fa-download"></i> Descargar

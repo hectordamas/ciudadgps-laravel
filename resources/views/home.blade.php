@@ -38,10 +38,10 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                    @php
-                        $comerciosPorAño = App\Models\Commerce::whereNotNull('paid')->whereYear('created_at', '=', date('Y')); 
-                        $totalPorAño = $comerciosPorAño->count() * 45;
-                    @endphp
+                        @php
+                          $comerciosPorAño = App\Models\Commerce::whereNotNull('paid')->whereYear('created_at', '=', date('Y')); 
+                          $totalPorAño = $comerciosPorAño->count() * 45;
+                        @endphp
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                             Ingresos (Año)</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">${{ number_format($totalPorAño, 2, '.', ',') }}</div>

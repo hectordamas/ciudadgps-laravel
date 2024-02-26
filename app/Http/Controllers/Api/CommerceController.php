@@ -89,7 +89,10 @@ class CommerceController extends BaseController
                 $commerce->category_id = $request->category;
             }
             $commerce->expiration_date = date("Y-m-d", strtotime(date('Y-m-d') . "+ 1 year"));
-    
+
+            $commerce->url = $request->url;
+            $commerce->urlName = $request->urlName;
+
             $commerce->save();
 
             for($i = 0; $i < $request->photosCount; $i++){
@@ -267,7 +270,7 @@ class CommerceController extends BaseController
             ->with(['likes', 'imgs', 'category', 'tags', 'users:id'])
             ->select('id','name', 'rating', 'logo' , 'info', 'lat', 'lon', 'category_id', 'web','telephone', 'facebook', 
             'whatsapp', 'instagram', 'user_email', $distance, 'youtube', 'address', 'twitter', 'enable', 'tiktok', 'threads', 
-            'hourEnable')
+            'hourEnable', 'url', 'urlName')
             ->whereNotNull('paid')                
             ->where('expiration_date', '>=', date('Y-m-d'))
             ->where('id', $id)
@@ -409,6 +412,9 @@ class CommerceController extends BaseController
             $commerce->twitter = $request->twitter;
             $commerce->youtube = $request->youtube;
             $commerce->category_id = $request->category;
+
+            $commerce->url = $request->url;
+            $commerce->urlName = $request->urlName;
 
             $commerce->save();
 

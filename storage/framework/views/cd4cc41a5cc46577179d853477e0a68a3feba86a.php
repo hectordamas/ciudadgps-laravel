@@ -54,7 +54,7 @@
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="user_email" class="text-dark font-weight-bold">E-Mail:</label>
-                        <input type="email" class="form-control"required  name="user_email" id="user_email">
+                        <input type="email" class="form-control"  name="user_email" id="user_email">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="telephone" class="text-dark font-weight-bold">Teléfono</label>
@@ -159,7 +159,21 @@
                     </div>
 
                     <div class="col-md-6 form-group">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h6 class="font-weight-bold">Enlace de interes</h6>
+                            </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="url" placeholder="URL de enlace de interes">
+                            </div>
+
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="urlName" placeholder="Nombre del enlace">
+                            </div>
+                        </div>
                     </div>
 
 

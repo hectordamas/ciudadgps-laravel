@@ -110,21 +110,21 @@
 
 <a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a> 
 
-<script src="<?php echo e(url('assetsPublic/js/jquery-3.6.0.min.js')); ?>"></script> 
-<script src="<?php echo e(url('assetsPublic/js/jquery-ui.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/jquery-3.6.0.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assetsPublic/js/jquery-ui.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/vendor/jquery/jquery.form.js')); ?>"></script>
-<script src="<?php echo e(url('assetsPublic/js/popper.min.js')); ?>"></script>
-<script src="<?php echo e(url('assetsPublic/bootstrap/js/bootstrap.min.js')); ?>"></script> 
-<script src="<?php echo e(url('assetsPublic/owlcarousel/js/owl.carousel.min.js')); ?>"></script> 
-<script src="<?php echo e(url('assetsPublic/js/magnific-popup.min.js')); ?>"></script> 
-<script src="<?php echo e(url('assetsPublic/js/waypoints.min.js')); ?>"></script> 
-<script src="<?php echo e(url('assetsPublic/js/parallax.js')); ?>"></script> 
-<script src="<?php echo e(url('assetsPublic/js/jquery.countdown.min.js')); ?>"></script> 
-<script src="<?php echo e(url('assetsPublic/js/imagesloaded.pkgd.min.js')); ?>"></script>
-<script src="<?php echo e(url('assetsPublic/js/isotope.min.js')); ?>"></script>
-<script src="<?php echo e(url('assetsPublic/js/jquery.dd.min.js')); ?>"></script>
-<script src="<?php echo e(url('assetsPublic/js/slick.min.js')); ?>"></script>
-<script src="<?php echo e(url('assetsPublic/js/jquery.elevatezoom.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/popper.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/bootstrap/js/bootstrap.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assetsPublic/owlcarousel/js/owl.carousel.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assetsPublic/js/magnific-popup.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assetsPublic/js/waypoints.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assetsPublic/js/parallax.js')); ?>"></script> 
+<script src="<?php echo e(asset('assetsPublic/js/jquery.countdown.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assetsPublic/js/imagesloaded.pkgd.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/isotope.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/jquery.dd.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/slick.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/jquery.elevatezoom.js')); ?>"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
@@ -132,7 +132,7 @@
 <script src="<?php echo e(asset('assets/vendor/datatables/jquery.dataTables.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/vendor/datatables/dataTables.bootstrap4.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/vendor/sweetalert/sweetalert.js')); ?>"></script>
-<script src="<?php echo e(url('assetsPublic/js/scripts.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/scripts.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/js/script.js?v=1')); ?>"></script>
 
 <?php if(session()->has('error')): ?>

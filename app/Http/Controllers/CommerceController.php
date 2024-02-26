@@ -124,6 +124,10 @@ class CommerceController extends Controller
         $commerce->address = $request->address;
         $commerce->created_by = Auth::user()->name;
         $commerce->hide = $request->hide;
+
+        $commerce->url = $request->url;
+        $commerce->urlName = $request->urlName;
+
         $commerce->save();
 
         if(isset($request->tags)){
@@ -230,6 +234,9 @@ class CommerceController extends Controller
         $commerce->created_by = Auth::user()->name;
         $commerce->hide = $request->hide;
 
+        $commerce->url = $request->url;
+        $commerce->urlName = $request->urlName;
+        
         $commerce->save();
 
         $commerce->tags()->delete();

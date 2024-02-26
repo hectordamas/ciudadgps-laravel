@@ -148,9 +148,22 @@
 
 
                     <div class="col-md-6 form-group">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h6 class="font-weight-bold">Enlace de interes</h6>
+                            </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" value="{{ $commerce->url }}" name="url" placeholder="URL de enlace de interes">
+                            </div>
+
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" value="{{ $commerce->urlName }}" name="urlName" placeholder="Nombre del enlace">
+                            </div>
+                        </div>
                     </div>
-
 
                     <div class="col-md-6 form-group">
                         <label for="info" class="text-dark font-weight-bold">Descripción:</label>

@@ -64,8 +64,12 @@ class PcategoryController extends Controller
 
         $pcategory->delete();
 
+        $pcategories = Pcategory::where('commerce_id', $pcategory->commerce_id)->get();
+
+
         return response()->json([
-            'message' => 'Categoria eliminada con exito'
+            'message' => 'Categoria eliminada con exito',
+            'pcategories' => $pcategories
         ]);
     }
 }
