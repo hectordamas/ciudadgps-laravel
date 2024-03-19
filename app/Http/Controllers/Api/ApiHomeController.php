@@ -64,7 +64,7 @@ class ApiHomeController extends Controller
 
 
             if($request->userId){
-                $stories = Like::where('user_id', $request->userId)
+                /*$stories = Like::where('user_id', $request->userId)
                 ->with(['commerce.stories', 'commerce' => function($query) {
                     $query->orderBy('lastStoryId', 'desc');
                 }])
@@ -74,6 +74,17 @@ class ApiHomeController extends Controller
                 ->get()
                 ->pluck('commerce')
                 ->flatten();
+
+                $storiesTotal = $stories->count();*/
+
+                $stories = Commerce::with(['stories'])
+                ->has('stories')
+                ->whereHas('stories', function ($query) {
+                    $query->where('created_at', '>=', Carbon::now()->subDays(1));
+                })
+                ->orderBy('lastStoryId', 'desc')
+                ->get()
+                ->take(15);
 
                 $storiesTotal = $stories->count();
             }else{
@@ -109,7 +120,7 @@ class ApiHomeController extends Controller
             'version' => "1.3.87",
             'appStoreVersionNumber' => "1.3.87",
             'playStoreVersionNumber' => "1.3.87",
-            'storeVersions' => ["1.3.86", "1.3.87", "1.3.88", "1.3.89"]
+            'storeVersions' => ["1.3.89", "1.3.90"]
         ]);
     }
 

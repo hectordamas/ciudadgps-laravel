@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index']);
 Auth::routes();
 
@@ -40,7 +41,11 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('stories', App\Http\Controllers\StoryController::class);
         Route::resource('storyitems', App\Http\Controllers\StoryItemController::class);
         Route::post('/eliminarVariosItems', [App\Http\Controllers\DestroyStoryItemsController::class, 'destroy']);
-    });
+    
+        Route::get('pushnotifications', [App\Http\Controllers\PushNotificationsController::class, 'index']);
+        Route::get('/pushnotifications/create', [App\Http\Controllers\PushNotificationsController::class, 'create']);
+        Route::post('/pushnotificatons/store', [App\Http\Controllers\PushNotificationsController::class, 'store'])->name('pushnotifications.store');
+    }); 
 
     Route::get('/mi-cuenta', [App\Http\Controllers\Public\UsersController::class, 'mi_cuenta']);
     Route::post('/update/account/{id}', [App\Http\Controllers\Public\UsersController::class, 'update']);

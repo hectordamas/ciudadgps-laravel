@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>CiudadGPS - Dashboard</title>
-    <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="<?php echo e(asset('assets/vendor/fontawesome-free/css/all.min.css')); ?>" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="{{ asset('assets/css/sb-admin-2.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet" type="text/css">
+    <link href="<?php echo e(asset('assets/css/sb-admin-2.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('assets/vendor/datatables/dataTables.bootstrap4.css')); ?>" rel="stylesheet" type="text/css">
     <link href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
     <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" /> 
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link href="<?php echo e(asset('assets/css/style.css')); ?>" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -26,9 +26,9 @@
         <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/administrador') }}">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo e(url('/administrador')); ?>">
                 <div class="sidebar-brand-text mx-3">
-                    <img src="{{asset('assets/logo_gps_blanco.png')}}" style="width:100%; max-width:150px;">
+                    <img src="<?php echo e(asset('assets/logo_gps_blanco.png')); ?>" style="width:100%; max-width:150px;">
                 </div>
             </a>
 
@@ -37,7 +37,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="{{ url('/administrador') }}">
+                <a class="nav-link" href="<?php echo e(url('/administrador')); ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Escritorio</span></a>
             </li>
@@ -60,8 +60,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Comercios:</h6>
-                        <a class="collapse-item" href="{{ route('commerces.create') }}">Crear Comercios</a>
-                        <a class="collapse-item" href="{{ route('commerces.filter') }}">Lista de Comercios</a>
+                        <a class="collapse-item" href="<?php echo e(route('commerces.create')); ?>">Crear Comercios</a>
+                        <a class="collapse-item" href="<?php echo e(route('commerces.filter')); ?>">Lista de Comercios</a>
                     </div>
                 </div>
             </li>
@@ -76,8 +76,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Anuncios:</h6>
-                        <a class="collapse-item" href="{{ route('banners.create') }}">Crear Anuncio</a>
-                        <a class="collapse-item" href="{{ route('banners.index') }}">Lista de Anuncios</a>
+                        <a class="collapse-item" href="<?php echo e(route('banners.create')); ?>">Crear Anuncio</a>
+                        <a class="collapse-item" href="<?php echo e(route('banners.index')); ?>">Lista de Anuncios</a>
                     </div>
                 </div>
             </li>
@@ -92,8 +92,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Categorías:</h6>
-                        <a class="collapse-item" href="{{route('category.create')}}">Crear Categoría</a>
-                        <a class="collapse-item" href="{{route('category.index')}}">Lista de Categorías</a>
+                        <a class="collapse-item" href="<?php echo e(route('category.create')); ?>">Crear Categoría</a>
+                        <a class="collapse-item" href="<?php echo e(route('category.index')); ?>">Lista de Categorías</a>
                     </div>
                 </div>
             </li>
@@ -109,8 +109,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Historias:</h6>
-                        <a class="collapse-item" href="{{ route('stories.create') }}">Crear Historias</a>
-                        <a class="collapse-item" href="{{ route('stories.index') }}">Lista de Historias</a>
+                        <a class="collapse-item" href="<?php echo e(route('stories.create')); ?>">Crear Historias</a>
+                        <a class="collapse-item" href="<?php echo e(route('stories.index')); ?>">Lista de Historias</a>
                     </div>
                 </div>
             </li>
@@ -133,8 +133,8 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Usuarios:</h6>
-                        <a class="collapse-item" href="{{ url('users/create') }}">Registrar Usuario</a>
-                        <a class="collapse-item" href="{{ url('users') }}">Lista de Usuarios</a>
+                        <a class="collapse-item" href="<?php echo e(url('users/create')); ?>">Registrar Usuario</a>
+                        <a class="collapse-item" href="<?php echo e(url('users')); ?>">Lista de Usuarios</a>
                     </div>
                 </div>
             </li>
@@ -148,8 +148,8 @@
                 <div id="collapseNotifications" class="collapse" aria-labelledby="headingNotifications" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Notificaciones:</h6>
-                        <a class="collapse-item" href="{{ url('pushnotifications/create') }}">Crear Notificaciones</a>
-                        <a class="collapse-item" href="{{ url('pushnotifications') }}">Lista de Notificaciones</a>
+                        <a class="collapse-item" href="<?php echo e(url('pushnotifications/create')); ?>">Crear Notificaciones</a>
+                        <a class="collapse-item" href="<?php echo e(url('pushnotifications')); ?>">Lista de Notificaciones</a>
                     </div>
                 </div>
             </li>
@@ -178,23 +178,23 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo e(Auth::user()->name); ?></span>
                                 <img class="img-profile rounded-circle"
-                                    src="{{Auth::user()->avatar ? Auth::user()->avatar : asset('assets/user_avatar_default.png') }}" 
+                                    src="<?php echo e(Auth::user()->avatar ? Auth::user()->avatar : asset('assets/user_avatar_default.png')); ?>" 
                                     referrerpolicy="no-referrer" 
-                                    alt="{{Auth::user()->name}}"
+                                    alt="<?php echo e(Auth::user()->name); ?>"
                                 >
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Cerrar Sesión
                                 </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
+                                <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
+                                        <?php echo csrf_field(); ?>
                                     </form>
                             </div>
                         </li>
@@ -208,7 +208,7 @@
                 <div class="container-fluid">
                     
 
-                    @yield('content')          
+                    <?php echo $__env->yieldContent('content'); ?>          
 
                 </div>
                 <!-- /.container-fluid -->
@@ -240,26 +240,26 @@
     </a>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/jquery/jquery.form.js')}}"></script>
-    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="<?php echo e(asset('assets/vendor/jquery/jquery.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/vendor/jquery/jquery.form.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')); ?>"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="{{ asset('assets/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/datatables/jquery.dataTables.js') }}"></script>
-    <script src="{{ asset('assets/vendor/datatables/dataTables.bootstrap4.js') }}"></script>
+    <script src="<?php echo e(asset('assets/vendor/jquery-easing/jquery.easing.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/vendor/datatables/jquery.dataTables.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/vendor/datatables/dataTables.bootstrap4.js')); ?>"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="{{ asset('assets/js/sb-admin-2.js') }}"></script>
+    <script src="<?php echo e(asset('assets/js/sb-admin-2.js')); ?>"></script>
 
     <!-- Page level plugins -->
-    <script src="{{ asset('assets/vendor/chart.js/Chart.min.js') }}"></script>
+    <script src="<?php echo e(asset('assets/vendor/chart.js/Chart.min.js')); ?>"></script>
 
     <!-- Page level custom scripts -->
-    <script src="{{ asset('assets/js/demo/chart-area-demo.js') }}"></script>
-    <script src="{{ asset('assets/js/demo/chart-pie-demo.js') }}"></script>
+    <script src="<?php echo e(asset('assets/js/demo/chart-area-demo.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/demo/chart-pie-demo.js')); ?>"></script>
 
-    <script src="{{ asset('assets/vendor/sweetalert/sweetalert.js') }}"></script>
+    <script src="<?php echo e(asset('assets/vendor/sweetalert/sweetalert.js')); ?>"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
@@ -272,21 +272,21 @@
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
     <script src="https://cdn.tiny.cloud/1/d7cey82e44je5nszsk92ggh7lijck476uco237t6qs8tjsje/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
-    <script src="{{ asset('assets/js/script.js?v=8') }}"></script>
-    @if(session()->has('error'))
+    <script src="<?php echo e(asset('assets/js/script.js?v=8')); ?>"></script>
+    <?php if(session()->has('error')): ?>
         <script>
-            Swal.fire({icon:'error', title:'Ha ocurrido un error!', text: "{{session('error')}}", confirmButtonText: "OK", confirmButtonColor: '#dc3545'})
+            Swal.fire({icon:'error', title:'Ha ocurrido un error!', text: "<?php echo e(session('error')); ?>", confirmButtonText: "OK", confirmButtonColor: '#dc3545'})
         </script>
-    @endif
+    <?php endif; ?>
 
-    @if(session()->has('message'))
+    <?php if(session()->has('message')): ?>
         <script>
-            Swal.fire({icon:'success', title:'', text: "{{session('message')}}", confirmButtonText: 'OK', confirmButtonColor: '#28a745'})
+            Swal.fire({icon:'success', title:'', text: "<?php echo e(session('message')); ?>", confirmButtonText: 'OK', confirmButtonColor: '#28a745'})
         </script>
-    @endif
+    <?php endif; ?>
 
-    @yield('map')
-    @yield('chart')
+    <?php echo $__env->yieldContent('map'); ?>
+    <?php echo $__env->yieldContent('chart'); ?>
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcWkdk6cq3cMIUqrJK36j7aErEOlWdqVo&callback=initMap">
     </script>
@@ -295,3 +295,4 @@
 
 </html>
 
+<?php /**PATH D:\Proyectos en Curso\ciudadgps\ciudadgps laravel\resources\views/layouts/app.blade.php ENDPATH**/ ?>

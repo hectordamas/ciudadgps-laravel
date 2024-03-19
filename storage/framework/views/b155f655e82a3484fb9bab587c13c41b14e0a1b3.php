@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -18,7 +16,7 @@
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                             Comercios Registrados</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ App\Models\Commerce::all()->count() }}</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo e(App\Models\Commerce::all()->count()); ?></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-store fa-2x text-gray-300"></i>
@@ -35,7 +33,7 @@
                   <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
                           Registrados Hoy</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{ App\Models\Commerce::whereDate('created_at', Carbon\Carbon::today())->count() }}</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo e(App\Models\Commerce::whereDate('created_at', Carbon\Carbon::today())->count()); ?></div>
                   </div>
                   <div class="col-auto">
                       <i class="fas fa-store fa-2x text-gray-300"></i>
@@ -52,12 +50,12 @@
                 <div class="col mr-2">
                     <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Notificaciones Enviadas
                     </div>
-                    @php
+                    <?php
                         $notifications = App\Models\PushNotification::all()->count();
-                    @endphp
+                    ?>
                     <div class="row no-gutters align-items-center">
                         <div class="col-auto">
-                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{$notifications}}</div>
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php echo e($notifications); ?></div>
                         </div>
                     </div>
                 </div>
@@ -76,12 +74,12 @@
                   <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Usuarios Registrados
                       </div>
-                      @php
+                      <?php
                           $users = App\Models\User::all()->count();
-                      @endphp
+                      ?>
                       <div class="row no-gutters align-items-center">
                           <div class="col-auto">
-                              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{$users}}</div>
+                              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php echo e($users); ?></div>
                           </div>
                       </div>
                   </div>
@@ -99,7 +97,7 @@
     <!-- Area Chart -->
     <div class="col-xl-8 col-lg-8">
         <div class="card shadow mb-4">
-            @php
+            <?php
                 $meses = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
                 $mesesEscritos = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
                 $montosPorMes = [];
@@ -109,7 +107,7 @@
                     array_push($montosPorMes, $monto);
                 }
 
-            @endphp
+            ?>
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-dark">Ingresos del Año</h6>
@@ -124,7 +122,7 @@
         </div>
 
         <div class="card shadow mb-4">
-            @php
+            <?php
                 $comerciosPorCategorias = collect([]);
                 $categories = App\Models\Category::all();
                 $diezCategorias = [];
@@ -138,7 +136,7 @@
                     array_push($diezCategorias, $cxc['nombre']);
                     array_push($numeroPorCategoria, $cxc['cantidad']);
                 }
-            @endphp
+            ?>
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-dark">Comercios por Categorìas</h6>
             </div>
@@ -157,12 +155,12 @@
                 <h6 class="m-0 font-weight-bold text-dark">Comercios Registrados</h6>
             </div>
             <!-- Card Body -->
-            @php
+            <?php
                 $status = ['Inactivos', 'Activos'];
                 $comerciosActivos = App\Models\Commerce::whereNotNull('paid')->count();
                 $comerciosInactivos = App\Models\Commerce::whereNull('paid')->count();
                 $comerciosRegistrados = [$comerciosInactivos, $comerciosActivos];
-            @endphp
+            ?>
             <div class="card-body">
                 <div class="chart-pie pt-4 pb-2">
                     <canvas id="myPieChart" class="d-none"></canvas>
@@ -185,12 +183,12 @@
                 <h6 class="m-0 font-weight-bold text-dark">Comercios por Expirar</h6>
             </div>
             <!-- Card Body -->
-            @php
+            <?php
                 $statusE = ['Expirados', 'Por Expirar'];
                 $comerciosPorExpirar = App\Models\Commerce::where('expiration_date', '>=', date('Y-m-d'))->count();
                 $comerciosExpirados = App\Models\Commerce::where('expiration_date', '<=', date('Y-m-d'))->count();
                 $comerciosPorExpiracion = [$comerciosExpirados, $comerciosPorExpirar];
-            @endphp
+            ?>
             <div class="card-body">
                 <div class="chart-pie pt-4 pb-2">
                     <canvas id="comerciosPorExpiracion"></canvas>
@@ -208,16 +206,16 @@
     </div>
 
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('chart')
+<?php $__env->startSection('chart'); ?>
 <script>
     // Area Chart Example
 var ctx = document.getElementById("gananciasMensuales");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: {!! json_encode($mesesEscritos) !!},
+    labels: <?php echo json_encode($mesesEscritos); ?>,
     datasets: [{
       label: "Ingresos",
       lineTension: 0.3,
@@ -231,7 +229,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: {!! json_encode($montosPorMes) !!},
+      data: <?php echo json_encode($montosPorMes); ?>,
     }],
   },
   options: {
@@ -307,7 +305,7 @@ var ctx = document.getElementById("comerciosPorCategorias");
 var myLineChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: {!! json_encode($diezCategorias) !!},
+    labels: <?php echo json_encode($diezCategorias); ?>,
     datasets: [{
       label: "Comercios",
       lineTension: 0.3,
@@ -321,7 +319,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(28, 200, 138, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: {!! json_encode($numeroPorCategoria) !!},
+      data: <?php echo json_encode($numeroPorCategoria); ?>,
     }],
   },
   options: {
@@ -388,9 +386,9 @@ var ctx = document.getElementById("comerciosRegistrados");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: {!! json_encode($status) !!},
+    labels: <?php echo json_encode($status); ?>,
     datasets: [{
-      data: {!! json_encode($comerciosRegistrados) !!},
+      data: <?php echo json_encode($comerciosRegistrados); ?>,
       backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
       hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -421,9 +419,9 @@ var ctx = document.getElementById("comerciosPorExpiracion");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: {!! json_encode($statusE) !!},
+    labels: <?php echo json_encode($statusE); ?>,
     datasets: [{
-      data: {!! json_encode($comerciosPorExpiracion) !!},
+      data: <?php echo json_encode($comerciosPorExpiracion); ?>,
       backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
       hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -450,4 +448,6 @@ var myPieChart = new Chart(ctx, {
 
 
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Proyectos en Curso\ciudadgps\ciudadgps laravel\resources\views/home.blade.php ENDPATH**/ ?>

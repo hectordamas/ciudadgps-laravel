@@ -24,10 +24,8 @@
     }
     
     function openApp (){
-        if(getMobileOperatingSystem() == "Android" || getMobileOperatingSystem() == "iOS"){
-           window.location.href = 'ciudadgps://comercios/{{$commerce->id}}/show';
-           setTimeout(function () { window.location.href = "https://ciudadgps.com/comercios/{{$commerce->id}}"; }, 3000);
-        }
+        window.location.href = 'ciudadgps://comercios/{{$commerce->id}}/show';
+        setTimeout(function () { window.location.href = "https://ciudadgps.com/comercios/{{$commerce->id}}"; }, 3000);
     }
     
     openApp();
