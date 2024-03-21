@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <div class="row">
         <div class="col-md-12">
             <div class="card shadow">
@@ -7,22 +7,22 @@
                     Buscar Comercios Por:
                 </div>
                 <div class="card-body">
-                    <form action="{{ url('/commerces') }}" method="get" class="row" enctype="multipart/form-data">
+                    <form action="<?php echo e(url('/commerces')); ?>" method="get" class="row" enctype="multipart/form-data">
                             <div class="form-group col-md-3">
                                 <label for="from" class="text-dark font-weight-bold">Creado (Desde):</label>
                                 <input type="date" class="form-control" name="from" id="from">
                             </div>
                             <div class="form-group col-md-3">
                                 <label for="to" class="text-dark font-weight-bold">Creado (Hasta):</label>
-                                <input type="date" class="form-control" name="to" id="to" value="{{date('Y-m-d')}}">
+                                <input type="date" class="form-control" name="to" id="to" value="<?php echo e(date('Y-m-d')); ?>">
                             </div>
                             <div class="col-md-3 form-group">
                                 <label for="category" class="text-dark font-weight-bold">Categoría:</label>
                                 <select name="category" class="form-control select2" id="category">
                                     <option value="">Todos</option>
-                                    @foreach($categories->sortBy('name') as $c)
-                                        <option value="{{$c->id}}">{{$c->name}}</p>
-                                    @endforeach
+                                    <?php $__currentLoopData = $categories->sortBy('name'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <option value="<?php echo e($c->id); ?>"><?php echo e($c->name); ?></p>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </select>
                             </div>
                             <div class="col-md-3 form-group">
@@ -41,9 +41,9 @@
                                 <label for="created_by" class="font-weight-bold text-dark">Creado Por</label>
                                 <select name="created_by" id="created_by" class="form-control">
                                     <option value="">Todos</option>
-                                    @foreach($users as $user)
-                                        <option value="{{$user->name}}">{{$user->name}} - {{$user->email}}</option>
-                                    @endforeach
+                                    <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <option value="<?php echo e($user->name); ?>"><?php echo e($user->name); ?> - <?php echo e($user->email); ?></option>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </select>
                             </div>
                             <div class="form-group col-md-3">
@@ -64,4 +64,5 @@
             </div>
         </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Proyectos en Curso\ciudadgps\ciudadgps laravel\resources\views/commerces/filter.blade.php ENDPATH**/ ?>

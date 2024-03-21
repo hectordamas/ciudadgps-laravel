@@ -29,22 +29,22 @@ class CommerceController extends Controller
 
     public function filter(Request $request){
         $categories = Category::all();
+        $users = User::where('role', "Administrador")->get();
 
         return view('commerces.filter', [
-            'categories' => $categories
+            'categories' => $categories,
+            'users' => $users
         ]);
     }
 
     public function index(Request $request)
     {
-        $from = $request->from;
-        $to = $request->to;
-        $category = $request->category;
-        $name = $request->name;
-
-        $commerces = Commerce::range($from, $to)
-        ->searchByCategory($category)
-        ->searchByname($name)
+        $commerces = Commerce::range($request->from, $request->to)
+        ->searchByCategory($request->category)
+        ->searchByname($request->name)
+        ->searchByCreatedBy($request->created_by)
+        ->searchByExpirationDate($request->expirationFrom, $request->expirationTo)
+        ->searchByStatus($request->paid)
         ->orderBy('id', 'desc')
         ->get();
     

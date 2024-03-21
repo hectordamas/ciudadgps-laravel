@@ -1,13 +1,13 @@
-@extends('layouts.app')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 <div class="row">
     <div class="col-md-12">
         <div class="card shadow">
             <div class="card-header font-weight-bold text-dark">
                 Lista de Comercios
             </div>
-            <form class="card-body pagado" action="{{ url('action') }}" method="post" style="overflow-x: scroll;">
-                @csrf
+            <form class="card-body pagado" action="<?php echo e(url('action')); ?>" method="post" style="overflow-x: scroll;">
+                <?php echo csrf_field(); ?>
                 <div class="row text-right">
                     <div class="col-md-12 form-group">
                         <button type="submit" name="accion" value="pagado" class="btn btn-primary btn-sm">
@@ -42,41 +42,42 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($commerces as $c)
+                        <?php $__currentLoopData = $commerces; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
-                                <td>{{$c->id}}</td>
-                                <td>{{date_format($c->created_at, 'd/m/Y')}}</td>
+                                <td><?php echo e($c->id); ?></td>
+                                <td><?php echo e(date_format($c->created_at, 'd/m/Y')); ?></td>
                                 <td>
-                                    @if(!(url('/') == 'http://localhost:8000'))
+                                    <?php if(!(url('/') == 'http://localhost:8000')): ?>
                                         <img 
-                                            src="{!! $c->logo !!}" 
+                                            src="<?php echo $c->logo; ?>" 
                                             width="30" 
                                             height="30" 
                                             class="rounded-circle" 
                                         /> 
-                                    @endif
-                                    <div>{{$c->name}}</div>
+                                    <?php endif; ?>
+                                    <div><?php echo e($c->name); ?></div>
                                 </td>
-                                <td>{{$c->category ? $c->category->name : ''}}</td>
-                                <td>{{$c->payment}}</td>
-                                <td>{{ date_format(new DateTime($c->expiration_date), 'd/m/Y') }}</td>
-                                <td>@if($c->paid) <i class="fa fa-check"></i> @endif</td>
-                                <td>@if($c->destacar) <i class="fa fa-check"></i> @endif</td>
-                                <td>{{ $c->created_by }}</td>
+                                <td><?php echo e($c->category ? $c->category->name : ''); ?></td>
+                                <td><?php echo e($c->payment); ?></td>
+                                <td><?php echo e(date_format(new DateTime($c->expiration_date), 'd/m/Y')); ?></td>
+                                <td><?php if($c->paid): ?> <i class="fa fa-check"></i> <?php endif; ?></td>
+                                <td><?php if($c->destacar): ?> <i class="fa fa-check"></i> <?php endif; ?></td>
+                                <td><?php echo e($c->created_by); ?></td>
                                 <td>
-                                    <input type="checkbox" class="checkOne" value="{{$c->id}}" name="check[]"/>
+                                    <input type="checkbox" class="checkOne" value="<?php echo e($c->id); ?>" name="check[]"/>
                                 </td>
                                 <td>
-                                    <a href="/commerces/{{$c->id}}/edit" class="btn btn-primary btn-sm">
+                                    <a href="/commerces/<?php echo e($c->id); ?>/edit" class="btn btn-primary btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                 </td>
                             </tr>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </tbody>
                 </table>
             </form>
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Proyectos en Curso\ciudadgps\ciudadgps laravel\resources\views/commerces/index.blade.php ENDPATH**/ ?>

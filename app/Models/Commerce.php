@@ -92,6 +92,32 @@ class Commerce extends Model
             return $query->whereBetween('created_at', [$from.' 00:00:00', $to. ' 23:59:59']);
     }
 
+    public function scopeSearchByExpirationDate($query, $from, $to){
+        if ($from && $to) {
+            return $query->whereBetween('expiration_date', [$from, $to]);
+        } elseif ($from) {
+            return $query->where('expiration_date', '>=', $from);
+        } elseif ($to) {
+            return $query->where('expiration_date', '<=', $to);
+        }
+        return $query;
+    }
+
+    public function scopeSearchByCreatedBy($query, $createdBy){
+        if($createdBy)
+            return $query->where('created_by', $createdBy);
+    }
+
+    public function scopeSearchByStatus($query, $status){
+        if($status){
+            if($status == 'Paid'){
+                return $query->whereNotNull('paid');
+            }else{
+                return $query->whereNull('paid');
+            }
+        }
+    }
+
     public function scopeSearchByCategory($query, $category){
         if($category)
             return $query->where('category_id', $category);
