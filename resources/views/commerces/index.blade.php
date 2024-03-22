@@ -50,7 +50,7 @@
                                             class="rounded-circle" 
                                         /> 
                                     @endif
-                                    <div style="maxi-width: 100px;">{{$c->name}}</div>
+                                    <div style="max-width: 100px;">{{$c->name}}</div>
                                 </td>
                                 <td>{{$c->category ? $c->category->name : ''}}</td>
                                 <td>{{$c->payment}}</td>
