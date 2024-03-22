@@ -26,8 +26,7 @@
                 <table class="datatable table table-bordered table-sm">
                     <thead class="table-dark">
                         <tr>
-                            <th>#</th>
-                            <th>Creación</th>
+                            <th></th>
                             <th>Negocio</th>
                             <th>Categoría</th>
                             <th>Método de Pago</th>
@@ -41,8 +40,7 @@
                     <tbody>
                         @foreach ($commerces as $c)
                             <tr>
-                                <td>{{$c->id}}</td>
-                                <td>{{date_format($c->created_at, 'd/m/Y')}}</td>
+                                <td>{{ $c->created_at }}</td>
                                 <td>
                                     @if(!(url('/') == 'http://localhost:8000'))
                                         <img 
