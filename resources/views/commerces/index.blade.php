@@ -33,10 +33,7 @@
                             <th>Método de Pago</th>
                             <th>Expiración</th>
                             <th>Pagado</th>
-                            <th>
-                                <i class="fa fa-check"></i>
-                            </th>
-                            <th>creado por</th>
+                            <th>Creado Por</th>
                             <th><input type="checkbox" id="checkAll" /></th>
                             <th>Editar</th>
                         </tr>
@@ -61,7 +58,6 @@
                                 <td>{{$c->payment}}</td>
                                 <td>{{ date_format(new DateTime($c->expiration_date), 'd/m/Y') }}</td>
                                 <td>@if($c->paid) <i class="fa fa-check"></i> @endif</td>
-                                <td>@if($c->destacar) <i class="fa fa-check"></i> @endif</td>
                                 <td>{{ $c->created_by }}</td>
                                 <td>
                                     <input type="checkbox" class="checkOne" value="{{$c->id}}" name="check[]"/>
