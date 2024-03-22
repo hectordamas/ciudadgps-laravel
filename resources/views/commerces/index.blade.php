@@ -29,7 +29,7 @@
                             <th></th>
                             <th>Negocio</th>
                             <th>Categoría</th>
-                            <th>Método de Pago</th>
+                            <th>Pago</th>
                             <th>Expiración</th>
                             <th>Pagado</th>
                             <th>Creado Por</th>
