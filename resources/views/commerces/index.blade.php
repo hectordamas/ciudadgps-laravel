@@ -34,8 +34,8 @@
                             <th>Expiración</th>
                             <th>Pagado</th>
                             <th>Creado Por</th>
-                            <th><input type="checkbox" id="checkAll" /></th>
                             <th>Editar</th>
+                            <th><input type="checkbox" id="checkAll" /></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -60,12 +60,12 @@
                                 <td>@if($c->paid) <i class="fa fa-check"></i> @endif</td>
                                 <td>{{ $c->created_by }}</td>
                                 <td>
-                                    <input type="checkbox" class="checkOne" value="{{$c->id}}" name="check[]"/>
-                                </td>
-                                <td>
                                     <a href="/commerces/{{$c->id}}/edit" class="btn btn-primary btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="checkOne" value="{{$c->id}}" name="check[]"/>
                                 </td>
                             </tr>
                         @endforeach
