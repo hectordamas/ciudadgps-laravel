@@ -1,9 +1,9 @@
-@extends('layouts.public')
-@section('title')
+
+<?php $__env->startSection('title'); ?>
 <title>CiudadGPS - Nosotros</title>
-@endsection
-@section('content')
-<div class="breadcrumb_section page-title-mini" style="background-image: url('{{ asset('assets/about.jpg') }}'); background-position: center center; background-size: cover; position: relative;">
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+<div class="breadcrumb_section page-title-mini" style="background-image: url('<?php echo e(asset('assets/about.jpg')); ?>'); background-position: center center; background-size: cover; position: relative;">
 
     <div style="position: absolute; top: 0; right: 0; width: 100%; height:100%; background: rgba(0,0,0,0.6);"></div>
 
@@ -43,7 +43,7 @@
         <div class="row align-items-center py-2">
         	<div class="col-lg-5">
             	<div class="about_img scene mb-4 mb-lg-0">
-                    <img src="{{ asset('assets/mision.jpg') }}" style="border-radius: 10px;" alt="Misión"/>
+                    <img src="<?php echo e(asset('assets/mision.jpg')); ?>" style="border-radius: 10px;" alt="Misión"/>
                 </div>
             </div>
             <div class="col-lg-7">
@@ -62,7 +62,7 @@
             </div>
             <div class="col-lg-5">
             	<div class="about_img scene mb-4 mb-lg-0">
-                    <img src="{{ asset('assets/vision.jpg') }}" style="border-radius: 10px;" alt="Visión"/>
+                    <img src="<?php echo e(asset('assets/vision.jpg')); ?>" style="border-radius: 10px;" alt="Visión"/>
                 </div>
             </div>
         </div>
@@ -193,4 +193,5 @@
     </div>
 </div>
 <!-- END SECTION ABOUT --> 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.public', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Proyectos en Curso\ciudadgps\ciudadgps laravel\resources\views/public/about.blade.php ENDPATH**/ ?>
