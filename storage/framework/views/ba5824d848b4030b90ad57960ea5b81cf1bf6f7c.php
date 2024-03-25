@@ -41,12 +41,12 @@
             </div>
         </div>
         <div class="row align-items-center py-2">
-        	<div class="col-lg-5">
+        	<div class="col-lg-4">
             	<div class="about_img scene mb-4 mb-lg-0">
                     <img src="<?php echo e(asset('assets/mision.jpg')); ?>" style="border-radius: 10px;" alt="Misión"/>
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-8">
                 <div class="heading_s1">
                     <h3 class="text-right">Misión</h3>
                 </div>
@@ -54,13 +54,13 @@
             </div>
         </div>
         <div class="row align-items-center py-2">
-            <div class="col-lg-7">
+            <div class="col-lg-8">
                 <div class="heading_s1">
                     <h3>Visión:</h3>
                 </div>
                 <p>Nuestra visión en CiudadGPS es convertirnos en la aplicación de referencia para los venezolanos y turistas que deseen descubrir los encantos de Venezuela. Buscamos ser reconocidos como el principal destino digital para explorar lugares, encontrar productos y servicios, y acceder a oportunidades laborales en todo el país. Aspiramos a facilitar la conexión entre comercios, usuarios y buscadores de empleo, creando una experiencia única y enriquecedora para todos.</p>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-4">
             	<div class="about_img scene mb-4 mb-lg-0">
                     <img src="<?php echo e(asset('assets/vision.jpg')); ?>" style="border-radius: 10px;" alt="Visión"/>
                 </div>
