@@ -161,7 +161,7 @@
                 @if($commerce->url)
                 <div class="row py-2">
                     <div class="col-md-12">
-                        <a href="{{ $commerce->url }}" target="blank" class="btn btn-dark btn-sm">
+                        <a target="blank" href="{{ $commerce->url }}" class="btn btn-dark btn-sm">
                             <i class="fas fa-link"></i> {{ $commerce->urlName }}
                         </a>
                     </div>
