@@ -155,6 +155,17 @@
                             <label for="web">Enlace Página Web:</label>
                             <input type="text" class="form-control" name="web" id="web">
                         </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="threads">Enlace de Interes:</label>
+                            <input type="text" class="form-control" name="url" id="url">
+                        </div>
+    
+    
+                        <div class="col-md-6 form-group">
+                            <label for="web">Nombre de enlace de interes:</label>
+                            <input type="text" class="form-control" name="urlName" id="urlName">
+                        </div>
             
                         <div class="col-md-6 form-group">
                             <label for="twitter">Video Promocional:</label>

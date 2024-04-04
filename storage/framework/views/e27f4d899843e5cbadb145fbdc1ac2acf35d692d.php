@@ -32,7 +32,7 @@
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/magnific-popup.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/slick.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/slick-theme.css')); ?>">
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/style.css?v=1')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/style.css?v=3')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/responsive.css')); ?>">
 
 
