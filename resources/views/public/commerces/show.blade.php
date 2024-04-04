@@ -148,7 +148,6 @@
                             <li class="bg-info"><a href="{{$commerce->web}}" target="blank"><i class="fab fa-chrome"></i></a></li>
                         @endif
                     </ul>
-
                     
                     @if($commerce->user_email)
                         <div class="mt-2"><i class="far fa-envelope"></i> {{$commerce->user_email}}</div>
@@ -158,8 +157,21 @@
                         <div class="mt-2"><i class="fas fa-phone"></i> {{$commerce->telephone}}</div>
                     @endif
                 </div>
+
+                @if($commerce->url)
+                <div class="row py-2">
+                    <div class="col-md-12">
+                        <a href="{{ $commerce->url }}" target="blank" class="btn btn-dark btn-sm">
+                            <i class="fas fa-link"></i> {{ $commerce->urlName }}
+                        </a>
+                    </div>
+                </div>
+                @endif
+
                 <ul class="product-meta">
-                    <li>Categoría: @if($commerce->category) <a href="{{ url('/comercios/categorias/' . $commerce->category->id) }}">{{$commerce->category->name}}</a> @endif</li>
+                    <li>Categorías: @foreach($commerce->categories as $category) 
+                        <a href="{{ url('/comercios/categorias/' . $category->id) }}" class="badge badge-dark">{{$category->name}}</a> 
+                    @endforeach</li>
                     @if($commerce->tags->count() > 0)
                     <li>Etiquetas: @foreach ($commerce->tags as $t)
                         <a href="{{ url('/comercios?order=id&search=' . $t->name) }}">#{{$t->name}}</a>
@@ -170,20 +182,9 @@
         </div>
     </div>
     
-    <div class="row mt-3">
-        <div class="col-md-12">
-            <hr>
-        </div>
-    </div>
 
-    <div class="row mb-3">
+    <div class="row py-4">
         <div class="col-md-12">
-            <h5>Ubicación:</h5>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12 mb-3">
             <strong>Dirección:</strong> {!! $commerce->address !!}
         </div>
     </div>
@@ -202,7 +203,7 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <div class="large_divider clearfix"></div>
+            <div class="small_divider clearfix"></div>
         </div>
     </div>
     <div class="row">
@@ -218,7 +219,7 @@
                 </ul>
                 <div class="tab-content shop_info_tab">
                     <div class="tab-pane fade show active" id="Description" role="tabpanel" aria-labelledby="Description-tab">
-                      {!!$commerce->info!!}
+                      {!! $commerce->info !!}
 
                       @if($commerce->youtube)
                         <div class="row mt-5">

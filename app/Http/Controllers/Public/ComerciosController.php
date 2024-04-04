@@ -16,36 +16,42 @@ use DB;
 
 class ComerciosController extends Controller
 {
-    private function getCommerces(){
+    private function getCommerces($categoryId = null) {
         $distance = null;
-
+    
         if (session()->has('latitude') && session()->has('longitude')) {
             $lat = session('latitude');
             $lon = session('longitude');
-
+    
             $distance = DB::raw('(111.045 * acos( cos( radians('.$lat.') ) 
                 * cos( radians( commerces.lat ) ) 
                 * cos( radians( commerces.lon ) - radians('.$lon.') ) 
                 + sin( radians('.$lat.') ) 
                 * sin( radians(commerces.lat) ) ) ) * 100 AS distance');
         }
-
+    
         $query = Commerce::join('categories', 'categories.id', '=', 'commerces.category_id')
-        ->distinct('commerces.id')
-        ->leftJoin('tags', 'tags.commerce_id', '=', 'commerces.id');
-
-        if($distance){
-            $select = $query->select('commerces.id','commerces.name', 'commerces.rating', 'commerces.logo', 'commerces.excerpt', 'commerces.info','commerces.expiration_date','commerces.category_id', $distance);
-        }else{
-            $select = $query->select('commerces.id','commerces.name', 'commerces.rating', 'commerces.logo', 'commerces.excerpt', 'commerces.info','commerces.expiration_date','commerces.category_id');
+            ->distinct('commerces.id')
+            ->leftJoin('tags', 'tags.commerce_id', '=', 'commerces.id');
+    
+        if ($distance) {
+            $select = $query->select('commerces.id', 'commerces.name', 'commerces.rating', 'commerces.logo', 'commerces.excerpt', 'commerces.info', 'commerces.expiration_date', 'commerces.category_id', $distance);
+        } else {
+            $select = $query->select('commerces.id', 'commerces.name', 'commerces.rating', 'commerces.logo', 'commerces.excerpt', 'commerces.info', 'commerces.expiration_date', 'commerces.category_id');
         }
-        
-        $commerces = $select->where(function($query){
+    
+        $commerces = $select->where(function ($query) {
             $query
-            ->whereNotNull('commerces.paid')
-            ->where('commerces.expiration_date', '>=', date('Y-m-d'));
+                ->whereNotNull('commerces.paid')
+                ->where('commerces.expiration_date', '>=', date('Y-m-d'));
         });
-
+    
+        if ($categoryId) {
+            $commerces->whereHas('categories', function ($query) use ($categoryId) {
+                $query->where('categories.id', $categoryId);
+            });
+        }
+    
         return $commerces;
     }
 
@@ -99,13 +105,13 @@ class ComerciosController extends Controller
     
     public function categoria($id, Request $request){
         try {
-            $commerces = $this->getCommerces()->where('category_id', $id);
+            $commerces = $this->getCommerces($id);
             $orderColumn = $request->order ? $request->order : (session()->has('latitude') && session()->has('longitude') ? 'distance' : 'id');
             $commerces = $this->applyOrdering($commerces, $orderColumn, session()->has('latitude'));
-        
+    
             $banners = Banner::paginate(15);
             $category = Category::find($id);
-        
+    
             return view('public.commerces.index', [
                 'commerces' => $commerces->paginate(10),
                 'banners' => $banners,
@@ -193,6 +199,9 @@ class ComerciosController extends Controller
         $commerce->threads = $request->threads;
         $commerce->instagram = $request->instagram;
         $commerce->web = $request->web;    
+        
+        $commerce->url = $request->url;
+        $commerce->urlName = $request->urlName;  
     
         $commerce->payment = $request->payment;
         $commerce->category_id = $request->category;
@@ -202,6 +211,10 @@ class ComerciosController extends Controller
         $commerce->expiration_date = date("Y-m-d", strtotime(date('Y-m-d') . "+ 1 year"));
 
         $commerce->save();
+
+        if($request->categories){
+            $commerce->categories()->sync($request->categories);
+        }
 
         $images = $request->file('images');
         if(isset($images)){

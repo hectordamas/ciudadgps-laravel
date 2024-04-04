@@ -26,26 +26,21 @@
                 <table class="datatable table table-bordered table-sm">
                     <thead class="table-dark">
                         <tr>
-                            <th>#</th>
-                            <th>Creación</th>
+                            <th></th>
                             <th>Negocio</th>
                             <th>Categoría</th>
-                            <th>Método de Pago</th>
+                            <th>Pago</th>
                             <th>Expiración</th>
                             <th>Pagado</th>
-                            <th>
-                                <i class="fa fa-check"></i>
-                            </th>
-                            <th>creado por</th>
-                            <th><input type="checkbox" id="checkAll" /></th>
+                            <th>Creado Por</th>
                             <th>Editar</th>
+                            <th><input type="checkbox" id="checkAll" /></th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php $__currentLoopData = $commerces; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
-                                <td><?php echo e($c->id); ?></td>
-                                <td><?php echo e(date_format($c->created_at, 'd/m/Y')); ?></td>
+                                <td><?php echo e($c->created_at); ?></td>
                                 <td>
                                     <?php if(!(url('/') == 'http://localhost:8000')): ?>
                                         <img 
@@ -57,19 +52,22 @@
                                     <?php endif; ?>
                                     <div><?php echo e($c->name); ?></div>
                                 </td>
-                                <td><?php echo e($c->category ? $c->category->name : ''); ?></td>
-                                <td><?php echo e($c->payment); ?></td>
+                                <td>
+                                    <?php if($c->categories->isNotEmpty()): ?>
+                                        <?php echo e($c->categories->first()->name); ?>
+
+                                    <?php endif; ?>
+                                </td>                                <td><?php echo e($c->payment); ?></td>
                                 <td><?php echo e(date_format(new DateTime($c->expiration_date), 'd/m/Y')); ?></td>
                                 <td><?php if($c->paid): ?> <i class="fa fa-check"></i> <?php endif; ?></td>
-                                <td><?php if($c->destacar): ?> <i class="fa fa-check"></i> <?php endif; ?></td>
                                 <td><?php echo e($c->created_by); ?></td>
-                                <td>
-                                    <input type="checkbox" class="checkOne" value="<?php echo e($c->id); ?>" name="check[]"/>
-                                </td>
                                 <td>
                                     <a href="/commerces/<?php echo e($c->id); ?>/edit" class="btn btn-primary btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="checkOne" value="<?php echo e($c->id); ?>" name="check[]"/>
                                 </td>
                             </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

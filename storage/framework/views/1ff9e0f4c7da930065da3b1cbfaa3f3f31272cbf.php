@@ -13,6 +13,15 @@
                         <img src="<?php echo e($commerce->logo); ?>" style="width: 100px; height: 100px; border-radius:50%;">
                     </div>
                 </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <a 
+                            href="<?php echo e(url('/comercios/' . $commerce->id)); ?>" 
+                            class="btn btn-dark" target="blank">
+                            <i class="fas fa-store"></i>
+                            Ver Perfil del Establecimiento</a>
+                    </div>
+                </div>
                 <form action="/commerces/<?php echo e($commerce->id); ?>/update" method="post" class="row" id="editCommerce" enctype="multipart/form-data">
                     <?php echo csrf_field(); ?>
                     <div class="col-md-3 form-group">
@@ -95,16 +104,13 @@
                     </div>
 
                     <div class="col-md-3 form-group">
-                        <label for="category" class="text-dark font-weight-bold">Categoría:</label>
-                        <select name="category" id="category" class="form-control select2">
-                            <option value="<?php echo e($commerce->category_id ? $commerce->category->id : ''); ?>" selected><?php echo e($commerce->category_id ? $commerce->category->name : 'Selecciona una Categoría'); ?></option>
-                            <?php
-                                $categories = $categories->filter(function($item) use ($commerce) {
-                                  return $item->id != $commerce->category_id;
-                                });
-                            ?>
+                        <label for="categories" class="text-dark font-weight-bold">Categoría:</label>
+                        <select name="categories[]" id="categories" class="form-control js-example-tags" multiple>
                             <?php $__currentLoopData = $categories->sortBy('name'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <option value="<?php echo e($c->id); ?>"><?php echo e($c->name); ?></option>
+                                <?php
+                                    $selected = in_array($c->id, $commerce->categories->pluck('id')->toArray()) ? 'selected' : '';
+                                ?>
+                                <option value="<?php echo e($c->id); ?>" <?php echo e($selected); ?>><?php echo e($c->name); ?></option>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
                     </div>

@@ -35,9 +35,8 @@ class UsersController extends Controller
         $user->save();
 
         if($request->input('email')){
-            $commerce = Commerce::where('user_email', strtolower($request->input('email')))->first();
-
-            if($commerce){
+            $commerces = Commerce::where('user_email', strtolower($request->input('email')))->get();
+            foreach($commerces as $commerce){
                 $user->commerces()->syncWithoutDetaching([$commerce->id]);
             }
         }
@@ -74,11 +73,10 @@ class UsersController extends Controller
         $user->save();
 
         if($request->input('email')){
-            $commerce = Commerce::where('user_email', strtolower($request->input('email')))->first();
-
-            if($commerce){
+            $commerces = Commerce::where('user_email', strtolower($request->input('email')))->get();
+            foreach($commerces as $commerce){
                 $user->commerces()->syncWithoutDetaching([$commerce->id]);
-            }   
+            }
         }
 
         return redirect()->back()->with('message', 'Usuario Modificado con éxito');

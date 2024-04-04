@@ -75,7 +75,7 @@
 <div class="section">
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="login_wrap">
                 <div class="py-5 px-5 bg-white">
     
@@ -118,7 +118,7 @@
                             <input type="text" id="telephoneFormatted" class="form-control" placeholder="412-1234567">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="whatsapp">Whatsapp:</label>
+                            <label for="whatsapp">WhatsApp:</label>
                             <input type="hidden" name="whatsapp_number_code" id="whatsapp_number_code" value="+58">
                             <input type="hidden" name="whatsapp_code" id="whatsapp_code" value="VE">
                             <input type="hidden" name="whatsapp_number" id="whatsapp_number">
@@ -155,6 +155,17 @@
                             <label for="web">Enlace Página Web:</label>
                             <input type="text" class="form-control" name="web" id="web">
                         </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="threads">Enlace de Interes:</label>
+                            <input type="text" class="form-control" name="url" id="url">
+                        </div>
+    
+    
+                        <div class="col-md-6 form-group">
+                            <label for="web">Nombre de enlace de interes:</label>
+                            <input type="text" class="form-control" name="urlName" id="urlName">
+                        </div>
             
                         <div class="col-md-6 form-group">
                             <label for="twitter">Video Promocional:</label>
@@ -163,8 +174,7 @@
 
                         <div class="col-md-6 form-group">
                             <label for="category">Categoría:</label>
-                            <select name="category" id="category" class="form-control select2" required>
-                                <option value="" selected>Seleccionar Elemento</option>
+                            <select name="categories[]" id="categories[]" multiple class="form-control js-example-tags" required>
                                 @foreach($categories->sortBy('name') as $c)
                                     <option value="{{$c->id}}">{{$c->name}}</option>
                                 @endforeach
@@ -176,8 +186,8 @@
                             <select name="tags[]" id="tags" class="form-control js-example-tags" multiple required></select>
                         </div>
 
-                        <div class="col-md-6 form-group">
-                            <label for="images">Subir Imágenes</label>
+                        <div class="col-md-12 form-group">
+                            <label for="images">Subir Imágenes de la fachada y el interior del local (preferiblemente horizontales con dimensiones de 640x450px)</label>
                             <input type="file" name="images[]" id="images" multiple class="form-control" accept="image/*">
                         </div>
             

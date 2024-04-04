@@ -28,10 +28,11 @@ class CategoriesController extends Controller
             * sin( radians(c.lat) ) ) ) * 100 AS distance');
             
              $commerces = Commerce::from('commerces as c')
-             ->select('c.id','c.name', 'c.rating', 'c.logo' , $distance, 'category_id', 'c.lat', 'c.lon', 'c.paid', 'c.expiration_date')
+             ->select('c.id','c.name', 'c.rating', 'c.logo' , $distance, 'cc.category_id', 'c.lat', 'c.lon', 'c.paid', 'c.expiration_date')
+             ->join('categories_commerces as cc', 'cc.commerce_id', '=', 'c.id')
              ->whereNotNull('c.paid')                
              ->where('c.expiration_date', '>=', date('Y-m-d'))
-             ->where('category_id', $request->category_id)
+             ->where('cc.category_id', $request->category_id)
              ->without(['created_at', 'updated_at', 'imgs'])
              ->orderBy($orderBy, $mode)
              ->paginate(15);
@@ -49,7 +50,9 @@ class CategoriesController extends Controller
     }
 
     public function index(){
-        $categories = Category::whereNull('hidden')->orderBy('position')->get();
+        $categories = Category::whereNull('hidden')
+        ->orderBy('position')
+        ->get();
         
         return response()->json([
             'categories' => $categories

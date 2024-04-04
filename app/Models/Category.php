@@ -11,6 +11,6 @@ class Category extends Model
     use HasFactory;
 
     public function commerces(){
-        return $this->hasMany(Commerce::class);    
+        return $this->belongsToMany(Commerce::class, 'categories_commerces');    
     }
 }

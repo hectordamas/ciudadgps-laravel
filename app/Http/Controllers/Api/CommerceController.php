@@ -95,6 +95,12 @@ class CommerceController extends BaseController
 
             $commerce->save();
 
+            if(isset($request->selectedCategories)){
+                if(count($request->selectedCategories) > 0){
+                    $commerce->categories()->sync($request->selectedCategories);
+                }
+            }
+
             for($i = 0; $i < $request->photosCount; $i++){
                 if($request->hasFile('photos' . $i)){
                     $file = $request->file('photos' . $i);
@@ -117,10 +123,12 @@ class CommerceController extends BaseController
                 $tag->save();
             }
 
-            $user = User::where('email', strtolower($commerce->user_email))->first();
+            if($commerce->user_email){
+                $users = User::where('email', strtolower($commerce->user_email))->get();
 
-            if($user){
-                $user->commerces()->syncWithoutDetaching([$commerce->id]);
+                foreach($users as $user){
+                    $user->commerces()->syncWithoutDetaching([$commerce->id]);
+                }
             }
 
             return Response::json([
@@ -267,7 +275,7 @@ class CommerceController extends BaseController
             * sin( radians(c.lat) ) ) ) * 100 AS distance');
     
             $commerce = Commerce::from('commerces as c')
-            ->with(['likes', 'imgs', 'category', 'tags', 'users:id'])
+            ->with(['likes', 'imgs', 'category', 'categories', 'tags', 'users:id'])
             ->select('id','name', 'rating', 'logo' , 'info', 'lat', 'lon', 'category_id', 'web','telephone', 'facebook', 
             'whatsapp', 'instagram', 'user_email', $distance, 'youtube', 'address', 'twitter', 'enable', 'tiktok', 'threads', 
             'hourEnable', 'url', 'urlName')
@@ -357,7 +365,7 @@ class CommerceController extends BaseController
                 ]);
             }
     
-            $commerce = Commerce::with(['imgs', 'tags', 'category'])->find($id);
+            $commerce = Commerce::with(['imgs', 'tags', 'category', 'categories'])->find($id);
     
             return response()->json([
                 'commerce' => $commerce
@@ -411,12 +419,19 @@ class CommerceController extends BaseController
             $commerce->web = $request->web;    
             $commerce->twitter = $request->twitter;
             $commerce->youtube = $request->youtube;
-            $commerce->category_id = $request->category;
+            $commerce->category_id = $request->selectedCategories[0];
+            $commerce->categories()->sync($request->selectedCategories);
 
             $commerce->url = $request->url;
             $commerce->urlName = $request->urlName;
 
             $commerce->save();
+
+            if(isset($request->selectedCategories)){
+                if(count($request->selectedCategories) > 0){
+                    $commerce->categories()->sync($request->selectedCategories);
+                }
+            }
 
             $commerce->tags()->delete();
 
@@ -427,10 +442,12 @@ class CommerceController extends BaseController
                 $tag->save();
             }
 
-            $user = User::where('email', strtolower($commerce->user_email))->first();
+            if($commerce->user_email){
+                $users = User::where('email', strtolower($commerce->user_email))->get();
 
-            if($user){
-                $user->commerces()->syncWithoutDetaching([$commerce->id]);
+                foreach($users as $user){
+                    $user->commerces()->syncWithoutDetaching([$commerce->id]);
+                }    
             }
 
             return Response::json([

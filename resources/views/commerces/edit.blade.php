@@ -12,6 +12,15 @@
                         <img src="{{$commerce->logo}}" style="width: 100px; height: 100px; border-radius:50%;">
                     </div>
                 </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <a 
+                            href="{{ url('/comercios/' . $commerce->id) }}" 
+                            class="btn btn-dark" target="blank">
+                            <i class="fas fa-store"></i>
+                            Ver Perfil del Establecimiento</a>
+                    </div>
+                </div>
                 <form action="/commerces/{{$commerce->id}}/update" method="post" class="row" id="editCommerce" enctype="multipart/form-data">
                     @csrf
                     <div class="col-md-3 form-group">
@@ -94,16 +103,13 @@
                     </div>
 
                     <div class="col-md-3 form-group">
-                        <label for="category" class="text-dark font-weight-bold">Categoría:</label>
-                        <select name="category" id="category" class="form-control select2">
-                            <option value="{{$commerce->category_id ? $commerce->category->id : ''}}" selected>{{$commerce->category_id ? $commerce->category->name : 'Selecciona una Categoría'}}</option>
-                            @php
-                                $categories = $categories->filter(function($item) use ($commerce) {
-                                  return $item->id != $commerce->category_id;
-                                });
-                            @endphp
+                        <label for="categories" class="text-dark font-weight-bold">Categoría:</label>
+                        <select name="categories[]" id="categories" class="form-control js-example-tags" multiple>
                             @foreach($categories->sortBy('name') as $c)
-                                <option value="{{$c->id}}">{{$c->name}}</option>
+                                @php
+                                    $selected = in_array($c->id, $commerce->categories->pluck('id')->toArray()) ? 'selected' : '';
+                                @endphp
+                                <option value="{{$c->id}}" {{$selected}}>{{$c->name}}</option>
                             @endforeach
                         </select>
                     </div>

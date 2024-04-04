@@ -98,23 +98,6 @@
                 </div>
             </li>
 
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseHistory"
-                    aria-expanded="true" aria-controls="collapseHistory">
-                    <i class="fas fa-history"></i>
-                    <span>Historias</span>
-                </a>
-                <div id="collapseHistory" class="collapse" aria-labelledby="headingHistory"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Historias:</h6>
-                        <a class="collapse-item" href="<?php echo e(route('stories.create')); ?>">Crear Historias</a>
-                        <a class="collapse-item" href="<?php echo e(route('stories.index')); ?>">Lista de Historias</a>
-                    </div>
-                </div>
-            </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider">
 

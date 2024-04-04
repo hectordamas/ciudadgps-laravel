@@ -113,7 +113,7 @@ class CommerceController extends Controller
         $commerce->web = $request->web;    
     
         $commerce->payment = 'Efectivo';
-        $commerce->category_id = $request->category;
+        $commerce->category_id = $request->categories[0];
 
         $commerce->position = $request->position;
         $commerce->destacar = $request->destacar;
@@ -139,6 +139,10 @@ class CommerceController extends Controller
             }
         }
 
+        if(isset($request->categories)){
+            $commerce->categories()->sync($request->categories);
+        }
+        
         if($commerce->user_email){
             $user = User::where('email', strtolower($commerce->user_email))->first();
 
@@ -151,12 +155,6 @@ class CommerceController extends Controller
             'message' => "Comercio modificado con éxito!",
             'commerce' => $commerce,
         ]);
-    }
-
-
-    public function show($id)
-    {
-        //
     }
 
 
@@ -225,7 +223,7 @@ class CommerceController extends Controller
         $commerce->address = $request->address;
 
         $commerce->payment = 'Efectivo';
-        $commerce->category_id = $request->category;
+        $commerce->category_id = $request->categories[0];
 
         $commerce->position = $request->position;
         $commerce->destacar = $request->destacar;
@@ -249,6 +247,10 @@ class CommerceController extends Controller
             }
         }
 
+        if($request->categories){
+            $commerce->categories()->sync($request->categories);
+        }
+
         if($commerce->user_email){
             $user = User::where('email', strtolower($commerce->user_email))->first();
 
@@ -262,11 +264,6 @@ class CommerceController extends Controller
             'commerce' => $commerce,
         ]);
 
-    }
-
-    public function destroy($id)
-    {
-        //
     }
 
     public function imagesUpload(Request $request){
@@ -311,6 +308,7 @@ class CommerceController extends Controller
                     $commerce->visits()->delete();
                     $commerce->commerce_codes()->delete();
                     $commerce->users()->detach();
+                    $commerce->categories()->detach();
                     $commerce->delete();
                 }else{
                     $commerce->paid = NULL;

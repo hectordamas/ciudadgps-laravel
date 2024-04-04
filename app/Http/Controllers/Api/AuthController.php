@@ -43,8 +43,8 @@ class AuthController extends Controller
             $token->save();
 
             if($request->email){
-                $commerce = Commerce::where('user_email', strtolower($request->email))->first();
-                if($commerce){
+                $commerces = Commerce::where('user_email', strtolower($request->email))->get();
+                foreach($commerces as $commerce){
                     $user->commerces()->syncWithoutDetaching([$commerce->id]);
                 }
             }

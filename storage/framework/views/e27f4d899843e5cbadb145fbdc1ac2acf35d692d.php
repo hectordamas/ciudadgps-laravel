@@ -169,7 +169,7 @@
                             <div class="col-lg-10 col-md-10">
                                 <div class="banner_content text_white text-left">
                                     <h1 class="staggered-animation mb-3" id="main-title" data-animation="fadeInDown" data-animation-delay="0.3s">Descubre locales comerciales en todo el país</h1>
-                                    <h2 class="staggered-animation" id="main-subtitle" data-animation="fadeInUp" data-animation-delay="0.4s">Accede a un amplio directorio de información sobre los negocios establecidos en Venezuela.</h2>
+                                    <p class="staggered-animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.4s" style="animation-delay: 0.4s; opacity: 1;">Accede a un amplio directorio de información sobre los negocios establecidos en Venezuela.</p>
                                     <div style="max-width:400px;">
                                         <form action="<?php echo e(url('/comercios')); ?>" class="d-flex">
                                             <input type="hidden" name="order" value="<?php echo e(session()->has('latitude') ? 'distance' : 'id'); ?>" />

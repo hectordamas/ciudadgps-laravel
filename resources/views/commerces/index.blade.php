@@ -52,7 +52,11 @@
                                     @endif
                                     <div>{{$c->name}}</div>
                                 </td>
-                                <td>{{$c->category ? $c->category->name : ''}}</td>
+                                <td>
+                                    @if($c->categories->isNotEmpty())
+                                        {{$c->categories->first()->name}}
+                                    @endif
+                                </td>                                
                                 <td>{{$c->payment}}</td>
                                 <td>{{ date_format(new DateTime($c->expiration_date), 'd/m/Y') }}</td>
                                 <td>@if($c->paid) <i class="fa fa-check"></i> @endif</td>

@@ -50,6 +50,10 @@ class Commerce extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function categories(){
+        return $this->belongsToMany(Category::class, 'categories_commerces');
+    }
+
     public function tags(){
         return $this->hasMany(Tag::class);
     }
@@ -82,6 +86,8 @@ class Commerce extends Model
     public function questions(){
         return $this->hasMany(Question::class);
     }
+
+    //Query scopes
 
     public function scopeRange($query, $from, $to){
         if(!$from) {

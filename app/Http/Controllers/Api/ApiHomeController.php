@@ -117,10 +117,10 @@ class ApiHomeController extends Controller
 
     public function getAppStoresVersion() {
         return response()->json([
-            'version' => "1.3.91",
-            'appStoreVersionNumber' => "1.3.91",
-            'playStoreVersionNumber' => "1.3.91",
-            'storeVersions' => ["1.3.91", "1.3.92"]
+            'version' => "1.3.92",
+            'appStoreVersionNumber' => "1.3.92",
+            'playStoreVersionNumber' => "1.3.92",
+            'storeVersions' => ["1.3.92"/*, "1.3.93"*/]
         ]);
     }
 

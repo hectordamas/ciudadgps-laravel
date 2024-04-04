@@ -14,7 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
     <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" /> 
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css?v=1') }}" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -94,23 +94,6 @@
                         <h6 class="collapse-header">Categorías:</h6>
                         <a class="collapse-item" href="{{route('category.create')}}">Crear Categoría</a>
                         <a class="collapse-item" href="{{route('category.index')}}">Lista de Categorías</a>
-                    </div>
-                </div>
-            </li>
-
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseHistory"
-                    aria-expanded="true" aria-controls="collapseHistory">
-                    <i class="fas fa-history"></i>
-                    <span>Historias</span>
-                </a>
-                <div id="collapseHistory" class="collapse" aria-labelledby="headingHistory"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Historias:</h6>
-                        <a class="collapse-item" href="{{ route('stories.create') }}">Crear Historias</a>
-                        <a class="collapse-item" href="{{ route('stories.index') }}">Lista de Historias</a>
                     </div>
                 </div>
             </li>
@@ -272,7 +255,7 @@
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
     <script src="https://cdn.tiny.cloud/1/d7cey82e44je5nszsk92ggh7lijck476uco237t6qs8tjsje/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
-    <script src="{{ asset('assets/js/script.js?v=8') }}"></script>
+    <script src="{{ asset('assets/js/script.js?v=9') }}"></script>
     @if(session()->has('error'))
         <script>
             Swal.fire({icon:'error', title:'Ha ocurrido un error!', text: "{{session('error')}}", confirmButtonText: "OK", confirmButtonColor: '#dc3545'})

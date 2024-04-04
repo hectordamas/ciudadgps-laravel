@@ -127,7 +127,7 @@ unset($__errorArgs, $__bag); ?>
                     <ul class="btn-login list_none text-center">
                         <li><a href="<?php echo e(url('auth/facebook?mode=web')); ?>" class="btn btn-facebook"><i class="ion-social-facebook"></i>Facebook</a></li>
                         <li><a href="<?php echo e(url('auth/google?mode=web')); ?>" class="btn btn-google"><i class="ion-social-googleplus"></i>Google</a></li>
-                        <li><a href="<?php echo e(url('auth/apple?mode=web')); ?>" class="btn btn-dark"><i class="ion-social-apple"></i>Apple ID</a></li>
+                        <!--<li><a href="<?php echo e(url('auth/apple?mode=web')); ?>" class="btn btn-dark"><i class="ion-social-apple"></i>Apple ID</a></li>-->
                     </ul>
                     <div class="form-note text-center">No tienes una cuenta? <a href="<?php echo e(route('register')); ?>">Regístrate</a></div>
                 </div>

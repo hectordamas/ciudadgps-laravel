@@ -20,29 +20,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="{{ url('assetsPublic/css/animate.css') }}">	
-<link rel="stylesheet" href="{{ url('assetsPublic/bootstrap/css/bootstrap.min.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/css/all.min.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/css/ionicons.min.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/css/themify-icons.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/css/linearicons.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/css/flaticon.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/css/simple-line-icons.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/owlcarousel/css/owl.carousel.min.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/owlcarousel/css/owl.theme.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/owlcarousel/css/owl.theme.default.min.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/css/magnific-popup.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/css/jquery-ui.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/css/slick.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/css/slick-theme.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/css/style.css') }}">
-<link rel="stylesheet" href="{{ url('assetsPublic/css/responsive.css') }}">
-<link rel="stylesheet" href="{{ url('style.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/animate.css') }}">	
+<link rel="stylesheet" href="{{ asset('assetsPublic/bootstrap/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/all.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/ionicons.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/themify-icons.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/linearicons.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/flaticon.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/simple-line-icons.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/owlcarousel/css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/owlcarousel/css/owl.theme.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/owlcarousel/css/owl.theme.default.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/magnific-popup.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/jquery-ui.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/slick.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/slick-theme.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/responsive.css') }}">
+<link rel="stylesheet" href="{{ asset('style.css') }}">
 <link href="{{ asset('assets/vendor/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet" type="text/css">
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<link href="{{ asset('assetsPublic/css/select2.min.css') }}" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
-<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" /> 
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/dropzone.min.css') }}" type="text/css" /> 
+<link href="{{ asset('assetsPublic/css/summernote.min.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
 <!-- Google tag (gtag.js) google ads-->

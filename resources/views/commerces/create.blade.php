@@ -115,11 +115,10 @@
                     </div>
 
                     <div class="col-md-3 form-group">
-                        <label for="category" class="text-dark font-weight-bold">Categoría:</label>
-                        <select name="category" id="category" class="form-control select2">
-                            <option value="" selected>Seleccionar Elemento</option>
+                        <label for="categories" class="text-dark font-weight-bold">Categoría:</label>
+                        <select name="categories[]" id="categories" class="form-control js-example-tags" multiple>
                             @foreach($categories->sortBy('name') as $c)
-                                <option value="{{$c->id}}">{{$c->name}}</option>
+                                <option value="{{$c->id}}" >{{$c->name}}</option>
                             @endforeach
                         </select>
                     </div>
