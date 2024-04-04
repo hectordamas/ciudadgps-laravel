@@ -57,7 +57,8 @@
                                         <?php echo e($c->categories->first()->name); ?>
 
                                     <?php endif; ?>
-                                </td>                                <td><?php echo e($c->payment); ?></td>
+                                </td>                                
+                                <td><?php echo e($c->payment); ?></td>
                                 <td><?php echo e(date_format(new DateTime($c->expiration_date), 'd/m/Y')); ?></td>
                                 <td><?php if($c->paid): ?> <i class="fa fa-check"></i> <?php endif; ?></td>
                                 <td><?php echo e($c->created_by); ?></td>
