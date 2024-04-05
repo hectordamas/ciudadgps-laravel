@@ -20,7 +20,7 @@ class TicketController extends Controller
         $data = ['ticket' => $ticket];
 
         Mail::send('mail.ticket', $data , function($message) use ($ticket, $request){
-            $message->from('no-responder@ciudadgps.com', 'CiudadGPS');
+            $message->from('no-reply@ciudadgps.com', 'CiudadGPS');
             $message->to(['soporte@ciudadgps.com', 'hectorgabrieldm@hotmail.com'])->subject($ticket->subject);
             if($request->hasFile('image')){
                 $file = $request->file('image');
