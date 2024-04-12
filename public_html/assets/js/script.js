@@ -1,4 +1,6 @@
 $(document).ready(function(){  
+    $('#summernote').summernote({height: 200});
+
     colorSuccess = '#1cc88a'  
 
     $("#checkAll").click(function(){

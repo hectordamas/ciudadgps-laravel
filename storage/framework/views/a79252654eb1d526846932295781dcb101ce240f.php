@@ -109,9 +109,8 @@
                         }
 
                         $ratingP = $rating * 100 / 5;  
-                    ?>
 
-                    <?php
+                        //Resumir info
                         $info = $c->info;
 
                         // Eliminar todas las etiquetas HTML y dejar solo el texto plano

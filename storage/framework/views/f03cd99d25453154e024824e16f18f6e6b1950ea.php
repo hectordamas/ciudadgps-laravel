@@ -1,28 +1,33 @@
-@extends('layouts.app')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <div class="card shadow">
                 <div class="card-header text-dark font-weight-bold">
-                    Crear Usuario
+                    Editar Datos del Usuario #<?php echo e($user->id); ?>
+
                 </div>
                 <div class="card-body">
-                    <form action="/users/store" method="post" class="row">
-                        @csrf
+                    <form action="/users/<?php echo e($user->id); ?>/update" method="post" class="row">
+                        <?php echo csrf_field(); ?>
                         <div class="col-md-3 form-group">
                             <label for="name" class="font-weight-bold text-dark">Nombre:</label>
-                            <input type="text" name="name" id="name" class="form-control">
+                            <input type="text" name="name" id="name" class="form-control" value="<?php echo e($user->name); ?>">
                         </div>
                         <div class="col-md-3 form-group">
                             <label for="email" class="font-weight-bold text-dark">Correo Electrónico:</label>
-                            <input type="email" name="email" id="email" class="form-control">
+                            <input type="email" name="email" id="email" class="form-control" value="<?php echo e($user->email); ?>">
                         </div>                        
                         <div class="col-md-3 form-group">
                             <label for="role" class="font-weight-bold text-dark">Rol:</label>
                             <select name="role" id="role" class="form-control">
+                                <option value="<?php echo e($user->role); ?>"><?php echo e($user->role); ?></option>
+                                <?php if($user->role == 'Administrador'): ?>
                                 <option value="Usuario">Usuario</option>
+                                <?php else: ?>
                                 <option value="Administrador">Administrador</option>
+                                <?php endif; ?>
                             </select>
                         </div>                           
                         <div class="col-md-3 form-group">
@@ -31,14 +36,14 @@
                         </div>
                         <div class="col-md-3 form-group">
                             <label for="name" class="font-weight-bold text-dark">Cargo:</label>
-                            <input type="text" name="job_position" id="job_position" class="form-control">
+                            <input type="text" name="job_position" id="job_position" value="<?php echo e($user->job_position); ?>" class="form-control">
                         </div>
                         <div class="col-md-3 form-group">
                             <label for="name" class="font-weight-bold text-dark">Bio:</label>
-                            <textarea name="bio" id="bio" class="form-control"></textarea>
+                            <textarea name="bio" id="bio" class="form-control"><?php echo e($user->bio); ?></textarea>
                         </div>
                         <div class="col-md-12">
-                            <input type="submit" value="Crear Usuario" class="btn btn-dark">
+                            <input type="submit" value="Editar Usuario" class="btn btn-dark">
                         </div>
                     </form>
                 </div>
@@ -46,4 +51,5 @@
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Proyectos en Curso\ciudadgps\ciudadgps laravel\resources\views/users/edit.blade.php ENDPATH**/ ?>

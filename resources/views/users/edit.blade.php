@@ -33,6 +33,14 @@
                             <label for="password" class="font-weight-bold text-dark">Contraseña:</label>
                             <input type="password" name="password" id="password" class="form-control">
                         </div>
+                        <div class="col-md-3 form-group">
+                            <label for="name" class="font-weight-bold text-dark">Cargo:</label>
+                            <input type="text" name="job_position" id="job_position" value="{{$user->job_position}}" class="form-control">
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label for="name" class="font-weight-bold text-dark">Bio:</label>
+                            <textarea name="bio" id="bio" class="form-control">{{$user->bio}}</textarea>
+                        </div>
                         <div class="col-md-12">
                             <input type="submit" value="Editar Usuario" class="btn btn-dark">
                         </div>

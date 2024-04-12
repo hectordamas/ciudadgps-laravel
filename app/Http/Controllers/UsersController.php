@@ -32,6 +32,8 @@ class UsersController extends Controller
         $user->email = strtolower($request->input('email'));
         $user->password = bcrypt($request->input('password'));
         $user->role = $request->role;
+        $user->bio = $request->bio;
+        $user->job_position = $request->job_position;
         $user->save();
 
         if($request->input('email')){
@@ -70,6 +72,8 @@ class UsersController extends Controller
             $user->password = bcrypt($request->input('password'));
         }
         $user->role = $request->role;
+        $user->bio = $request->bio;
+        $user->job_position = $request->job_position;
         $user->save();
 
         if($request->input('email')){

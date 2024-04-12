@@ -11,6 +11,7 @@ use App\Models\Comment;
 use App\Models\Commerce;
 use App\Models\Like;
 use App\Models\Code;
+use App\Models\Article;
 
 class User extends Authenticatable
 {
@@ -36,5 +37,9 @@ class User extends Authenticatable
 
     public function commerces(){
         return $this->belongsToMany(Commerce::class, 'commerce_user');
+    }
+
+    public function articles(){
+        return $this->hasMany(Article::class);
     }
 }

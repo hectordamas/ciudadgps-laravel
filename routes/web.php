@@ -107,3 +107,18 @@ Route::post('/updateCartItem', [App\Http\Controllers\Public\CartController::clas
 Route::post('/save-location', [App\Http\Controllers\Public\LocationController::class, 'saveLocation']);
 
 Route::get('/categorias', [App\Http\Controllers\Public\CategoriesController::class, 'index']);
+
+Route::get('/blog', [App\Http\Controllers\ArticleController::class, 'index']);
+Route::get('/blog/{slug}', [App\Http\Controllers\ArticleController::class, 'show']);
+Route::get('/search/blog', [App\Http\Controllers\ArticleController::class, 'search']);
+Route::get('/search/tags/{id}', [App\Http\Controllers\ArticleController::class, 'tags']);
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('articles/index', [App\Http\Controllers\ArticleController::class, 'list']);
+    Route::get('articles/create', [App\Http\Controllers\ArticleController::class, 'create']);
+    Route::post('articles/store', [App\Http\Controllers\ArticleController::class, 'store'])->name('articles.store');
+    Route::get('articles/{id}/edit', [App\Http\Controllers\ArticleController::class, 'edit']);
+    Route::post('articles/{id}/update', [App\Http\Controllers\ArticleController::class, 'update']);
+
+});
+

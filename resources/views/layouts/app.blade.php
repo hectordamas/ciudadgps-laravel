@@ -14,6 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
     <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" /> 
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <link href="{{ asset('assets/css/style.css?v=1') }}" rel="stylesheet">
 </head>
 
@@ -137,6 +138,21 @@
                 </div>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseArticle"
+                    aria-expanded="true" aria-controls="collapseArticle">
+                    <i class="far fa-newspaper"></i>
+                    <span>Artículos</span>
+                </a>
+                <div id="collapseArticle" class="collapse" aria-labelledby="headingArticle" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Artículos:</h6>
+                        <a class="collapse-item" href="{{ url('articles/create') }}">Crear Artículos</a>
+                        <a class="collapse-item" href="{{ url('articles/index') }}">Lista de Artículos</a>
+                    </div>
+                </div>
+            </li>
+
 
         </ul>
         <!-- End of Sidebar -->
@@ -253,8 +269,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.tiny.cloud/1/d7cey82e44je5nszsk92ggh7lijck476uco237t6qs8tjsje/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
     <script src="{{ asset('assets/js/script.js?v=9') }}"></script>
     @if(session()->has('error'))
         <script>

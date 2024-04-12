@@ -12,7 +12,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 @yield('title')
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CiudadGPS es una Aplicación que ayuda a las personas a encontrar comercios en Venezuela. Con geolocalización, ofrece detalles de negocios cercanos, categorías variadas y permite calificaciones, promoviendo interacción entre usuarios y negocios locales.">
+<meta name="description" content="CiudadGPS es una Plataforma que ayuda a las personas a encontrar comercios en Venezuela. Con geolocalización, ofrece detalles de negocios cercanos, categorías variadas y permite calificaciones, promoviendo interacción entre usuarios y negocios locales.">
 <meta name="keywords" content="CiudadGPS, Venezuela, negocios, locales, geolocalización, comercios cercanos, categorías de negocios, restaurantes, tiendas, salud, educación, tecnología, información detallada de negocios, dirección exacta, contacto, redes sociales, directorio comercial, emprendedores, ciudadgps, Ciudad GPS, herramientas, viajes, comunicacion, plomeros, mecanicos, medicos, venezuela, caracas, lugares">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
@@ -83,17 +83,14 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li>
-                            <a class="nav-link" href="{{ url('/') }}">INICIO</a>
-                        </li>
                         @include('layouts.megaMenu')
                         <li><a class="nav-link nav_item" href="{{ url('registrar-comercio') }}">Registrar Local</a></li> 
                         <li><a class="nav-link nav_item" href="{{ url('empleos') }}">Empleos</a></li> 
                         <li><a class="nav-link nav_item" href="{{ url('nosotros') }}">Nosotros</a></li> 
-                        <!--<li><a class="nav-link nav_item" href="{{ url('planes') }}">Planes</a></li> -->
+                        <li><a class="nav-link nav_item" href="{{ url('planes') }}">Planes</a></li>
+                        <li><a class="nav-link nav_item" href="{{ url('blog') }}">Blog</a></li> 
                         @guest
                         <li><a class="nav-link nav_item" href="{{ route('login') }}">Inicia Sesión</a></li> 
-                        <li><a class="nav-link nav_item" href="{{ route('register') }}">Regístrate</a></li> 
                         @else
                         <li><a class="nav-link nav_item" href="{{ url('favoritos') }}">Favoritos</a></li> 
                         <li class="dropdown">
