@@ -1,6 +1,8 @@
 @extends('layouts.public')
 @section('title')
 <title>CiudadGPS - Planes</title>
+<meta name="description" content="Descubre los precios de afiliar tu negocio a CiudadGPS" />
+<meta name="keywords" content="Afiliar, comercio, negocio, emprendimiento, bolsa de empleo, talento, personal, captacion, trabajo, venezuela, comercio electrónico, viajes, trabajo, medicina, aplicación">
 @endsection
 @section('content')
 <div class="breadcrumb_section page-title-mini" style="background-image: url('{{ asset('assets/pricing.jpeg') }}'); background-position: center center; background-size: cover; position: relative;">

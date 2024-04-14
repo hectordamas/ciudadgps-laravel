@@ -1,6 +1,8 @@
 @extends('layouts.public')
 @section('title')
 <title> @if(isset($commerce)) {{$commerce->name}} - CiudadGPS  @else Buscar en CiudadGPS @endif</title>
+<meta name="description" content="{{ $meta_description }}" />
+<meta name="keywords" content="{{ $keywords }}">
 @endsection
 @section('content')
 @php
@@ -170,7 +172,7 @@
 
                 <ul class="product-meta">
                     <li>Categorías: @foreach($commerce->categories as $category) 
-                        <a href="{{ url('/comercios/categorias/' . $category->id) }}" class="badge badge-dark">{{$category->name}}</a> 
+                        <a href="{{ url('/comercios/slug-categorias/' . $category->slug) }}" class="badge badge-dark">{{$category->name}}</a> 
                     @endforeach</li>
                     @if($commerce->tags->count() > 0)
                     <li>Etiquetas: @foreach ($commerce->tags as $t)
@@ -340,7 +342,7 @@
                         <h4>Catálogo de Productos:</h4>
                     </div>
                     <div class="view_all">
-                        <a href="{{ url('/catalogo-de-productos/' . $commerce->id) }}" class="text_default"><i class="linearicons-power"></i> <span>Ver Todos</span></a>
+                        <a href="{{ url('/catalogo-productos/' . $commerce->slug) }}" class="text_default"><i class="linearicons-power"></i> <span>Ver Todos</span></a>
                     </div>
                 </div>
             </div>

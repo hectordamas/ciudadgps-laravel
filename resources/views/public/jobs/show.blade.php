@@ -1,12 +1,11 @@
 @extends('layouts.public')
 @section('title')
-<title>CiudadGPS - Empleos</title>
+<title>{{$job->title}} - CiudadGPS - Empleos</title>
+<meta name="description" content="{{ $meta_description }}" />
+<meta name="keywords" content="{{ $keywords }}">
 @endsection
 @section('content')
 <?php 
-    use Carbon\Carbon;
-    Carbon::setLocale('es');
-
     $message = "¡Hola! Estoy interesado/a en la oferta laboral de ".$job->title." publicada en CiudadGPS. ¿Podemos hablar más sobre ella?";
     $whatsappLink = "https://api.whatsapp.com/send/?phone=". $job->whatsapp . "&text=" . $message; 
 ?>
@@ -23,17 +22,17 @@
 
                             <div class="row">
 
-                                <a href="/jobs/{{$job->id}}" class="col-md-2 d-flex justify-content-center">
-                                    <img src="{{$job->commerce->logo}}" style="width: 100px; height: 100px;" class="rounded-circle border" alt="" srcset="">
+                                <a href="/empleo/{{$job->slug}}" class="col-md-2 d-flex justify-content-center">
+                                    <img src="{{$job->commerce->logo}}" style="width: 100px; height: 100px;" class="rounded-circle border" alt="{{$job->title}}" />
                                 </a>
 
                                 <div class="col-md-10">
 
                                     <h4 class="product_title">
-                                        <a href="/jobs/{{$job->id}}">{{$job->title}}</a>
+                                        <a href="/empleo/{{$job->slug}}">{{$job->title}}</a>
                                     </h4>
                                     <h6>{{ $job->commerce->name }}</h6>
-                                    <h6>{{ Carbon::parse($job->created_at)->diffForHumans() }}</h6>
+                                    <h6>{{ $job->created_at->diffForHumans() }}</h6>
                                     <div class="content-p">
                                         <p>{{$job->description}}</p>
                                     </div>

@@ -5,6 +5,8 @@
     Carbon::setLocale('es');  
 @endphp
 <title> @if(isset($product)) {{$product->name}} - CiudadGPS  @else Buscar en CiudadGPS @endif</title>
+<meta name="description" content="{{ $meta_description }}" />
+<meta name="keywords" content="{{ $keywords }}">
 @endsection
 @section('content')
 <style>
@@ -72,8 +74,8 @@
                                 </div>
                             </div>
                             <div class="col-md-12 my-2">
-                                <a href="/comercios/{{$product->commerce->id}}" class="btn btn-dark btn-sm">Ver Comercio</a>
-                                <a href="/catalogo-de-productos/{{$product->commerce->id}}"  class="btn btn-dark btn-sm mr-2">Ver Catálogo</a>
+                                <a href="/slug-comercios/{{$product->commerce->slug}}" class="btn btn-dark btn-sm">Ver Comercio</a>
+                                <a href="/catalogo-productos/{{$product->commerce->slug}}"  class="btn btn-dark btn-sm mr-2">Ver Catálogo</a>
                             </div>
                         </div>
         

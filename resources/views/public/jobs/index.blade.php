@@ -1,13 +1,10 @@
 @extends('layouts.public')
 @section('title')
 <title>CiudadGPS - Empleos</title>
+<meta name="description" content="Encuentra personal para tu empresa y busca empleo si eres un profesional" />
+<meta name="keywords" content="Afiliar, comercio, negocio, emprendimiento, bolsa de empleo, talento, personal, captacion, trabajo, venezuela">
 @endsection
 @section('content')
-<?php 
-    use Carbon\Carbon;
-    Carbon::setLocale('es');
-    
-?>
 <style>
     .content-p {
       max-height: 3.2em; /* Aproximadamente dos líneas de texto */
@@ -99,16 +96,16 @@
 
                             <div class="row">
 
-                                <a href="/jobs/{{$job->id}}" class="col-md-2 col-3 d-flex justify-content-center">
+                                <a href="/empleo/{{$job->slug}}" class="col-md-2 col-3 d-flex justify-content-center">
                                     <img src="{{$job->commerce->logo}}" style="width: 100px; height: 100px;" class="rounded-circle border d-none d-md-block" alt="{{$job->title}}">
                                     <img src="{{$job->commerce->logo}}" style="width: 50px; height: 50px;" class="rounded-circle border d-block d-md-none" alt="{{$job->title}}">
                                 </a>
 
                                 <div class="col-md-10 col-9">
                                     <h4 class="product_title">
-                                        <a href="/jobs/{{$job->id}}">{{$job->title}}</a>
+                                        <a href="/empleo/{{$job->slug}}">{{$job->title}}</a>
                                     </h4>
-                                    <h6>{{ Carbon::parse($job->created_at)->diffForHumans() }}</h6>
+                                    <h6>{{ $job->created_at->diffForHumans() }}</h6>
                                     <div class="content-p">
                                         <p>{{$job->description}}</p>
                                     </div>

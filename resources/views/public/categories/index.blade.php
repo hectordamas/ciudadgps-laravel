@@ -1,6 +1,8 @@
 @extends('layouts.public')
 @section('title')
 <title>Categorías en CiudadGPS</title>
+<meta name="description" content="Conoce las más de 100 categorías que tien CiudadGPS" />
+<meta name="keywords" content="Afiliar, comercio, negocio, emprendimiento, bolsa de empleo, talento, personal, captacion, trabajo, venezuela, comercio electrónico, viajes, trabajo, medicina, aplicación">
 @endsection
 @section('content')
 <div class="breadcrumb_section page-title-mini" style="background-image: url('{{ asset('assets/categorias.jpg') }}'); background-position: center center; position: relative;">
@@ -32,9 +34,9 @@
                 <div class="row">
                 @foreach ($categories as $category)
                     @php
-                        $url = '/comercios/categorias/' . $category->id . '?order=id';
+                        $url = '/comercios/slug-categorias/' . $category->slug . '?order=id';
                         if(session()->has('latitude') && session()->has('longitude')){
-                            $url = '/comercios/categorias/' . $category->id . '?order=distance';
+                            $url = '/comercios/slug-categorias/' . $category->slug . '?order=distance';
                         }
                     @endphp
                     <div class="col-md-2 col-6 mb-3">

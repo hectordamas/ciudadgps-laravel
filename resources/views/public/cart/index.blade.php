@@ -1,6 +1,8 @@
 @extends('layouts.public')
 @section('title')
 <title>CiudadGPS - Carrito de Compras</title>
+<meta name="description" content="Carrito de Compras ciudadgps" />
+<meta name="keywords" content="ciudadgps, orden, carrito de compras, pagon en linea">
 @endsection
 @section('content')
 <div class="breadcrumb_section page-title-mini" style="background-image: url('{{ asset('assets/cart.jpg') }}'); background-position: center center; background-size: cover; position: relative;">

@@ -2,16 +2,12 @@
 
 @section('title')
 <title> 
-    @if(isset($category)) 
-        {{$category->name}} en CiudadGPS  
-    @else 
-        @if(isset($search))
-            "{{$search}}" en CiudadGPS
-        @else
-            Buscar en CiudadGPS
-        @endif
+    @if(isset($category)){{$category->name}} en CiudadGPS @else 
+        @if(isset($search)){{$search}} en CiudadGPS @else Buscar en CiudadGPS @endif
     @endif
 </title>
+<meta name="description" content="{{ $meta_description }}" />
+<meta name="keywords" content="{{ $keywords }}">
 @endsection
 
 @section('content')
@@ -54,7 +50,7 @@
                 @endphp
                 @if(isset($category))
                 <div class="row align-items-center mb-4 pb-1">
-                    <form id="formOrder" action="{{ url('/comercios/categorias/'. $category->id) }}" method="get" class="col-12">
+                    <form id="formOrder" action="{{ url('/comercios/slug-categorias/'. $category->slug) }}" method="get" class="col-12">
                         <div class="product_header">
                             <div class="product_header_left">
                                 <h5>{{$category->name}}: {{$commerces->total()}} comercios encontrados</h5>
@@ -124,7 +120,7 @@
                     <div class="col-lg-12">
                         <div class="product">
                             <div class="product_img">
-                                <a href="/comercios/{{$c->id}}">
+                                <a href="/slug-comercios/{{$c->slug}}">
                                     @if($c->imgs->first())<img src="{{ $c->imgs->first()->uri }}" alt="{{$c->name}}" style="max-height: 250px;">@endif
                                 
                                     <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
@@ -133,7 +129,7 @@
                                 </a>
                             </div>
                             <div class="product_info">
-                                <h6 class="product_title"><a href="/comercios/{{$c->id}}">{{$c->name}}</a></h6>
+                                <h6 class="product_title"><a href="/slug-comercios/{{$c->slug}}">{{$c->name}}</a></h6>
                                 <div class="product_price">
                                     <div class="rating_wrap">
                                         <div class="rating">
@@ -146,7 +142,7 @@
                                     </div>
                                 </div>
                                 <div class="pr_desc">
-                                    <p style="text-align: justify;">{!! $resumen !!} <a href="/comercios/{{$c->id}}">Leer Más</a> </p>
+                                    <p style="text-align: justify;">{!! $resumen !!} <a href="/slug-comercios/{{$c->slug}}">Leer Más</a> </p>
                                 </div>
                             
                                 @auth

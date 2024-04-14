@@ -207,4 +207,6 @@
       });
     }
 </script>
+
+
 <?php /**PATH D:\Proyectos en Curso\ciudadgps\ciudadgps laravel\resources\views/layouts/footer.blade.php ENDPATH**/ ?>

@@ -1,6 +1,8 @@
 @extends('layouts.public')
 @section('title')
 <title> Regístrate en CiudadGPS</title>
+<meta name="description" content="Registrate como usuario y haz parte de la comunidad de comercios más grande de Latinoamérica" />
+<meta name="keywords" content="Afiliar, comercio, negocio, emprendimiento, bolsa de empleo, talento, personal, captacion, trabajo, venezuela, comercio electrónico, viajes, trabajo, medicina, aplicación">
 @endsection
 @section('content')
 <div class="breadcrumb_section page-title-mini" style="background-image: url('{{ asset('assets/register.jpg') }}'); background-position: center center; background-size: cover; position: relative;">

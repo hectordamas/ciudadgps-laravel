@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+
 use App\Models\Article;
 use App\Models\Atag;
 use Auth;
@@ -48,13 +51,19 @@ class ArticleController extends Controller
         $nextArticle = Article::where('id', '>', $article->id)->orderBy('id', 'asc')->first();
         $tags = Atag::all();
 
+        $articleTags = $article->atags->pluck('name')->unique()->toArray();
+        $keywords = $article->title . ', ' . implode(', ', $articleTags);
+        $meta_description = $article->excerpt;
+
         return view('public.articles.show', [
             'article' => $article,
             'recentArticles' => $recentArticles,
             'relatedArticles' => $relatedArticles,
             'previousArticle' => $previousArticle,
             'nextArticle' => $nextArticle,
-            'tags' => $tags
+            'tags' => $tags,
+            'keywords' => $keywords,
+            'meta_description' => $meta_description
         ]);
     }
 
@@ -66,11 +75,19 @@ class ArticleController extends Controller
     }
 
     public function store(Request $request){
+        $slug = Str::slug($request->title);
+        $count = DB::table('articles')->where('slug', $slug)->count();
+        $suffix = '';
+
+        if ($count > 0) {
+            $suffix = '-' . Str::random(6);
+        }
+
         $article = new Article();
         $article->title = $request->title;
-        $article->slug = $request->slug;
         $article->content = $request->content;
         $article->excerpt = $request->excerpt;
+        $article->slug = $slug . $suffix;
         $article->user_id = Auth::id();
 
         if($request->hasFile('image')){
@@ -104,11 +121,19 @@ class ArticleController extends Controller
     }
 
     public function update($id, Request $request) {
+        $slug = Str::slug($request->title);
+        $count = DB::table('articles')->where('slug', $slug)->count();
+        $suffix = '';
+
+        if ($count > 0) {
+            $suffix = '-' . Str::random(6);
+        }
+
         $article = Article::findOrFail($id);
         $article->title = $request->title;
-        $article->slug = $request->slug;
         $article->content = $request->content;
         $article->excerpt = $request->excerpt;
+        $article->slug = $slug . $suffix;
         $article->user_id = Auth::id();
 
         if($request->hasFile('image')){

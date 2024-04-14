@@ -4,14 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class CategoriesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $categories = Category::all();
@@ -21,25 +19,25 @@ class CategoriesController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('categories.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
+        $slug = Str::slug($request->input('name'));
+        $count = DB::table('categories')->where('slug', $slug)->count();
+        $suffix = '';
+
+        if ($count > 0) {
+            $suffix = '-' . Str::random(6);
+        }
+
         $category = new Category();
+        $category->slug = $slug . $suffix;
         $category->name = $request->input('name');
         $category->position = $request->input('position');
         $category->hidden = $request->input('hidden');
@@ -57,23 +55,6 @@ class CategoriesController extends Controller
         return redirect()->back()->with('message', 'Categoría Creada con éxito!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $category = Category::find($id);
@@ -84,17 +65,19 @@ class CategoriesController extends Controller
 
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
+        $slug = Str::slug($request->input('name'));
+        $count = DB::table('categories')->where('slug', $slug)->count();
+        $suffix = '';
+
+        if ($count > 0) {
+            $suffix = '-' . Str::random(6);
+        }
+
         $category = Category::find($id);
         $category->name = $request->input('name');
+        $category->slug = $slug . $suffix;
         $category->position = $request->input('position');
         $category->hidden = $request->input('hidden');
         if($request->hasFile('image')){
@@ -111,12 +94,6 @@ class CategoriesController extends Controller
         return redirect('/category')->with('message', 'Categoría Modificada con éxito!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //

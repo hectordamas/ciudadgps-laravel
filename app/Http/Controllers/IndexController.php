@@ -12,7 +12,7 @@ class IndexController extends Controller
         
         $categories = Category::all();
         $commerces = Commerce::from('commerces as c')
-        ->select('id','name', 'rating', 'logo')
+        ->select('id','name', 'rating', 'logo', 'slug')
         ->whereNotNull('destacar')
         ->orderBy('id', 'desc')
         ->get()

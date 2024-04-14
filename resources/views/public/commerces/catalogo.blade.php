@@ -1,6 +1,8 @@
 @extends('layouts.public')
 @section('title')
-<title>CiudadGPS - Catálogo de Productos</title>
+<title>CiudadGPS - Catálogo de Productos - {{$commerce->name}}</title>
+<meta name="description" content="{{ $meta_description }}" />
+<meta name="keywords" content="{{ $keywords }}">
 @endsection
 @section('content')
 <style>
@@ -53,7 +55,7 @@
                 <div class="col-lg-3 col-md-5 col-5 grid_item px-2">
                     <div class="product shadow product_box border-0">
                         <div class="product_img" style="aspect-ratio: 1;">
-                            <a href="/productos/{{ $product->id }}" style="position: relative; height: 100%;">
+                            <a href="/slug-productos/{{ $product->slug }}" style="position: relative; height: 100%;">
                                 <img src="{{ asset($product->image) }}" style="object-fit: cover; height: 100%; aspect-ratio: 1;" alt="{{ $product->name }}">
                             </a>
                             
@@ -62,7 +64,7 @@
                             </a>
                         </div>
                         <div class="product_info">
-                            <h6 class="product_title"><a href="/productos/{{ $product->id }}">{{$product->name}}</a></h6>
+                            <h6 class="product_title"><a href="/slug-productos/{{ $product->slug }}">{{$product->name}}</a></h6>
                             <div class="product_price">
                                 <span class="price">${{ number_format($product->price, 2, '.', ',') }}</span>
                             </div>

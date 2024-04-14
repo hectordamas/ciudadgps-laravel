@@ -45,6 +45,12 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('pushnotifications', [App\Http\Controllers\PushNotificationsController::class, 'index']);
         Route::get('/pushnotifications/create', [App\Http\Controllers\PushNotificationsController::class, 'create']);
         Route::post('/pushnotificatons/store', [App\Http\Controllers\PushNotificationsController::class, 'store'])->name('pushnotifications.store');
+    
+        Route::get('articles/index', [App\Http\Controllers\ArticleController::class, 'list']);
+        Route::get('articles/create', [App\Http\Controllers\ArticleController::class, 'create']);
+        Route::post('articles/store', [App\Http\Controllers\ArticleController::class, 'store'])->name('articles.store');
+        Route::get('articles/{id}/edit', [App\Http\Controllers\ArticleController::class, 'edit']);
+        Route::post('articles/{id}/update', [App\Http\Controllers\ArticleController::class, 'update']);
     }); 
 
     Route::get('/mi-cuenta', [App\Http\Controllers\Public\UsersController::class, 'mi_cuenta']);
@@ -58,18 +64,19 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::get('/comercios', [App\Http\Controllers\Public\ComerciosController::class, 'index']);
 Route::get('/faq', function(){ return view('public.faq'); });
-Route::get('/planes', function() {
-    return view('public.pricing');
-});
+Route::get('/planes', function() {  return view('public.pricing'); });
 Route::get('/nosotros', function(){ return view('public.about'); });
 Route::get('/eliminar-cuenta', function(){ return view('public.eliminarCuenta'); });
+Route::get('/politicas-de-privacidad', function(){ return view('privacidad'); });
 
 Route::get('/registrar-comercio', [App\Http\Controllers\Public\ComerciosController::class, 'registrar']);
 Route::post('/comercios/store', [App\Http\Controllers\Public\ComerciosController::class, 'store'])->name('public.commerces.store');
 Route::get('/comercios/{id}', [App\Http\Controllers\Public\ComerciosController::class, 'show']);
+Route::get('/slug-comercios/{slug}', [App\Http\Controllers\Public\ComerciosController::class, 'showSlug']);
 Route::get('/comercios/{id}/redirect', [App\Http\Controllers\Public\ComerciosController::class, 'redirect']);
+
 Route::get('/comercios/categorias/{id}', [App\Http\Controllers\Public\ComerciosController::class, 'categoria']);
-Route::get('/politicas-de-privacidad', function(){ return view('privacidad'); });
+Route::get('/comercios/slug-categorias/{slug}', [App\Http\Controllers\Public\ComerciosController::class, 'categoriaSlug']);
 
 Route::get('comentarios-de-comercios/{id}', [App\Http\Controllers\Public\CommentsController::class, 'index']);
 
@@ -91,11 +98,15 @@ Route::post('stripe-post', [App\Http\Controllers\Public\StripeController::class,
 
 Route::get('catalogo/{id}/share', [App\Http\Controllers\Public\ComerciosController::class, 'shareCatalogo']);
 Route::get('/catalogo-de-productos/{id}', [App\Http\Controllers\Public\ComerciosController::class, 'catalogo']);
+Route::get('/catalogo-productos/{slug}', [App\Http\Controllers\Public\ComerciosController::class, 'catalogoSlug']);
+
 Route::get('/productos/{id}/share', [App\Http\Controllers\Public\ComerciosController::class, 'productShare']);
 Route::get('/productos/{id}', [App\Http\Controllers\Public\ProductsController::class, 'show']);
+Route::get('/slug-productos/{slug}', [App\Http\Controllers\Public\ProductsController::class, 'showSlug']);
 
 Route::get('/empleos', [App\Http\Controllers\Public\JobsController::class, 'index']);
 Route::get('/jobs/{id}', [App\Http\Controllers\Public\JobsController::class, 'show']);
+Route::get('/empleo/{slug}', [App\Http\Controllers\Public\JobsController::class, 'showSlug']);
 Route::get('/empleos/{id}/redirect', [App\Http\Controllers\Public\JobsController::class, 'redirect']);
 
 Route::get('/carrito-de-compras', [App\Http\Controllers\Public\CartController::class, 'index']);
@@ -112,13 +123,3 @@ Route::get('/blog', [App\Http\Controllers\ArticleController::class, 'index']);
 Route::get('/blog/{slug}', [App\Http\Controllers\ArticleController::class, 'show']);
 Route::get('/search/blog', [App\Http\Controllers\ArticleController::class, 'search']);
 Route::get('/search/tags/{id}', [App\Http\Controllers\ArticleController::class, 'tags']);
-
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('articles/index', [App\Http\Controllers\ArticleController::class, 'list']);
-    Route::get('articles/create', [App\Http\Controllers\ArticleController::class, 'create']);
-    Route::post('articles/store', [App\Http\Controllers\ArticleController::class, 'store'])->name('articles.store');
-    Route::get('articles/{id}/edit', [App\Http\Controllers\ArticleController::class, 'edit']);
-    Route::post('articles/{id}/update', [App\Http\Controllers\ArticleController::class, 'update']);
-
-});
-

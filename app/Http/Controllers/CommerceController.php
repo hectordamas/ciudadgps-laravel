@@ -11,6 +11,8 @@ use App\Models\Story;
 use App\Models\User;
 use Spatie\GoogleCalendar\Event;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Auth;
 
 class CommerceController extends Controller
@@ -53,7 +55,6 @@ class CommerceController extends Controller
         ]);
 
     }
-
 
     public function create()
     {
@@ -130,6 +131,16 @@ class CommerceController extends Controller
 
         $commerce->save();
 
+        $slug = Str::slug($request->name);
+        $count = DB::table('commerces')->where('slug', $slug)->count();
+        $suffix = '';
+        if ($count > 0) {
+            $suffix = '-' . $commerce->id;
+        }
+        $commerce->slug = $slug . $suffix;
+        $commerce->save();
+
+
         if(isset($request->tags)){
             for($i = 0; count($request->tags) > $i; $i++){
                 $tag = new Tag();
@@ -170,8 +181,16 @@ class CommerceController extends Controller
 
     public function update(Request $request, $id)
     {
-        $commerce = Commerce::find($id);
+        $slug = Str::slug($request->name);
+        $count = DB::table('commerces')->where('slug', $slug)->count();
+        $suffix = '';
 
+        if ($count > 0) {
+            $suffix = '-' . $id;
+        }
+
+        $commerce = Commerce::find($id);
+        $commerce->slug = $slug . $suffix;
         $commerce->name = $request->name;
         $commerce->user_name = $request->user_name;
         $commerce->user_lastname = $request->user_lastname;

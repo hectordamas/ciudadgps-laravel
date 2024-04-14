@@ -13,6 +13,7 @@ use App\Models\User;
 use App\Models\Product;
 use GeoIP;
 use DB;
+use Illuminate\Support\Str;
 
 class ComerciosController extends Controller
 {
@@ -35,9 +36,9 @@ class ComerciosController extends Controller
             ->leftJoin('tags', 'tags.commerce_id', '=', 'commerces.id');
     
         if ($distance) {
-            $select = $query->select('commerces.id', 'commerces.name', 'commerces.rating', 'commerces.logo', 'commerces.excerpt', 'commerces.info', 'commerces.expiration_date', 'commerces.category_id', $distance);
+            $select = $query->select('commerces.id', 'commerces.name', 'commerces.rating', 'commerces.logo', 'commerces.excerpt', 'commerces.info', 'commerces.expiration_date', 'commerces.category_id', 'commerces.slug', $distance);
         } else {
-            $select = $query->select('commerces.id', 'commerces.name', 'commerces.rating', 'commerces.logo', 'commerces.excerpt', 'commerces.info', 'commerces.expiration_date', 'commerces.category_id');
+            $select = $query->select('commerces.id', 'commerces.name', 'commerces.rating', 'commerces.logo', 'commerces.excerpt', 'commerces.info', 'commerces.expiration_date', 'commerces.category_id', 'commerces.slug');
         }
     
         $commerces = $select->where(function ($query) {
@@ -49,6 +50,45 @@ class ComerciosController extends Controller
         if ($categoryId) {
             $commerces->whereHas('categories', function ($query) use ($categoryId) {
                 $query->where('categories.id', $categoryId);
+            });
+        }
+    
+        return $commerces;
+    }
+
+    private function getCommercesBySlug($slug) {
+        $distance = null;
+    
+        if (session()->has('latitude') && session()->has('longitude')) {
+            $lat = session('latitude');
+            $lon = session('longitude');
+    
+            $distance = DB::raw('(111.045 * acos( cos( radians('.$lat.') ) 
+                * cos( radians( commerces.lat ) ) 
+                * cos( radians( commerces.lon ) - radians('.$lon.') ) 
+                + sin( radians('.$lat.') ) 
+                * sin( radians(commerces.lat) ) ) ) * 100 AS distance');
+        }
+    
+        $query = Commerce::join('categories', 'categories.id', '=', 'commerces.category_id')
+            ->distinct('commerces.id')
+            ->leftJoin('tags', 'tags.commerce_id', '=', 'commerces.id');
+    
+        if ($distance) {
+            $select = $query->select('commerces.id', 'commerces.name', 'commerces.rating', 'commerces.logo', 'commerces.excerpt', 'commerces.info', 'commerces.expiration_date', 'commerces.category_id', 'commerces.slug', $distance);
+        } else {
+            $select = $query->select('commerces.id', 'commerces.name', 'commerces.rating', 'commerces.logo', 'commerces.excerpt', 'commerces.info', 'commerces.expiration_date', 'commerces.category_id', 'commerces.slug');
+        }
+    
+        $commerces = $select->where(function ($query) {
+            $query
+                ->whereNotNull('commerces.paid')
+                ->where('commerces.expiration_date', '>=', date('Y-m-d'));
+        });
+    
+        if ($slug) {
+            $commerces->whereHas('categories', function ($query) use ($slug) {
+                $query->where('categories.slug', $slug);
             });
         }
     
@@ -91,35 +131,73 @@ class ComerciosController extends Controller
             $commerces = $this->applyOrdering($commerces, $orderColumn, session()->has('latitude'));
             
             $banners = Banner::paginate(15);
+
+            $commercesKeywords = $commerces->get()->take(20);
+            $allTags = $commercesKeywords->flatMap->tags->pluck('name')->unique()->toArray();
+            $commerceNames = $commercesKeywords->pluck('name')->toArray();
+            $tagsString = implode(', ', $allTags);
+            $namesString = implode(', ', $commerceNames);
+            $mergedString = $tagsString . ', ' . $namesString;
+            
+            $keywords = $mergedString;
+            $meta_description =  $request->search . ' en CiudadGPS: más de ' . $commerces->count() . ' resultados de Búsqueda: ' . $keywords;
+    
         }catch(\Exception $e){
-            return view('errors.500');
+            return view('errors.404');
         }
 
         return view('public.commerces.index', [
             'commerces' => $commerces->paginate(10),
             'banners' => $banners,
             'search' => $request->search,
-            'order' => $orderColumn
+            'order' => $orderColumn,
+            'keywords' => $keywords,
+            'meta_description' => $meta_description
         ]);
     }
     
     public function categoria($id, Request $request){
         try {
-            $commerces = $this->getCommerces($id);
+            $category = Category::find($id);
+            $orderColumn = $request->order ? $request->order : (session()->has('latitude') && session()->has('longitude') ? 'distance' : 'id');
+            return redirect('/comercios/slug-categorias/' . $category->slug . '?order='. $orderColumn );
+
+        } catch(\Exception $e) {
+            return view('errors.404');
+        }
+    }
+
+    public function categoriaSlug($slug, Request $request){
+        try {
+            $commerces = $this->getCommercesBySlug($slug);
             $orderColumn = $request->order ? $request->order : (session()->has('latitude') && session()->has('longitude') ? 'distance' : 'id');
             $commerces = $this->applyOrdering($commerces, $orderColumn, session()->has('latitude'));
     
             $banners = Banner::paginate(15);
-            $category = Category::find($id);
+            $category = Category::where('slug', $slug)->first();
+
+            $commercesKeywords = $category->commerces()->take(20)->get();
+            $allTags = $commercesKeywords->flatMap->tags->pluck('name')->unique()->toArray();
+            $commerceNames = $commercesKeywords->pluck('name')->toArray();
+            
+            $tagsString = implode(', ', $allTags);
+            $namesString = implode(', ', $commerceNames);
+            
+            $mergedString = $tagsString . ', ' . $namesString;
+            
+            $keywords = $namesString;
+            $meta_description = $category->name . ' en CiudadGPS: más de ' . $commerces->count() . ' resultados de Búsqueda: ' . $keywords;
     
             return view('public.commerces.index', [
                 'commerces' => $commerces->paginate(10),
                 'banners' => $banners,
                 'category' => $category,
-                'order' => $orderColumn
+                'order' => $orderColumn,
+                'keywords' => $keywords,
+                'meta_description' => $meta_description
             ]);
         } catch(\Exception $e) {
-            return view('errors.500');
+            return view('errors.404');
         }
     }
 
@@ -133,8 +211,24 @@ class ComerciosController extends Controller
     public function show($id, Request $request){
         $commerce = Commerce::find($id);
         if($commerce){
+            return redirect('/slug-comercios/' . $commerce->slug);
+        }else{
+            return view('errors.404');
+        }
+    }
+
+    public function showSlug($slug, Request $request){
+        $commerce = Commerce::where('slug', $slug)->first();
+        $tags = $commerce->tags->pluck('name')->unique()->toArray();
+        $categories = $commerce->categories->pluck('name')->unique()->toArray();
+        $keywords = implode(', ', $categories) . ', ' . $commerce->name . ', ' . implode(', ', $tags);
+        $meta_description = $commerce->name .' en CiudadGPS: '. $commerce->info;
+
+        if($commerce){
             return view('public.commerces.show', [
                 'commerce' => $commerce,
+                'keywords' => $keywords,
+                'meta_description' => $meta_description
             ]);
         }else{
             return view('errors.404');
@@ -150,7 +244,16 @@ class ComerciosController extends Controller
     }
 
     public function store(Request $request){
+        $slug = Str::slug($request->name);
+        $count = DB::table('commerces')->where('slug', $slug)->count();
+        $suffix = '';
+
+        if ($count > 0) {
+            $suffix = '-' . Str::random(6);
+        }
+
         $commerce = new Commerce();
+        $commerce->slug = $slug . $suffix;
         $commerce->name = $request->name;
         $commerce->user_name = $request->user_name;
         $commerce->user_lastname = $request->user_lastname;    
@@ -262,15 +365,32 @@ class ComerciosController extends Controller
     }
 
     public function catalogo($id){
-        $products = Product::where('commerce_id', $id)        
-        ->whereNull('hidden')
-        ->get();
-        
         $commerce = Commerce::find($id);
 
+        if($commerce){
+            return redirect('catalogo-productos/' . $commerce->slug);
+        }else{
+            return view('errors.404');
+        }
+    }
+
+    public function catalogoSlug($slug){
+        $commerce = Commerce::where('slug', $slug)->first();
+
+        $products = Product::where('commerce_id', $commerce->id)        
+        ->whereNull('hidden')
+        ->get();
+
+        $tags = $commerce->tags->pluck('name')->unique()->toArray();
+        $categories = $commerce->categories->pluck('name')->unique()->toArray();
+        $keywords = implode(', ', $categories) . ', ' . $commerce->name . ', ' . implode(', ', $tags);
+        $meta_description = 'Catálogo de Productos de ' . $commerce->name .' en CiudadGPS: '. $commerce->info;
+        
         return view('public.commerces.catalogo', [
             'products' => $products,
-            'commerce' => $commerce
+            'commerce' => $commerce, 
+            'keywords' => $keywords, 
+            'meta_description' => $meta_description
         ]);
     }
 

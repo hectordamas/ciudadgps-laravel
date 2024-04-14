@@ -1,6 +1,6 @@
 @extends('layouts.public')
 @section('title')
-<title> Pago Online</title>
+<title>Pago Online</title>
 @endsection
 @section('content')
 <div class="container">

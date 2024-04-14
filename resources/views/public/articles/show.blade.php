@@ -1,6 +1,8 @@
 @extends('layouts.public')
 @section('title')
 <title>{{ $article->title }} - CiudadGPS</title>
+<meta name="description" content="{{ $meta_description }}" />
+<meta name="keywords" content="{{ $keywords }}">
 @endsection
 @section('content')
 <div class="breadcrumb_section page-title-mini" style="background-image: url('{{ asset('assets/blog.jpg') }}'); background-position: center center; background-size: cover; position: relative;">

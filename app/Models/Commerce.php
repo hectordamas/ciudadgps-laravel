@@ -4,12 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+
 use App\Models\Comment;
 use App\Models\Img;
 use App\Models\Like;
 use App\Models\Category;
 use App\Models\Tag;
-use Illuminate\Support\Facades\DB;
 use App\Models\Story;
 use App\Models\CommerceCode;
 use App\Models\Product;
@@ -24,7 +26,6 @@ class Commerce extends Model
     use HasFactory;
 
     protected $guarded = [];
-    
 
     public function users(){
         return $this->belongsToMany(User::class, 'commerce_user');

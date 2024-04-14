@@ -12,8 +12,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 @yield('title')
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CiudadGPS es una Plataforma que ayuda a las personas a encontrar comercios en Venezuela. Con geolocalización, ofrece detalles de negocios cercanos, categorías variadas y permite calificaciones, promoviendo interacción entre usuarios y negocios locales.">
-<meta name="keywords" content="CiudadGPS, Venezuela, negocios, locales, geolocalización, comercios cercanos, categorías de negocios, restaurantes, tiendas, salud, educación, tecnología, información detallada de negocios, dirección exacta, contacto, redes sociales, directorio comercial, emprendedores, ciudadgps, Ciudad GPS, herramientas, viajes, comunicacion, plomeros, mecanicos, medicos, venezuela, caracas, lugares">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">

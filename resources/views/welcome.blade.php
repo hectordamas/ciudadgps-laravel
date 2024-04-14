@@ -13,13 +13,14 @@
 <meta name="description" content="CiudadGPS es una Plataforma que ayuda a las personas a encontrar comercios en Venezuela. Con geolocalización, ofrece detalles de negocios cercanos, categorías variadas y permite calificaciones, promoviendo interacción entre usuarios y negocios locales.">
 <meta name="keywords" content="CiudadGPS, Venezuela, negocios, locales, geolocalización, comercios, categorías, restaurantes, tiendas, salud, educación, tecnología, información detallada de negocios, dirección exacta, contacto, redes sociales, directorio comercial, emprendedores, ciudadgps, Ciudad GPS, herramientas, viajes, comunicacion, plomeros, mecanicos, medicos, venezuela, caracas, lugares">
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<title>CiudadGPS - La App que conecta. Comercios en Venezuela</title>
+<title>CiudadGPS - La App que te conecta - Comercios en Venezuela - La Comunidad de Comercios más Grande de Venezuela</title>
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/animate.css') }}">	
 <link rel="stylesheet" href="{{ asset('assetsPublic/bootstrap/css/bootstrap.min.css') }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/all.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/ionicons.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/themify-icons.css') }}">
@@ -234,9 +235,9 @@
                             <div class="cat_slider mt-4 mt-md-0 carousel_slider owl-carousel owl-theme nav_style5" data-loop="true" data-dots="false" data-nav="true" data-margin="30" data-responsive='{"0":{"items": "2"}, "380":{"items": "2"}, "991":{"items": "2"}, "1199":{"items": "4"}}'>
                                 @foreach ($catHeader->take(12) as $category)
                                 @php
-                                    $url = '/comercios/categorias/' . $category->id . '?order=id';
+                                    $url = '/comercios/categorias/' . $category->slug . '?order=id';
                                     if(session()->has('latitude') && session()->has('longitude')){
-                                        $url = '/comercios/categorias/' . $category->id . '?order=distance';
+                                        $url = '/comercios/slug-categorias/' . $category->slug . '?order=distance';
                                     }
                                 @endphp
                                 <div class="item">
@@ -298,7 +299,7 @@
                 <div class="col-md-6 col-lg-3 col-12 mb-3">
                     <div class="product_box text-center shadow border-0">
                         <div class="product_img">
-                            <a href="{{ url('/comercios/' . $c->id) }}">
+                            <a href="{{ url('/slug-comercios/' . $c->slug) }}">
                                 @if($c->imgs->first())<img src="{{ $c->imgs->first()->uri }}" alt="{{$c->name}}">@endif
                                 <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
                                     <img src="{{ asset($c->logo) }}" alt="{{$c->name}} logo" style="width:60px; height:60px; border-radius:50%;">
@@ -306,7 +307,7 @@
                             </a>
                         </div>
                         <div class="product_info">
-                            <h6 class="product_title"><a href="{{ url('/comercios/' . $c->id) }}">{{ $c->name }}</a></h6>
+                            <h6 class="product_title"><a href="{{ url('/slug-comercios/' . $c->slug) }}">{{ $c->name }}</a></h6>
                             <div class="rating_wrap">
                                 <div class="rating">
                                     <div class="product_rate" style="width:{{$ratingP}}%"></div>

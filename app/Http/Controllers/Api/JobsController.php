@@ -7,6 +7,8 @@ use App\Http\Controllers\Api\BaseController;
 use Illuminate\Http\Request;
 use App\Models\Job;
 use App\Models\Commerce;
+use DB;
+use Illuminate\Support\Str;
 
 class JobsController extends BaseController
 {
@@ -108,6 +110,16 @@ class JobsController extends BaseController
         $job->email = $request->email;
         $job->save();
 
+        $slug = Str::slug($request->job);
+        $count = DB::table('jobs')->where('slug', $slug)->count();
+        $suffix = '';
+        if ($count > 0) {
+            $suffix = '-' . $job->id;
+        }
+        $job->slug = $slug . $suffix;
+        $job->save();
+
+
         return response()->json([
             'response' => 'Empleo publicado con éxito!'
         ]);
@@ -128,7 +140,16 @@ class JobsController extends BaseController
                 'error' => 'Tu usuario no está asociado a este comercio.'
             ]);
         }
+        $slug = Str::slug($request->job);
+        $count = DB::table('jobs')->where('slug', $slug)->count();
+        $suffix = '';
+
+        if ($count > 0) {
+            $suffix = '-' . $request->job_id;
+        }
+        
         $job->title = $request->job;
+        $job->slug = $slug . $suffix;
         $job->description = $request->description;
         $job->whatsapp_code = $request->whatsapp_code;
         $job->whatsapp_number_code = $request->whatsapp_number_code;

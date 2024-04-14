@@ -1,6 +1,8 @@
 @extends('layouts.public')
 @section('title')
 <title>Resultados para {{$tag->name}} en CiudadGPS</title>
+<meta name="description" content="Página de Etiquetas: Blog, articulos y noticias de CiudadGPS: tocamos temas de empleo, e-commerce, directorios de comercios, entre otras cosas" />
+<meta name="keywords" content="Etiquetas, Afiliar, comercio, negocio, emprendimiento, bolsa de empleo, talento, personal, captacion, trabajo, venezuela, comercio electrónico, viajes, trabajo, medicina, aplicación">
 @endsection
 @section('content')
 <div class="breadcrumb_section page-title-mini" style="background-image: url('{{ asset('assets/blog.jpg') }}'); background-position: center center; background-size: cover; position: relative;">

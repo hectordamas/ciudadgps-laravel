@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\BaseController;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use DB;
+use Illuminate\Support\Str;
 use App\Models\Commerce;
 use App\Models\Product;
 use App\Models\Visit;
@@ -72,6 +73,7 @@ class ProductsController extends BaseController
         }
 
         $product = new Product();
+        $product->slug = $slug . $suffix;
         $product->name = $request->name;
         $product->price = $request->price;   
         $product->description = $request->description;           
@@ -85,6 +87,16 @@ class ProductsController extends BaseController
         }
         $product->commerce_id = $request->commerce_id;
         $product->pcategory_id = $request->pcategory_id;
+        $product->save();
+
+        $slug = Str::slug($request->name);
+        $count = DB::table('products')->where('slug', $slug)->count();
+        $suffix = '';
+
+        if ($count > 0) {
+            $suffix = '-' . $product->id;
+        }
+        $product->slug = $slug . $suffix;
         $product->save();
 
         return response()->json([
@@ -123,6 +135,16 @@ class ProductsController extends BaseController
             $product->image = $fileUri;
         }
         $product->pcategory_id = $request->pcategory_id;
+        $product->save();
+
+        $slug = Str::slug($request->name);
+        $count = DB::table('products')->where('slug', $slug)->count();
+        $suffix = '';
+
+        if ($count > 0) {
+            $suffix = '-' . $product->id;
+        }
+        $product->slug = $slug . $suffix;
         $product->save();
 
         return response()->json([

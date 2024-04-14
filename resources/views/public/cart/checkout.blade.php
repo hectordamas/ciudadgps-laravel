@@ -1,6 +1,8 @@
 @extends('layouts.public')
 @section('title')
 <title>CiudadGPS - Procesar Orden</title>
+<meta name="description" content="Procesar orden en ciudadgps" />
+<meta name="keywords" content="ciudadgps, orden, carrito de compras, pagon en linea">
 @endsection
 
 @section('content')

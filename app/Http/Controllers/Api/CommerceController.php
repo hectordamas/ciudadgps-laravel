@@ -10,6 +10,7 @@ use App\Models\Category;
 use Response;
 use App\Models\Img;
 use App\Models\Tag;
+use Illuminate\Support\Str;
 use DB;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Api\BaseController;
@@ -35,7 +36,16 @@ class CommerceController extends BaseController
 
     public function store(Request $request){   
         try {
+            $slug = Str::slug($request->name);
+            $count = DB::table('commerces')->where('slug', $slug)->count();
+            $suffix = '';
+    
+            if ($count > 0) {
+                $suffix = '-' . Str::random(6);
+            }
+
             $commerce = new Commerce();
+            $commerce->slug = $slug . $suffix;
             $commerce->name = $request->name;
             $commerce->user_name = $request->user_name;
             $commerce->user_lastname = $request->user_lastname;  
@@ -383,9 +393,17 @@ class CommerceController extends BaseController
                 ]);
             }
 
-            $commerce = Commerce::find($id);
-            $commerce->name = $request->name;
+            $slug = Str::slug($request->name);
+            $count = DB::table('commerces')->where('slug', $slug)->count();
+            $suffix = '';
+    
+            if ($count > 0) {
+                $suffix = '-' . Str::random(6);
+            }
 
+            $commerce = Commerce::find($id);
+            $commerce->slug = $slug . $suffix;
+            $commerce->name = $request->name;
             $commerce->telephone_code = $request->telephone_code;
             $commerce->telephone_number_code = $request->telephone_number_code;
             if($request->telephone_number){

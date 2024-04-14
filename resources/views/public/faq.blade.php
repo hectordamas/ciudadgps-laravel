@@ -1,6 +1,8 @@
 @extends('layouts.public')
 @section('title')
 <title>CiudadGPS - FAQ</title>
+<meta name="description" content="Preguntas más Frecuente de CiudadGPS. Descubre qué es CiudadGPS, y con qué propósito fue creado, conoce la visión de la comunidad de comercios más grande de Latinoamérica" />
+<meta name="keywords" content="Afiliar, comercio, negocio, emprendimiento, bolsa de empleo, talento, personal, captacion, trabajo, venezuela, comercio electrónico, viajes, trabajo, medicina, aplicación">
 @endsection
 @section('content')
 <div class="breadcrumb_section page-title-mini" style="background-image: url('{{ asset('assets/faq.jpg') }}'); background-position: center center; background-size: cover; position: relative;">

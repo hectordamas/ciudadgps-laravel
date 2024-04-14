@@ -16,8 +16,10 @@
         ['url' => '/', 'text' => 'Inicio'],
         ['url' => url('registrar-comercio'), 'text' => 'Registra Tu Negocio'],
         ['url' => url('empleos'), 'text' => 'Empleos'],
+        ['url' => url('planes'), 'text' => 'Planes'],
         ['url' => url('faq'), 'text' => 'FAQ'],
         ['url' => url('nosotros'), 'text' => 'Nosotros'],
+        ['url' => url('blog'), 'text' => 'Blog'],
     ];
 @endphp
 <!-- START FOOTER -->
@@ -35,6 +37,7 @@
                     <div class="widget">
                         <ul class="social_icons social_white">
                             <li><a href="https://www.instagram.com/ciudadgps" target="blank"><i class="ion-social-instagram-outline" style="font-size:30px;"></i></a></li>
+                            <li><a href="https://www.tiktok.com/@ciudadgps" target="blank"><i class="fab fa-tiktok" style="font-size:25px;"></i></a></li>
                             <li><a href="https://api.whatsapp.com/send?phone=584129749348" target="blank"><i class="ion-social-whatsapp-outline" style="font-size:30px;"></i></a></li>
                         </ul>
                     </div>
@@ -46,9 +49,9 @@
                             <ul class="widget_links">
                                 @foreach($category['items'] as $ca)
                                     @php
-                                        $url = '/comercios/categorias/' . $ca->id . '?order=id';
+                                        $url = '/comercios/slug-categorias/' . $ca->slug . '?order=id';
                                         if(session()->has('latitude') && session()->has('longitude')){
-                                            $url = '/comercios/categorias/' . $ca->id . '?order=distance';
+                                            $url = '/comercios/slug-categorias/' . $ca->slug . '?order=distance';
                                         }
                                     @endphp
                                     <li><a href="{{ url($url) }}" class="category-link">{{$ca->name}}</a></li>
@@ -207,3 +210,5 @@
       });
     }
 </script>
+
+

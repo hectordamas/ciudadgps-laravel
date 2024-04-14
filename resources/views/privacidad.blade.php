@@ -1,6 +1,8 @@
 @extends('layouts.public')
 @section('title')
-<title> Políticas de privacidad</title>
+<title>Políticas de privacidad</title>
+<meta name="description" content="Politica de privacidad de CiudadGPS">
+<meta name="keywords" content="Privacidad, CiudadGPS, Venezuela, negocios, locales, geolocalización, comercios, categorías, restaurantes, tiendas, salud, educación, tecnología, información detallada de negocios, dirección exacta, contacto, redes sociales, directorio comercial, emprendedores, ciudadgps, Ciudad GPS, herramientas, viajes, comunicacion, plomeros, mecanicos, medicos, venezuela, caracas, lugares">
 @endsection
 @section('content')
 <div class="container">
