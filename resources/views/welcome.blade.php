@@ -10,10 +10,10 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CiudadGPS es una Plataforma que ayuda a las personas a encontrar comercios en Venezuela. Con geolocalización, ofrece detalles de negocios cercanos, categorías variadas y permite calificaciones, promoviendo interacción entre usuarios y negocios locales.">
-<meta name="keywords" content="CiudadGPS, Venezuela, negocios, locales, geolocalización, comercios, categorías, restaurantes, tiendas, salud, educación, tecnología, información detallada de negocios, dirección exacta, contacto, redes sociales, directorio comercial, emprendedores, ciudadgps, Ciudad GPS, herramientas, viajes, comunicacion, plomeros, mecanicos, medicos, venezuela, caracas, lugares">
+<meta name="description" content="CiudadGPS es una Plataforma que ayuda a las personas a encontrar comercios. Con geolocalización, ofrece detalles de negocios cercanos, categorías variadas y permite calificaciones, promoviendo interacción entre usuarios y comercios.">
+<meta name="keywords" content="CiudadGPS, Venezuela, negocios, locales, geolocalización, comercios, categorías, restaurantes, tiendas, salud, educación, tecnología, información detallada de negocios, dirección exacta, contacto, redes sociales, directorio comercial, emprendedores, ciudadgps, Ciudad GPS, herramientas, viajes, comunicacion, plomeros, mecanicos, medicos, venezuela, caracas, lugares, Descubre, locale,s comerciales, en, todo, el, país, Accede, a, un, amplio, directorio, de, información, sobre, los, negocios, establecidos, en, Venezuela">
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<title>CiudadGPS - La App que te conecta - Comercios en Venezuela - La Comunidad de Comercios más Grande de Venezuela</title>
+<title>CiudadGPS - La Comunidad de Comercios más Grande de Venezuela</title>
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/animate.css') }}">	
 <link rel="stylesheet" href="{{ asset('assetsPublic/bootstrap/css/bootstrap.min.css') }}">
