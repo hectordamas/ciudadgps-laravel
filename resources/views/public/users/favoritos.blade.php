@@ -54,7 +54,7 @@
                                                 @if($c->imgs->first())<img src="{{ asset($c->imgs->first()->uri) }}" alt="{{$c->name}}" style="max-height: 250px;">@endif
                 
                                                 <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
-                                                    <img src={{asset($c->logo)}} alt="{{$c->name}} Logotipo" style="width:60px; height:60px; border-radius:50%;">
+                                                    <img src="{{asset($c->logo)}}" alt="{{$c->name}} Logotipo" style="width:60px; height:60px; border-radius:50%;">
                                                 </div>
                                             </a>
                                         </div>
