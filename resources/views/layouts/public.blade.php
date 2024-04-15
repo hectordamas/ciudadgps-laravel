@@ -90,7 +90,6 @@
                         @guest
                         <li><a class="nav-link nav_item" href="{{ route('login') }}">Inicia Sesión</a></li> 
                         @else
-                        <li><a class="nav-link nav_item" href="{{ url('favoritos') }}">Favoritos</a></li> 
                         <li class="dropdown">
                             <a class="dropdown-toggle nav-link" href="{{ url('mi-cuenta') }}" data-toggle="dropdown">{{ Auth::user()->name }}</a>
                             <div class="dropdown-menu">
@@ -99,6 +98,7 @@
                                     <li><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="{{ url('/administrador') }}">Administrador</a></li> 
                                     @endif
                                     <li><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="{{ url('mi-cuenta') }}">Mi Cuenta</a></li> 
+                                    <li><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="{{ url('favoritos') }}">Favoritos</a></li> 
                                     <li>
                                         <a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
