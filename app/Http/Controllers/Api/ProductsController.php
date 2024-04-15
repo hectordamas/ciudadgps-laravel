@@ -132,8 +132,6 @@ class ProductsController extends BaseController
             $product->image = $fileUri;
         }
         $product->pcategory_id = $request->pcategory_id;
-        $product->save();
-
         $slug = Str::slug($request->name);
         $count = DB::table('products')->where('slug', $slug)->where('id', '!=', $product->id)->count();
         $suffix = '';

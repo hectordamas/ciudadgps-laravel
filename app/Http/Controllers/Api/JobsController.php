@@ -144,7 +144,7 @@ class JobsController extends BaseController
         $suffix = '';
 
         if ($count > 0) {
-            $suffix = '-' . $request->job_id;
+            $suffix = '-' . $count;
         }
         
         $job->title = $request->job;
