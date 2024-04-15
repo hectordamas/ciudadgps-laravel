@@ -73,7 +73,6 @@ class ProductsController extends BaseController
         }
 
         $product = new Product();
-        $product->slug = $slug . $suffix;
         $product->name = $request->name;
         $product->price = $request->price;   
         $product->description = $request->description;           
@@ -87,14 +86,12 @@ class ProductsController extends BaseController
         }
         $product->commerce_id = $request->commerce_id;
         $product->pcategory_id = $request->pcategory_id;
-        $product->save();
-
         $slug = Str::slug($request->name);
         $count = DB::table('products')->where('slug', $slug)->count();
         $suffix = '';
 
         if ($count > 0) {
-            $suffix = '-' . $product->id;
+            $suffix = '-' . $count;
         }
         $product->slug = $slug . $suffix;
         $product->save();
@@ -138,11 +135,11 @@ class ProductsController extends BaseController
         $product->save();
 
         $slug = Str::slug($request->name);
-        $count = DB::table('products')->where('slug', $slug)->count();
+        $count = DB::table('products')->where('slug', $slug)->where('id', '!=', $product->id)->count();
         $suffix = '';
 
         if ($count > 0) {
-            $suffix = '-' . $product->id;
+            $suffix = '-' . $count;
         }
         $product->slug = $slug . $suffix;
         $product->save();

@@ -80,7 +80,7 @@ class ArticleController extends Controller
         $suffix = '';
 
         if ($count > 0) {
-            $suffix = '-' . Str::random(6);
+            $suffix = '-' . $count;
         }
 
         $article = new Article();
@@ -122,11 +122,11 @@ class ArticleController extends Controller
 
     public function update($id, Request $request) {
         $slug = Str::slug($request->title);
-        $count = DB::table('articles')->where('slug', $slug)->count();
+        $count = DB::table('articles')->where('slug', $slug)->where('id', '!=', $id)->count();
         $suffix = '';
 
         if ($count > 0) {
-            $suffix = '-' . Str::random(6);
+            $suffix = '-' . $count;
         }
 
         $article = Article::findOrFail($id);

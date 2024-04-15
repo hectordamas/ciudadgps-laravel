@@ -249,7 +249,7 @@ class ComerciosController extends Controller
         $suffix = '';
 
         if ($count > 0) {
-            $suffix = '-' . Str::random(6);
+            $suffix = '-' . $count;
         }
 
         $commerce = new Commerce();

@@ -108,13 +108,12 @@ class JobsController extends BaseController
         }
         $job->commerce_id = $request->commerce_id;
         $job->email = $request->email;
-        $job->save();
 
         $slug = Str::slug($request->job);
         $count = DB::table('jobs')->where('slug', $slug)->count();
         $suffix = '';
         if ($count > 0) {
-            $suffix = '-' . $job->id;
+            $suffix = '-' . $count;
         }
         $job->slug = $slug . $suffix;
         $job->save();
@@ -141,7 +140,7 @@ class JobsController extends BaseController
             ]);
         }
         $slug = Str::slug($request->job);
-        $count = DB::table('jobs')->where('slug', $slug)->count();
+        $count = DB::table('jobs')->where('slug', $slug)->where('id', '!=', $job->id)->count();
         $suffix = '';
 
         if ($count > 0) {

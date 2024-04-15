@@ -28,15 +28,13 @@ class CategoriesController extends Controller
 
     public function store(Request $request)
     {
+        $category = new Category();
         $slug = Str::slug($request->input('name'));
         $count = DB::table('categories')->where('slug', $slug)->count();
         $suffix = '';
-
         if ($count > 0) {
-            $suffix = '-' . Str::random(6);
+            $suffix = '-' . $count;
         }
-
-        $category = new Category();
         $category->slug = $slug . $suffix;
         $category->name = $request->input('name');
         $category->position = $request->input('position');
@@ -67,16 +65,14 @@ class CategoriesController extends Controller
 
     public function update(Request $request, $id)
     {
-        $slug = Str::slug($request->input('name'));
-        $count = DB::table('categories')->where('slug', $slug)->count();
-        $suffix = '';
-
-        if ($count > 0) {
-            $suffix = '-' . Str::random(6);
-        }
-
         $category = Category::find($id);
         $category->name = $request->input('name');
+        $slug = Str::slug($request->input('name'));
+        $count = DB::table('categories')->where('slug', $slug)->where('id', '!=', $id)->count();
+        $suffix = '';
+        if ($count > 0) {
+            $suffix = '-' . $count;
+        }
         $category->slug = $slug . $suffix;
         $category->position = $request->input('position');
         $category->hidden = $request->input('hidden');

@@ -41,7 +41,7 @@ class CommerceController extends BaseController
             $suffix = '';
     
             if ($count > 0) {
-                $suffix = '-' . Str::random(6);
+                $suffix = '-' . $count;
             }
 
             $commerce = new Commerce();
@@ -394,11 +394,11 @@ class CommerceController extends BaseController
             }
 
             $slug = Str::slug($request->name);
-            $count = DB::table('commerces')->where('slug', $slug)->count();
+            $count = DB::table('commerces')->where('slug', $slug)->where('id', '!=', $id)->count();
             $suffix = '';
     
             if ($count > 0) {
-                $suffix = '-' . Str::random(6);
+                $suffix = '-' . $count;
             }
 
             $commerce = Commerce::find($id);
