@@ -13,13 +13,7 @@
                 <li class="mega-menu-col col-lg-3">
                     <ul>
                         @foreach($catHeader->skip($section)->take(12) as $cat)
-                            @php
-                                $url = '/comercios/slug-categorias/' . $cat->slug . '?order=id';
-                                if(session()->has('latitude') && session()->has('longitude')){
-                                    $url = '/comercios/slug-categorias/' . $cat->slug . '?order=distance';
-                                }
-                            @endphp
-                            <li><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="{{ url($url ) }}">{{$cat->name}}</a></li>
+                            <li><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="{{ url('/comercios/slug-categorias/' . $cat->slug) }}">{{$cat->name}}</a></li>
                         @endforeach
                     </ul>
                 </li>

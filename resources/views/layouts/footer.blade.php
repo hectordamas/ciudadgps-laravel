@@ -48,13 +48,7 @@
                             <h6 class="widget_title">{{ $category['title'] }}</h6>
                             <ul class="widget_links">
                                 @foreach($category['items'] as $ca)
-                                    @php
-                                        $url = '/comercios/slug-categorias/' . $ca->slug . '?order=id';
-                                        if(session()->has('latitude') && session()->has('longitude')){
-                                            $url = '/comercios/slug-categorias/' . $ca->slug . '?order=distance';
-                                        }
-                                    @endphp
-                                    <li><a href="{{ url($url) }}" class="category-link">{{$ca->name}}</a></li>
+                                    <li><a href="{{ url('comercios/slug-categorias/' . $ca->slug) }}" class="category-link">{{$ca->name}}</a></li>
                                 @endforeach
                             </ul>
                         </div>

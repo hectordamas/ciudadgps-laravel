@@ -48,13 +48,7 @@
                             <h6 class="widget_title"><?php echo e($category['title']); ?></h6>
                             <ul class="widget_links">
                                 <?php $__currentLoopData = $category['items']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ca): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <?php
-                                        $url = '/comercios/slug-categorias/' . $ca->slug . '?order=id';
-                                        if(session()->has('latitude') && session()->has('longitude')){
-                                            $url = '/comercios/slug-categorias/' . $ca->slug . '?order=distance';
-                                        }
-                                    ?>
-                                    <li><a href="<?php echo e(url($url)); ?>" class="category-link"><?php echo e($ca->name); ?></a></li>
+                                    <li><a href="<?php echo e(url('comercios/slug-categorias/' . $ca->slug)); ?>" class="category-link"><?php echo e($ca->name); ?></a></li>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </ul>
                         </div>

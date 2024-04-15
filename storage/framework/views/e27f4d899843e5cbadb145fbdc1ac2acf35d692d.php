@@ -115,7 +115,7 @@
                     <li><a href="javascript:void(0);" class="nav-link search_trigger"><i class="linearicons-magnifier"></i></a>
                         <div class="search_wrap">
                             <span class="close-search"><i class="ion-ios-close-empty"></i></span>
-                            <form action="<?php echo e(url('/comercios')); ?>">
+                            <form action="<?php echo e(url('comercios')); ?>">
                                 <input type="hidden" name="order" value="<?php echo e(session()->has('latitude') ? 'distance' : 'id'); ?>" />
                                 <input type="text" name="search" placeholder="Cuéntanos. ¿Qué Estás Buscando?" class="form-control" id="search_input">
                                 <button type="submit" class="search_icon"><i class="ion-ios-search-strong"></i></button>
@@ -169,7 +169,7 @@
                                     <h1 class="staggered-animation mb-3" id="main-title" data-animation="fadeInDown" data-animation-delay="0.3s">Descubre locales comerciales en todo el país</h1>
                                     <p class="staggered-animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.4s" style="animation-delay: 0.4s; opacity: 1;">Accede a un amplio directorio de información sobre los negocios establecidos en Venezuela.</p>
                                     <div style="max-width:400px;">
-                                        <form action="<?php echo e(url('/comercios')); ?>" class="d-flex">
+                                        <form action="<?php echo e(url('comercios')); ?>" class="d-flex">
                                             <input type="hidden" name="order" value="<?php echo e(session()->has('latitude') ? 'distance' : 'id'); ?>" />
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
@@ -235,15 +235,9 @@
                         <div class="col-lg-9 col-md-7">
                             <div class="cat_slider mt-4 mt-md-0 carousel_slider owl-carousel owl-theme nav_style5" data-loop="true" data-dots="false" data-nav="true" data-margin="30" data-responsive='{"0":{"items": "2"}, "380":{"items": "2"}, "991":{"items": "2"}, "1199":{"items": "4"}}'>
                                 <?php $__currentLoopData = $catHeader->take(12); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <?php
-                                    $url = '/comercios/slug-categorias/' . $category->slug . '?order=id';
-                                    if(session()->has('latitude') && session()->has('longitude')){
-                                        $url = '/comercios/slug-categorias/' . $category->slug . '?order=distance';
-                                    }
-                                ?>
                                 <div class="item">
                                     <div class="categories_box">
-                                        <a href="<?php echo e(url($url)); ?>" class="category-link">
+                                        <a href="<?php echo e(url('comercios/slug-categorias/' . $category->slug)); ?>" class="category-link">
                                             <img src="<?php echo e(asset($category->image_url)); ?>" alt="<?php echo e($category->name); ?>" style="height:40px; width:40px; margin:auto;" class="mb-4">
                                             <span class="text-dark text-uppercase font-weight-bold" style="font-size:12px;">
                                                 <?php echo e($category->name); ?>
@@ -274,13 +268,7 @@
                         <h4>Comercios Destacados</h4>
                     </div>
                     <div class="view_all">
-                        <?php
-                            $url = '/comercios?order=id&search=';
-                            if(session()->has('latitude') && session()->has('longitude')){
-                                $url = '/comercios?order=distance&search=';
-                            }
-                        ?>
-                        <a href="<?php echo e(url($url)); ?>" class="text_default link_all"><i class="linearicons-power"></i> <span>Ver Más</span></a>
+                        <a href="<?php echo e(url('comercios')); ?>" class="text_default link_all"><i class="linearicons-power"></i> <span>Ver Más</span></a>
                     </div>
                 </div>
             </div>
