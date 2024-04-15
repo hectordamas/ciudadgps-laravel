@@ -33,16 +33,10 @@
             <div class="col-lg-12">
                 <div class="row">
                 <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <?php
-                        $url = '/comercios/slug-categorias/' . $category->slug . '?order=id';
-                        if(session()->has('latitude') && session()->has('longitude')){
-                            $url = '/comercios/slug-categorias/' . $category->slug . '?order=distance';
-                        }
-                    ?>
                     <div class="col-md-2 col-6 mb-3">
                         <div class="card shadow">
                             <div class="categories_box">
-                                <a href="<?php echo e(url($url)); ?>" class="category-link">
+                                <a href="<?php echo e(url('/comercios/slug-categorias/' . $category->slug )); ?>" class="category-link">
                                     <img src="<?php echo e(asset($category->image_url)); ?>" alt="<?php echo e($category->name); ?>" style="height:40px; width:40px; margin:auto;" class="mb-4">
                                     <span class="text-dark text-uppercase font-weight-bold" style="font-size:12px;">
                                         <?php echo e($category->name); ?>
