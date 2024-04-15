@@ -95,7 +95,6 @@ class CommerceController extends Controller
         $commerce->paid = $request->paid;
         $commerce->lat = $request->lat;   
         $commerce->lon = $request->lon;
-            
         if($request->hasFile('logo')){
             $file = $request->file('logo');
             $path = public_path(). '/logos/' ;
@@ -104,38 +103,28 @@ class CommerceController extends Controller
             $fileUri = '/logos/'. $fileName;
             $commerce->logo = $fileUri;
         }
-
         $commerce->user_email = strtolower($request->user_email);
-
         $commerce->facebook = $request->facebook;
         $commerce->tiktok = $request->tiktok;
-
         $commerce->instagram = $request->instagram;
         $commerce->web = $request->web;    
-    
         $commerce->payment = 'Efectivo';
         $commerce->category_id = $request->categories[0];
-
         $commerce->position = $request->position;
         $commerce->destacar = $request->destacar;
         $commerce->expiration_date = $request->expiration_date;
-
         $commerce->twitter = $request->twitter;
         $commerce->youtube = $request->youtube;
         $commerce->address = $request->address;
         $commerce->created_by = Auth::user()->name;
         $commerce->hide = $request->hide;
-
         $commerce->url = $request->url;
         $commerce->urlName = $request->urlName;
-
-        $commerce->save();
-
         $slug = Str::slug($request->name);
         $count = DB::table('commerces')->where('slug', $slug)->count();
         $suffix = '';
         if ($count > 0) {
-            $suffix = '-' . $commerce->id;
+            $suffix = '-' . $count;
         }
         $commerce->slug = $slug . $suffix;
         $commerce->save();
@@ -181,16 +170,7 @@ class CommerceController extends Controller
 
     public function update(Request $request, $id)
     {
-        $slug = Str::slug($request->name);
-        $count = DB::table('commerces')->where('slug', $slug)->count();
-        $suffix = '';
-
-        if ($count > 0) {
-            $suffix = '-' . $id;
-        }
-
         $commerce = Commerce::find($id);
-        $commerce->slug = $slug . $suffix;
         $commerce->name = $request->name;
         $commerce->user_name = $request->user_name;
         $commerce->user_lastname = $request->user_lastname;
@@ -253,7 +233,13 @@ class CommerceController extends Controller
 
         $commerce->url = $request->url;
         $commerce->urlName = $request->urlName;
-        
+        $slug = Str::slug($request->name);
+        $count = DB::table('commerces')->where('slug', $slug)->count();
+        $suffix = '';
+        if ($count > 0) {
+            $suffix = '-' . $count;
+        }
+        $commerce->slug = $slug . $suffix;        
         $commerce->save();
 
         $commerce->tags()->delete();
