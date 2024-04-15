@@ -12,8 +12,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <?php echo $__env->yieldContent('title'); ?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CiudadGPS es una Plataforma que ayuda a las personas a encontrar comercios en Venezuela. Con geolocalización, ofrece detalles de negocios cercanos, categorías variadas y permite calificaciones, promoviendo interacción entre usuarios y negocios locales.">
-<meta name="keywords" content="CiudadGPS, Venezuela, negocios, locales, geolocalización, comercios cercanos, categorías de negocios, restaurantes, tiendas, salud, educación, tecnología, información detallada de negocios, dirección exacta, contacto, redes sociales, directorio comercial, emprendedores, ciudadgps, Ciudad GPS, herramientas, viajes, comunicacion, plomeros, mecanicos, medicos, venezuela, caracas, lugares">
 <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo e(asset('favicon.ico')); ?>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,7 +90,6 @@
                         <?php if(auth()->guard()->guest()): ?>
                         <li><a class="nav-link nav_item" href="<?php echo e(route('login')); ?>">Inicia Sesión</a></li> 
                         <?php else: ?>
-                        <li><a class="nav-link nav_item" href="<?php echo e(url('favoritos')); ?>">Favoritos</a></li> 
                         <li class="dropdown">
                             <a class="dropdown-toggle nav-link" href="<?php echo e(url('mi-cuenta')); ?>" data-toggle="dropdown"><?php echo e(Auth::user()->name); ?></a>
                             <div class="dropdown-menu">
@@ -101,6 +98,7 @@
                                     <li><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="<?php echo e(url('/administrador')); ?>">Administrador</a></li> 
                                     <?php endif; ?>
                                     <li><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="<?php echo e(url('mi-cuenta')); ?>">Mi Cuenta</a></li> 
+                                    <li><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="<?php echo e(url('favoritos')); ?>">Favoritos</a></li> 
                                     <li>
                                         <a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="<?php echo e(route('logout')); ?>"
                                         onclick="event.preventDefault();

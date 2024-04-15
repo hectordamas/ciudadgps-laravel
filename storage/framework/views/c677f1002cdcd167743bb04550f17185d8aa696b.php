@@ -1,6 +1,8 @@
 
 <?php $__env->startSection('title'); ?>
 <title> <?php if(isset($commerce)): ?> <?php echo e($commerce->name); ?> - CiudadGPS  <?php else: ?> Buscar en CiudadGPS <?php endif; ?></title>
+<meta name="description" content="<?php echo e($meta_description); ?>" />
+<meta name="keywords" content="<?php echo e($keywords); ?>">
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
 <?php
@@ -161,7 +163,7 @@
                 <?php if($commerce->url): ?>
                 <div class="row py-2">
                     <div class="col-md-12">
-                        <a href="<?php echo e($commerce->url); ?>" target="blank" class="btn btn-dark btn-sm">
+                        <a target="blank" href="<?php echo e($commerce->url); ?>" class="btn btn-dark btn-sm">
                             <i class="fas fa-link"></i> <?php echo e($commerce->urlName); ?>
 
                         </a>
@@ -170,8 +172,8 @@
                 <?php endif; ?>
 
                 <ul class="product-meta">
-                    <li>Categoría: <?php $__currentLoopData = $commerce->categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
-                        <a href="<?php echo e(url('/comercios/categorias/' . $category->id)); ?>" class="badge badge-dark"><?php echo e($category->name); ?></a> 
+                    <li>Categorías: <?php $__currentLoopData = $commerce->categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
+                        <a href="<?php echo e(url('/comercios/slug-categorias/' . $category->slug)); ?>" class="badge badge-dark"><?php echo e($category->name); ?></a> 
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></li>
                     <?php if($commerce->tags->count() > 0): ?>
                     <li>Etiquetas: <?php $__currentLoopData = $commerce->tags; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $t): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -343,7 +345,7 @@
                         <h4>Catálogo de Productos:</h4>
                     </div>
                     <div class="view_all">
-                        <a href="<?php echo e(url('/catalogo-de-productos/' . $commerce->id)); ?>" class="text_default"><i class="linearicons-power"></i> <span>Ver Todos</span></a>
+                        <a href="<?php echo e(url('/catalogo-productos/' . $commerce->slug)); ?>" class="text_default"><i class="linearicons-power"></i> <span>Ver Todos</span></a>
                     </div>
                 </div>
             </div>
@@ -353,7 +355,7 @@
                     <div class="item">
                         <div class="product shadow product_box border-0">
                             <div class="product_img" style="aspect-ratio: 1;">
-                                <a href="/productos/<?php echo e($product->id); ?>" style="position: relative; height: 100%;">
+                                <a href="/slug-productos/<?php echo e($product->slug); ?>" style="position: relative; height: 100%;">
                                     <img 
                                         src="<?php echo e(asset($product->image)); ?>" 
                                         alt="<?php echo e($product->name); ?>" 
@@ -366,7 +368,7 @@
                                 </a>
                             </div>
                             <div class="product_info">
-                                <h6 class="product_title"><a href="/productos/<?php echo e($product->id); ?>"><?php echo e($product->name); ?></a></h6>
+                                <h6 class="product_title"><a href="/slug-productos/<?php echo e($product->slug); ?>"><?php echo e($product->name); ?></a></h6>
                                 <div class="product_price">
                                     <span class="price">$<?php echo e(number_format($product->price, 2, '.', ',')); ?></span>
                                 </div>

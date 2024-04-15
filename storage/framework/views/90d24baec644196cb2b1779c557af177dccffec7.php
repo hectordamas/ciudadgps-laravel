@@ -1,10 +1,10 @@
-@extends('layouts.public')
-@section('title')
-<title>CiudadGPS - Catálogo de Productos - {{$commerce->name}}</title>
-<meta name="description" content="{{ $meta_description }}" />
-<meta name="keywords" content="{{ $keywords }}">
-@endsection
-@section('content')
+
+<?php $__env->startSection('title'); ?>
+<title>CiudadGPS - Catálogo de Productos - <?php echo e($commerce->name); ?></title>
+<meta name="description" content="<?php echo e($meta_description); ?>" />
+<meta name="keywords" content="<?php echo e($keywords); ?>">
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
 <style>
     html{
         overflow-x: hidden;
@@ -21,7 +21,7 @@
     }
 </style>
 <!-- START SECTION BREADCRUMB -->
-<div class="breadcrumb_section page-title-mini" style="background-image: url('{{ asset('assets/job_background.jpg') }}'); background-position: center center; background-size: cover; position: relative;">
+<div class="breadcrumb_section page-title-mini" style="background-image: url('<?php echo e(asset('assets/job_background.jpg')); ?>'); background-position: center center; background-size: cover; position: relative;">
 
 </div>
 <!-- END SECTION BREADCRUMB -->
@@ -30,15 +30,15 @@
 
     <div class="row justify-content-center" style="margin-top: -80px;">
         <div class="col-md-10 d-flex justify-content-center my-2">
-            <img class="border rounded-circle" style="width: 120px; height: 120px;" src="{{ asset($commerce->logo) }}" alt="{{$commerce->name}}">
+            <img class="border rounded-circle" style="width: 120px; height: 120px;" src="<?php echo e(asset($commerce->logo)); ?>" alt="<?php echo e($commerce->name); ?>">
         </div>
 
         <div class="col-md-10 d-flex justify-content-center my-2">
-            <h3 class="text-center">{{$commerce->name}}</h3>
+            <h3 class="text-center"><?php echo e($commerce->name); ?></h3>
         </div>
 
         <div class="col-md-10 d-flex justify-content-center mb-5">
-            <a href="{{ url('/carrito-de-compras') }}" class="btn btn-sm btn-light" style="background: #e9e9e9;"> 
+            <a href="<?php echo e(url('/carrito-de-compras')); ?>" class="btn btn-sm btn-light" style="background: #e9e9e9;"> 
                 <i class="icon-basket-loaded" style="font-size: 20px;"></i>
                 Ir al Carrito
             </a>
@@ -51,35 +51,35 @@
 
         <div class="col-md-8">
             <div class="row shop_container justify-content-center">
-                @foreach($products as $product)
+                <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="col-lg-3 col-md-5 col-5 grid_item px-2">
                     <div class="product shadow product_box border-0">
                         <div class="product_img" style="aspect-ratio: 1;">
-                            <a href="{{ url('/slug-productos/' . $product->slug) }}" style="position: relative; height: 100%;">
-                                <img src="{{ asset($product->image) }}" style="object-fit: cover; height: 100%; aspect-ratio: 1;" alt="{{ $product->name }}">
+                            <a href="/slug-productos/<?php echo e($product->slug); ?>" style="position: relative; height: 100%;">
+                                <img src="<?php echo e(asset($product->image)); ?>" style="object-fit: cover; height: 100%; aspect-ratio: 1;" alt="<?php echo e($product->name); ?>">
                             </a>
                             
-                            <a href="javascript:void(0)" class="btn btn-sm addToCart" data-commerce="{{$product->commerce_id}}" data-id="{{$product->id}}" style="background-color: rgba(0,0,0,0.5); position: absolute; top: 0; right: 0; border-radius: 0;">
+                            <a href="javascript:void(0)" class="btn btn-sm addToCart" data-commerce="<?php echo e($product->commerce_id); ?>" data-id="<?php echo e($product->id); ?>" style="background-color: rgba(0,0,0,0.5); position: absolute; top: 0; right: 0; border-radius: 0;">
                                 <i class="icon-basket-loaded text-light" style="font-size: 30px;"></i>
                             </a>
                         </div>
                         <div class="product_info">
-                            <h6 class="product_title"><a href="/slug-productos/{{ $product->slug }}">{{$product->name}}</a></h6>
+                            <h6 class="product_title"><a href="/slug-productos/<?php echo e($product->slug); ?>"><?php echo e($product->name); ?></a></h6>
                             <div class="product_price">
-                                <span class="price">${{ number_format($product->price, 2, '.', ',') }}</span>
+                                <span class="price">$<?php echo e(number_format($product->price, 2, '.', ',')); ?></span>
                             </div>
                         </div>
                     </div>
                 </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
     </div>
 
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('map')
+<?php $__env->startSection('map'); ?>
 <script>
 $(document).ready(function() {
   $('#copyButton').click(function() {
@@ -102,4 +102,6 @@ $(document).ready(function() {
   });
 });
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.public', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Proyectos en Curso\ciudadgps\ciudadgps laravel\resources\views/public/commerces/catalogo.blade.php ENDPATH**/ ?>

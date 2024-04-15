@@ -235,7 +235,7 @@
                             <div class="cat_slider mt-4 mt-md-0 carousel_slider owl-carousel owl-theme nav_style5" data-loop="true" data-dots="false" data-nav="true" data-margin="30" data-responsive='{"0":{"items": "2"}, "380":{"items": "2"}, "991":{"items": "2"}, "1199":{"items": "4"}}'>
                                 @foreach ($catHeader->take(12) as $category)
                                 @php
-                                    $url = '/comercios/categorias/' . $category->slug . '?order=id';
+                                    $url = '/comercios/slug-categorias/' . $category->slug . '?order=id';
                                     if(session()->has('latitude') && session()->has('longitude')){
                                         $url = '/comercios/slug-categorias/' . $category->slug . '?order=distance';
                                     }

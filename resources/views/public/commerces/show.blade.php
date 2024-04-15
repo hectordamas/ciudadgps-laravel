@@ -352,7 +352,7 @@
                     <div class="item">
                         <div class="product shadow product_box border-0">
                             <div class="product_img" style="aspect-ratio: 1;">
-                                <a href="/productos/{{ $product->id }}" style="position: relative; height: 100%;">
+                                <a href="/slug-productos/{{ $product->slug }}" style="position: relative; height: 100%;">
                                     <img 
                                         src="{{ asset($product->image) }}" 
                                         alt="{{$product->name}}" 
@@ -365,7 +365,7 @@
                                 </a>
                             </div>
                             <div class="product_info">
-                                <h6 class="product_title"><a href="/productos/{{ $product->id }}">{{ $product->name }}</a></h6>
+                                <h6 class="product_title"><a href="/slug-productos/{{ $product->slug }}">{{ $product->name }}</a></h6>
                                 <div class="product_price">
                                     <span class="price">${{ number_format($product->price, 2, '.', ',') }}</span>
                                 </div>
