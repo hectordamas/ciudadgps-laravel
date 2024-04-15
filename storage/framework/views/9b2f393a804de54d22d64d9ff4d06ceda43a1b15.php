@@ -122,10 +122,10 @@
 <script src="<?php echo e(asset('assetsPublic/js/jquery.dd.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/js/slick.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/js/jquery.elevatezoom.js')); ?>"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script src="<?php echo e(asset('assetsPublic/js/select2.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/summernote.min.js')); ?>"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+<script src="<?php echo e(asset('assetsPublic/js/dropzone.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/vendor/datatables/jquery.dataTables.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/vendor/datatables/dataTables.bootstrap4.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/vendor/sweetalert/sweetalert.js')); ?>"></script>

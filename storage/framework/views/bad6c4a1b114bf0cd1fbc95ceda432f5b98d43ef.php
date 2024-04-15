@@ -1,6 +1,8 @@
 
 <?php $__env->startSection('title'); ?>
 <title> Registra tu negocio en CiudadGPS</title>
+<meta name="description" content="Registra tu negocio en CiudadGPS: para obtener más alcance en tu zona, atraer nuevos clientes, tener tu catálogo de productos y publicar en nuestra bolsa de empleos" />
+<meta name="keywords" content="Afiliar, comercio, negocio, emprendimiento, comercio electrónico, bolsa de empleo">
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
 <?php
@@ -77,7 +79,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="login_wrap">
-                <div class="py-5 px-5 bg-white">
+                <div class="py-4 px-4 py-lg-5 px-lg-5 bg-white">
     
                     <form action="<?php echo e(route('public.commerces.store')); ?>" method="post" class="row" enctype="multipart/form-data">
                         <?php echo csrf_field(); ?>
@@ -89,8 +91,8 @@
                         </div>
     
                         <div class="col-md-12">
-                            <p class="text-justify">Además de ayudar a los usuarios a encontrar comercios y locales cerca de ellos, CiudadGPS ayuda a los negocios locales a tener un mayor alcance y presencia en el mercado. Al proporcionar información detallada sobre cada negocio, los usuarios pueden conocer más sobre ellos y decidir si desean visitarlos. Además, los negocios también pueden recibir calificaciones y comentarios de los usuarios, lo que les permite mejorar su servicio y atraer a más clientes.</p>
-                            <p class="text-justify"> Para registrar tu negocio en CiudadGPS por favor rellena el siguiente formulario, luego de que lo envíes te estaremos contactando en las próximas horas para confirmar tus datos</p>
+                            <p>Además de ayudar a los usuarios a encontrar comercios y locales cerca de ellos, CiudadGPS ayuda a los negocios locales a tener un mayor alcance y presencia en el mercado. Al proporcionar información detallada sobre cada negocio, los usuarios pueden conocer más sobre ellos y decidir si desean visitarlos. Además, los negocios también pueden recibir calificaciones y comentarios de los usuarios, lo que les permite mejorar su servicio y atraer a más clientes.</p>
+                            <p>Para registrar tu negocio en CiudadGPS por favor rellena el siguiente formulario, luego de que lo envíes te estaremos contactando en las próximas horas para confirmar tus datos</p>
                         </div>
     
                         <div class="col-md-6 form-group">
