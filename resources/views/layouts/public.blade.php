@@ -43,27 +43,6 @@
 <link href="{{ asset('assetsPublic/css/summernote.min.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
-<!-- Google tag (gtag.js) google ads-->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11483785592">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-11483785592');
-</script>
-
-<!-- Google tag (gtag.js) google analitycs-->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE105KKB85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YE105KKB85');
-</script>
-
 </head>
 
 <body>
