@@ -22,11 +22,9 @@ class ComerciosAsociadosController extends BaseController
         $commerces = $user->commerces;
     
         // Cargar las historias relacionadas para cada comercio
-        $commerces = Commerce::with(['stories' => function ($query) {
+        $commerces->load(['stories' => function ($query) {
             $query->where('created_at', '>=', now()->subDays(1));
-        }])
-        ->orderByRaw('CASE WHEN EXISTS (SELECT * FROM stories WHERE stories.commerce_id = commerces.id AND stories.created_at >= DATE_SUB(NOW(), INTERVAL 1 DAY)) THEN 0 ELSE 1 END')
-        ->get();
+        }]);
     
         return response()->json([
             'commerces' => $commerces
