@@ -347,6 +347,53 @@
 <!-- END SECTION SHOP -->
 
 
+<!-- START SECTION SHOP -->
+<div class="section pt-0 pb-5">
+    <?php
+        $articles = \App\Models\Article::orderBy('id', 'desc')
+        ->get()
+        ->take(3);   
+    ?>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12">
+                <div class="heading_s2">
+                    <h4 class="mb-3">Nuestro Blog</h4>
+                    <p class="leads">Conoce nuestros últimos artículos y noticias. Mantente al tanto de las últimas tendencias, consejos y novedades sobre cómo hacer crecer tu negocio con CiudadGPS.</p>
+                </div>
+            </div>
+		</div>
+        <div class="row shop_container d-flex justifify-content-space-between">
+            <?php $__empty_1 = true; $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+            <div class="col-xl-4 col-md-6">
+                <div class="blog_post blog_style2 box_shadow1">
+                    <div class="blog_img">
+                        <a href="<?php echo e(url('blog/' . $article->slug )); ?>">
+                            <img src="<?php echo e($article->image); ?>" height="200" alt="<?php echo e($article->title); ?>">
+                        </a>
+                    </div>
+                    <div class="blog_content bg-white">
+                        <div class="blog_text">
+                            <h6 class="blog_title"><a href="<?php echo e(url('blog/' . $article->slug )); ?>"><?php echo e(Illuminate\Support\Str::limit($article->title, 60)); ?></a></h6>
+                            <ul class="list_none blog_meta">
+                                <li><a href="<?php echo e(url('blog/' . $article->slug  )); ?>"><i class="ti-calendar"></i> <?php echo e($article->created_at->diffForHumans()); ?>
+
+                            </ul>
+                            <p><?php echo e(Illuminate\Support\Str::limit($article->excerpt, 140)); ?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+            <div class="col-lg-12">
+                <h6>No hay resultados disponibles</h6>
+            </div>   
+            <?php endif; ?>
+        </div> 
+    </div>
+</div>
+<!-- END SECTION SHOP -->
+
 </div>
 <!-- END MAIN CONTENT -->
 

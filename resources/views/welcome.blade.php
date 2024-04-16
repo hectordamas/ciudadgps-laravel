@@ -345,6 +345,52 @@
 <!-- END SECTION SHOP -->
 
 
+<!-- START SECTION SHOP -->
+<div class="section pt-0 pb-5">
+    @php
+        $articles = \App\Models\Article::orderBy('id', 'desc')
+        ->get()
+        ->take(3);   
+    @endphp
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12">
+                <div class="heading_s2">
+                    <h4 class="mb-3">Nuestro Blog</h4>
+                    <p class="leads">Conoce nuestros últimos artículos y noticias. Mantente al tanto de las últimas tendencias, consejos y novedades sobre cómo hacer crecer tu negocio con CiudadGPS.</p>
+                </div>
+            </div>
+		</div>
+        <div class="row shop_container d-flex justifify-content-space-between">
+            @forelse ($articles as $article)
+            <div class="col-xl-4 col-md-6">
+                <div class="blog_post blog_style2 box_shadow1">
+                    <div class="blog_img">
+                        <a href="{{ url('blog/' . $article->slug ) }}">
+                            <img src="{{  $article->image  }}" height="200" alt="{{  $article->title }}">
+                        </a>
+                    </div>
+                    <div class="blog_content bg-white">
+                        <div class="blog_text">
+                            <h6 class="blog_title"><a href="{{ url('blog/' . $article->slug ) }}">{{ Illuminate\Support\Str::limit($article->title, 60) }}</a></h6>
+                            <ul class="list_none blog_meta">
+                                <li><a href="{{ url('blog/' . $article->slug  ) }}"><i class="ti-calendar"></i> {{ $article->created_at->diffForHumans() }}
+                            </ul>
+                            <p>{{ Illuminate\Support\Str::limit($article->excerpt, 140) }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+            @empty
+            <div class="col-lg-12">
+                <h6>No hay resultados disponibles</h6>
+            </div>   
+            @endforelse
+        </div> 
+    </div>
+</div>
+<!-- END SECTION SHOP -->
+
 </div>
 <!-- END MAIN CONTENT -->
 

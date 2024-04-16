@@ -19,18 +19,22 @@ class ComerciosAsociadosController extends BaseController
 {
     public function index(Request $request){
         $user = User::find($request->user_id);
-        $commerces = $user->commerces;
-    
+        
+        // Obtener una consulta de los comercios del usuario
+        $commercesQuery = $user->commerces();
+        
         // Cargar las historias relacionadas para cada comercio
-        $commerces->load(['stories' => function ($query) {
-            $query->where('created_at', '>=', now()->subDays(1));
-        }]);
-    
+        $commerces = $commercesQuery->with(['stories' => function ($query) {
+                $query->where('created_at', '>=', now()->subDays(1));
+            }])
+            ->orderBy('lastStoryId', 'desc')
+            ->get();
+        
         return response()->json([
             'commerces' => $commerces
         ]);
     }
-
+    
     public function solicitarCodigo(Request $request){
         $request->validate([
             'email' => 'required|email',
