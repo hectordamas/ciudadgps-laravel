@@ -153,7 +153,7 @@
 <div class="banner_section full_screen staggered-animation-wrap bg-dark">
     <div id="carouselExampleControls" class="carousel slide carousel-fade light_arrow carousel_style2" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active background_bg overlay_bg_70" data-img-src="{{ asset('caracas_background.jpg') }}">
+            <div class="carousel-item active background_bg overlay_bg_70" data-img-src="{{ asset('caracas_background.webp') }}">
                 <div class="banner_slide_content banner_content_inner">
                 	<div class="container">
                     	<div class="row justify-content-center">
@@ -282,7 +282,9 @@
                     <div class="product_box text-center shadow border-0">
                         <div class="product_img">
                             <a href="{{ url('/slug-comercios/' . $c->slug) }}">
-                                @if($c->imgs->first())<img src="{{ $c->imgs->first()->uri }}" alt="Fachada de {{$c->name}}">@endif
+                                @if($c->imgs->first())
+                                    <img src="{{ $c->imgs->first()->uri }}" alt="Fachada de {{$c->name}}">
+                                @endif
                                 <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
                                     <img src="{{ asset($c->logo) }}" alt="{{$c->name}} Logotipo" style="width:60px; height:60px; border-radius:50%;">
                                 </div>

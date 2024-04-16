@@ -56,9 +56,11 @@
 <body>
 <input type="hidden" <?php if(isset($commerceId)): ?> value="<?php echo e($commerceId); ?>" <?php endif; ?> id="commerceId" />
 
+<!--
 <div class="preloader">
     <div class="loader"></div>
 </div>
+-->
 
 <!-- START HEADER -->
 <header class="header_wrap fixed-top dd_dark_skin transparent_header">
@@ -154,7 +156,7 @@
 <div class="banner_section full_screen staggered-animation-wrap bg-dark">
     <div id="carouselExampleControls" class="carousel slide carousel-fade light_arrow carousel_style2" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active background_bg overlay_bg_70" data-img-src="<?php echo e(asset('caracas_background.jpg')); ?>">
+            <div class="carousel-item active background_bg overlay_bg_70" data-img-src="<?php echo e(asset('caracas_background.webp')); ?>">
                 <div class="banner_slide_content banner_content_inner">
                 	<div class="container">
                     	<div class="row justify-content-center">
