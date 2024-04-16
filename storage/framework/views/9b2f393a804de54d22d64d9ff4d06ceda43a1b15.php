@@ -113,15 +113,15 @@
 <script src="<?php echo e(asset('assetsPublic/js/popper.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/bootstrap/js/bootstrap.min.js')); ?>"></script> 
 <script src="<?php echo e(asset('assetsPublic/owlcarousel/js/owl.carousel.min.js')); ?>"></script>
-    <script src="<?php echo e(asset('assetsPublic/js/magnific-popup.min.js')); ?>"></script> 
-    <script src="<?php echo e(asset('assetsPublic/js/waypoints.min.js')); ?>"></script> 
-    <script src="<?php echo e(asset('assetsPublic/js/parallax.js')); ?>"></script> 
-    <script src="<?php echo e(asset('assetsPublic/js/jquery.countdown.min.js')); ?>"></script> 
-    <script src="<?php echo e(asset('assetsPublic/js/imagesloaded.pkgd.min.js')); ?>"></script>
-    <script src="<?php echo e(asset('assetsPublic/js/isotope.min.js')); ?>"></script>
-    <script src="<?php echo e(asset('assetsPublic/js/jquery.dd.min.js')); ?>"></script>
-    <script src="<?php echo e(asset('assetsPublic/js/slick.min.js')); ?>"></script>
-    <script src="<?php echo e(asset('assetsPublic/js/jquery.elevatezoom.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/magnific-popup.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assetsPublic/js/waypoints.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assetsPublic/js/parallax.js')); ?>"></script> 
+<script src="<?php echo e(asset('assetsPublic/js/jquery.countdown.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assetsPublic/js/imagesloaded.pkgd.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/isotope.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/jquery.dd.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/slick.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/jquery.elevatezoom.js')); ?>"></script>
 <?php if(!request()->is('/')): ?> 
     <script src="<?php echo e(asset('assetsPublic/js/select2.min.js')); ?>"></script>
     <script src="<?php echo e(asset('assetsPublic/js/summernote.min.js')); ?>"></script>
@@ -132,7 +132,7 @@
 <?php endif; ?>
 <script src="<?php echo e(asset('assets/vendor/sweetalert/sweetalert.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/js/scripts.js')); ?>"></script>
-<script src="<?php echo e(asset('assets/js/script.js?v=2')); ?>"></script>
+<script src="<?php echo e(asset('assets/js/script.js?v=3')); ?>"></script>
 
 <?php if(session()->has('error')): ?>
 <script>
