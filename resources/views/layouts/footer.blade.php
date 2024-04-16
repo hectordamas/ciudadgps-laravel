@@ -112,7 +112,7 @@
 <script src="{{ asset('assets/vendor/jquery/jquery.form.js')}}"></script>
 <script src="{{ asset('assetsPublic/js/popper.min.js') }}"></script>
 <script src="{{ asset('assetsPublic/bootstrap/js/bootstrap.min.js') }}"></script> 
-<script src="{{ asset('assetsPublic/owlcarousel/js/owl.carousel.min.js') }}"></script> 
+<script src="{{ asset('assetsPublic/owlcarousel/js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('assetsPublic/js/magnific-popup.min.js') }}"></script> 
 <script src="{{ asset('assetsPublic/js/waypoints.min.js') }}"></script> 
 <script src="{{ asset('assetsPublic/js/parallax.js') }}"></script> 
@@ -122,15 +122,17 @@
 <script src="{{ asset('assetsPublic/js/jquery.dd.min.js') }}"></script>
 <script src="{{ asset('assetsPublic/js/slick.min.js') }}"></script>
 <script src="{{ asset('assetsPublic/js/jquery.elevatezoom.js') }}"></script>
-<script src="{{ asset('assetsPublic/js/select2.min.js') }}"></script>
-<script src="{{ asset('assetsPublic/js/summernote.min.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-<script src="{{ asset('assetsPublic/js/dropzone.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/datatables/jquery.dataTables.js') }}"></script>
-<script src="{{ asset('assets/vendor/datatables/dataTables.bootstrap4.js') }}"></script>
+@if(!request()->is('/')) 
+    <script src="{{ asset('assetsPublic/js/select2.min.js') }}"></script>
+    <script src="{{ asset('assetsPublic/js/summernote.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="{{ asset('assetsPublic/js/dropzone.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/datatables/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('assets/vendor/datatables/dataTables.bootstrap4.js') }}"></script>
+@endif
 <script src="{{ asset('assets/vendor/sweetalert/sweetalert.js') }}"></script>
 <script src="{{ asset('assetsPublic/js/scripts.js') }}"></script>
-<script src="{{ asset('assets/js/script.js?v=2') }}"></script>
+<script src="{{ asset('assets/js/script.js?v=3') }}"></script>
 
 @if(session()->has('error'))
 <script>

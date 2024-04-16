@@ -30,14 +30,16 @@
                         </select>
                     </div>
 
-                    <div class="col-md-6 form-group">
+
+
+                    <div class="col-md-12 form-group">
+                        <label for="excerpt" class="font-weight-bold">Resumen</label>
+                        <textarea name="excerpt" class="form-control" rows="5"></textarea>
+                    </div>
+                    
+                    <div class="col-md-12 form-group">
                         <label for="content" class="font-weight-bold">Contenido</label>
                         <textarea name="content" id="summernote" class="form-control"></textarea>
-                    </div>
-
-                    <div class="col-md-6 form-group">
-                        <label for="excerpt" class="font-weight-bold">Resumen</label>
-                        <textarea name="excerpt" class="form-control" rows="10"></textarea>
                     </div>
 
                     <div class="col-md-12 form-group">

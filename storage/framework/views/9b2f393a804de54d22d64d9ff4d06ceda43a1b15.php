@@ -112,22 +112,24 @@
 <script src="<?php echo e(asset('assets/vendor/jquery/jquery.form.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/js/popper.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/bootstrap/js/bootstrap.min.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/owlcarousel/js/owl.carousel.min.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/js/magnific-popup.min.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/js/waypoints.min.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/js/parallax.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/js/jquery.countdown.min.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/js/imagesloaded.pkgd.min.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/isotope.min.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/jquery.dd.min.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/slick.min.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/jquery.elevatezoom.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/select2.min.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/summernote.min.js')); ?>"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-<script src="<?php echo e(asset('assetsPublic/js/dropzone.min.js')); ?>"></script>
-<script src="<?php echo e(asset('assets/vendor/datatables/jquery.dataTables.js')); ?>"></script>
-<script src="<?php echo e(asset('assets/vendor/datatables/dataTables.bootstrap4.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/owlcarousel/js/owl.carousel.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/magnific-popup.min.js')); ?>"></script> 
+    <script src="<?php echo e(asset('assetsPublic/js/waypoints.min.js')); ?>"></script> 
+    <script src="<?php echo e(asset('assetsPublic/js/parallax.js')); ?>"></script> 
+    <script src="<?php echo e(asset('assetsPublic/js/jquery.countdown.min.js')); ?>"></script> 
+    <script src="<?php echo e(asset('assetsPublic/js/imagesloaded.pkgd.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/isotope.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/jquery.dd.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/slick.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/jquery.elevatezoom.js')); ?>"></script>
+<?php if(!request()->is('/')): ?> 
+    <script src="<?php echo e(asset('assetsPublic/js/select2.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/summernote.min.js')); ?>"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/dropzone.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/vendor/datatables/jquery.dataTables.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/vendor/datatables/dataTables.bootstrap4.js')); ?>"></script>
+<?php endif; ?>
 <script src="<?php echo e(asset('assets/vendor/sweetalert/sweetalert.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/js/scripts.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/js/script.js?v=2')); ?>"></script>

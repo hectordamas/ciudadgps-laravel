@@ -1,6 +1,9 @@
 $(document).ready(function(){  
-    $('#summernote').summernote({height: 200});
-
+    if ($('#summernote').length) {
+      $('#summernote').summernote({
+          height: 200
+      });
+    }
     colorSuccess = '#1cc88a'  
 
     $("#checkAll").click(function(){
@@ -15,55 +18,62 @@ $(document).ready(function(){
       }
     });
 
-    $('.datatable').DataTable({
-      "lengthMenu": [ [10, 25, 50, -1], ["10 Entradas", "25 Entradas", "50 Entradas", "Ver Todos"] ],
-      "bSort": false,
-      order: [[0, 'desc']],
-      dom: 'Bfrtip',
-      buttons: ['pageLength',
-          {
-              extend: 'copy',
-              text: '<i class="far fa-copy"></i> Copiar Tabla',
-              footer: true
-          }, {
-              extend: 'excel',
-              text: '<i class="far fa-file-excel"></i> Descargar Excel',
-              footer: true
-          }, {
-              extend: 'pdfHtml5',
-              text: '<i class="far fa-file-pdf"></i> Descargar PDF',
-              //orientation: 'landscape',
-              //pageSize: 'LEGAL',
-              footer: true
-          }
-      ],
-      language: {
-          "decimal": "",
-          "emptyTable": "No hay información",
-          "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
-          "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
-          "infoFiltered": "(Filtrado de _MAX_ total entradas)",
-          "infoPostFix": "",
-          "thousands": ",",
-          "lengthMenu": "Mostrar _MENU_ Entradas",
-          "loadingRecords": "Cargando...",
-          "processing": "Procesando...",
-          "search": "Buscar:",
-          "zeroRecords": "Sin resultados encontrados",
-          "paginate": {
-              "first": "Primero",
-              "last": "Ultimo",
-              "next": '<i class="fas fa-angle-right"></i>',
-              "previous": '<i class="fas fa-angle-left"></i>'
-          }
-      },
-    });
+    if ($('.datatable').length) {
+      $('.datatable').DataTable({
+        "lengthMenu": [ [10, 25, 50, -1], ["10 Entradas", "25 Entradas", "50 Entradas", "Ver Todos"] ],
+        "bSort": false,
+        order: [[0, 'desc']],
+        dom: 'Bfrtip',
+        buttons: ['pageLength',
+            {
+                extend: 'copy',
+                text: '<i class="far fa-copy"></i> Copiar Tabla',
+                footer: true
+            }, {
+                extend: 'excel',
+                text: '<i class="far fa-file-excel"></i> Descargar Excel',
+                footer: true
+            }, {
+                extend: 'pdfHtml5',
+                text: '<i class="far fa-file-pdf"></i> Descargar PDF',
+                //orientation: 'landscape',
+                //pageSize: 'LEGAL',
+                footer: true
+            }
+        ],
+        language: {
+            "decimal": "",
+            "emptyTable": "No hay información",
+            "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+            "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+            "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+            "infoPostFix": "",
+            "thousands": ",",
+            "lengthMenu": "Mostrar _MENU_ Entradas",
+            "loadingRecords": "Cargando...",
+            "processing": "Procesando...",
+            "search": "Buscar:",
+            "zeroRecords": "Sin resultados encontrados",
+            "paginate": {
+                "first": "Primero",
+                "last": "Ultimo",
+                "next": '<i class="fas fa-angle-right"></i>',
+                "previous": '<i class="fas fa-angle-left"></i>'
+            }
+        },
+      });
+    }
 
     //Select2
-    $('.select2').select2();
-    $(".js-example-tags").select2({
-      tags: true
-    });
+    if($('.select2').length){
+      $('.select2').select2();
+    }
+
+    if($('.js-example-tags').length){
+      $(".js-example-tags").select2({
+        tags: true
+      });
+    }
 
     //Alert success
     setTimeout(() => {
@@ -162,7 +172,9 @@ $(document).ready(function(){
     $('.iti').css('display', 'block');
 
     //DropZone
-    $("div#dropzone").dropzone();
+    if($("div#dropzone").length){
+      $("div#dropzone").dropzone();
+    }
 
 
     //Edit Commerce Update
