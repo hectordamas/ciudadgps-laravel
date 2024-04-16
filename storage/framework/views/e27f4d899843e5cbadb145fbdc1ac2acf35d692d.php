@@ -35,28 +35,6 @@
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/slick-theme.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/style.css?v=3')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/responsive.css')); ?>">
-
-
-<!-- Google tag (gtag.js) google ads-->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11483785592">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-11483785592');
-</script>
-
-<!-- Google tag (gtag.js) google analitycs-->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE105KKB85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YE105KKB85');
-</script>
 </head>
 
 <body>

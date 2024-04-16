@@ -137,7 +137,7 @@ class ComerciosController extends Controller
             $commerceNames = $commercesKeywords->pluck('name')->toArray();
             $tagsString = implode(', ', $allTags);
             $namesString = implode(', ', $commerceNames);
-            $mergedString = $tagsString . ', ' . $namesString;
+            $mergedString = $tagsString . ', ' . $namesString . ', ' . $request->search . ' en Caracas, ' . $request->search . ' en Venezuela';
             
             $keywords = $mergedString;
             $meta_description =  $request->search . ' en CiudadGPS: más de ' . $commerces->count() . ' resultados de Búsqueda: ' . $keywords;
@@ -183,7 +183,7 @@ class ComerciosController extends Controller
             $tagsString = implode(', ', $allTags);
             $namesString = implode(', ', $commerceNames);
             
-            $mergedString = $tagsString . ', ' . $namesString;
+            $mergedString = $tagsString . ', ' . $namesString . ', ' . $category->name . ' en Venezuela' . ', ' . $category->name . ' en Caracas';
             
             $keywords = $namesString;
             $meta_description = $category->name . ' en CiudadGPS: más de ' . $commerces->count() . ' resultados de Búsqueda: ' . $keywords;
@@ -219,20 +219,31 @@ class ComerciosController extends Controller
 
     public function showSlug($slug, Request $request){
         $commerce = Commerce::where('slug', $slug)->first();
-        $tags = $commerce->tags->pluck('name')->unique()->toArray();
-        $categories = $commerce->categories->pluck('name')->unique()->toArray();
-        $keywords = implode(', ', $categories) . ', ' . $commerce->name . ', ' . implode(', ', $tags);
-        $meta_description = $commerce->name .' en CiudadGPS: '. $commerce->info;
-
-        if($commerce){
-            return view('public.commerces.show', [
-                'commerce' => $commerce,
-                'keywords' => $keywords,
-                'meta_description' => $meta_description
-            ]);
-        }else{
+        
+        if(!$commerce){
             return view('errors.404');
         }
+    
+        $tags = $commerce->tags->pluck('name')->unique()->toArray();
+        $categories = $commerce->categories->pluck('name')->unique()->toArray();
+    
+        $categoriesInVenezuela = array_map(function($category) {
+            return $category . ' en Venezuela';
+        }, $categories);
+    
+        $categoriesInCaracas = array_map(function($category) {
+            return $category . ' en Caracas';
+        }, $categories);
+    
+        $keywords = implode(', ', array_merge($categories, $categoriesInVenezuela, $categoriesInCaracas, [$commerce->name], $tags));
+        
+        $meta_description = $commerce->name .' en CiudadGPS: '. $commerce->info;
+    
+        return view('public.commerces.show', [
+            'commerce' => $commerce,
+            'keywords' => $keywords,
+            'meta_description' => $meta_description
+        ]);
     }
 
     public function registrar(){

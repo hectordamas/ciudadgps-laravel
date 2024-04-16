@@ -1,8 +1,8 @@
 @extends('layouts.public')
 @section('title')
 <title>Categorías en CiudadGPS</title>
-<meta name="description" content="Conoce las más de 100 categorías que tien CiudadGPS" />
-<meta name="keywords" content="Afiliar, comercio, negocio, emprendimiento, bolsa de empleo, talento, personal, captacion, trabajo, venezuela, comercio electrónico, viajes, trabajo, medicina, aplicación">
+<meta name="description" content="Conoce las más de 100 categorías que tiene CiudadGPS" />
+<meta name="keywords" content="Afiliar, comercio, negocio, emprendimiento, bolsa de empleo, talento, personal, captacion, trabajo, venezuela, comercio electrónico, viajes, trabajo, medicina, aplicación, comercios en caracas, comercios en venezuela">
 @endsection
 @section('content')
 <div class="breadcrumb_section page-title-mini" style="background-image: url('{{ asset('assets/categorias.jpg') }}'); background-position: center center; position: relative;">
