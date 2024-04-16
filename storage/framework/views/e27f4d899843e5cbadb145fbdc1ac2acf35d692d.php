@@ -30,9 +30,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="<?php echo e(url('favicon/favicon-32x32.png')); ?>">
 <link rel="icon" type="image/png" sizes="96x96" href="<?php echo e(url('favicon/favicon-96x96.png')); ?>">
 <link rel="icon" type="image/png" sizes="16x16" href="<?php echo e(url('favicon/favicon-16x16.png')); ?>">
-<meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="<?php echo e(url('favicon/ms-icon-144x144.png')); ?>">
-<meta name="theme-color" content="#ffffff">
+<link rel="shortcut icon" type="image/x-icon" href="<?php echo e(asset('favicon.ico')); ?>">
 
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/animate.css')); ?>">	
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/bootstrap/css/bootstrap.min.css')); ?>">
@@ -369,7 +368,7 @@
     <?php
         $articles = \App\Models\Article::orderBy('id', 'desc')
         ->get()
-        ->take(3);   
+        ->take(6);   
     ?>
 	<div class="container">
 		<div class="row justify-content-center">
@@ -386,7 +385,7 @@
                 <div class="blog_post blog_style2 box_shadow1">
                     <div class="blog_img">
                         <a href="<?php echo e(url('blog/' . $article->slug )); ?>">
-                            <img src="<?php echo e($article->image); ?>" height="200" alt="<?php echo e($article->title); ?>">
+                            <img src="<?php echo e($article->image); ?>" style="max-height: 200px; object-fit: cover;" alt="<?php echo e($article->title); ?>">
                         </a>
                     </div>
                     <div class="blog_content bg-white">

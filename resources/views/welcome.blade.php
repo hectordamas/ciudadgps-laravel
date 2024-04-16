@@ -366,7 +366,7 @@
     @php
         $articles = \App\Models\Article::orderBy('id', 'desc')
         ->get()
-        ->take(3);   
+        ->take(6);   
     @endphp
 	<div class="container">
 		<div class="row justify-content-center">
@@ -383,7 +383,7 @@
                 <div class="blog_post blog_style2 box_shadow1">
                     <div class="blog_img">
                         <a href="{{ url('blog/' . $article->slug ) }}">
-                            <img src="{{  $article->image  }}" height="200" alt="{{  $article->title }}">
+                            <img src="{{  $article->image  }}" style="max-height: 200px; object-fit: cover;" alt="{{  $article->title }}">
                         </a>
                     </div>
                     <div class="blog_content bg-white">
