@@ -61,14 +61,14 @@
             <div class="product-image">
                 <div class="product_img_box">
                     @if($commerce->imgs->first()) 
-                        <img id="product_img" src="{{asset($commerce->imgs->first()->uri)}}" alt="{{$commerce->name}}" class="w-100" style="max-height: 450px; object-fit: cover;"/> 
+                        <img id="product_img" src="{{asset($commerce->imgs->first()->uri)}}" alt="Fachada de {{$commerce->name}}" class="w-100" style="max-height: 450px; object-fit: cover;"/> 
                     @endif
                 </div>
                 <div id="pr_item_gallery" class="product_gallery_item slick_slider justify-content-start" data-nav="true" data-slides-to-show="7" data-slides-to-scroll="1" data-infinite="false">
                     @foreach($commerce->imgs as $img)
                     <div class="item">
                         <a href="#" class="product_gallery_item" data-image="{{asset($img->uri)}}">
-                            <img src="{{asset($img->uri)}}" alt="{{$commerce->name}}" class="w-100" style="max-height: 50px; object-fit: cover;"/>
+                            <img src="{{asset($img->uri)}}" alt="Fachada de {{$commerce->name}} {{$img->id}}" class="w-100" style="max-height: 50px; object-fit: cover;"/>
                         </a>
                     </div>
                     @endforeach
@@ -256,7 +256,7 @@
                                     @if($comment->comment)
                                         <li>
                                             <div class="comment_img">
-                                                <img src="{{$comment->user->avatar ? $comment->user->avatar : asset('assets/user_avatar_default.png') }}" referrerpolicy="no-referrer" alt="{{$comment->user->name}}"/>
+                                                <img src="{{$comment->user->avatar ? $comment->user->avatar : asset('assets/user_avatar_default.png') }}" referrerpolicy="no-referrer" alt="{{$comment->user->name}} avatar" />
                                             </div>
                                             <div class="comment_block">
                                                 <div class="rating_wrap">
@@ -355,7 +355,7 @@
                                 <a href="/slug-productos/{{ $product->slug }}" style="position: relative; height: 100%;">
                                     <img 
                                         src="{{ asset($product->image) }}" 
-                                        alt="{{$product->name}}" 
+                                        alt="Imagen de producto {{$product->name}}" 
                                         style="object-fit: cover; height: 100%; aspect-ratio: 1;"
                                     >
 

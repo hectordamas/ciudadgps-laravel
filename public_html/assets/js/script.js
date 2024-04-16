@@ -76,9 +76,7 @@ $(document).ready(function(){
     }
 
     //Alert success
-    setTimeout(() => {
-      $('.dimiss').fadeOut();
-    }, 5000);
+    setTimeout(() => { $('.dimiss').fadeOut(); }, 5000);
 
 
     ////////////////////////////////// Input Tel

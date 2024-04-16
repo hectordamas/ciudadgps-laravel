@@ -182,7 +182,7 @@
                                                     target="blank">
                                                     <img 
                                                         src="<?php echo e(asset('appButtons/play_store.png')); ?>" 
-                                                        alt="App Store Button" 
+                                                        alt="Google Play Store Button" 
                                                     />
                                                 </a>
                                             </div>
@@ -232,7 +232,7 @@
                                 <div class="item">
                                     <div class="categories_box">
                                         <a href="<?php echo e(url('comercios/slug-categorias/' . $category->slug)); ?>" class="category-link">
-                                            <img src="<?php echo e(asset($category->image_url)); ?>" alt="<?php echo e($category->name); ?>" style="height:40px; width:40px; margin:auto;" class="mb-4">
+                                            <img src="<?php echo e(asset($category->image_url)); ?>" alt="Icono de categoria: <?php echo e($category->name); ?>" style="height:40px; width:40px; margin:auto;" class="mb-4">
                                             <span class="text-dark text-uppercase font-weight-bold" style="font-size:12px;">
                                                 <?php echo e($category->name); ?>
 
@@ -284,9 +284,9 @@
                     <div class="product_box text-center shadow border-0">
                         <div class="product_img">
                             <a href="<?php echo e(url('/slug-comercios/' . $c->slug)); ?>">
-                                <?php if($c->imgs->first()): ?><img src="<?php echo e($c->imgs->first()->uri); ?>" alt="<?php echo e($c->name); ?>"><?php endif; ?>
+                                <?php if($c->imgs->first()): ?><img src="<?php echo e($c->imgs->first()->uri); ?>" alt="Fachada de <?php echo e($c->name); ?>"><?php endif; ?>
                                 <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
-                                    <img src="<?php echo e(asset($c->logo)); ?>" alt="<?php echo e($c->name); ?> logo" style="width:60px; height:60px; border-radius:50%;">
+                                    <img src="<?php echo e(asset($c->logo)); ?>" alt="<?php echo e($c->name); ?> Logotipo" style="width:60px; height:60px; border-radius:50%;">
                                 </div>
                             </a>
                         </div>
@@ -385,7 +385,7 @@
                 <div class="blog_post blog_style2 box_shadow1">
                     <div class="blog_img">
                         <a href="<?php echo e(url('blog/' . $article->slug )); ?>">
-                            <img src="<?php echo e($article->image); ?>" style="max-height: 200px; object-fit: cover;" alt="<?php echo e($article->title); ?>">
+                            <img src="<?php echo e($article->image); ?>" style="max-height: 200px; object-fit: cover;" alt="<?php echo e($article->title); ?> Imagen del Articulo">
                         </a>
                     </div>
                     <div class="blog_content bg-white">

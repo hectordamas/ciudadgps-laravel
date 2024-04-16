@@ -37,7 +37,7 @@
                         <div class="card shadow">
                             <div class="categories_box">
                                 <a href="{{ url('/comercios/slug-categorias/' . $category->slug ) }}" class="category-link">
-                                    <img src="{{ asset($category->image_url) }}" alt="{{$category->name}}" style="height:40px; width:40px; margin:auto;" class="mb-4">
+                                    <img src="{{ asset($category->image_url) }}" alt="Icono de la categoria: {{$category->name}}" style="height:40px; width:40px; margin:auto;" class="mb-4">
                                     <span class="text-dark text-uppercase font-weight-bold" style="font-size:12px;">
                                         {{$category->name}}
                                     </span>

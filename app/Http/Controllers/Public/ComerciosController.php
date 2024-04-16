@@ -168,34 +168,40 @@ class ComerciosController extends Controller
     }
 
     public function categoriaSlug($slug, Request $request){
-        try {
-            $commerces = $this->getCommercesBySlug($slug);
-            $orderColumn = $request->order ? $request->order : (session()->has('latitude') && session()->has('longitude') ? 'distance' : 'id');
-            $commerces = $this->applyOrdering($commerces, $orderColumn, session()->has('latitude'));
-    
-            $banners = Banner::paginate(15);
-            $category = Category::where('slug', $slug)->first();
 
-            $commercesKeywords = $category->commerces()->take(20)->get();
-            $allTags = $commercesKeywords->flatMap->tags->pluck('name')->unique()->toArray();
-            $commerceNames = $commercesKeywords->pluck('name')->toArray();
-            
-            $tagsString = implode(', ', $allTags);
-            $namesString = implode(', ', $commerceNames);
-            
-            $mergedString = $tagsString . ', ' . $namesString . ', ' . $category->name . ' en Venezuela' . ', ' . $category->name . ' en Caracas';
-            
-            $keywords = $namesString;
-            $meta_description = $category->name . ' en CiudadGPS: más de ' . $commerces->count() . ' resultados de Búsqueda: ' . $keywords;
+        try {
+            $category = Category::where('slug', $slug)->first();
+            if($category){
+                $commerces = $this->getCommercesBySlug($slug);
+                $orderColumn = $request->order ? $request->order : (session()->has('latitude') && session()->has('longitude') ? 'distance' : 'id');
+                $commerces = $this->applyOrdering($commerces, $orderColumn, session()->has('latitude'));
+        
+                $banners = Banner::paginate(15);
     
-            return view('public.commerces.index', [
-                'commerces' => $commerces->paginate(10),
-                'banners' => $banners,
-                'category' => $category,
-                'order' => $orderColumn,
-                'keywords' => $keywords,
-                'meta_description' => $meta_description
-            ]);
+                $commercesKeywords = $category->commerces()->take(20)->get();
+                $allTags = $commercesKeywords->flatMap->tags->pluck('name')->unique()->toArray();
+                $commerceNames = $commercesKeywords->pluck('name')->toArray();
+                
+                $tagsString = implode(', ', $allTags);
+                $namesString = implode(', ', $commerceNames);
+                
+                $mergedString = $tagsString . ', ' . $namesString . ', ' . $category->name . ' en Venezuela' . ', ' . $category->name . ' en Caracas';
+                
+                $keywords = $namesString;
+                $meta_description = $category->name . ' en CiudadGPS: más de ' . $commerces->count() . ' resultados de Búsqueda: ' . $keywords;
+        
+                return view('public.commerces.index', [
+                    'commerces' => $commerces->paginate(10),
+                    'banners' => $banners,
+                    'category' => $category,
+                    'order' => $orderColumn,
+                    'keywords' => $keywords,
+                    'meta_description' => $meta_description
+                ]);
+            }else{
+                return view('errors.404');
+
+            }
         } catch(\Exception $e) {
             return view('errors.404');
         }

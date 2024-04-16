@@ -181,7 +181,7 @@
                                                     target="blank">
                                                     <img 
                                                         src="{{ asset('appButtons/play_store.png') }}" 
-                                                        alt="App Store Button" 
+                                                        alt="Google Play Store Button" 
                                                     />
                                                 </a>
                                             </div>
@@ -231,7 +231,7 @@
                                 <div class="item">
                                     <div class="categories_box">
                                         <a href="{{ url('comercios/slug-categorias/' . $category->slug) }}" class="category-link">
-                                            <img src="{{ asset($category->image_url) }}" alt="{{$category->name}}" style="height:40px; width:40px; margin:auto;" class="mb-4">
+                                            <img src="{{ asset($category->image_url) }}" alt="Icono de categoria: {{$category->name}}" style="height:40px; width:40px; margin:auto;" class="mb-4">
                                             <span class="text-dark text-uppercase font-weight-bold" style="font-size:12px;">
                                                 {{$category->name}}
                                             </span>
@@ -282,9 +282,9 @@
                     <div class="product_box text-center shadow border-0">
                         <div class="product_img">
                             <a href="{{ url('/slug-comercios/' . $c->slug) }}">
-                                @if($c->imgs->first())<img src="{{ $c->imgs->first()->uri }}" alt="{{$c->name}}">@endif
+                                @if($c->imgs->first())<img src="{{ $c->imgs->first()->uri }}" alt="Fachada de {{$c->name}}">@endif
                                 <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
-                                    <img src="{{ asset($c->logo) }}" alt="{{$c->name}} logo" style="width:60px; height:60px; border-radius:50%;">
+                                    <img src="{{ asset($c->logo) }}" alt="{{$c->name}} Logotipo" style="width:60px; height:60px; border-radius:50%;">
                                 </div>
                             </a>
                         </div>
@@ -383,7 +383,7 @@
                 <div class="blog_post blog_style2 box_shadow1">
                     <div class="blog_img">
                         <a href="{{ url('blog/' . $article->slug ) }}">
-                            <img src="{{  $article->image  }}" style="max-height: 200px; object-fit: cover;" alt="{{  $article->title }}">
+                            <img src="{{  $article->image  }}" style="max-height: 200px; object-fit: cover;" alt="{{  $article->title }} Imagen del Articulo">
                         </a>
                     </div>
                     <div class="blog_content bg-white">
