@@ -24,14 +24,24 @@ class ComerciosAsociadosController extends BaseController
         $commercesQuery = $user->commerces();
         
         // Cargar las historias relacionadas para cada comercio
-        $commerces = $commercesQuery->with(['stories' => function ($query) {
-                $query->where('created_at', '>=', now()->subDays(1));
-            }])
-            ->orderBy('lastStoryId', 'desc')
-            ->get();
+        $commerces = $commercesQuery
+        ->with('stories', function ($query) {
+            $query->where('created_at', '>=', Carbon::now()->subDays(1));
+        })
+        ->get();
+
+        $stories = $commercesQuery
+        ->with('stories', function ($query) {
+            $query->where('created_at', '>=', Carbon::now()->subDays(1));
+        })
+        ->has('stories')
+        ->orderBy('lastStoryId', 'desc')
+        ->get()
+        ->take(15);
         
         return response()->json([
-            'commerces' => $commerces
+            'commerces' => $commerces,
+            'stories' => $stories
         ]);
     }
     

@@ -251,7 +251,7 @@
 
 
     <!-- START SECTION SHOP -->
-    <div class="section pt-0 pb-5">
+    <div class="section pt-0 pb-2">
     	<div class="container">
             <div class="row">
                 <div class="col-12">
@@ -301,7 +301,67 @@
     </div>
     <!-- END SECTION SHOP -->
 
-    
+    <!-- Seccion de about -->
+    <div class="section pb_70">
+    	<div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="heading_s2">
+                        <h4 class="mb-3" style="text-transform: none;">¿Qué es CiudadGPS?</h4>
+                        <p class="leads">CiudadGPS es una plataforma que nació con el objetivo de ayudar a las consumidores a encontrar comercios, además ayudamos a los negocios a visibilizar sus productos y/o servicios con herramientas como:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">	
+                    <div class="icon_box icon_box_style1">
+                        <div class="icon">
+                            <i class="fas fa-search-location text-primary"></i>
+                        </div>
+                        <div class="icon_box_content">
+                            <h6>Directorio de Comercios</h6>
+                            <p class="leads">Te ayuda a encontrar comercios cercanos a tu ubicacion actual.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">	
+                    <div class="icon_box icon_box_style1">
+                        <div class="icon">
+                            <i class="fas fa-book-open text-primary"></i>
+                        </div>
+                        <div class="icon_box_content">
+                            <h6>Catálogo de Productos</h6>
+                            <p class="leads">Puedes realizar compras en línea por medio de WhatsApp.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">	
+                    <div class="icon_box icon_box_style1">
+                        <div class="icon">
+                            <i class="fas fa-briefcase text-primary"></i>
+                        </div>
+                        <div class="icon_box_content">
+                            <h6>Bolsa de Empleos</h6>
+                            <p class="leads">Puedes ver anuncios de empleos de las empresas afiliadas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">	
+                    <div class="icon_box icon_box_style1">
+                        <div class="icon">
+                            <i class="fas fa-history text-primary"></i>
+                        </div>
+                        <div class="icon_box_content">
+                            <h6>Historias</h6>
+                            <p class="leads">Verás historias de 24h de duración de empresas afilidadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Seccion de about -->
+
     <!-- START SECTION SHOP -->
     <div class="section pt-0 pb-5">
         @php
@@ -373,7 +433,7 @@
                                     <h4 class="text-light mb-4 font-weight-light"><em>Disponible en Play Store</em></h4>
 
                                     <a href="https://play.google.com/store/apps/details?id=com.ciudadgps.app" target="blank" class="btn btn-fill-out btn-radius btn-sm">
-                                        <i class="fas fa-download"></i> Descargar
+                                        <i class="fas fa-link"></i> Descargar
                                     </a>
                                 </div>
                             </div>
@@ -391,7 +451,7 @@
                                     <h4 class="text-light mb-4 font-weight-light"><em>Disponible en App Store</em></h4>
 
                                     <a href="https://apps.apple.com/app/ciudad-gps/id1643027976" target="blank" class="btn btn-fill-out btn-radius btn-sm">
-                                        <i class="fas fa-download"></i> Descargar
+                                        <i class="fas fa-link"></i> Descargar
                                     </a>
                                 </div>
                             </div>
