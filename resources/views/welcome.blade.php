@@ -319,7 +319,7 @@
                             <i class="fas fa-search-location text-dark"></i>
                         </div>
                         <div class="icon_box_content">
-                            <h6>Directorio de Comercios</h6>
+                            <h6 style="text-transform: none;">Directorio de Comercios</h6>
                             <p class="leads">Te ayuda a encontrar comercios cercanos a tu ubicación actual.</p>
                         </div>
                     </div>
@@ -330,7 +330,7 @@
                             <i class="fas fa-book-open text-dark"></i>
                         </div>
                         <div class="icon_box_content">
-                            <h6>Catálogo de Productos</h6>
+                            <h6 style="text-transform: none;">Catálogo de Productos</h6>
                             <p class="leads">Puedes realizar compras en línea por medio de WhatsApp.</p>
                         </div>
                     </div>
@@ -341,7 +341,7 @@
                             <i class="fas fa-briefcase text-dark"></i>
                         </div>
                         <div class="icon_box_content">
-                            <h6>Bolsa de Empleos</h6>
+                            <h6 style="text-transform: none;">Bolsa de Empleos</h6>
                             <p class="leads">Puedes ver anuncios de empleos de las empresas afiliadas.</p>
                         </div>
                     </div>
@@ -352,7 +352,7 @@
                             <i class="fas fa-history text-dark"></i>
                         </div>
                         <div class="icon_box_content">
-                            <h6>Historias</h6>
+                            <h6 style="text-transform: none;">Historias</h6>
                             <p class="leads">Verás historias de 24h de duración de empresas afilidadas.</p>
                         </div>
                     </div>
