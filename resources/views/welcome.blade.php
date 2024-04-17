@@ -211,7 +211,7 @@
 <!-- END MAIN CONTENT -->
 <div class="main_content">
 
-<!-- START SECTION CATEGORIES -->
+    <!-- START SECTION CATEGORIES -->
     <div class="section pt-0 pb-5">
     	<div class="container">
         	<div class="row">
@@ -301,14 +301,15 @@
     </div>
     <!-- END SECTION SHOP -->
 
+
     <!-- Seccion de about -->
     <div class="section pb_70">
-    	<div class="container">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading_s2">
                         <h4 class="mb-3" style="text-transform: none;">¿Qué es CiudadGPS?</h4>
-                        <p class="leads">CiudadGPS es una plataforma que nació con el objetivo de ayudar a las consumidores a encontrar comercios, además ayudamos a los negocios a visibilizar sus productos y/o servicios con herramientas como:</p>
+                        <p class="leads">CiudadGPS surge como una plataforma innovadora que conecta negocios y consumidores de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los productos, servicios y locales comerciales de los negocios, mientras que a los consumidores les brindamos las herramientas necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:</p>
                     </div>
                 </div>
             </div>
@@ -361,6 +362,7 @@
         </div>
     </div>
     <!-- end Seccion de about -->
+
 
     <!-- START SECTION SHOP -->
     <div class="section pt-0 pb-5">

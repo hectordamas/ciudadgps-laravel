@@ -212,7 +212,7 @@
 <!-- END MAIN CONTENT -->
 <div class="main_content">
 
-<!-- START SECTION CATEGORIES -->
+    <!-- START SECTION CATEGORIES -->
     <div class="section pt-0 pb-5">
     	<div class="container">
         	<div class="row">
@@ -277,7 +277,7 @@
                             <div class="product_img">
                                 <a href="<?php echo e(url('/slug-comercios/' . $c->slug)); ?>">
                                     <?php if($c->imgs->first()): ?>
-                                        <img src="<?php echo e($c->imgs->first()->uri); ?>" alt="Fachada de <?php echo e($c->name); ?>">
+                                        <img src="<?php echo e($c->imgs->first()->uri); ?>" alt="Fachada de <?php echo e($c->name); ?>" title="Fachada de <?php echo e($c->name); ?>"/>
                                     <?php endif; ?>
                                     <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
                                         <img src="<?php echo e(asset($c->logo)); ?>" alt="<?php echo e($c->name); ?> Logotipo" style="width:60px; height:60px; border-radius:50%;">
@@ -303,14 +303,15 @@
     </div>
     <!-- END SECTION SHOP -->
 
+
     <!-- Seccion de about -->
     <div class="section pb_70">
-    	<div class="container">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading_s2">
                         <h4 class="mb-3" style="text-transform: none;">¿Qué es CiudadGPS?</h4>
-                        <p class="leads">CiudadGPS es una plataforma que nació con el objetivo de ayudar a las consumidores a encontrar comercios, además ayudamos a los negocios a visibilizar sus productos y/o servicios con herramientas como:</p>
+                        <p class="leads">CiudadGPS surge como una plataforma innovadora que conecta negocios y consumidores de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los productos, servicios y locales comerciales de los negocios, mientras que a los consumidores les brindamos las herramientas necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:</p>
                     </div>
                 </div>
             </div>
@@ -321,7 +322,7 @@
                             <i class="fas fa-search-location text-dark"></i>
                         </div>
                         <div class="icon_box_content">
-                            <h6>Directorio de Comercios</h6>
+                            <h6 style="text-transform: none;">Directorio de Comercios</h6>
                             <p class="leads">Te ayuda a encontrar comercios cercanos a tu ubicación actual.</p>
                         </div>
                     </div>
@@ -332,7 +333,7 @@
                             <i class="fas fa-book-open text-dark"></i>
                         </div>
                         <div class="icon_box_content">
-                            <h6>Catálogo de Productos</h6>
+                            <h6 style="text-transform: none;">Catálogo de Productos</h6>
                             <p class="leads">Puedes realizar compras en línea por medio de WhatsApp.</p>
                         </div>
                     </div>
@@ -343,7 +344,7 @@
                             <i class="fas fa-briefcase text-dark"></i>
                         </div>
                         <div class="icon_box_content">
-                            <h6>Bolsa de Empleos</h6>
+                            <h6 style="text-transform: none;">Bolsa de Empleos</h6>
                             <p class="leads">Puedes ver anuncios de empleos de las empresas afiliadas.</p>
                         </div>
                     </div>
@@ -354,7 +355,7 @@
                             <i class="fas fa-history text-dark"></i>
                         </div>
                         <div class="icon_box_content">
-                            <h6>Historias</h6>
+                            <h6 style="text-transform: none;">Historias</h6>
                             <p class="leads">Verás historias de 24h de duración de empresas afilidadas.</p>
                         </div>
                     </div>
@@ -363,6 +364,7 @@
         </div>
     </div>
     <!-- end Seccion de about -->
+
 
     <!-- START SECTION SHOP -->
     <div class="section pt-0 pb-5">
@@ -386,7 +388,7 @@
                     <div class="blog_post blog_style2 box_shadow1">
                         <div class="blog_img">
                             <a href="<?php echo e(url('blog/' . $article->slug )); ?>">
-                                <img src="<?php echo e($article->image); ?>" style="max-height: 200px; object-fit: cover;" alt="<?php echo e($article->title); ?> Imagen del Articulo">
+                                <img src="<?php echo e($article->image); ?>" style="max-height: 200px; object-fit: cover;" alt="<?php echo e($article->title); ?> Imagen del Articulo" title="<?php echo e($article->title); ?> Imagen del Articulo">
                             </a>
                         </div>
                         <div class="blog_content bg-white">
