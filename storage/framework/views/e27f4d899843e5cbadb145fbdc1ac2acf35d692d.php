@@ -322,7 +322,7 @@
                         </div>
                         <div class="icon_box_content">
                             <h6>Directorio de Comercios</h6>
-                            <p class="leads">Te ayuda a encontrar comercios cercanos a tu ubicacion actual.</p>
+                            <p class="leads">Te ayuda a encontrar comercios cercanos a tu ubicación actual.</p>
                         </div>
                     </div>
                 </div>
