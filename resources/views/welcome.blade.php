@@ -275,7 +275,7 @@
                             <div class="product_img">
                                 <a href="{{ url('/slug-comercios/' . $c->slug) }}">
                                     @if($c->imgs->first())
-                                        <img src="{{ $c->imgs->first()->uri }}" alt="Fachada de {{$c->name}}">
+                                        <img src="{{ $c->imgs->first()->uri }}" alt="Fachada de {{$c->name}}" title="Fachada de {{$c->name}}"/>
                                     @endif
                                     <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
                                         <img src="{{ asset($c->logo) }}" alt="{{$c->name}} Logotipo" style="width:60px; height:60px; border-radius:50%;">
@@ -384,7 +384,7 @@
                     <div class="blog_post blog_style2 box_shadow1">
                         <div class="blog_img">
                             <a href="{{ url('blog/' . $article->slug ) }}">
-                                <img src="{{  $article->image  }}" style="max-height: 200px; object-fit: cover;" alt="{{  $article->title }} Imagen del Articulo">
+                                <img src="{{  $article->image  }}" style="max-height: 200px; object-fit: cover;" alt="{{  $article->title }} Imagen del Articulo" title="{{  $article->title }} Imagen del Articulo">
                             </a>
                         </div>
                         <div class="blog_content bg-white">
