@@ -231,7 +231,7 @@
                                     <div class="item">
                                         <div class="categories_box">
                                             <a href="{{ url('comercios/slug-categorias/' . $category->slug) }}" class="category-link">
-                                                <img src="{{ asset($category->image_url) }}" alt="Icono de categoria: {{$category->name}}" style="height:40px; width:40px; margin:auto;" class="mb-4">
+                                                <img src="{{ asset($category->image_url) }}" alt="Icono de categoría: {{$category->name}}" style="height:40px; width:40px; margin:auto;" class="mb-4">
                                                 <span class="text-dark text-uppercase font-weight-bold" style="font-size:12px;">
                                                     {{$category->name}}
                                                 </span>
@@ -257,7 +257,7 @@
                 <div class="col-12">
                     <div class="heading_tab_header">
                         <div class="heading_s2">
-                            <h4>Comercios Destacados</h4>
+                            <h4>directorio de comercios</h4>
                         </div>
                         <div class="view_all">
                             <a href="{{ url('comercios') }}" class="text_default link_all"><i class="linearicons-power"></i> <span>Ver Más</span></a>
