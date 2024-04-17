@@ -315,8 +315,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3">	
-                    <div class="icon_box icon_box_style1">
+                <div class="col-lg-3 col-md-6">	
+                    <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
                             <i class="fas fa-search-location text-dark"></i>
                         </div>
@@ -326,8 +326,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">	
-                    <div class="icon_box icon_box_style1">
+                <div class="col-lg-3 col-md-6">	
+                    <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
                             <i class="fas fa-book-open text-dark"></i>
                         </div>
@@ -337,8 +337,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">	
-                    <div class="icon_box icon_box_style1">
+                <div class="col-lg-3 col-md-6">	
+                    <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
                             <i class="fas fa-briefcase text-dark"></i>
                         </div>
@@ -348,8 +348,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">	
-                    <div class="icon_box icon_box_style1">
+                <div class="col-lg-3 col-md-6">	
+                    <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
                             <i class="fas fa-history text-dark"></i>
                         </div>
