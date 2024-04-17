@@ -250,8 +250,7 @@
                                 </style>
                                 @foreach($commerce->comments->sortByDesc('id')->take(3) as $comment)
                                     @php
-                                        $ratingC = 0;
-                                        $ratingC = $comment->rating * 100 / 5;
+                                        $ratingC = $commerce->comments->avg('rating') * 100 / 5;  
                                     @endphp
                                     @if($comment->comment)
                                         <li>

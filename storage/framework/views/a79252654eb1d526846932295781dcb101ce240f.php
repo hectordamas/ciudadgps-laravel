@@ -96,15 +96,7 @@
                 <div class="row shop_container list">
                     <?php $__currentLoopData = $commerces; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <?php
-                            $rating = 0;
-                            foreach ($c->comments as $co) {
-                                $rating = $rating + $co->rating;
-                            }
-                            if($c->comments->count() > 0){
-                                $rating = $rating / $c->comments->count();
-                            }
-                        
-                            $ratingP = $rating * 100 / 5;  
+                            $ratingP = $c->comments->average('rating') * 100 / 5;  
                         
                             //Resumir info
                             $info = $c->info;
@@ -120,11 +112,11 @@
                     <div class="col-lg-12">
                         <div class="product">
                             <div class="product_img">
-                                <a href="/slug-comercios/<?php echo e($c->slug); ?>">
-                                    <?php if($c->imgs->first()): ?><img src="<?php echo e(asset($c->imgs->first()->uri)); ?>" alt="<?php echo e($c->name); ?>" style="max-height: 250px;"><?php endif; ?>
+                                <a href="<?php echo e(url('/slug-comercios/' . $c->slug)); ?>">
+                                    <?php if($c->imgs->first()): ?><img src="<?php echo e(asset($c->imgs->first()->uri)); ?>" alt="Fachada de <?php echo e($c->name); ?>" style="max-height: 250px;"><?php endif; ?>
                                 
                                     <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
-                                        <img src="<?php echo e(asset($c->logo)); ?>" style="width:60px; height:60px; border-radius:50%;" alt="<?php echo e($c->name); ?> logo">
+                                        <img src="<?php echo e(asset($c->logo)); ?>" style="width:60px; height:60px; border-radius:50%;" alt="Logotipo de <?php echo e($c->name); ?>">
                                     </div>
                                 </a>
                             </div>

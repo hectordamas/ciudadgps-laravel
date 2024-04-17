@@ -212,202 +212,198 @@
 <div class="main_content">
 
 <!-- START SECTION CATEGORIES -->
-<div class="section pt-0 pb-5">
-	<div class="container">
-    	<div class="row">
-        	<div class="col-12">
-            	<div class="cat_overlap radius_all_5">
-                	<div class="row align-items-center">
-        				<div class="col-lg-3 col-md-5">
-                        	<div class="text-center text-md-left">
-                                <h4>Categorías</h4>
-                                <p class="mb-2">Descubre las categorías más populares en CiudadGPS</p>
-                                <a href="{{ url('categorias') }}" class="btn btn-fill-out btn-sm btn-radius"><i class="linearicons-power"></i> Ver Más</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-9 col-md-7">
-                            <div class="cat_slider mt-4 mt-md-0 carousel_slider owl-carousel owl-theme nav_style5" data-loop="true" data-dots="false" data-nav="true" data-margin="30" data-responsive='{"0":{"items": "2"}, "380":{"items": "2"}, "991":{"items": "2"}, "1199":{"items": "4"}}'>
-                                @foreach ($catHeader->take(12) as $category)
-                                <div class="item">
-                                    <div class="categories_box">
-                                        <a href="{{ url('comercios/slug-categorias/' . $category->slug) }}" class="category-link">
-                                            <img src="{{ asset($category->image_url) }}" alt="Icono de categoria: {{$category->name}}" style="height:40px; width:40px; margin:auto;" class="mb-4">
-                                            <span class="text-dark text-uppercase font-weight-bold" style="font-size:12px;">
-                                                {{$category->name}}
-                                            </span>
-                                        </a>
-                                    </div>
+    <div class="section pt-0 pb-5">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-12">
+                	<div class="cat_overlap radius_all_5">
+                    	<div class="row align-items-center">
+            				<div class="col-lg-3 col-md-5">
+                            	<div class="text-center text-md-left">
+                                    <h4>Categorías</h4>
+                                    <p class="mb-2">Descubre las categorías más populares en CiudadGPS</p>
+                                    <a href="{{ url('categorias') }}" class="btn btn-fill-out btn-sm btn-radius"><i class="linearicons-power"></i> Ver Más</a>
                                 </div>
-                                @endforeach
                             </div>
-                        </div>
-            		</div>
-            	</div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- END SECTION CATEGORIES -->
-
-
-<!-- START SECTION SHOP -->
-<div class="section pt-0 pb-5">
-	<div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="heading_tab_header">
-                    <div class="heading_s2">
-                        <h4>Comercios Destacados</h4>
-                    </div>
-                    <div class="view_all">
-                        <a href="{{ url('comercios') }}" class="text_default link_all"><i class="linearicons-power"></i> <span>Ver Más</span></a>
-                    </div>
+                            <div class="col-lg-9 col-md-7">
+                                <div class="cat_slider mt-4 mt-md-0 carousel_slider owl-carousel owl-theme nav_style5" data-loop="true" data-dots="false" data-nav="true" data-margin="30" data-responsive='{"0":{"items": "2"}, "380":{"items": "2"}, "991":{"items": "2"}, "1199":{"items": "4"}}'>
+                                    @foreach ($catHeader->take(12) as $category)
+                                    <div class="item">
+                                        <div class="categories_box">
+                                            <a href="{{ url('comercios/slug-categorias/' . $category->slug) }}" class="category-link">
+                                                <img src="{{ asset($category->image_url) }}" alt="Icono de categoria: {{$category->name}}" style="height:40px; width:40px; margin:auto;" class="mb-4">
+                                                <span class="text-dark text-uppercase font-weight-bold" style="font-size:12px;">
+                                                    {{$category->name}}
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                		</div>
+                	</div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            @foreach($commerces as $c)
-                @php
-                    $rating = 0;
-                    foreach ($c->comments as $co) {
-                        $rating = $rating + $co->rating;
-                    }
-                    if($c->comments->count() > 0){
-                        $rating = $rating / $c->comments->count();
-                    }
+    </div>
+    <!-- END SECTION CATEGORIES -->
 
-                    $ratingP = $rating * 100 / 5;  
-                @endphp
-                <div class="col-md-6 col-lg-3 col-12 mb-3">
-                    <div class="product_box text-center shadow border-0">
-                        <div class="product_img">
-                            <a href="{{ url('/slug-comercios/' . $c->slug) }}">
-                                @if($c->imgs->first())
-                                    <img src="{{ $c->imgs->first()->uri }}" alt="Fachada de {{$c->name}}">
-                                @endif
-                                <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
-                                    <img src="{{ asset($c->logo) }}" alt="{{$c->name}} Logotipo" style="width:60px; height:60px; border-radius:50%;">
+
+    <!-- START SECTION SHOP -->
+    <div class="section pt-0 pb-5">
+    	<div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading_tab_header">
+                        <div class="heading_s2">
+                            <h4>Comercios Destacados</h4>
+                        </div>
+                        <div class="view_all">
+                            <a href="{{ url('comercios') }}" class="text_default link_all"><i class="linearicons-power"></i> <span>Ver Más</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @foreach($commerces as $c)
+                    @php
+                        $ratingP = $c->comments->avg('rating') * 100 / 5;  
+                    @endphp
+                    <div class="col-md-6 col-lg-3 col-12 mb-3">
+                        <div class="product_box text-center shadow border-0">
+                            <div class="product_img">
+                                <a href="{{ url('/slug-comercios/' . $c->slug) }}">
+                                    @if($c->imgs->first())
+                                        <img src="{{ $c->imgs->first()->uri }}" alt="Fachada de {{$c->name}}">
+                                    @endif
+                                    <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
+                                        <img src="{{ asset($c->logo) }}" alt="{{$c->name}} Logotipo" style="width:60px; height:60px; border-radius:50%;">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product_info">
+                                <h6 class="product_title">
+                                    <a href="{{ url('/slug-comercios/' . $c->slug) }}">{{ $c->name }}</a>
+                                </h6>
+                                <div class="rating_wrap">
+                                    <div class="rating">
+                                        <div class="product_rate" style="width:{{$ratingP}}%"></div>
+                                    </div>
+                                    <span class="rating_num">({{$c->comments->count()}})</span>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div> 
+        </div>
+    </div>
+    <!-- END SECTION SHOP -->
+
+    
+    <!-- START SECTION SHOP -->
+    <div class="section pt-0 pb-5">
+        @php
+            $articles = \App\Models\Article::orderBy('id', 'desc')
+            ->get()
+            ->take(6);   
+        @endphp
+    	<div class="container">
+    		<div class="row justify-content-center">
+    			<div class="col-12">
+                    <div class="heading_s2">
+                        <h4 class="mb-3">Nuestro Blog</h4>
+                        <p class="leads">Conoce nuestros últimos artículos y noticias. Mantente al tanto de las últimas tendencias, consejos y novedades sobre cómo hacer crecer tu negocio con CiudadGPS.</p>
+                    </div>
+                </div>
+    		</div>
+            <div class="row shop_container d-flex justifify-content-space-between">
+                @forelse ($articles as $article)
+                <div class="col-xl-4 col-md-6">
+                    <div class="blog_post blog_style2 box_shadow1">
+                        <div class="blog_img">
+                            <a href="{{ url('blog/' . $article->slug ) }}">
+                                <img src="{{  $article->image  }}" style="max-height: 200px; object-fit: cover;" alt="{{  $article->title }} Imagen del Articulo">
                             </a>
                         </div>
-                        <div class="product_info">
-                            <h6 class="product_title"><a href="{{ url('/slug-comercios/' . $c->slug) }}">{{ $c->name }}</a></h6>
-                            <div class="rating_wrap">
-                                <div class="rating">
-                                    <div class="product_rate" style="width:{{$ratingP}}%"></div>
+                        <div class="blog_content bg-white">
+                            <div class="blog_text">
+                                <h6 class="blog_title"><a href="{{ url('blog/' . $article->slug ) }}">{{ Illuminate\Support\Str::limit($article->title, 60) }}</a></h6>
+                                <ul class="list_none blog_meta">
+                                    <li><a href="{{ url('blog/' . $article->slug  ) }}"><i class="ti-calendar"></i> {{ $article->created_at->diffForHumans() }}</a></li>
+                                </ul>
+                                <p>{{ Illuminate\Support\Str::limit($article->excerpt, 140) }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+                @empty
+                <div class="col-lg-12">
+                    <h6>No hay resultados disponibles</h6>
+                </div>   
+                @endforelse
+            </div> 
+        </div>
+    </div>
+    <!-- END SECTION SHOP -->
+
+
+    <!-- START SECTION SHOP -->
+    <div class="section pt-0 pb-5">
+    	<div class="container">
+    		<div class="row justify-content-center">
+    			<div class="col-12">
+                    <div class="heading_tab_header">
+                        <div class="heading_s2">
+                            <h4>Descarga Nuestra Aplicación:</h4>
+                        </div>
+                    </div>
+                </div>
+    		</div>
+            <div class="row shop_container d-flex justifify-content-space-between">
+                <div class="col-md-6 mb-4">
+                    <div class="card" style="background: #202325;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3 d-flex justify-content-center align-items-center text-center">
+                                    <i class="fab fa-google-play text-light fa-4x"></i>
                                 </div>
-                                <span class="rating_num">({{$c->comments->count()}})</span>
+                                <div class="col-9 py-3">
+                                    <h4 class="text-light mb-4 font-weight-light"><em>Disponible en Play Store</em></h4>
+
+                                    <a href="https://play.google.com/store/apps/details?id=com.ciudadgps.app" target="blank" class="btn btn-fill-out btn-radius btn-sm">
+                                        <i class="fas fa-download"></i> Descargar
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            @endforeach
-        </div> 
+                <div class="col-md-6 mb-4">
+                    <div class="card" style="background: #202325;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3 d-flex justify-content-center align-items-center">
+                                    <i class="fab fa-app-store text-light fa-4x"></i>
+                                </div>
+                                <div class="col-9 py-3">
+                                    <h4 class="text-light mb-4 font-weight-light"><em>Disponible en App Store</em></h4>
+
+                                    <a href="https://apps.apple.com/app/ciudad-gps/id1643027976" target="blank" class="btn btn-fill-out btn-radius btn-sm">
+                                        <i class="fas fa-download"></i> Descargar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>       
+            </div> 
+        </div>
     </div>
-</div>
-<!-- END SECTION SHOP -->
+    <!-- END SECTION SHOP -->
 
 
-<!-- START SECTION SHOP -->
-<div class="section pt-0 pb-5">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12">
-                <div class="heading_tab_header">
-                    <div class="heading_s2">
-                        <h4>Descarga Nuestra Aplicación:</h4>
-                    </div>
-                </div>
-            </div>
-		</div>
-        <div class="row shop_container d-flex justifify-content-space-between">
-            <div class="col-md-6 mb-4">
-                <div class="card" style="background: #202325;">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-3 d-flex justify-content-center align-items-center">
-                                <i class="fab fa-google-play text-light fa-4x"></i>
-                            </div>
-                            <div class="col-9 py-3">
-                                <h4 class="text-light mb-4 font-weight-light"><em>Disponible en Play Store</em></h4>
-
-                                <a href="https://play.google.com/store/apps/details?id=com.ciudadgps.app" target="blank" class="btn btn-fill-out btn-radius btn-sm">
-                                    <i class="fas fa-download"></i> Descargar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="card" style="background: #202325;">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-3 d-flex justify-content-center align-items-center">
-                                <i class="fab fa-app-store text-light fa-4x"></i>
-                            </div>
-                            <div class="col-9 py-3">
-                                <h4 class="text-light mb-4 font-weight-light"><em>Disponible en App Store</em></h4>
-
-                                <a href="https://apps.apple.com/app/ciudad-gps/id1643027976" target="blank" class="btn btn-fill-out btn-radius btn-sm">
-                                    <i class="fas fa-download"></i> Descargar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>       
-        </div> 
-    </div>
-</div>
-<!-- END SECTION SHOP -->
-
-
-<!-- START SECTION SHOP -->
-<div class="section pt-0 pb-5">
-    @php
-        $articles = \App\Models\Article::orderBy('id', 'desc')
-        ->get()
-        ->take(6);   
-    @endphp
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12">
-                <div class="heading_s2">
-                    <h4 class="mb-3">Nuestro Blog</h4>
-                    <p class="leads">Conoce nuestros últimos artículos y noticias. Mantente al tanto de las últimas tendencias, consejos y novedades sobre cómo hacer crecer tu negocio con CiudadGPS.</p>
-                </div>
-            </div>
-		</div>
-        <div class="row shop_container d-flex justifify-content-space-between">
-            @forelse ($articles as $article)
-            <div class="col-xl-4 col-md-6">
-                <div class="blog_post blog_style2 box_shadow1">
-                    <div class="blog_img">
-                        <a href="{{ url('blog/' . $article->slug ) }}">
-                            <img src="{{  $article->image  }}" style="max-height: 200px; object-fit: cover;" alt="{{  $article->title }} Imagen del Articulo">
-                        </a>
-                    </div>
-                    <div class="blog_content bg-white">
-                        <div class="blog_text">
-                            <h6 class="blog_title"><a href="{{ url('blog/' . $article->slug ) }}">{{ Illuminate\Support\Str::limit($article->title, 60) }}</a></h6>
-                            <ul class="list_none blog_meta">
-                                <li><a href="{{ url('blog/' . $article->slug  ) }}"><i class="ti-calendar"></i> {{ $article->created_at->diffForHumans() }}
-                            </ul>
-                            <p>{{ Illuminate\Support\Str::limit($article->excerpt, 140) }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>     
-            @empty
-            <div class="col-lg-12">
-                <h6>No hay resultados disponibles</h6>
-            </div>   
-            @endforelse
-        </div> 
-    </div>
-</div>
-<!-- END SECTION SHOP -->
 
 </div>
 <!-- END MAIN CONTENT -->

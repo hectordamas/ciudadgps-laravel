@@ -96,15 +96,7 @@
                 <div class="row shop_container list">
                     @foreach($commerces as $c)
                         @php
-                            $rating = 0;
-                            foreach ($c->comments as $co) {
-                                $rating = $rating + $co->rating;
-                            }
-                            if($c->comments->count() > 0){
-                                $rating = $rating / $c->comments->count();
-                            }
-                        
-                            $ratingP = $rating * 100 / 5;  
+                            $ratingP = $c->comments->avg('rating') * 100 / 5;  
                         
                             //Resumir info
                             $info = $c->info;
