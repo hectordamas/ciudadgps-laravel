@@ -133,8 +133,8 @@
     <script src="<?php echo e(asset('assets/vendor/datatables/dataTables.bootstrap4.js')); ?>"></script>
 <?php endif; ?>
 <script src="<?php echo e(asset('assets/vendor/sweetalert/sweetalert.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/scripts.js')); ?>"></script>
-<script src="<?php echo e(asset('assets/js/script.js?v=3')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/scripts.js?v=1')); ?>"></script>
+<script src="<?php echo e(asset('assets/js/script.js?v=4')); ?>"></script>
 
 <?php if(session()->has('error')): ?>
 <script>

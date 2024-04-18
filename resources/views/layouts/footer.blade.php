@@ -133,8 +133,8 @@
     <script src="{{ asset('assets/vendor/datatables/dataTables.bootstrap4.js') }}"></script>
 @endif
 <script src="{{ asset('assets/vendor/sweetalert/sweetalert.js') }}"></script>
-<script src="{{ asset('assetsPublic/js/scripts.js') }}"></script>
-<script src="{{ asset('assets/js/script.js?v=3') }}"></script>
+<script src="{{ asset('assetsPublic/js/scripts.js?v=1') }}"></script>
+<script src="{{ asset('assets/js/script.js?v=4') }}"></script>
 
 @if(session()->has('error'))
 <script>

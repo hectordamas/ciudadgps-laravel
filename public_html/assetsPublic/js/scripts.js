@@ -318,7 +318,9 @@
 	08. PARALLAX JS
 	*===================================*/
 	$(window).on('load', function() {
-        $('.parallax_bg').parallaxBackground();
+		if($('.parallax_bg').length){
+			$('.parallax_bg').parallaxBackground();
+		}
 	});
 	
 	/*===================================*
@@ -887,34 +889,40 @@
 	var colorSuccess = '#28a745';
 	var colorError = '#dc3545';
 
-	$('#solicitarCodigo').ajaxForm({
-		success: (data) => {
-		  if(data.message){
-			$('#user_id').val(data.user.id);
-			$('.email-container').addClass('d-none');
-			$('.code-container').removeClass('d-none');
-			return data.message && Swal.fire({icon:'success', title:'Enviado con éxito', text: data.message, confirmButtonText: "He Recibido Mi Código", confirmButtonColor: colorSuccess})
-		  }
-		  return Swal.fire({icon:'error', title:'Ha ocurrido un error!', text: data.error, confirmButtonText: "Listo", confirmButtonColor: colorError})
-		},             
-		error: (err) => {
-		  Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorError}) 
-		  console.log(err);
-		},
-	});
+	if($('#solicitarCodigo').length){
+		$('#solicitarCodigo').ajaxForm({
+			success: (data) => {
+			  if(data.message){
+				$('#user_id').val(data.user.id);
+				$('.email-container').addClass('d-none');
+				$('.code-container').removeClass('d-none');
+				return data.message && Swal.fire({icon:'success', title:'Enviado con éxito', text: data.message, confirmButtonText: "He Recibido Mi Código", confirmButtonColor: colorSuccess})
+			  }
+			  return Swal.fire({icon:'error', title:'Ha ocurrido un error!', text: data.error, confirmButtonText: "Listo", confirmButtonColor: colorError})
+			},             
+			error: (err) => {
+			  Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorError}) 
+			  console.log(err);
+			},
+		});
+	}
 
-	$('#comprobarCodigo').ajaxForm({
-		success: (data) => {
-			if(data.error){
-				return Swal.fire({icon:'error', title:'Ha ocurrido un error!', text: data.error, confirmButtonText: "Listo", confirmButtonColor: colorError})
-			}else{
-				return location.href = "/cambiar-contraseña"
-			}
-		},             
-		error: (err) => {
-		  Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorError}) 
-		  console.log(err);
-		},
-	});
+	if($('#solicitarCodigo').length){
+		$('#comprobarCodigo').ajaxForm({
+			success: (data) => {
+				if(data.error){
+					return Swal.fire({icon:'error', title:'Ha ocurrido un error!', text: data.error, confirmButtonText: "Listo", confirmButtonColor: colorError})
+				}else{
+					return location.href = "/cambiar-contraseña"
+				}
+			},             
+			error: (err) => {
+			  Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorError}) 
+			  console.log(err);
+			},
+		});
+	}
+
+
   	
 })(jQuery);

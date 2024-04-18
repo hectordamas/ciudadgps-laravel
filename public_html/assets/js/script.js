@@ -174,61 +174,66 @@ $(document).ready(function(){
       $("div#dropzone").dropzone();
     }
 
-
     //Edit Commerce Update
-    $('#editCommerce').ajaxForm({
-      uploadProgress: (event, position, total, percentComplete) => {
-          Swal.fire({
-              title: 'Procesando infomación, por favor espere...',
-              allowEscapeKey: false,
-              allowOutsideClick: false,
-              showConfirmButton:false,
-              showCancelButton:false,
-              html: '<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>'
-          })
-      },
-      success: (data) => {
-        if(data.message){
-          return data.message && Swal.fire({icon:'success', title:data.message, confirmButtonText: "Listo", confirmButtonColor: colorSuccess})
-        }
-        return Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorSuccess})
-      },             
-      error: (err) => {
-        Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorSuccess}) 
-        console.log(err);
-      },
-    });
+    if($('#editCommerce').length){
+      $('#editCommerce').ajaxForm({
+        uploadProgress: (event, position, total, percentComplete) => {
+            Swal.fire({
+                title: 'Procesando infomación, por favor espere...',
+                allowEscapeKey: false,
+                allowOutsideClick: false,
+                showConfirmButton:false,
+                showCancelButton:false,
+                html: '<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>'
+            })
+        },
+        success: (data) => {
+          if(data.message){
+            return data.message && Swal.fire({icon:'success', title:data.message, confirmButtonText: "Listo", confirmButtonColor: colorSuccess})
+          }
+          return Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorSuccess})
+        },             
+        error: (err) => {
+          Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorSuccess}) 
+          console.log(err);
+        },
+      });
+    }
+
 
     //Store Commerce
-    $('#storeCommerce').ajaxForm({
-      uploadProgress: (event, position, total, percentComplete) => {
-          Swal.fire({
-              title: 'Procesando infomación, por favor espere...',
-              allowEscapeKey: false,
-              allowOutsideClick: false,
-              showConfirmButton:false,
-              showCancelButton:false,
-              html: '<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>'
-          })
-      },
-      success: (data) => {
-        $('#storeCommerce').fadeOut();
-        $('#dropzone_container').fadeIn();
-        $('#commerce_id').val(data.commerce.id);
-        $('#continuar').attr('href', `/commerces/${data.commerce.id}/edit`);
-        $('#name_commerce_created').html(data.commerce.name);
-        $('#img_commerce_created').attr('src', data.commerce.logo);
+    if($('#editCommerce').length){
+      $('#editCommerce').ajaxForm({
+        uploadProgress: (event, position, total, percentComplete) => {
+            Swal.fire({
+                title: 'Procesando infomación, por favor espere...',
+                allowEscapeKey: false,
+                allowOutsideClick: false,
+                showConfirmButton:false,
+                showCancelButton:false,
+                html: '<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>'
+            })
+        },
+        success: (data) => {
+          $('#storeCommerce').fadeOut();
+          $('#dropzone_container').fadeIn();
+          $('#commerce_id').val(data.commerce.id);
+          $('#continuar').attr('href', `/commerces/${data.commerce.id}/edit`);
+          $('#name_commerce_created').html(data.commerce.name);
+          $('#img_commerce_created').attr('src', data.commerce.logo);
+  
+          if(data.message){
+            return data.message && Swal.fire({icon:'success', title:data.message, confirmButtonText: "Listo", confirmButtonColor: colorSuccess})
+          }
+          return Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorSuccess})
+        },             
+        error: (err) => {
+          Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorSuccess}) 
+          console.log(err);
+        },
+      });
+    }
 
-        if(data.message){
-          return data.message && Swal.fire({icon:'success', title:data.message, confirmButtonText: "Listo", confirmButtonColor: colorSuccess})
-        }
-        return Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorSuccess})
-      },             
-      error: (err) => {
-        Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorSuccess}) 
-        console.log(err);
-      },
-    });
 
     //Destroy Image
     $('.destroy-image').on('click', function(){
@@ -237,32 +242,36 @@ $(document).ready(function(){
       $('#destroyImage').attr('action', `/imagesDestroy/${id}`);
     });
 
-    $('#destroyImage').ajaxForm({
-      uploadProgress: (event, position, total, percentComplete) => {
-        Swal.fire({
-            title: 'Procesando infomación, por favor espere...',
-            allowEscapeKey: false,
-            allowOutsideClick: false,
-            showConfirmButton:false,
-            showCancelButton:false,
-            html: '<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>'
-        })
-    },
-    success: (data) => {
-      var id = $('#image_id').val()
+    if($('#destroyImage').length){
+      $('#destroyImage').ajaxForm({
+        uploadProgress: (event, position, total, percentComplete) => {
+          Swal.fire({
+              title: 'Procesando infomación, por favor espere...',
+              allowEscapeKey: false,
+              allowOutsideClick: false,
+              showConfirmButton:false,
+              showCancelButton:false,
+              html: '<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>'
+          })
+      },
+      success: (data) => {
+        var id = $('#image_id').val()
+      
+        if(data.message){
+          $('#destroyImage').modal('hide');
+          $('.image' + id).css('display', 'none');
+          return data.message && Swal.fire({icon:'success', title:data.message, confirmButtonText: "Listo", confirmButtonColor: colorSuccess})
+        }
+        return Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorSuccess})
+      },             
+      error: (err) => {
+        Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorSuccess}) 
+        console.log(err);
+      },
+    })
+    }
 
-      if(data.message){
-        $('#destroyImage').modal('hide');
-        $('.image' + id).css('display', 'none');
-        return data.message && Swal.fire({icon:'success', title:data.message, confirmButtonText: "Listo", confirmButtonColor: colorSuccess})
-      }
-      return Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorSuccess})
-    },             
-    error: (err) => {
-      Swal.fire({icon:'error', title:'Ha ocurrido un error!', confirmButtonText: "Listo", confirmButtonColor: colorSuccess}) 
-      console.log(err);
-    },
-  })
+
 
   function addToCartAlert (id) {
     Swal.fire({
