@@ -14,8 +14,6 @@
 <meta name="keywords" content="CiudadGPS, Venezuela, negocios, locales, comercios, categorías, restaurantes, tiendas, salud, educación, tecnología, información detallada de negocios, dirección exacta, contacto, redes sociales, directorio comercial, emprendedores, ciudadgps, Ciudad GPS, herramientas, viajes, comunicacion, plomeros, mecanicos, medicos, venezuela, caracas, lugares, Descubre, locale,s comerciales, en, todo, el, país, Accede, a, un, amplio, directorio, de, información, sobre, los, negocios, establecidos, en, Venezuela">
 <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 <title>CiudadGPS - Tu Comunidad de Comercios en línea.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link rel="apple-touch-icon" sizes="57x57" href="<?php echo e(asset('favicon/apple-icon-57x57.png?v=1')); ?>">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php echo e(asset('favicon/apple-icon-60x60.png?v=1')); ?>">
@@ -33,9 +31,12 @@
 <meta name="msapplication-TileImage" content="<?php echo e(asset('favicon/ms-icon-144x144.png?v=1')); ?>">
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo e(asset('favicon.ico?v=1')); ?>">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/animate.css')); ?>">	
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/bootstrap/css/bootstrap.min.css')); ?>">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="<?php echo e(asset('assets/vendor/fontawesome-free/css/all.min.css')); ?>" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/all.min.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/ionicons.min.css')); ?>">
@@ -47,8 +48,6 @@
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/owlcarousel/css/owl.theme.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/owlcarousel/css/owl.theme.default.min.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/magnific-popup.css')); ?>">
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/slick.css')); ?>">
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/slick-theme.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/style.css?v=3')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/responsive.css')); ?>">
 </head>
@@ -262,7 +261,7 @@
                             <h4>directorio de comercios</h4>
                         </div>
                         <div class="view_all">
-                            <a href="<?php echo e(url('comercios')); ?>" class="text_default link_all"><i class="linearicons-power"></i> <span>Ver Más</span></a>
+                            <a href="<?php echo e(url('comercios')); ?>" class="text_default link_all"><i class="linearicons-power"></i> <strong>Leer Más</strong></a>
                         </div>
                     </div>
                 </div>
@@ -277,7 +276,7 @@
                             <div class="product_img">
                                 <a href="<?php echo e(url('/slug-comercios/' . $c->slug)); ?>">
                                     <?php if($c->imgs->first()): ?>
-                                        <img src="<?php echo e($c->imgs->first()->uri); ?>" alt="Fachada de <?php echo e($c->name); ?>" title="Fachada de <?php echo e($c->name); ?>"/>
+                                        <img src="<?php echo e(asset($c->imgs->first()->uri)); ?>" alt="Fachada de <?php echo e($c->name); ?>" title="Fachada de <?php echo e($c->name); ?>"/>
                                     <?php endif; ?>
                                     <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
                                         <img src="<?php echo e(asset($c->logo)); ?>" alt="<?php echo e($c->name); ?> Logotipo" style="width:60px; height:60px; border-radius:50%;">
@@ -309,8 +308,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="heading_s2">
-                        <h4 class="mb-3" style="text-transform: none;">¿Qué es CiudadGPS?</h4>
+                    <div class="heading_s2 text-center">
+                        <h4 class="mb-4" style="text-transform: none;">¿Qué es CiudadGPS?</h4>
                         <p class="leads">CiudadGPS surge como una plataforma innovadora que conecta negocios y consumidores de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los productos, servicios y locales comerciales de los negocios, mientras que a los consumidores les brindamos las herramientas necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:</p>
                     </div>
                 </div>
@@ -319,7 +318,7 @@
                 <div class="col-lg-3 col-md-6">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="fas fa-search-location text-dark"></i>
+                            <i class="fas fa-search-location"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Directorio de Comercios</h6>
@@ -330,7 +329,7 @@
                 <div class="col-lg-3 col-md-6">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="fas fa-book-open text-dark"></i>
+                            <i class="fas fa-book-open"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Catálogo de Productos</h6>
@@ -341,7 +340,7 @@
                 <div class="col-lg-3 col-md-6">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="fas fa-briefcase text-dark"></i>
+                            <i class="fas fa-briefcase"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Bolsa de Empleos</h6>
@@ -352,7 +351,7 @@
                 <div class="col-lg-3 col-md-6">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="fas fa-history text-dark"></i>
+                            <i class="fas fa-history"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Historias</h6>
@@ -376,8 +375,8 @@
     	<div class="container">
     		<div class="row justify-content-center">
     			<div class="col-12">
-                    <div class="heading_s2">
-                        <h4 class="mb-3">Nuestro Blog</h4>
+                    <div class="heading_s2 text-center">
+                        <h4 class="mb-4">Nuestro Blog</h4>
                         <p class="leads">Conoce nuestros últimos artículos y noticias. Mantente al tanto de las últimas tendencias, consejos y novedades sobre cómo hacer crecer tu negocio con CiudadGPS.</p>
                     </div>
                 </div>
@@ -421,6 +420,9 @@
                     <div class="heading_tab_header">
                         <div class="heading_s2">
                             <h4>Descarga Nuestra Aplicación:</h4>
+                        </div>
+                        <div class="view_all">
+                            <a href="https://linktr.ee/ciudadgps" target="blank" class="text_default link_all"><i class="linearicons-power"></i> <strong>Enlaces</strong></a>
                         </div>
                     </div>
                 </div>

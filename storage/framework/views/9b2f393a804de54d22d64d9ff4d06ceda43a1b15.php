@@ -30,9 +30,9 @@
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="widget">
                         <div class="footer_logo">
-                            <a href="/"><img src="<?php echo e(asset('assets/logo_gps_blanco.png')); ?>" width="150px" alt="CiudadGPS logo light"/></a>
+                            <a href="/"><img src="<?php echo e(asset('assets/logo_gps_blanco.png')); ?>" width="150px" alt="CiudadGPS logotipo light"/></a>
                         </div>
-                        <p>Somos la App que te conecta! <br> Locales comerciales en todo el país <br> Tu Comunidad de Comercios en línea.</p>
+                        <p>Somos la App que te conecta! <br> Descubre locales comerciales en todo el país<br>Tu Comunidad de Comercios en línea.</p>
                     </div>
                     <div class="widget">
                         <ul class="social_icons social_white">
@@ -45,7 +45,7 @@
                 <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-lg-2 col-md-3 col-sm-6">
                         <div class="widget">
-                            <h6 class="widget_title"><?php echo e($category['title']); ?></h6>
+                            <?php if(strlen($category['title']) > 0): ?><h6 class="widget_title"><?php echo e($category['title']); ?></h6><?php endif; ?>
                             <ul class="widget_links">
                                 <?php $__currentLoopData = $category['items']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ca): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <li><a href="<?php echo e(url('comercios/slug-categorias/' . $ca->slug)); ?>" class="category-link"><?php echo e($ca->name); ?></a></li>
@@ -108,21 +108,23 @@
 <a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a> 
 
 <script src="<?php echo e(asset('assetsPublic/js/jquery-3.6.0.min.js')); ?>"></script> 
+<?php if(!request()->is('/')): ?> 
 <script src="<?php echo e(asset('assetsPublic/js/jquery-ui.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/vendor/jquery/jquery.form.js')); ?>"></script>
+<?php endif; ?>
 <script src="<?php echo e(asset('assetsPublic/js/popper.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/bootstrap/js/bootstrap.min.js')); ?>"></script> 
 <script src="<?php echo e(asset('assetsPublic/owlcarousel/js/owl.carousel.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/js/magnific-popup.min.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/js/waypoints.min.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/js/parallax.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/js/jquery.countdown.min.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/js/imagesloaded.pkgd.min.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/isotope.min.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/jquery.dd.min.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/slick.min.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/jquery.elevatezoom.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/waypoints.min.js')); ?>"></script>
 <?php if(!request()->is('/')): ?> 
+    <script src="<?php echo e(asset('assetsPublic/js/parallax.js')); ?>"></script> 
+    <script src="<?php echo e(asset('assetsPublic/js/jquery.countdown.min.js')); ?>"></script> 
+    <script src="<?php echo e(asset('assetsPublic/js/imagesloaded.pkgd.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/isotope.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/jquery.dd.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/slick.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/jquery.elevatezoom.js')); ?>"></script>
     <script src="<?php echo e(asset('assetsPublic/js/select2.min.js')); ?>"></script>
     <script src="<?php echo e(asset('assetsPublic/js/summernote.min.js')); ?>"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
@@ -131,8 +133,8 @@
     <script src="<?php echo e(asset('assets/vendor/datatables/dataTables.bootstrap4.js')); ?>"></script>
 <?php endif; ?>
 <script src="<?php echo e(asset('assets/vendor/sweetalert/sweetalert.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/scripts.js')); ?>"></script>
-<script src="<?php echo e(asset('assets/js/script.js?v=3')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/scripts.js?v=1')); ?>"></script>
+<script src="<?php echo e(asset('assets/js/script.js?v=4')); ?>"></script>
 
 <?php if(session()->has('error')): ?>
 <script>

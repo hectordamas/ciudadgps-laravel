@@ -116,6 +116,7 @@ Route::post('/deleteCartItem', [App\Http\Controllers\Public\CartController::clas
 Route::post('/updateCartItem', [App\Http\Controllers\Public\CartController::class, 'updateCartItem']);
 
 Route::post('/save-location', [App\Http\Controllers\Public\LocationController::class, 'saveLocation']);
+Route::post('/getPushNotificationData', [App\Http\Controllers\PushNotificationsController::class, 'show']);
 
 Route::get('/categorias', [App\Http\Controllers\Public\CategoriesController::class, 'index']);
 

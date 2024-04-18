@@ -59,4 +59,12 @@ class PushNotificationsController extends Controller
 
         return redirect()->back()->with('message', 'Notificacion enviada con éxito!');
     }
+
+    public function show(Request $request){
+        $pushnotification = PushNotification::find($request->id);
+
+        return response()->json([
+            'pushnotification' => $pushnotification
+        ]);
+    }
 }

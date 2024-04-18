@@ -50,8 +50,6 @@
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/owlcarousel/css/owl.theme.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/owlcarousel/css/owl.theme.default.min.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/magnific-popup.css')); ?>">
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/slick.css')); ?>">
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/slick-theme.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/style.css?v=3')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/responsive.css')); ?>">
 </head>

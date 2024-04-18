@@ -15,8 +15,6 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <title>CiudadGPS - Tu Comunidad de Comercios en línea.</title>
 
-
-
 <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('favicon/apple-icon-57x57.png?v=1') }}">
 <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('favicon/apple-icon-60x60.png?v=1') }}">
 <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('favicon/apple-icon-72x72.png?v=1') }}">
@@ -261,7 +259,7 @@
                             <h4>directorio de comercios</h4>
                         </div>
                         <div class="view_all">
-                            <a href="{{ url('comercios') }}" class="text_default link_all"><i class="linearicons-power"></i> <span>Ver Más</span></a>
+                            <a href="{{ url('comercios') }}" class="text_default link_all"><i class="linearicons-power"></i> <strong>Leer Más</strong></a>
                         </div>
                     </div>
                 </div>
@@ -420,6 +418,9 @@
                     <div class="heading_tab_header">
                         <div class="heading_s2">
                             <h4>Descarga Nuestra Aplicación:</h4>
+                        </div>
+                        <div class="view_all">
+                            <a href="https://linktr.ee/ciudadgps" target="blank" class="text_default link_all"><i class="linearicons-power"></i> <strong>Enlaces</strong></a>
                         </div>
                     </div>
                 </div>
