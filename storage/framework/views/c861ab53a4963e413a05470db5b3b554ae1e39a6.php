@@ -108,21 +108,23 @@
 <a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a> 
 
 <script src="<?php echo e(asset('assetsPublic/js/jquery-3.6.0.min.js')); ?>"></script> 
+<?php if(!request()->is('/')): ?> 
 <script src="<?php echo e(asset('assetsPublic/js/jquery-ui.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/vendor/jquery/jquery.form.js')); ?>"></script>
+<?php endif; ?>
 <script src="<?php echo e(asset('assetsPublic/js/popper.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/bootstrap/js/bootstrap.min.js')); ?>"></script> 
 <script src="<?php echo e(asset('assetsPublic/owlcarousel/js/owl.carousel.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/js/magnific-popup.min.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/js/waypoints.min.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/js/parallax.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/js/jquery.countdown.min.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/js/imagesloaded.pkgd.min.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/isotope.min.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/jquery.dd.min.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/slick.min.js')); ?>"></script>
-<script src="<?php echo e(asset('assetsPublic/js/jquery.elevatezoom.js')); ?>"></script>
+<script src="<?php echo e(asset('assetsPublic/js/waypoints.min.js')); ?>"></script>
 <?php if(!request()->is('/')): ?> 
+    <script src="<?php echo e(asset('assetsPublic/js/parallax.js')); ?>"></script> 
+    <script src="<?php echo e(asset('assetsPublic/js/jquery.countdown.min.js')); ?>"></script> 
+    <script src="<?php echo e(asset('assetsPublic/js/imagesloaded.pkgd.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/isotope.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/jquery.dd.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/slick.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/jquery.elevatezoom.js')); ?>"></script>
     <script src="<?php echo e(asset('assetsPublic/js/select2.min.js')); ?>"></script>
     <script src="<?php echo e(asset('assetsPublic/js/summernote.min.js')); ?>"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
