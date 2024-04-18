@@ -45,7 +45,7 @@
                 @foreach($categories as $category)
                     <div class="col-lg-2 col-md-3 col-sm-6">
                         <div class="widget">
-                            <h6 class="widget_title">{{ $category['title'] }}</h6>
+                            @if(strlen($category['title']) > 0)<h6 class="widget_title">{{ $category['title'] }}</h6>@endif
                             <ul class="widget_links">
                                 @foreach($category['items'] as $ca)
                                     <li><a href="{{ url('comercios/slug-categorias/' . $ca->slug) }}" class="category-link">{{$ca->name}}</a></li>

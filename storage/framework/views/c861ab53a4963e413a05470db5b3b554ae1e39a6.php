@@ -45,7 +45,7 @@
                 <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-lg-2 col-md-3 col-sm-6">
                         <div class="widget">
-                            <h6 class="widget_title"><?php echo e($category['title']); ?></h6>
+                            <?php if(strlen($category['title']) > 0): ?><h6 class="widget_title"><?php echo e($category['title']); ?></h6><?php endif; ?>
                             <ul class="widget_links">
                                 <?php $__currentLoopData = $category['items']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ca): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <li><a href="<?php echo e(url('comercios/slug-categorias/' . $ca->slug)); ?>" class="category-link"><?php echo e($ca->name); ?></a></li>
