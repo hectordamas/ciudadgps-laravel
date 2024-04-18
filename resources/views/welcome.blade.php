@@ -317,7 +317,7 @@
                 <div class="col-lg-3 col-md-6">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="fas fa-search-location text-dark"></i>
+                            <i class="fas fa-search-location"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Directorio de Comercios</h6>
@@ -328,7 +328,7 @@
                 <div class="col-lg-3 col-md-6">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="fas fa-book-open text-dark"></i>
+                            <i class="fas fa-book-open"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Catálogo de Productos</h6>
@@ -339,7 +339,7 @@
                 <div class="col-lg-3 col-md-6">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="fas fa-briefcase text-dark"></i>
+                            <i class="fas fa-briefcase"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Bolsa de Empleos</h6>
@@ -350,7 +350,7 @@
                 <div class="col-lg-3 col-md-6">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="fas fa-history text-dark"></i>
+                            <i class="fas fa-history"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Historias</h6>
