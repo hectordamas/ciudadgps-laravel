@@ -310,7 +310,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading_s2 text-center">
-                        <h4 class="mb-3" style="text-transform: none;">¿Qué es CiudadGPS?</h4>
+                        <h4 class="mb-4" style="text-transform: none;">¿Qué es CiudadGPS?</h4>
                         <p class="leads">CiudadGPS surge como una plataforma innovadora que conecta negocios y consumidores de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los productos, servicios y locales comerciales de los negocios, mientras que a los consumidores les brindamos las herramientas necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:</p>
                     </div>
                 </div>
