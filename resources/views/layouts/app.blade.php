@@ -221,7 +221,7 @@
             <footer class="sticky-footer bg-dark">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto text-light">
-                        <span>Copyright &copy; CiudadGPS 2022</span>
+                        <span>Copyright &copy; CiudadGPS {{ date('Y') }}</span>
                     </div>
                 </div>
             </footer>

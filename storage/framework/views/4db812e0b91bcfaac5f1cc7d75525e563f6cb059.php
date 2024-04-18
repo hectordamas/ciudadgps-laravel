@@ -14,8 +14,6 @@
 <meta name="keywords" content="CiudadGPS, Venezuela, negocios, locales, comercios, categorías, restaurantes, tiendas, salud, educación, tecnología, información detallada de negocios, dirección exacta, contacto, redes sociales, directorio comercial, emprendedores, ciudadgps, Ciudad GPS, herramientas, viajes, comunicacion, plomeros, mecanicos, medicos, venezuela, caracas, lugares, Descubre, locale,s comerciales, en, todo, el, país, Accede, a, un, amplio, directorio, de, información, sobre, los, negocios, establecidos, en, Venezuela">
 <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 <title>CiudadGPS - Tu Comunidad de Comercios en línea.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link rel="apple-touch-icon" sizes="57x57" href="<?php echo e(asset('favicon/apple-icon-57x57.png?v=1')); ?>">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php echo e(asset('favicon/apple-icon-60x60.png?v=1')); ?>">
@@ -35,7 +33,9 @@
 
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/animate.css')); ?>">	
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/bootstrap/css/bootstrap.min.css')); ?>">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="<?php echo e(asset('assets/vendor/fontawesome-free/css/all.min.css')); ?>" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/all.min.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/ionicons.min.css')); ?>">
@@ -277,7 +277,7 @@
                             <div class="product_img">
                                 <a href="<?php echo e(url('/slug-comercios/' . $c->slug)); ?>">
                                     <?php if($c->imgs->first()): ?>
-                                        <img src="<?php echo e($c->imgs->first()->uri); ?>" alt="Fachada de <?php echo e($c->name); ?>" title="Fachada de <?php echo e($c->name); ?>"/>
+                                        <img src="<?php echo e(asset($c->imgs->first()->uri)); ?>" alt="Fachada de <?php echo e($c->name); ?>" title="Fachada de <?php echo e($c->name); ?>"/>
                                     <?php endif; ?>
                                     <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
                                         <img src="<?php echo e(asset($c->logo)); ?>" alt="<?php echo e($c->name); ?> Logotipo" style="width:60px; height:60px; border-radius:50%;">
