@@ -377,7 +377,7 @@
     		<div class="row justify-content-center">
     			<div class="col-12">
                     <div class="heading_s2 text-center">
-                        <h4 class="mb-3">Nuestro Blog</h4>
+                        <h4 class="mb-4">Nuestro Blog</h4>
                         <p class="leads">Conoce nuestros últimos artículos y noticias. Mantente al tanto de las últimas tendencias, consejos y novedades sobre cómo hacer crecer tu negocio con CiudadGPS.</p>
                     </div>
                 </div>

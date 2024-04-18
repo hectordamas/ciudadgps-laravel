@@ -32,7 +32,7 @@
                         <div class="footer_logo">
                             <a href="/"><img src="{{asset('assets/logo_gps_blanco.png')}}" width="150px" alt="CiudadGPS logotipo light"/></a>
                         </div>
-                        <p>Somos la App que te conecta! <br> Tu Comunidad de Comercios en línea.</p>
+                        <p>Somos la App que te conecta! <br> Descubre locales comerciales en todo el país<br>Tu Comunidad de Comercios en línea.</p>
                     </div>
                     <div class="widget">
                         <ul class="social_icons social_white">
