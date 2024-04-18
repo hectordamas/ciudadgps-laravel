@@ -10,15 +10,31 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CiudadGPS es una Plataforma que ayuda a las personas a encontrar comercios. Con geolocalización, ofrece detalles de negocios cercanos, categorías variadas y permite calificaciones, promoviendo interacción entre usuarios y comercios.">
-<meta name="keywords" content="CiudadGPS, Venezuela, negocios, locales, geolocalización, comercios, categorías, restaurantes, tiendas, salud, educación, tecnología, información detallada de negocios, dirección exacta, contacto, redes sociales, directorio comercial, emprendedores, ciudadgps, Ciudad GPS, herramientas, viajes, comunicacion, plomeros, mecanicos, medicos, venezuela, caracas, lugares, Descubre, locale,s comerciales, en, todo, el, país, Accede, a, un, amplio, directorio, de, información, sobre, los, negocios, establecidos, en, Venezuela">
+<meta name="description" content="Somos la App que te conecta, más que un directorio de comercio, la comunidad de comercios más grande de Venezuela">
+<meta name="keywords" content="CiudadGPS, Venezuela, negocios, locales, comercios, categorías, restaurantes, tiendas, salud, educación, tecnología, información detallada de negocios, dirección exacta, contacto, redes sociales, directorio comercial, emprendedores, ciudadgps, Ciudad GPS, herramientas, viajes, comunicacion, plomeros, mecanicos, medicos, venezuela, caracas, lugares, Descubre, locale,s comerciales, en, todo, el, país, Accede, a, un, amplio, directorio, de, información, sobre, los, negocios, establecidos, en, Venezuela">
 <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
-<title>CiudadGPS - La Comunidad de Comercios más Grande de Venezuela</title>
-<link rel="shortcut icon" type="image/x-icon" href="<?php echo e(asset('favicon.ico')); ?>">
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/animate.css')); ?>">	
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/bootstrap/css/bootstrap.min.css')); ?>">
+<title>CiudadGPS - Tu Comunidad de Comercios en línea.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo e(asset('favicon/apple-icon-57x57.png?v=1')); ?>">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php echo e(asset('favicon/apple-icon-60x60.png?v=1')); ?>">
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo e(asset('favicon/apple-icon-72x72.png?v=1')); ?>">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php echo e(asset('favicon/apple-icon-76x76.png?v=1')); ?>">
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo e(asset('favicon/apple-icon-114x114.png?v=1')); ?>">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php echo e(asset('favicon/apple-icon-120x120.png?v=1')); ?>">
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo e(asset('favicon/apple-icon-144x144.png?v=1')); ?>">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php echo e(asset('favicon/apple-icon-152x152.png?v=1')); ?>">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo e(asset('favicon/apple-icon-180x180.png?v=1')); ?>">
+<link rel="icon" type="image/png" sizes="192x192" href="<?php echo e(asset('favicon/android-icon-192x192.png?v=1')); ?>">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo e(asset('favicon/favicon-32x32.png?v=1')); ?>">
+<link rel="icon" type="image/png" sizes="96x96" href="<?php echo e(asset('favicon/favicon-96x96.png?v=1')); ?>">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo e(asset('favicon/favicon-16x16.png?v=1')); ?>">
+<meta name="msapplication-TileImage" content="<?php echo e(asset('favicon/ms-icon-144x144.png?v=1')); ?>">
+<link rel="shortcut icon" type="image/x-icon" href="<?php echo e(asset('favicon.ico?v=1')); ?>">
+
+<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/animate.css')); ?>">	
+<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/bootstrap/css/bootstrap.min.css')); ?>">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="<?php echo e(asset('assets/vendor/fontawesome-free/css/all.min.css')); ?>" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/all.min.css')); ?>">
@@ -35,28 +51,6 @@
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/slick-theme.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/style.css?v=3')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/responsive.css')); ?>">
-
-
-<!-- Google tag (gtag.js) google ads-->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11483785592">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-11483785592');
-</script>
-
-<!-- Google tag (gtag.js) google analitycs-->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE105KKB85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YE105KKB85');
-</script>
 </head>
 
 <body>
@@ -115,7 +109,7 @@
                     <li><a href="javascript:void(0);" class="nav-link search_trigger"><i class="linearicons-magnifier"></i></a>
                         <div class="search_wrap">
                             <span class="close-search"><i class="ion-ios-close-empty"></i></span>
-                            <form action="<?php echo e(url('/comercios')); ?>">
+                            <form action="<?php echo e(url('comercios')); ?>">
                                 <input type="hidden" name="order" value="<?php echo e(session()->has('latitude') ? 'distance' : 'id'); ?>" />
                                 <input type="text" name="search" placeholder="Cuéntanos. ¿Qué Estás Buscando?" class="form-control" id="search_input">
                                 <button type="submit" class="search_icon"><i class="ion-ios-search-strong"></i></button>
@@ -160,7 +154,7 @@
 <div class="banner_section full_screen staggered-animation-wrap bg-dark">
     <div id="carouselExampleControls" class="carousel slide carousel-fade light_arrow carousel_style2" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active background_bg overlay_bg_70" data-img-src="<?php echo e(asset('caracas_background.jpg')); ?>">
+            <div class="carousel-item active background_bg overlay_bg_70" data-img-src="<?php echo e(asset('caracas_background.webp')); ?>">
                 <div class="banner_slide_content banner_content_inner">
                 	<div class="container">
                     	<div class="row justify-content-center">
@@ -169,7 +163,7 @@
                                     <h1 class="staggered-animation mb-3" id="main-title" data-animation="fadeInDown" data-animation-delay="0.3s">Descubre locales comerciales en todo el país</h1>
                                     <p class="staggered-animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.4s" style="animation-delay: 0.4s; opacity: 1;">Accede a un amplio directorio de información sobre los negocios establecidos en Venezuela.</p>
                                     <div style="max-width:400px;">
-                                        <form action="<?php echo e(url('/comercios')); ?>" class="d-flex">
+                                        <form action="<?php echo e(url('comercios')); ?>" class="d-flex">
                                             <input type="hidden" name="order" value="<?php echo e(session()->has('latitude') ? 'distance' : 'id'); ?>" />
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
@@ -188,7 +182,7 @@
                                                     target="blank">
                                                     <img 
                                                         src="<?php echo e(asset('appButtons/play_store.png')); ?>" 
-                                                        alt="App Store Button" 
+                                                        alt="Google Play Store Button" 
                                                     />
                                                 </a>
                                             </div>
@@ -218,167 +212,261 @@
 <!-- END MAIN CONTENT -->
 <div class="main_content">
 
-<!-- START SECTION CATEGORIES -->
-<div class="section pt-0 pb-5">
-	<div class="container">
-    	<div class="row">
-        	<div class="col-12">
-            	<div class="cat_overlap radius_all_5">
-                	<div class="row align-items-center">
-        				<div class="col-lg-3 col-md-5">
-                        	<div class="text-center text-md-left">
-                                <h4>Categorías</h4>
-                                <p class="mb-2">Descubre las categorías más populares en CiudadGPS</p>
-                                <a href="<?php echo e(url('categorias')); ?>" class="btn btn-fill-out btn-sm btn-radius"><i class="linearicons-power"></i> Ver Más</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-9 col-md-7">
-                            <div class="cat_slider mt-4 mt-md-0 carousel_slider owl-carousel owl-theme nav_style5" data-loop="true" data-dots="false" data-nav="true" data-margin="30" data-responsive='{"0":{"items": "2"}, "380":{"items": "2"}, "991":{"items": "2"}, "1199":{"items": "4"}}'>
-                                <?php $__currentLoopData = $catHeader->take(12); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <?php
-                                    $url = '/comercios/categorias/' . $category->slug . '?order=id';
-                                    if(session()->has('latitude') && session()->has('longitude')){
-                                        $url = '/comercios/slug-categorias/' . $category->slug . '?order=distance';
-                                    }
-                                ?>
-                                <div class="item">
-                                    <div class="categories_box">
-                                        <a href="<?php echo e(url($url)); ?>" class="category-link">
-                                            <img src="<?php echo e(asset($category->image_url)); ?>" alt="<?php echo e($category->name); ?>" style="height:40px; width:40px; margin:auto;" class="mb-4">
-                                            <span class="text-dark text-uppercase font-weight-bold" style="font-size:12px;">
-                                                <?php echo e($category->name); ?>
-
-                                            </span>
-                                        </a>
-                                    </div>
+    <!-- START SECTION CATEGORIES -->
+    <div class="section pt-0 pb-5">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-12">
+                	<div class="cat_overlap radius_all_5">
+                    	<div class="row align-items-center">
+            				<div class="col-lg-3 col-md-5">
+                            	<div class="text-center text-md-left">
+                                    <h4>Categorías</h4>
+                                    <p class="mb-2">Descubre las categorías más populares en CiudadGPS</p>
+                                    <a href="<?php echo e(url('categorias')); ?>" class="btn btn-fill-out btn-sm btn-radius"><i class="linearicons-power"></i> Ver Más</a>
                                 </div>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
-                        </div>
-            		</div>
-            	</div>
+                            <div class="col-lg-9 col-md-7">
+                                <div class="cat_slider mt-4 mt-md-0 carousel_slider owl-carousel owl-theme nav_style5" data-loop="true" data-dots="false" data-nav="true" data-margin="30" data-responsive='{"0":{"items": "2"}, "380":{"items": "2"}, "991":{"items": "2"}, "1199":{"items": "4"}}'>
+                                    <?php $__currentLoopData = $catHeader->take(12); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="item">
+                                        <div class="categories_box">
+                                            <a href="<?php echo e(url('comercios/slug-categorias/' . $category->slug)); ?>" class="category-link">
+                                                <img src="<?php echo e(asset($category->image_url)); ?>" alt="Icono de categoría: <?php echo e($category->name); ?>" style="height:40px; width:40px; margin:auto;" class="mb-4">
+                                                <span class="text-dark text-uppercase font-weight-bold" style="font-size:12px;">
+                                                    <?php echo e($category->name); ?>
+
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                </div>
+                            </div>
+                		</div>
+                	</div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- END SECTION CATEGORIES -->
+    <!-- END SECTION CATEGORIES -->
 
 
-<!-- START SECTION SHOP -->
-<div class="section pt-0 pb-5">
-	<div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="heading_tab_header">
-                    <div class="heading_s2">
-                        <h4>Comercios Destacados</h4>
+    <!-- START SECTION SHOP -->
+    <div class="section pt-0 pb-2">
+    	<div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading_tab_header">
+                        <div class="heading_s2">
+                            <h4>directorio de comercios</h4>
+                        </div>
+                        <div class="view_all">
+                            <a href="<?php echo e(url('comercios')); ?>" class="text_default link_all"><i class="linearicons-power"></i> <span>Ver Más</span></a>
+                        </div>
                     </div>
-                    <div class="view_all">
-                        <?php
-                            $url = '/comercios?order=id&search=';
-                            if(session()->has('latitude') && session()->has('longitude')){
-                                $url = '/comercios?order=distance&search=';
-                            }
-                        ?>
-                        <a href="<?php echo e(url($url)); ?>" class="text_default link_all"><i class="linearicons-power"></i> <span>Ver Más</span></a>
+                </div>
+            </div>
+            <div class="row">
+                <?php $__currentLoopData = $commerces; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php
+                        $ratingP = $c->comments->avg('rating') * 100 / 5;  
+                    ?>
+                    <div class="col-md-6 col-lg-3 col-12 mb-3">
+                        <div class="product_box text-center shadow border-0">
+                            <div class="product_img">
+                                <a href="<?php echo e(url('/slug-comercios/' . $c->slug)); ?>">
+                                    <?php if($c->imgs->first()): ?>
+                                        <img src="<?php echo e($c->imgs->first()->uri); ?>" alt="Fachada de <?php echo e($c->name); ?>" title="Fachada de <?php echo e($c->name); ?>"/>
+                                    <?php endif; ?>
+                                    <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
+                                        <img src="<?php echo e(asset($c->logo)); ?>" alt="<?php echo e($c->name); ?> Logotipo" style="width:60px; height:60px; border-radius:50%;">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product_info">
+                                <h6 class="product_title">
+                                    <a href="<?php echo e(url('/slug-comercios/' . $c->slug)); ?>"><?php echo e($c->name); ?></a>
+                                </h6>
+                                <div class="rating_wrap">
+                                    <div class="rating">
+                                        <div class="product_rate" style="width:<?php echo e($ratingP); ?>%"></div>
+                                    </div>
+                                    <span class="rating_num">(<?php echo e($c->comments->count()); ?>)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </div> 
+        </div>
+    </div>
+    <!-- END SECTION SHOP -->
+
+
+    <!-- Seccion de about -->
+    <div class="section pb_70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="heading_s2 text-center">
+                        <h4 class="mb-3" style="text-transform: none;">¿Qué es CiudadGPS?</h4>
+                        <p class="leads">CiudadGPS surge como una plataforma innovadora que conecta negocios y consumidores de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los productos, servicios y locales comerciales de los negocios, mientras que a los consumidores les brindamos las herramientas necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">	
+                    <div class="icon_box icon_box_style1 px-2">
+                        <div class="icon">
+                            <i class="fas fa-search-location text-dark"></i>
+                        </div>
+                        <div class="icon_box_content">
+                            <h6 style="text-transform: none;">Directorio de Comercios</h6>
+                            <p class="leads">Te ayuda a encontrar comercios cercanos a tu ubicación actual.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">	
+                    <div class="icon_box icon_box_style1 px-2">
+                        <div class="icon">
+                            <i class="fas fa-book-open text-dark"></i>
+                        </div>
+                        <div class="icon_box_content">
+                            <h6 style="text-transform: none;">Catálogo de Productos</h6>
+                            <p class="leads">Puedes realizar compras en línea por medio de WhatsApp.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">	
+                    <div class="icon_box icon_box_style1 px-2">
+                        <div class="icon">
+                            <i class="fas fa-briefcase text-dark"></i>
+                        </div>
+                        <div class="icon_box_content">
+                            <h6 style="text-transform: none;">Bolsa de Empleos</h6>
+                            <p class="leads">Puedes ver anuncios de empleos de las empresas afiliadas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">	
+                    <div class="icon_box icon_box_style1 px-2">
+                        <div class="icon">
+                            <i class="fas fa-history text-dark"></i>
+                        </div>
+                        <div class="icon_box_content">
+                            <h6 style="text-transform: none;">Historias</h6>
+                            <p class="leads">Verás historias de 24h de duración de empresas afilidadas.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <?php $__currentLoopData = $commerces; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <?php
-                    $rating = 0;
-                    foreach ($c->comments as $co) {
-                        $rating = $rating + $co->rating;
-                    }
-                    if($c->comments->count() > 0){
-                        $rating = $rating / $c->comments->count();
-                    }
+    </div>
+    <!-- end Seccion de about -->
 
-                    $ratingP = $rating * 100 / 5;  
-                ?>
-                <div class="col-md-6 col-lg-3 col-12 mb-3">
-                    <div class="product_box text-center shadow border-0">
-                        <div class="product_img">
-                            <a href="<?php echo e(url('/slug-comercios/' . $c->slug)); ?>">
-                                <?php if($c->imgs->first()): ?><img src="<?php echo e($c->imgs->first()->uri); ?>" alt="<?php echo e($c->name); ?>"><?php endif; ?>
-                                <div style="position: absolute; left:0; top:0; background-color:rgba(255,255,255,0.4); padding:10px; display:flex; jusitfy-content:center; align-items: center;">
-                                    <img src="<?php echo e(asset($c->logo)); ?>" alt="<?php echo e($c->name); ?> logo" style="width:60px; height:60px; border-radius:50%;">
-                                </div>
+
+    <!-- START SECTION SHOP -->
+    <div class="section pt-0 pb-5">
+        <?php
+            $articles = \App\Models\Article::orderBy('id', 'desc')
+            ->get()
+            ->take(6);   
+        ?>
+    	<div class="container">
+    		<div class="row justify-content-center">
+    			<div class="col-12">
+                    <div class="heading_s2 text-center">
+                        <h4 class="mb-3">Nuestro Blog</h4>
+                        <p class="leads">Conoce nuestros últimos artículos y noticias. Mantente al tanto de las últimas tendencias, consejos y novedades sobre cómo hacer crecer tu negocio con CiudadGPS.</p>
+                    </div>
+                </div>
+    		</div>
+            <div class="row shop_container d-flex justifify-content-space-between">
+                <?php $__empty_1 = true; $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                <div class="col-xl-4 col-md-6">
+                    <div class="blog_post blog_style2 box_shadow1">
+                        <div class="blog_img">
+                            <a href="<?php echo e(url('blog/' . $article->slug )); ?>">
+                                <img src="<?php echo e($article->image); ?>" style="max-height: 200px; object-fit: cover;" alt="<?php echo e($article->title); ?> Imagen del Articulo" title="<?php echo e($article->title); ?> Imagen del Articulo">
                             </a>
                         </div>
-                        <div class="product_info">
-                            <h6 class="product_title"><a href="<?php echo e(url('/slug-comercios/' . $c->slug)); ?>"><?php echo e($c->name); ?></a></h6>
-                            <div class="rating_wrap">
-                                <div class="rating">
-                                    <div class="product_rate" style="width:<?php echo e($ratingP); ?>%"></div>
+                        <div class="blog_content bg-white">
+                            <div class="blog_text">
+                                <h6 class="blog_title"><a href="<?php echo e(url('blog/' . $article->slug )); ?>"><?php echo e(Illuminate\Support\Str::limit($article->title, 60)); ?></a></h6>
+                                <ul class="list_none blog_meta">
+                                    <li><a href="<?php echo e(url('blog/' . $article->slug  )); ?>"><i class="ti-calendar"></i> <?php echo e($article->created_at->diffForHumans()); ?></a></li>
+                                </ul>
+                                <p><?php echo e(Illuminate\Support\Str::limit($article->excerpt, 140)); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+                <div class="col-lg-12">
+                    <h6>No hay resultados disponibles</h6>
+                </div>   
+                <?php endif; ?>
+            </div> 
+        </div>
+    </div>
+    <!-- END SECTION SHOP -->
+
+
+    <!-- START SECTION SHOP -->
+    <div class="section pt-0 pb-5">
+    	<div class="container">
+    		<div class="row justify-content-center">
+    			<div class="col-12">
+                    <div class="heading_tab_header">
+                        <div class="heading_s2">
+                            <h4>Descarga Nuestra Aplicación:</h4>
+                        </div>
+                    </div>
+                </div>
+    		</div>
+            <div class="row shop_container d-flex justifify-content-space-between">
+                <div class="col-md-6 mb-4">
+                    <div class="card" style="background: #202325;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3 d-flex justify-content-center align-items-center text-center">
+                                    <i class="fab fa-google-play text-light fa-4x"></i>
                                 </div>
-                                <span class="rating_num">(<?php echo e($c->comments->count()); ?>)</span>
+                                <div class="col-9 py-3">
+                                    <h4 class="text-light mb-4 font-weight-light"><em>Disponible en Play Store</em></h4>
+
+                                    <a href="https://play.google.com/store/apps/details?id=com.ciudadgps.app" target="blank" class="btn btn-fill-out btn-radius btn-sm">
+                                        <i class="fas fa-link"></i> Descargar
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-        </div> 
+                <div class="col-md-6 mb-4">
+                    <div class="card" style="background: #202325;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3 d-flex justify-content-center align-items-center">
+                                    <i class="fab fa-app-store text-light fa-4x"></i>
+                                </div>
+                                <div class="col-9 py-3">
+                                    <h4 class="text-light mb-4 font-weight-light"><em>Disponible en App Store</em></h4>
+
+                                    <a href="https://apps.apple.com/app/ciudad-gps/id1643027976" target="blank" class="btn btn-fill-out btn-radius btn-sm">
+                                        <i class="fas fa-link"></i> Descargar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>       
+            </div> 
+        </div>
     </div>
-</div>
-<!-- END SECTION SHOP -->
+    <!-- END SECTION SHOP -->
 
-
-<!-- START SECTION SHOP -->
-<div class="section pt-0 pb-5">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12">
-                <div class="heading_tab_header">
-                    <div class="heading_s2">
-                        <h4>Descarga Nuestra Aplicación:</h4>
-                    </div>
-                </div>
-            </div>
-		</div>
-        <div class="row shop_container d-flex justifify-content-space-between">
-            <div class="col-md-6 mb-4">
-                <div class="card" style="background: #202325;">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-3 d-flex justify-content-center align-items-center">
-                                <i class="fab fa-google-play text-light fa-4x"></i>
-                            </div>
-                            <div class="col-9 py-3">
-                                <h4 class="text-light mb-4 font-weight-light"><em>Disponible en Play Store</em></h4>
-
-                                <a href="https://play.google.com/store/apps/details?id=com.ciudadgps.app" target="blank" class="btn btn-fill-out btn-radius btn-sm">
-                                    <i class="fas fa-download"></i> Descargar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="card" style="background: #202325;">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-3 d-flex justify-content-center align-items-center">
-                                <i class="fab fa-app-store text-light fa-4x"></i>
-                            </div>
-                            <div class="col-9 py-3">
-                                <h4 class="text-light mb-4 font-weight-light"><em>Disponible en App Store</em></h4>
-
-                                <a href="https://apps.apple.com/app/ciudad-gps/id1643027976" target="blank" class="btn btn-fill-out btn-radius btn-sm">
-                                    <i class="fas fa-download"></i> Descargar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>       
-        </div> 
-    </div>
-</div>
-<!-- END SECTION SHOP -->
 
 
 </div>

@@ -4,8 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://ciudadgps.com/</loc>
@@ -260,17 +258,17 @@
 <url>
   <loc>https://ciudadgps.com/registrar-comercio</loc>
   <lastmod>2024-04-15T17:29:18+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://ciudadgps.com/empleos</loc>
   <lastmod>2024-04-15T17:29:18+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://ciudadgps.com/nosotros</loc>
   <lastmod>2024-04-15T17:29:18+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://ciudadgps.com/planes</loc>
@@ -280,12 +278,12 @@
 <url>
   <loc>https://ciudadgps.com/blog</loc>
   <lastmod>2024-04-15T17:29:18+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://ciudadgps.com/login</loc>
   <lastmod>2024-04-15T17:29:18+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://ciudadgps.com/carrito-de-compras</loc>

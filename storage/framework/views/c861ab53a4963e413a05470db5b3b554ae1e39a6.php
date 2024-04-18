@@ -30,9 +30,9 @@
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="widget">
                         <div class="footer_logo">
-                            <a href="/"><img src="<?php echo e(asset('assets/logo_gps_blanco.png')); ?>" width="150px" alt="CiudadGPS logo light"/></a>
+                            <a href="/"><img src="<?php echo e(asset('assets/logo_gps_blanco.png')); ?>" width="150px" alt="CiudadGPS logotipo light"/></a>
                         </div>
-                        <p>Somos la App que te conecta! <br> Locales comerciales en todo el país </p>
+                        <p>Somos la App que te conecta! <br> Tu Comunidad de Comercios en línea.</p>
                     </div>
                     <div class="widget">
                         <ul class="social_icons social_white">
@@ -48,13 +48,7 @@
                             <h6 class="widget_title"><?php echo e($category['title']); ?></h6>
                             <ul class="widget_links">
                                 <?php $__currentLoopData = $category['items']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ca): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <?php
-                                        $url = '/comercios/slug-categorias/' . $ca->slug . '?order=id';
-                                        if(session()->has('latitude') && session()->has('longitude')){
-                                            $url = '/comercios/slug-categorias/' . $ca->slug . '?order=distance';
-                                        }
-                                    ?>
-                                    <li><a href="<?php echo e(url($url)); ?>" class="category-link"><?php echo e($ca->name); ?></a></li>
+                                    <li><a href="<?php echo e(url('comercios/slug-categorias/' . $ca->slug)); ?>" class="category-link"><?php echo e($ca->name); ?></a></li>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </ul>
                         </div>
@@ -118,7 +112,7 @@
 <script src="<?php echo e(asset('assets/vendor/jquery/jquery.form.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/js/popper.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/bootstrap/js/bootstrap.min.js')); ?>"></script> 
-<script src="<?php echo e(asset('assetsPublic/owlcarousel/js/owl.carousel.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assetsPublic/owlcarousel/js/owl.carousel.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/js/magnific-popup.min.js')); ?>"></script> 
 <script src="<?php echo e(asset('assetsPublic/js/waypoints.min.js')); ?>"></script> 
 <script src="<?php echo e(asset('assetsPublic/js/parallax.js')); ?>"></script> 
@@ -128,15 +122,17 @@
 <script src="<?php echo e(asset('assetsPublic/js/jquery.dd.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/js/slick.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/js/jquery.elevatezoom.js')); ?>"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-<script src="<?php echo e(asset('assets/vendor/datatables/jquery.dataTables.js')); ?>"></script>
-<script src="<?php echo e(asset('assets/vendor/datatables/dataTables.bootstrap4.js')); ?>"></script>
+<?php if(!request()->is('/')): ?> 
+    <script src="<?php echo e(asset('assetsPublic/js/select2.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/summernote.min.js')); ?>"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/dropzone.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/vendor/datatables/jquery.dataTables.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/vendor/datatables/dataTables.bootstrap4.js')); ?>"></script>
+<?php endif; ?>
 <script src="<?php echo e(asset('assets/vendor/sweetalert/sweetalert.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/js/scripts.js')); ?>"></script>
-<script src="<?php echo e(asset('assets/js/script.js?v=2')); ?>"></script>
+<script src="<?php echo e(asset('assets/js/script.js?v=3')); ?>"></script>
 
 <?php if(session()->has('error')): ?>
 <script>
