@@ -202,8 +202,8 @@ $(document).ready(function(){
 
 
     //Store Commerce
-    if($('#editCommerce').length){
-      $('#editCommerce').ajaxForm({
+    if($('#storeCommerce').length){
+      $('#storeCommerce').ajaxForm({
         uploadProgress: (event, position, total, percentComplete) => {
             Swal.fire({
                 title: 'Procesando infomación, por favor espere...',
