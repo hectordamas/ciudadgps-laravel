@@ -222,7 +222,7 @@
                             	<div class="text-center text-md-left">
                                     <h4>Categorías</h4>
                                     <p class="mb-2">Descubre las categorías más populares en CiudadGPS</p>
-                                    <a href="<?php echo e(url('categorias')); ?>" class="btn btn-fill-out btn-sm btn-radius"><i class="linearicons-power"></i> Ver Más</a>
+                                    <a href="<?php echo e(url('categorias')); ?>" class="btn btn-fill-out btn-sm btn-radius"><i class="fas fa-bolt"></i> Ver Más</a>
                                 </div>
                             </div>
                             <div class="col-lg-9 col-md-7">
@@ -261,7 +261,7 @@
                             <h4>directorio de comercios</h4>
                         </div>
                         <div class="view_all">
-                            <a href="<?php echo e(url('comercios')); ?>" class="text_default link_all"><i class="linearicons-power"></i> <strong>Leer Más</strong></a>
+                            <a href="<?php echo e(url('comercios')); ?>" class="text_default link_all"><i class="fas fa-bolt"></i> <strong>Leer Más</strong></a>
                         </div>
                     </div>
                 </div>
