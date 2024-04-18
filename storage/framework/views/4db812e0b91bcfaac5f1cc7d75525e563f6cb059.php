@@ -15,6 +15,10 @@
 <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 <title>CiudadGPS - Tu Comunidad de Comercios en línea.</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
 <link rel="apple-touch-icon" sizes="57x57" href="<?php echo e(asset('favicon/apple-icon-57x57.png?v=1')); ?>">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php echo e(asset('favicon/apple-icon-60x60.png?v=1')); ?>">
 <link rel="apple-touch-icon" sizes="72x72" href="<?php echo e(asset('favicon/apple-icon-72x72.png?v=1')); ?>">
@@ -33,9 +37,6 @@
 
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/animate.css')); ?>">	
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/bootstrap/css/bootstrap.min.css')); ?>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="<?php echo e(asset('assets/vendor/fontawesome-free/css/all.min.css')); ?>" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/all.min.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/ionicons.min.css')); ?>">
