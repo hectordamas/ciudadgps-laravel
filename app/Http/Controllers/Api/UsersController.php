@@ -9,6 +9,7 @@ use App\Models\Commerce;
 use App\Models\Comment;
 use App\Models\Like;
 use Carbon\Carbon;
+use App\Models\PushToken;
 
 class UsersController extends Controller
 {
@@ -127,9 +128,15 @@ class UsersController extends Controller
     }
 
     public function setToken(Request $request){
-        $user = User::find($request->userId);
-        $user->token = $request->token;
-        $user->save();
+        if($request->userId){
+            $user = User::find($request->userId);
+            $user->token = $request->token;
+            $user->save();    
+        } else {
+            $token = new PushToken();
+            $token->token = $request->token;
+            $token->save();
+        }
 
         return response()->json([
             'message' => 'Token almacenado con exito',

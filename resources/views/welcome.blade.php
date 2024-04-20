@@ -180,7 +180,7 @@
                                                     target="blank">
                                                     <img 
                                                         src="{{ asset('appButtons/play_store.png') }}" 
-                                                        alt="Google Play Store Button" 
+                                                        alt="Botón de descarga de Google Play Store" 
                                                     />
                                                 </a>
                                             </div>
@@ -190,7 +190,7 @@
                                                     target="blank">
                                                     <img 
                                                         src="{{ asset('appButtons/app_store.png') }}" 
-                                                        alt="App Store Button" 
+                                                        alt="Botón de descarga de App Store" 
                                                     />
                                                 </a>
                                             </div>
@@ -221,7 +221,7 @@
                             	<div class="text-center text-md-left">
                                     <h4>Categorías</h4>
                                     <p class="mb-2">Descubre las categorías más populares en CiudadGPS</p>
-                                    <a href="{{ url('categorias') }}" class="btn btn-fill-out btn-sm btn-radius"><i class="fas fa-bolt"></i> Ver Más</a>
+                                    <a href="{{ url('categorias') }}" class="btn btn-fill-out btn-sm btn-radius"><i class="linearicons-power"></i> Ver Más</a>
                                 </div>
                             </div>
                             <div class="col-lg-9 col-md-7">
@@ -259,7 +259,7 @@
                             <h4>directorio de comercios</h4>
                         </div>
                         <div class="view_all">
-                            <a href="{{ url('comercios') }}" class="text_default link_all"><i class="fas fa-bolt"></i> <strong>Leer Más</strong></a>
+                            <a href="{{ url('comercios') }}" class="text_default link_all"><i class="linearicons-power"></i> <strong>Leer Más</strong></a>
                         </div>
                     </div>
                 </div>
@@ -307,8 +307,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading_s2 text-center">
-                        <h4 class="mb-4" style="text-transform: none;">¿Qué es CiudadGPS?</h4>
-                        <p class="leads">CiudadGPS surge como una plataforma innovadora que conecta negocios y consumidores de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los productos, servicios y locales comerciales de los negocios, mientras que a los consumidores les brindamos las herramientas necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:</p>
+                        <h4 class="mb-5" style="text-transform: none;">¿Qué es CiudadGPS?</h4>
+                        <p class="leads mb-5">CiudadGPS surge como una plataforma innovadora que conecta negocios y consumidores de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los productos, servicios y locales comerciales de los negocios, mientras que a los consumidores les brindamos las herramientas necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:</p>
                     </div>
                 </div>
             </div>
@@ -316,7 +316,7 @@
                 <div class="col-lg-3 col-md-6">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="fas fa-search-location"></i>
+                            <i class="ti-map"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Directorio de Comercios</h6>
@@ -327,7 +327,7 @@
                 <div class="col-lg-3 col-md-6">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="fas fa-book-open"></i>
+                            <i class="ti-book"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Catálogo de Productos</h6>
@@ -338,7 +338,7 @@
                 <div class="col-lg-3 col-md-6">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="fas fa-briefcase"></i>
+                            <i class="ti-briefcase"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Bolsa de Empleos</h6>
@@ -349,7 +349,7 @@
                 <div class="col-lg-3 col-md-6">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="fas fa-history"></i>
+                            <i class="ti-time"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Historias</h6>
@@ -420,7 +420,9 @@
                             <h4>Descarga Nuestra Aplicación:</h4>
                         </div>
                         <div class="view_all">
-                            <a href="https://linktr.ee/ciudadgps" target="blank" class="text_default link_all"><i class="fas fa-bolt"></i> <strong>Enlaces</strong></a>
+                            <a href="https://linktr.ee/ciudadgps" target="blank" class="text_default link_all">
+                                <i class="linearicons-power"></i> <strong>Enlaces</strong>
+                            </a>
                         </div>
                     </div>
                 </div>

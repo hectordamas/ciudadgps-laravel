@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
     <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" /> 
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-    <link href="<?php echo e(asset('assets/css/style.css?v=1')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('assets/css/style.css?v=2')); ?>" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -271,7 +271,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-    <script src="<?php echo e(asset('assets/js/script.js?v=9')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/script.js?v=11')); ?>"></script>
     <?php if(session()->has('error')): ?>
         <script>
             Swal.fire({icon:'error', title:'Ha ocurrido un error!', text: "<?php echo e(session('error')); ?>", confirmButtonText: "OK", confirmButtonColor: '#dc3545'})
