@@ -256,7 +256,7 @@
                 <div class="col-12">
                     <div class="heading_tab_header">
                         <div class="heading_s2">
-                            <h4>directorio de comercios</h4>
+                            <h4 style="text-transform: none;">Directorio de Comercios</h4>
                         </div>
                         <div class="view_all">
                             <a href="{{ url('comercios') }}" class="text_default link_all"><i class="linearicons-power"></i> <strong>Leer Más</strong></a>
@@ -468,8 +468,6 @@
         </div>
     </div>
     <!-- END SECTION SHOP -->
-
-
 
 </div>
 <!-- END MAIN CONTENT -->

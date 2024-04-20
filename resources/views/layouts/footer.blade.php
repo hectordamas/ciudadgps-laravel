@@ -27,6 +27,26 @@
     <div class="footer_top">
         <div class="container">
             <div class="row">
+            	<div class="col-12">
+                	<div class="pb-4 mb-4 mb-md-5 border_bottom_tran">
+        				<div class="row align-items-center justify-content-between">	
+                            <div class="col-lg-8 col-md-8">
+                                <div class="heading_s1">
+                                    <h3>Registra Tu Negocio</h3>
+                                </div>
+                                <p>Regístra tu negocio en CiudadGPS y sé parte de la comunidad de comercios más grande de América Latina. Crece, conéctate y destaca con CiudadGPS</p>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <a href="{{ url('registrar-comercio') }}" class="btn btn-fill-out btn-block">
+                                    <i class="ti-rocket" style="font-size: 25px;"></i> Afíliate ya!
+                                </a>
+                            </div>
+                        </div>
+            		</div>
+            	</div>
+            </div>
+
+            <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="widget">
                         <div class="footer_logo">
@@ -77,6 +97,10 @@
                         <ul class="contact_info contact_info_light">
                             <li>
                                 <i class="ti-email"></i>
+                                <a href="mailto:ventas@ciudadgps.com">ventas@ciudadgps.com</a>
+                            </li>
+                            <li>
+                                <i class="ti-email"></i>
                                 <a href="mailto:info@ciudadgps.com">info@ciudadgps.com</a>
                             </li>
                             <li>
@@ -88,6 +112,30 @@
                                 <a href="https://api.whatsapp.com/send?phone=584129749348">+58 (412)974-9348</a>
                             </li>
                         </ul>
+                    </div>
+                    <div class="widget">
+                        <div class="row mt-4">
+                            <div class="col-6 pr-1">
+                                <a 
+                                    href="https://play.google.com/store/apps/details?id=com.ciudadgps.app" 
+                                    target="blank">
+                                    <img 
+                                        src="{{ asset('appButtons/play_store.png') }}" 
+                                        alt="Botón de descarga de Google Play Store" 
+                                    />
+                                </a>
+                            </div>
+                            <div class="pl-1 col-6">
+                                <a 
+                                    href="https://apps.apple.com/us/app/ciudadgps/id1643027976"
+                                    target="blank">
+                                    <img 
+                                        src="{{ asset('appButtons/app_store.png') }}" 
+                                        alt="Botón de descarga de App Store" 
+                                    />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
