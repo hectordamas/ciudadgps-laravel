@@ -174,7 +174,7 @@
                                         </form>
 
                                         <div class="row mt-4">
-                                            <div class="col-5 pr-1">
+                                            <div class="col-4 pr-1">
                                                 <a 
                                                     href="https://play.google.com/store/apps/details?id=com.ciudadgps.app" 
                                                     target="blank">
@@ -184,7 +184,7 @@
                                                     />
                                                 </a>
                                             </div>
-                                            <div class="pl-1 col-5">
+                                            <div class="pl-1 col-4">
                                                 <a 
                                                     href="https://apps.apple.com/us/app/ciudadgps/id1643027976"
                                                     target="blank">
@@ -307,13 +307,13 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading_s2 text-center">
-                        <h4 class="mb-5" style="text-transform: none;">¿Qué es CiudadGPS?</h4>
+                        <h2 class="mb-4" style="text-transform: none;">¿Qué es CiudadGPS?</h2>
                         <p class="leads mb-5">CiudadGPS surge como una plataforma innovadora que conecta negocios y consumidores de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los productos, servicios y locales comerciales de los negocios, mientras que a los consumidores les brindamos las herramientas necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:</p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-6">	
+                <div class="col-lg-3 col-md-6 mb-5">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
                             <i class="ti-map"></i>
@@ -324,7 +324,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">	
+                <div class="col-lg-3 col-md-6 mb-5">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
                             <i class="ti-book"></i>
@@ -335,7 +335,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">	
+                <div class="col-lg-3 col-md-6 mb-5">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
                             <i class="ti-briefcase"></i>
@@ -346,7 +346,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">	
+                <div class="col-lg-3 col-md-6 mb-5">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
                             <i class="ti-time"></i>
@@ -374,7 +374,7 @@
     		<div class="row justify-content-center">
     			<div class="col-12">
                     <div class="heading_s2 text-center">
-                        <h4 class="mb-4">Nuestro Blog</h4>
+                        <h3 class="mb-4">Nuestro Blog</h3>
                         <p class="leads">Conoce nuestros últimos artículos y noticias. Mantente al tanto de las últimas tendencias, consejos y novedades sobre cómo hacer crecer tu negocio con CiudadGPS.</p>
                     </div>
                 </div>
@@ -436,7 +436,7 @@
                                     <i class="fab fa-google-play text-light fa-4x"></i>
                                 </div>
                                 <div class="col-9 py-3">
-                                    <h4 class="text-light mb-4 font-weight-light"><em>Disponible en Play Store</em></h4>
+                                    <h5 class="text-light mb-4 font-weight-light"><em>Disponible en Play Store</em></h5>
 
                                     <a href="https://play.google.com/store/apps/details?id=com.ciudadgps.app" target="blank" class="btn btn-fill-out btn-radius btn-sm">
                                         <i class="fas fa-link"></i> Descargar
@@ -454,7 +454,7 @@
                                     <i class="fab fa-app-store text-light fa-4x"></i>
                                 </div>
                                 <div class="col-9 py-3">
-                                    <h4 class="text-light mb-4 font-weight-light"><em>Disponible en App Store</em></h4>
+                                    <h5 class="text-light mb-4 font-weight-light"><em>Disponible en App Store</em></h5>
 
                                     <a href="https://apps.apple.com/app/ciudad-gps/id1643027976" target="blank" class="btn btn-fill-out btn-radius btn-sm">
                                         <i class="fas fa-link"></i> Descargar
