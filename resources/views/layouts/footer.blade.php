@@ -4,11 +4,11 @@
     $categories = [
         [
             'title' => '',
-            'items' => $catFooter->take(8),
+            'items' => $catFooter->take(12),
         ],
         [
             'title' => '',
-            'items' => $catFooter->skip(8)->take(9),
+            'items' => $catFooter->skip(12)->take(12),
         ],
     ];
 
