@@ -34,7 +34,7 @@
                                 <div class="heading_s1">
                                     <h3 style="text-transform: none;">Haz parte de CiudadGPS</h3>
                                 </div>
-                                <p>Regístra tu negocio en CiudadGPS y sé parte de la comunidad de comercios más grande de América Latina: <strong>Crece, conéctate y destaca con CiudadGPS</strong></p>
+                                <p>Registra tu negocio en CiudadGPS y se parte de la comunidad de comercios más grande de América Latina: <strong>Crece, conéctate y destaca con CiudadGPS</strong></p>
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <a href="<?php echo e(url('registrar-comercio')); ?>" class="btn btn-fill-out btn-block">

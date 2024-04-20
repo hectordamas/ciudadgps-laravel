@@ -3,7 +3,7 @@
 
     $categories = [
         [
-            'title' => 'Categorías:',
+            'title' => '',
             'items' => $catFooter->take(8),
         ],
         [
