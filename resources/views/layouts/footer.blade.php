@@ -157,8 +157,8 @@
 
 <script src="{{ asset('assetsPublic/js/jquery-3.6.0.min.js') }}"></script> 
 @if(!request()->is('/')) 
-<script src="{{ asset('assetsPublic/js/jquery-ui.js') }}"></script>
-<script src="{{ asset('assets/vendor/jquery/jquery.form.js')}}"></script>
+    <script src="{{ asset('assetsPublic/js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('assets/vendor/jquery/jquery.form.js')}}"></script>
 @endif
 <script src="{{ asset('assetsPublic/js/popper.min.js') }}"></script>
 <script src="{{ asset('assetsPublic/bootstrap/js/bootstrap.min.js') }}"></script> 
@@ -210,7 +210,6 @@
 </script>
 
 @yield('stripe')
-
 @yield('map')
 
 <script>

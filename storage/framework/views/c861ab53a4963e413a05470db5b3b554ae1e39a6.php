@@ -32,7 +32,7 @@
         				<div class="row align-items-center justify-content-between">	
                             <div class="col-lg-8 col-md-8">
                                 <div class="heading_s1">
-                                    <h3 style="text-transform: none;">Haz parte de CiudadGPS</h3>
+                                    <h3 style="text-transform: none;">Forma parte de CiudadGPS</h3>
                                 </div>
                                 <p>Registra tu negocio en CiudadGPS y se parte de la comunidad de comercios más grande de América Latina: <strong>Crece, conéctate y destaca con CiudadGPS</strong></p>
                             </div>
@@ -157,8 +157,8 @@
 
 <script src="<?php echo e(asset('assetsPublic/js/jquery-3.6.0.min.js')); ?>"></script> 
 <?php if(!request()->is('/')): ?> 
-<script src="<?php echo e(asset('assetsPublic/js/jquery-ui.js')); ?>"></script>
-<script src="<?php echo e(asset('assets/vendor/jquery/jquery.form.js')); ?>"></script>
+    <script src="<?php echo e(asset('assetsPublic/js/jquery-ui.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/vendor/jquery/jquery.form.js')); ?>"></script>
 <?php endif; ?>
 <script src="<?php echo e(asset('assetsPublic/js/popper.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assetsPublic/bootstrap/js/bootstrap.min.js')); ?>"></script> 
@@ -210,7 +210,6 @@
 </script>
 
 <?php echo $__env->yieldContent('stripe'); ?>
-
 <?php echo $__env->yieldContent('map'); ?>
 
 <script>
