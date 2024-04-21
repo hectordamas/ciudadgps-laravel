@@ -61,14 +61,14 @@
             <div class="product-image">
                 <div class="product_img_box">
                     <?php if($commerce->imgs->first()): ?> 
-                        <img id="product_img" src="<?php echo e(asset($commerce->imgs->first()->uri)); ?>" alt="<?php echo e($commerce->name); ?>" class="w-100" style="max-height: 450px; object-fit: cover;"/> 
+                        <img id="product_img" src="<?php echo e(asset($commerce->imgs->first()->uri)); ?>" alt="Fachada de <?php echo e($commerce->name); ?>" class="w-100" style="max-height: 450px; object-fit: cover;"/> 
                     <?php endif; ?>
                 </div>
                 <div id="pr_item_gallery" class="product_gallery_item slick_slider justify-content-start" data-nav="true" data-slides-to-show="7" data-slides-to-scroll="1" data-infinite="false">
                     <?php $__currentLoopData = $commerce->imgs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="item">
                         <a href="#" class="product_gallery_item" data-image="<?php echo e(asset($img->uri)); ?>">
-                            <img src="<?php echo e(asset($img->uri)); ?>" alt="<?php echo e($commerce->name); ?>" class="w-100" style="max-height: 50px; object-fit: cover;"/>
+                            <img src="<?php echo e(asset($img->uri)); ?>" alt="Fachada de <?php echo e($commerce->name); ?> <?php echo e($img->id); ?>" class="w-100" style="max-height: 50px; object-fit: cover;"/>
                         </a>
                     </div>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -253,13 +253,12 @@
                                 </style>
                                 <?php $__currentLoopData = $commerce->comments->sortByDesc('id')->take(3); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $comment): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <?php
-                                        $ratingC = 0;
-                                        $ratingC = $comment->rating * 100 / 5;
+                                        $ratingC = $commerce->comments->avg('rating') * 100 / 5;  
                                     ?>
                                     <?php if($comment->comment): ?>
                                         <li>
                                             <div class="comment_img">
-                                                <img src="<?php echo e($comment->user->avatar ? $comment->user->avatar : asset('assets/user_avatar_default.png')); ?>" referrerpolicy="no-referrer" alt="<?php echo e($comment->user->name); ?>"/>
+                                                <img src="<?php echo e($comment->user->avatar ? $comment->user->avatar : asset('assets/user_avatar_default.png')); ?>" referrerpolicy="no-referrer" alt="<?php echo e($comment->user->name); ?> avatar" />
                                             </div>
                                             <div class="comment_block">
                                                 <div class="rating_wrap">
@@ -355,10 +354,10 @@
                     <div class="item">
                         <div class="product shadow product_box border-0">
                             <div class="product_img" style="aspect-ratio: 1;">
-                                <a href="/productos/<?php echo e($product->id); ?>" style="position: relative; height: 100%;">
+                                <a href="/slug-productos/<?php echo e($product->slug); ?>" style="position: relative; height: 100%;">
                                     <img 
                                         src="<?php echo e(asset($product->image)); ?>" 
-                                        alt="<?php echo e($product->name); ?>" 
+                                        alt="Imagen de producto <?php echo e($product->name); ?>" 
                                         style="object-fit: cover; height: 100%; aspect-ratio: 1;"
                                     >
 
@@ -368,7 +367,7 @@
                                 </a>
                             </div>
                             <div class="product_info">
-                                <h6 class="product_title"><a href="/productos/<?php echo e($product->id); ?>"><?php echo e($product->name); ?></a></h6>
+                                <h6 class="product_title"><a href="/slug-productos/<?php echo e($product->slug); ?>"><?php echo e($product->name); ?></a></h6>
                                 <div class="product_price">
                                     <span class="price">$<?php echo e(number_format($product->price, 2, '.', ',')); ?></span>
                                 </div>

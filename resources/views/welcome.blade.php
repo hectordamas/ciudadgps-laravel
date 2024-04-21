@@ -35,8 +35,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="{{ asset('assetsPublic/css/animate.css') }}">	
-<link rel="stylesheet" href="{{ asset('assetsPublic/bootstrap/css/bootstrap.min.css') }}">
 <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/all.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/ionicons.min.css') }}">
@@ -44,12 +42,9 @@
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/linearicons.css') }}">
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/flaticon.css') }}">
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/simple-line-icons.css') }}">
-<link rel="stylesheet" href="{{ asset('assetsPublic/owlcarousel/css/owl.carousel.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assetsPublic/owlcarousel/css/owl.theme.css') }}">
-<link rel="stylesheet" href="{{ asset('assetsPublic/owlcarousel/css/owl.theme.default.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assetsPublic/css/magnific-popup.css') }}">
-<link rel="stylesheet" href="{{ asset('assetsPublic/css/style.css?v=3') }}">
-<link rel="stylesheet" href="{{ asset('assetsPublic/css/responsive.css') }}">
+
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/styles.min.css') }}">
+
 </head>
 
 <body>

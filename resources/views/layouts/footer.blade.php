@@ -155,17 +155,15 @@
 
 <a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a> 
 
-<script src="{{ asset('assetsPublic/js/jquery-3.6.0.min.js') }}"></script> 
-@if(!request()->is('/')) 
+@if(!request()->is('/'))
+    <script src="{{ asset('assetsPublic/js/jquery-3.6.0.min.js') }}"></script> 
     <script src="{{ asset('assetsPublic/js/jquery-ui.js') }}"></script>
     <script src="{{ asset('assets/vendor/jquery/jquery.form.js')}}"></script>
-@endif
-<script src="{{ asset('assetsPublic/js/popper.min.js') }}"></script>
-<script src="{{ asset('assetsPublic/bootstrap/js/bootstrap.min.js') }}"></script> 
-<script src="{{ asset('assetsPublic/owlcarousel/js/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('assetsPublic/js/magnific-popup.min.js') }}"></script> 
-<script src="{{ asset('assetsPublic/js/waypoints.min.js') }}"></script>
-@if(!request()->is('/')) 
+    <script src="{{ asset('assetsPublic/js/popper.min.js') }}"></script>
+    <script src="{{ asset('assetsPublic/bootstrap/js/bootstrap.min.js') }}"></script> 
+    <script src="{{ asset('assetsPublic/owlcarousel/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assetsPublic/js/magnific-popup.min.js') }}"></script> 
+    <script src="{{ asset('assetsPublic/js/waypoints.min.js') }}"></script>
     <script src="{{ asset('assetsPublic/js/parallax.js') }}"></script> 
     <script src="{{ asset('assetsPublic/js/jquery.countdown.min.js') }}"></script> 
     <script src="{{ asset('assetsPublic/js/imagesloaded.pkgd.min.js') }}"></script>
@@ -179,10 +177,13 @@
     <script src="{{ asset('assetsPublic/js/dropzone.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/datatables/jquery.dataTables.js') }}"></script>
     <script src="{{ asset('assets/vendor/datatables/dataTables.bootstrap4.js') }}"></script>
+    <script src="{{ asset('assets/vendor/sweetalert/sweetalert.js') }}"></script>
+    <script src="{{ asset('assetsPublic/js/scripts.js?v=1') }}"></script>
+    <script src="{{ asset('assets/js/script.js?v=4') }}"></script>
+@else
+    <script src="{{asset('assetsPublic/js/script.min.js')}}"></script>
+    <script src="{{asset('assets/js/script.js')}}"></script>    
 @endif
-<script src="{{ asset('assets/vendor/sweetalert/sweetalert.js') }}"></script>
-<script src="{{ asset('assetsPublic/js/scripts.js?v=1') }}"></script>
-<script src="{{ asset('assets/js/script.js?v=4') }}"></script>
 
 @if(session()->has('error'))
 <script>
