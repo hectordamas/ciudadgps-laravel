@@ -36,14 +36,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
 <link href="<?php echo e(asset('assets/vendor/fontawesome-free/css/all.min.css')); ?>" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/all.min.css')); ?>">
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/ionicons.min.css')); ?>">
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/themify-icons.css')); ?>">
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/linearicons.css')); ?>">
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/flaticon.css')); ?>">
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/simple-line-icons.css')); ?>">
-
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/styles.min.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/styles.min.css')); ?>"><!--Estilos con iconos--->
 
 </head>
 

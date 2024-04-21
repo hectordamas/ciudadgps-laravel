@@ -36,8 +36,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
 <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="{{ asset('assetsPublic/css/icons.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assetsPublic/css/styles.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/styles.min.css') }}"><!--Estilos con iconos--->
 
 </head>
 
