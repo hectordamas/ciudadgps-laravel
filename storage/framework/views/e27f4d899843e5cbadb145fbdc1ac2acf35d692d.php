@@ -303,7 +303,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-6 mb-5">	
+                <div class="col-lg-3 col-md-6 mb-4">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
                             <i class="linearicons-map"></i>
@@ -314,10 +314,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-5">	
+                <div class="col-lg-3 col-md-6 mb-4">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="ti-book"></i>
+                            <i class="linearicons-bag"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Catálogo de Productos</h6>
@@ -325,7 +325,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-5">	
+                <div class="col-lg-3 col-md-6 mb-4">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
                             <i class="linearicons-briefcase"></i>
@@ -336,7 +336,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-5">	
+                <div class="col-lg-3 col-md-6 mb-4">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
                             <i class="ti-time"></i>
