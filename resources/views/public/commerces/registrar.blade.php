@@ -188,6 +188,10 @@
                             <select name="tags[]" id="tags" class="form-control js-example-tags" multiple required></select>
                         </div>
 
+                        <div class="col-md-12 form-group">
+                            <hr>
+                        </div>
+
                         <div class="col-md-6 form-group">
                             <label for="images" class="font-weight-bold">Subir Imágenes de la fachada y el interior del local <span class="font-weight-normal">(preferiblemente horizontales con dimensiones de 640x450px)<span></label>
                             <input type="file" name="images[]" id="images" multiple class="form-control" accept="image/*">
