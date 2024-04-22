@@ -292,7 +292,7 @@
 
 
     <!-- Seccion de about -->
-    <div class="section pb_70">
+    <div class="section pb_50">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
