@@ -1,11 +1,11 @@
-@extends('layouts.public')
-@section('title')
+
+<?php $__env->startSection('title'); ?>
 <title>Blog, articulos y noticias de CiudadGPS</title>
 <meta name="description" content="Blog, articulos y noticias de CiudadGPS: tocamos temas de empleo, e-commerce, directorios de comercios, entre otras cosas" />
 <meta name="keywords" content="Afiliar, comercio, negocio, emprendimiento, bolsa de empleo, talento, personal, captacion, trabajo, venezuela, comercio electrónico, viajes, trabajo, medicina, aplicación">
-@endsection
-@section('content')
-<div class="breadcrumb_section page-title-mini" style="background-image: url('{{ asset('assets/blog.jpg') }}'); background-position: center center; background-size: cover; position: relative;">
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+<div class="breadcrumb_section page-title-mini" style="background-image: url('<?php echo e(asset('assets/blog.jpg')); ?>'); background-position: center center; background-size: cover; position: relative;">
 
     <div style="position: absolute; top: 0; right: 0; width: 100%; height:100%; background: rgba(0,0,0,0.6);"></div>
 
@@ -37,7 +37,7 @@
                     <div class="col-lg-8">
                         <div class="widget">
                             <div class="search_form">
-                                <form method="GET" action="{{ url('search/blog') }}"> 
+                                <form method="GET" action="<?php echo e(url('search/blog')); ?>"> 
                                     <input required name="search" class="form-control" placeholder="Buscar..." type="text">
                                     <button type="submit" title="Subscribe" class="btn icon_search" name="submit" value="Submit">
                                         <i class="ion-ios-search-strong"></i>
@@ -49,30 +49,30 @@
                 </div>
 
                 <div class="row d-flex">
-                    @forelse ($articles as $article)
+                    <?php $__empty_1 = true; $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                     <div class="col-xl-4 col-md-6">
                         <div class="blog_post blog_style2 box_shadow1">
                             <div class="blog_img">
-                                <a href="{{ url('blog/' . $article->slug ) }}">
-                                    <img src="{{  $article->image  }}" height="200" alt="{{  $article->title }}">
+                                <a href="<?php echo e(url('blog/' . $article->slug )); ?>">
+                                    <img src="<?php echo e($article->image); ?>" height="200" alt="<?php echo e($article->title); ?>">
                                 </a>
                             </div>
                             <div class="blog_content bg-white">
                                 <div class="blog_text">
-                                    <h6 class="blog_title"><a href="{{ url('blog/' . $article->slug ) }}">{{ Illuminate\Support\Str::limit($article->title, 60) }}</a></h6>
+                                    <h6 class="blog_title"><a href="<?php echo e(url('blog/' . $article->slug )); ?>"><?php echo e(Illuminate\Support\Str::limit($article->title, 60)); ?></a></h6>
                                     <ul class="list_none blog_meta">
-                                        <li><a href="{{ url('blog/' . $article->slug  ) }}"><i class="ti-calendar"></i> {{ $article->created_at->diffForHumans() }}</a></li>
+                                        <li><a href="<?php echo e(url('blog/' . $article->slug  )); ?>"><i class="ti-calendar"></i> <?php echo e($article->created_at->diffForHumans()); ?></a></li>
                                     </ul>
-                                    <p>{{ Illuminate\Support\Str::limit($article->excerpt, 140) }}</p>
+                                    <p><?php echo e(Illuminate\Support\Str::limit($article->excerpt, 140)); ?></p>
                                 </div>
                             </div>
                         </div>
                     </div>     
-                    @empty
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
                     <div class="col-lg-12">
                         <h6>No hay resultados disponibles</h6>
                     </div>   
-                    @endforelse
+                    <?php endif; ?>
                 </div>
                 
 
@@ -81,10 +81,12 @@
 
         
         <div class="row justify-content-center">
-            {{$articles->appends(Request::except('page'))->links()}}
+            <?php echo e($articles->appends(Request::except('page'))->links()); ?>
+
         </div>
 
     </div>
 </div>
 <!-- END SECTION ABOUT --> 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.public', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Proyectos en Curso\ciudadgps\ciudadgps laravel\resources\views/public/articles/index.blade.php ENDPATH**/ ?>
