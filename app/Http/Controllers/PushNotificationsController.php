@@ -47,6 +47,8 @@ class PushNotificationsController extends Controller
         
             $responses[] = $response;
         }
+
+        dd(['responses' => $responses, 'total_unique_tokens' => count($mergedTokens)]);
         
         return ['responses' => $responses, 'total_unique_tokens' => count($mergedTokens)];
     }
