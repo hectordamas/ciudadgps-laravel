@@ -465,4 +465,4 @@
 <?php echo $__env->make('layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 </body>
-</html><?php /**PATH E:\Proyectos en Curso\ciudadgps\ciudadgps laravel\resources\views/welcome.blade.php ENDPATH**/ ?>
+</html><?php /**PATH D:\Proyectos en Curso\ciudadgps\ciudadgps laravel\resources\views/welcome.blade.php ENDPATH**/ ?>

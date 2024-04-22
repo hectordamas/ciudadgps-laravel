@@ -28,16 +28,14 @@ class PushNotificationsController extends Controller
         
         $chunks = array_chunk($mergedTokens, 100); // Divide los tokens únicos en lotes de 100
         $responses = [];
-
-        $data = [
-            [
-                "commerceId" => $data['commerceId'],
-                "screen" => $data['screen'] == 'Comercio' ? 'Commerce' : '',
-            ]
-        ];
         
         // Convertir la data en JSON
-        $dataJson = json_encode($data);
+        $dataJson = json_encode([
+            [
+                "commerceId" => $data['commerceId'],
+                "screen" => $data['screen'] == "Comercio" ? "Commerce" : "",
+            ]
+        ]);
         
         foreach ($chunks as $chunk) {
             $response = Http::post("https://exp.host/--/api/v2/push/send", [

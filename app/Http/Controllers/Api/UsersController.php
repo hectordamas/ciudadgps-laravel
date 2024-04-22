@@ -127,21 +127,38 @@ class UsersController extends Controller
         ]);
     }
 
-    public function setToken(Request $request){
-        if($request->userId){
+    public function setToken(Request $request) {
+        $tokenValue = $request->token;
+        $existingToken = PushToken::where('token', $tokenValue)->first();
+
+        if(!$tokenValue){
+            return response()->json([
+                'message' => 'El token es nulo, por lo tanto no puede almacenarse',
+                'token' => $tokenValue
+            ]);
+        }
+    
+        if ($existingToken) {
+            return response()->json([
+                'message' => 'El token ya está almacenado en la base de datos',
+                'token' => $tokenValue
+            ]);
+        }
+    
+        if ($request->userId) {
             $user = User::find($request->userId);
-            $user->token = $request->token;
+            $user->token = $tokenValue;
             $user->save();    
         } else {
             $token = new PushToken();
-            $token->token = $request->token;
+            $token->token = $tokenValue;
             $token->save();
         }
-
+    
         return response()->json([
-            'message' => 'Token almacenado con exito',
-            'token' => $request->token
-        ]);    
+            'message' => 'Token almacenado con éxito',
+            'token' => $tokenValue
+        ]);
     }
 
     public function setGenderAndBirthday(Request $request){
