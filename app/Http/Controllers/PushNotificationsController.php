@@ -28,14 +28,14 @@ class PushNotificationsController extends Controller
         
         $chunks = array_chunk($mergedTokens, 100); // Divide los tokens únicos en lotes de 100
         $responses = [];
+
+        $dataArray = [
+            "commerceId" => $data['commerceId'],
+            "screen" => $data['screen'] == "Comercio" ? "Commerce" : null,
+        ];        
         
         // Convertir la data en JSON
-        $dataJson = json_encode([
-            [
-                "commerceId" => $data['commerceId'],
-                "screen" => $data['screen'] == "Comercio" ? "Commerce" : "",
-            ]
-        ]);
+        $dataJson = json_encode($dataArray);
         
         foreach ($chunks as $chunk) {
             $response = Http::post("https://exp.host/--/api/v2/push/send", [
@@ -47,8 +47,6 @@ class PushNotificationsController extends Controller
         
             $responses[] = $response;
         }
-
-        dd(['responses' => $responses, 'total_unique_tokens' => count($mergedTokens)]);
         
         return ['responses' => $responses, 'total_unique_tokens' => count($mergedTokens)];
     }
