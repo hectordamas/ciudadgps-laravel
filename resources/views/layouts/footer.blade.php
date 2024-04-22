@@ -37,8 +37,8 @@
                                 <p>Registra tu negocio en CiudadGPS y se parte de la comunidad de comercios más grande de América Latina: <strong>Crece, conéctate y destaca con CiudadGPS</strong></p>
                             </div>
                             <div class="col-lg-4 col-md-4">
-                                <a href="{{ url('registrar-comercio') }}" class="btn btn-fill-out btn-block">
-                                    <i class="fas fa-rocket" style="font-size: 25px;"></i> Afíliate ya!
+                                <a href="{{ url('registrar-comercio') }}" class="btn btn-fill-out btn-block">                                    
+                                    <i class="linearicons-rocket" style="font-size: 25px;"></i> Afíliate ya!
                                 </a>
                             </div>
                         </div>

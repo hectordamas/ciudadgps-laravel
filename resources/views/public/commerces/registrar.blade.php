@@ -96,23 +96,23 @@
                         </div>
     
                         <div class="col-md-6 form-group">
-                            <label for="name">Nombre del Negocio:</label>
+                            <label for="name" class="font-weight-bold">Nombre del Negocio:</label>
                             <input type="text" class="form-control" name="name" id="name" required>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="rif">RIF o Documento de Identidad:</label>
+                            <label for="rif" class="font-weight-bold">RIF o Documento de Identidad:</label>
                             <input type="text" class="form-control" name="rif" id="rif" required>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="user_name">Nombre y Apellido:</label>
+                            <label for="user_name" class="font-weight-bold">Nombre y Apellido:</label>
                             <input type="text" class="form-control" name="user_name" id="user_name" required>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="user_email">E-Mail:</label>
+                            <label for="user_email" class="font-weight-bold">E-Mail:</label>
                             <input type="email" class="form-control" name="user_email" id="user_email" required>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="telephone">Teléfono</label>
+                            <label for="telephone" class="font-weight-bold">Teléfono</label>
                             <input type="hidden" name="telephone_number_code" id="telephone_number_code" value="+58">
                             <input type="hidden" name="telephone_code" id="telephone_code" value="VE">
                             <input type="hidden" name="telephone_number" id="telephone_number">
@@ -120,7 +120,7 @@
                             <input type="text" id="telephoneFormatted" class="form-control" placeholder="412-1234567">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="whatsapp">WhatsApp:</label>
+                            <label for="whatsapp" class="font-weight-bold">WhatsApp:</label>
                             <input type="hidden" name="whatsapp_number_code" id="whatsapp_number_code" value="+58">
                             <input type="hidden" name="whatsapp_code" id="whatsapp_code" value="VE">
                             <input type="hidden" name="whatsapp_number" id="whatsapp_number">
@@ -128,54 +128,54 @@
                             <input type="text" id="whatsappFormatted" class="form-control" placeholder="412-1234567">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="logo">Cargar Logo:</label>
+                            <label for="logo" class="font-weight-bold">Cargar Logo:</label>
                             <input type="file" name="logo" id="logo" class="form-control" accept="image/*" required>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="facebook">Enlace Facebook:</label>
+                            <label for="facebook" class="font-weight-bold">Enlace Facebook:</label>
                             <input type="text" class="form-control" name="facebook" id="facebook">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="twitter">Enlace Twitter:</label>
+                            <label for="twitter" class="font-weight-bold">Enlace Twitter:</label>
                             <input type="text" class="form-control" name="twitter" id="twitter">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="instagram">Enlace Instagram:</label>
+                            <label for="instagram" class="font-weight-bold">Enlace Instagram:</label>
                             <input type="text" class="form-control" name="instagram" id="instagram">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="tiktok">Enlace Tiktok:</label>
+                            <label for="tiktok" class="font-weight-bold">Enlace Tiktok:</label>
                             <input type="text" class="form-control" name="tiktok" id="tiktok">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="threads">Enlace Threads:</label>
+                            <label for="threads" class="font-weight-bold">Enlace Threads:</label>
                             <input type="text" class="form-control" name="threads" id="threads">
                         </div>
     
     
                         <div class="col-md-6 form-group">
-                            <label for="web">Enlace Página Web:</label>
+                            <label for="web" class="font-weight-bold">Enlace Página Web:</label>
                             <input type="text" class="form-control" name="web" id="web">
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="threads">Enlace de Interes:</label>
+                            <label for="threads" class="font-weight-bold">Enlace de Interes:</label>
                             <input type="text" class="form-control" name="url" id="url">
                         </div>
     
     
                         <div class="col-md-6 form-group">
-                            <label for="web">Nombre de enlace de interes:</label>
+                            <label for="web" class="font-weight-bold">Nombre de enlace de interes:</label>
                             <input type="text" class="form-control" name="urlName" id="urlName">
                         </div>
             
                         <div class="col-md-6 form-group">
-                            <label for="twitter">Video Promocional:</label>
+                            <label for="twitter" class="font-weight-bold">Video Promocional:</label>
                             <input type="text" class="form-control" name="youtube" id="youtube" placeholder="ID de Youtube o Enlace">
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="category">Categoría:</label>
+                            <label for="category" class="font-weight-bold">Categoría:</label>
                             <select name="categories[]" id="categories[]" multiple class="form-control js-example-tags" required>
                                 @foreach($categories->sortBy('name') as $c)
                                     <option value="{{$c->id}}">{{$c->name}}</option>
@@ -184,37 +184,39 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="tags">Etiquetas: separar cada etiqueta con Enter</label>
+                            <label for="tags" class="font-weight-bold">Etiquetas: separar cada etiqueta con Enter</label>
                             <select name="tags[]" id="tags" class="form-control js-example-tags" multiple required></select>
                         </div>
 
-                        <div class="col-md-12 form-group">
-                            <label for="images">Subir Imágenes de la fachada y el interior del local (preferiblemente horizontales con dimensiones de 640x450px)</label>
+                        <div class="col-md-6 form-group">
+                            <label for="images" class="font-weight-bold">Subir Imágenes de la fachada y el interior del local <span class="font-weight-normal">(preferiblemente horizontales con dimensiones de 640x450px)<span></label>
                             <input type="file" name="images[]" id="images" multiple class="form-control" accept="image/*">
                         </div>
+
+                        <div class="col-md-6"></div>
             
-                        <div class="col-md-12 form-group">
-                            <label for="info">Descripción:</label>
+                        <div class="col-md-6 form-group">
+                            <label for="info" class="font-weight-bold">Descripción:</label>
             
-                            <textarea name="info" id="info" class="form-control" required></textarea>
+                            <textarea name="info" id="info" class="form-control" required rows="6"></textarea>
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="address">Dirección:</label>
+                            <label for="address" class="font-weight-bold">Dirección:</label>
             
-                            <textarea name="address" id="address" class="form-control" required rows="10"></textarea>
+                            <textarea name="address" id="address" class="form-control" required rows="6"></textarea>
                         </div>
             
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-12 form-group">
                             <input type="hidden" name="lat" id="lat" value="{{$lat}}">
                             <input type="hidden" name="lon" id="lng" value="{{$lon}}">
-                            <label for="ubicacion">Ubicación:</label>
+                            <label for="ubicacion" class="font-weight-bold">Ubicación:</label>
                             <div id="map" class="w-100" style="height:300px;"></div>
                         </div>
             
-                        <div class="col-md-12">
-                            <button type="submit" class="btn btn-fill-out">
-                                Registrar Local
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-fill-out btn-block">
+                               <i class="linearicons-rocket"></i> Registrar Local
                             </button>
                         </div>
                     </form>
