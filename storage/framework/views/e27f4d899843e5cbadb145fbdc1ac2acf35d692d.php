@@ -306,7 +306,7 @@
                 <div class="col-lg-3 col-md-6 mb-5">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="ti-map"></i>
+                            <i class="linearicons-map"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Directorio Comercial</h6>
@@ -328,7 +328,7 @@
                 <div class="col-lg-3 col-md-6 mb-5">	
                     <div class="icon_box icon_box_style1 px-2">
                         <div class="icon">
-                            <i class="ti-briefcase"></i>
+                            <i class="linearicons-briefcase"></i>
                         </div>
                         <div class="icon_box_content">
                             <h6 style="text-transform: none;">Bolsa de Empleos</h6>
