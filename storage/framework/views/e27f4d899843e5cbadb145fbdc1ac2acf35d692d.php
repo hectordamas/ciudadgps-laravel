@@ -295,55 +295,73 @@
     <div class="section pb_50">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="heading_s2 text-center">
-                        <h2 class="mb-4" style="text-transform: none;">¿Qué es CiudadGPS?</h2>
-                        <p class="leads mb-5">CiudadGPS surge como una plataforma innovadora que conecta negocios y consumidores de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los productos, servicios y locales comerciales de los negocios, mientras que a los consumidores les brindamos las herramientas necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:</p>
-                    </div>
+                <div class="col-lg-5 pr-lg-3 d-none d-lg-block">
+                    <video 
+                        onclick="this.play()"
+                        preload="none" 
+                        autoplay 
+                        controls 
+                        poster="<?php echo e(asset('assets/img/poster.jpg')); ?>" 
+                        style="height: 100%; cursor: pointer; border-radius: 10px;">
+                        <source 
+                            src="<?php echo e(asset('assets/img/video-landing.mp4')); ?>" 
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">	
-                    <div class="icon_box icon_box_style1 px-2">
-                        <div class="icon">
-                            <i class="linearicons-map"></i>
-                        </div>
-                        <div class="icon_box_content">
-                            <h6 style="text-transform: none;">Directorio Comercial</h6>
-                            <p class="leads">Te ayuda a encontrar comercios cercanos a tu ubicación actual.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">	
-                    <div class="icon_box icon_box_style1 px-2">
-                        <div class="icon">
-                            <i class="linearicons-bag"></i>
-                        </div>
-                        <div class="icon_box_content">
-                            <h6 style="text-transform: none;">Catálogo de Productos</h6>
-                            <p class="leads">Puedes realizar compras en línea por medio de WhatsApp.</p>
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="heading_s2">
+                                <h2 class="mb-4" style="text-transform: none;">¿Qué es CiudadGPS?</h2>
+                                <p class="leads mb-5">CiudadGPS surge como una plataforma innovadora que conecta negocios y consumidores de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los productos, servicios y locales comerciales de los negocios, mientras que a los consumidores les brindamos las herramientas necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">	
-                    <div class="icon_box icon_box_style1 px-2">
-                        <div class="icon">
-                            <i class="linearicons-briefcase"></i>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 mb-4">	
+                            <div class="icon_box icon_box_style1 px-2">
+                                <div class="icon">
+                                    <i class="linearicons-map"></i>
+                                </div>
+                                <div class="icon_box_content">
+                                    <h6 style="text-transform: none;">Directorio Comercial</h6>
+                                    <p class="leads">Te ayuda a encontrar comercios cercanos a tu ubicación actual.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="icon_box_content">
-                            <h6 style="text-transform: none;">Bolsa de Empleos</h6>
-                            <p class="leads">Puedes ver anuncios de empleos de las empresas afiliadas.</p>
+                        <div class="col-lg-6 col-md-6 mb-4">	
+                            <div class="icon_box icon_box_style1 px-2">
+                                <div class="icon">
+                                    <i class="linearicons-bag"></i>
+                                </div>
+                                <div class="icon_box_content">
+                                    <h6 style="text-transform: none;">Catálogo de Productos</h6>
+                                    <p class="leads">Puedes realizar compras en línea por medio de WhatsApp.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">	
-                    <div class="icon_box icon_box_style1 px-2">
-                        <div class="icon">
-                            <i class="ti-time"></i>
+                        <div class="col-lg-6 col-md-6 mb-4">	
+                            <div class="icon_box icon_box_style1 px-2">
+                                <div class="icon">
+                                    <i class="linearicons-briefcase"></i>
+                                </div>
+                                <div class="icon_box_content">
+                                    <h6 style="text-transform: none;">Bolsa de Empleos</h6>
+                                    <p class="leads">Puedes ver anuncios de empleos de las empresas afiliadas.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="icon_box_content">
-                            <h6 style="text-transform: none;">Historias</h6>
-                            <p class="leads">Verás historias de 24h de duración de empresas afilidadas.</p>
+                        <div class="col-lg-6 col-md-6 mb-4">	
+                            <div class="icon_box icon_box_style1 px-2">
+                                <div class="icon">
+                                    <i class="ti-time"></i>
+                                </div>
+                                <div class="icon_box_content">
+                                    <h6 style="text-transform: none;">Historias</h6>
+                                    <p class="leads">Verás historias de 24h de duración de empresas afilidadas.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
