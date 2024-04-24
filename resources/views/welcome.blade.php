@@ -300,7 +300,7 @@
                         autoplay 
                         controls 
                         poster="{{ asset('assets/img/poster.jpg') }}" 
-                        style="height: 100%; cursor: pointer; border-radius: 10px;">
+                        style="cursor: pointer; border-radius: 10px; object-fit: cover; max-height: 650px;">
                         <source 
                             src="{{ asset('assets/img/video-landing.mp4') }}" 
                             type="video/mp4">
