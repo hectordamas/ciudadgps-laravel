@@ -292,7 +292,7 @@
 
 
     <!-- Seccion de about -->
-    <div class="section pb_50">
+    <div class="section pb-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 pr-lg-3 d-none d-lg-block">
@@ -302,7 +302,7 @@
                         autoplay 
                         controls 
                         poster="<?php echo e(asset('assets/img/poster.jpg')); ?>" 
-                        style="cursor: pointer; border-radius: 10px; object-fit: cover; max-height: 650px;">
+                        style="cursor: pointer; border-radius: 10px; object-fit: cover;">
                         <source 
                             src="<?php echo e(asset('assets/img/video-landing.mp4')); ?>" 
                             type="video/mp4">
@@ -313,7 +313,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="heading_s2">
-                                <h2 class="mb-4" style="text-transform: none;">¿Qué es CiudadGPS?</h2>
+                                <h2 class="mb-4" style="text-transform: none; font-family: poppins;">¿Qué es CiudadGPS?</h2>
                                 <p class="leads mb-5">CiudadGPS surge como una plataforma innovadora que conecta negocios y consumidores de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los productos, servicios y locales comerciales de los negocios, mientras que a los consumidores les brindamos las herramientas necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:</p>
                             </div>
                         </div>
@@ -325,7 +325,7 @@
                                     <i class="linearicons-map"></i>
                                 </div>
                                 <div class="icon_box_content">
-                                    <h6 style="text-transform: none;">Directorio Comercial</h6>
+                                    <h6 style="text-transform: none; font-family: poppins, verdana;">Directorio Comercial</h6>
                                     <p class="leads">Te ayuda a encontrar comercios cercanos a tu ubicación actual.</p>
                                 </div>
                             </div>
@@ -336,32 +336,43 @@
                                     <i class="linearicons-bag"></i>
                                 </div>
                                 <div class="icon_box_content">
-                                    <h6 style="text-transform: none;">Catálogo de Productos</h6>
+                                    <h6 style="text-transform: none; font-family: poppins, verdana;">Catálogo de Productos</h6>
                                     <p class="leads">Puedes realizar compras en línea por medio de WhatsApp.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 mb-4">	
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 mb-4 mb-lg-0">	
                             <div class="icon_box icon_box_style1 px-2">
                                 <div class="icon">
                                     <i class="linearicons-briefcase"></i>
                                 </div>
                                 <div class="icon_box_content">
-                                    <h6 style="text-transform: none;">Bolsa de Empleos</h6>
+                                    <h6 style="text-transform: none; font-family: poppins, verdana;">Bolsa de Empleos</h6>
                                     <p class="leads">Puedes ver anuncios de empleos de las empresas afiliadas.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 mb-4">	
+                        <div class="col-lg-6 col-md-6">	
                             <div class="icon_box icon_box_style1 px-2">
                                 <div class="icon">
                                     <i class="ti-time"></i>
                                 </div>
                                 <div class="icon_box_content">
-                                    <h6 style="text-transform: none;">Historias</h6>
+                                    <h6 style="text-transform: none; font-family: poppins, verdana;">Historias</h6>
                                     <p class="leads">Verás historias de 24h de duración de empresas afilidadas.</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>Si tienes una empresa, es momento de inscribirla en CiudadGPS, se parte de la comunidad de comercios más grande de América Latina.</p>
+                            <a href="<?php echo e(url('registrar-comercio')); ?>" class="btn btn-fill-out">                                    
+                                <i class="linearicons-rocket" style="font-size: 25px;"></i> Afíliate Ahora!
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -370,9 +381,10 @@
     </div>
     <!-- end Seccion de about -->
 
+    <hr>
 
     <!-- START SECTION SHOP -->
-    <div class="section pt-0 pb-5">
+    <div class="section pt-5 pb-5">
         <?php
             $articles = \App\Models\Article::orderBy('id', 'desc')
             ->get()

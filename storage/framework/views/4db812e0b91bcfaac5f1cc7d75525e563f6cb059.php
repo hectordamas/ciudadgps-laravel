@@ -325,7 +325,7 @@
                                     <i class="linearicons-map"></i>
                                 </div>
                                 <div class="icon_box_content">
-                                    <h6 style="text-transform: none; font-family: poppins;">Directorio Comercial</h6>
+                                    <h6 style="text-transform: none; font-family: poppins, verdana;">Directorio Comercial</h6>
                                     <p class="leads">Te ayuda a encontrar comercios cercanos a tu ubicación actual.</p>
                                 </div>
                             </div>
@@ -336,18 +336,20 @@
                                     <i class="linearicons-bag"></i>
                                 </div>
                                 <div class="icon_box_content">
-                                    <h6 style="text-transform: none; font-family: poppins;">Catálogo de Productos</h6>
+                                    <h6 style="text-transform: none; font-family: poppins, verdana;">Catálogo de Productos</h6>
                                     <p class="leads">Puedes realizar compras en línea por medio de WhatsApp.</p>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="col-lg-6 col-md-6 mb-4 mb-lg-0">	
                             <div class="icon_box icon_box_style1 px-2">
                                 <div class="icon">
                                     <i class="linearicons-briefcase"></i>
                                 </div>
                                 <div class="icon_box_content">
-                                    <h6 style="text-transform: none; font-family: poppins;">Bolsa de Empleos</h6>
+                                    <h6 style="text-transform: none; font-family: poppins, verdana;">Bolsa de Empleos</h6>
                                     <p class="leads">Puedes ver anuncios de empleos de las empresas afiliadas.</p>
                                 </div>
                             </div>
@@ -358,12 +360,14 @@
                                     <i class="ti-time"></i>
                                 </div>
                                 <div class="icon_box_content">
-                                    <h6 style="text-transform: none; font-family: poppins;">Historias</h6>
+                                    <h6 style="text-transform: none; font-family: poppins, verdana;">Historias</h6>
                                     <p class="leads">Verás historias de 24h de duración de empresas afilidadas.</p>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
+                    <div class="row">
                         <div class="col-lg-12 text-right">
                             <p class="leads">Si tienes una empresa, es momento de inscribirla en CiudadGPS, se parte de la comunidad de comercios más grande de América Latina.</p>
                             <a href="<?php echo e(url('registrar-comercio')); ?>" class="btn btn-fill-out">                                    
