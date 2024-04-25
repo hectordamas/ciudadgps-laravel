@@ -296,8 +296,7 @@
                 <div class="col-lg-5 pr-lg-3 d-none d-lg-block">
                     <video 
                         onclick="this.play()"
-                        preload="none" 
-                        autoplay 
+                        preload="none"  
                         controls 
                         poster="{{ asset('assets/img/poster.jpg') }}" 
                         style="cursor: pointer; border-radius: 10px; object-fit: cover;">
