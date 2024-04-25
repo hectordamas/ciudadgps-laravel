@@ -311,7 +311,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="heading_s2">
-                                <h2 class="mb-4" style="text-transform: none;">¿Qué es CiudadGPS?</h2>
+                                <h2 class="mb-4" style="text-transform: none; font-family: poppins;">¿Qué es CiudadGPS?</h2>
                                 <p class="leads mb-5">CiudadGPS surge como una plataforma innovadora que conecta negocios y consumidores de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los productos, servicios y locales comerciales de los negocios, mientras que a los consumidores les brindamos las herramientas necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:</p>
                             </div>
                         </div>
@@ -323,7 +323,7 @@
                                     <i class="linearicons-map"></i>
                                 </div>
                                 <div class="icon_box_content">
-                                    <h6 style="text-transform: none;">Directorio Comercial</h6>
+                                    <h6 style="text-transform: none; font-family: poppins;">Directorio Comercial</h6>
                                     <p class="leads">Te ayuda a encontrar comercios cercanos a tu ubicación actual.</p>
                                 </div>
                             </div>
@@ -334,7 +334,7 @@
                                     <i class="linearicons-bag"></i>
                                 </div>
                                 <div class="icon_box_content">
-                                    <h6 style="text-transform: none;">Catálogo de Productos</h6>
+                                    <h6 style="text-transform: none; font-family: poppins;">Catálogo de Productos</h6>
                                     <p class="leads">Puedes realizar compras en línea por medio de WhatsApp.</p>
                                 </div>
                             </div>
@@ -345,7 +345,7 @@
                                     <i class="linearicons-briefcase"></i>
                                 </div>
                                 <div class="icon_box_content">
-                                    <h6 style="text-transform: none;">Bolsa de Empleos</h6>
+                                    <h6 style="text-transform: none; font-family: poppins;">Bolsa de Empleos</h6>
                                     <p class="leads">Puedes ver anuncios de empleos de las empresas afiliadas.</p>
                                 </div>
                             </div>
@@ -356,15 +356,15 @@
                                     <i class="ti-time"></i>
                                 </div>
                                 <div class="icon_box_content">
-                                    <h6 style="text-transform: none;">Historias</h6>
+                                    <h6 style="text-transform: none; font-family: poppins;">Historias</h6>
                                     <p class="leads">Verás historias de 24h de duración de empresas afilidadas.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 text-right">
                             <p class="leads">Si tienes una empresa, es momento de inscribirla en CiudadGPS, se parte de la comunidad de comercios más grande de América Latina.</p>
-                            <a href="{{ url('registrar-comercio') }}" class="btn btn-fill-out btn-block">                                    
+                            <a href="{{ url('registrar-comercio') }}" class="btn btn-fill-out">                                    
                                 <i class="linearicons-rocket" style="font-size: 25px;"></i> Afíliate Ahora!
                             </a>
                         </div>
