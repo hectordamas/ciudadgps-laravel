@@ -59,6 +59,7 @@
                             <li><a href="https://www.instagram.com/ciudadgps" target="blank"><i class="ion-social-instagram-outline" style="font-size:30px;"></i></a></li>
                             <li><a href="https://www.tiktok.com/@ciudadgps" target="blank"><i class="fab fa-tiktok" style="font-size:25px;"></i></a></li>
                             <li><a href="https://api.whatsapp.com/send?phone=584129749348" target="blank"><i class="ion-social-whatsapp-outline" style="font-size:30px;"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/ciudadgps" target="blank"><i class="fab fa-linkedin-in" style="font-size:30px;"></i></a></li>
                         </ul>
                     </div>
                 </div>
