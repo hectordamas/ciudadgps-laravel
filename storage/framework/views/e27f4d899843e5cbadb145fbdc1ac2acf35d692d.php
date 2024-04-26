@@ -308,7 +308,7 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-7 pl-lg-4">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="heading_s2">
