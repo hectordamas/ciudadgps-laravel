@@ -31,7 +31,7 @@
 	<div class="container">
     	<div class="row">
             <div class="col-lg-10">
-                <img src="{{ asset('assets/banner_precios.jpg') }}" alt="" srcset="">
+                <img src="{{ asset('assets/precios.jpeg') }}" alt="" srcset="">
             </div>
         </div>
     </div>

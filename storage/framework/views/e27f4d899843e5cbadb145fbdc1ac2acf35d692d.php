@@ -47,6 +47,46 @@
     <div class="loader"></div>
 </div>
 
+<!-- Home Popup Section -->
+<div class="modal fade subscribe_popup" id="onload-popup" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+                </button>
+
+                <div class="row">
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <img src="<?php echo e(asset('gama-promo.jpg')); ?>" class="w-100" alt="" srcset="">
+                    </div>
+                    <div class="col-sm-6 d-flex align-items-center">
+                        <div class="popup_content">
+                            <div class="popup-text">
+                                <div class="heading_s1">
+                                    <h4>Subscribe and Get 25% Discount!</h4>
+                                </div>
+                                <p>Subscribe to the newsletter to receive updates about new products.</p>
+                            </div>
+                            <form method="post">
+                                <div class="form-group">
+                                	<button class="btn btn-fill-line btn-block text-uppercase rounded-0" title="Subscribe" type="submit">Call To Action</button>
+                                </div>
+                            </form>
+                            <div class="chek-form">
+                                <div class="custome-checkbox">
+                                    <label class="form-check-label" for="exampleCheckbox3"><span>No volver a mostrar</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    	</div>
+    </div>
+</div>
+<!--End Screen Load Popup Section --> 
+
 <!-- START HEADER -->
 <header class="header_wrap fixed-top dd_dark_skin transparent_header">
     <div class="light_skin main_menu_uppercase">
@@ -239,6 +279,7 @@
     <!-- END SECTION CATEGORIES -->
 
 
+
     <!-- START SECTION SHOP -->
     <div class="section pt-0 pb-2">
     	<div class="container">
@@ -313,7 +354,9 @@
                         <div class="col-lg-12">
                             <div class="heading_s2">
                                 <h2 class="mb-4" style="text-transform: none; font-family: poppins;">¿Qué es CiudadGPS?</h2>
-                                <p class="leads mb-5"><strong>CiudadGPS</strong> surge como una plataforma innovadora que conecta <strong>negocios</strong> y <strong>consumidores</strong> de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los <strong>productos, servicios</strong> y <strong>locales comerciales</strong> de los negocios, mientras que a los consumidores les brindamos las <strong>herramientas</strong> necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:</p>
+                                <p class="leads mb-5">
+                                    <strong>CiudadGPS</strong> surge como una plataforma innovadora que conecta <strong>negocios</strong> y <strong>consumidores</strong> de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los <strong>productos, servicios</strong> y <strong>locales comerciales</strong> de los negocios, mientras que a los consumidores les brindamos las <strong>herramientas</strong> necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -430,7 +473,7 @@
 
 
     <!-- START SECTION SHOP -->
-    <div class="section pt-0 pb-5">
+    <div class="section pt-0 pb_20">
     	<div class="container">
     		<div class="row justify-content-center">
     			<div class="col-12">
@@ -487,6 +530,8 @@
         </div>
     </div>
     <!-- END SECTION SHOP -->
+
+
 
 </div>
 <!-- END MAIN CONTENT -->
