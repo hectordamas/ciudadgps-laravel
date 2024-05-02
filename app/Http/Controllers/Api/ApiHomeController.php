@@ -120,7 +120,7 @@ class ApiHomeController extends Controller
             'version' => "1.3.94",
             'appStoreVersionNumber' => "1.3.94",
             'playStoreVersionNumber' => "1.3.94",
-            'storeVersions' => ["1.3.93", "1.3.94"]
+            'storeVersions' => ["1.3.94"]
         ]);
     }
 

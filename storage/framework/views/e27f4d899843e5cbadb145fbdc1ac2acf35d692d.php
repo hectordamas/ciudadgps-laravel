@@ -47,8 +47,8 @@
     <div class="loader"></div>
 </div>
 
-<!-- Home Popup Section -->
-<div class="modal fade subscribe_popup" id="onload-popup" tabindex="-1" role="dialog" aria-hidden="true">
+<!-- Home Popup Section 
+    <div class="modal fade subscribe_popup" id="onload-popup" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body">
@@ -85,7 +85,7 @@
     	</div>
     </div>
 </div>
-<!--End Screen Load Popup Section --> 
+End Screen Load Popup Section --> 
 
 <!-- START HEADER -->
 <header class="header_wrap fixed-top dd_dark_skin transparent_header">
