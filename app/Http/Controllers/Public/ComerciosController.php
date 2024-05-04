@@ -185,10 +185,10 @@ class ComerciosController extends Controller
                 $tagsString = implode(', ', $allTags);
                 $namesString = implode(', ', $commerceNames);
                 
-                $mergedString = $tagsString . ', ' . $namesString . ', ' . $category->name . ' en Venezuela' . ', ' . $category->name . ' en Caracas';
+                $mergedString = $tagsString . ', ' . $namesString . ', ' . $category->name . ', ' . $category->name . ' en Venezuela' . ', ' . $category->name . ' en Caracas';
                 
-                $keywords = $namesString;
-                $meta_description = $category->name . ' en CiudadGPS: más de ' . $commerces->count() . ' resultados de Búsqueda: ' . $keywords;
+                $keywords = $mergedString;
+                $meta_description = $category->name . ' en CiudadGPS, más de ' . $commerces->count() . ' resultados de Búsqueda: ' . $namesString;
         
                 return view('public.commerces.index', [
                     'commerces' => $commerces->paginate(10),
