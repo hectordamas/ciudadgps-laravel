@@ -168,7 +168,6 @@ class ComerciosController extends Controller
     }
 
     public function categoriaSlug($slug, Request $request){
-
         try {
             $category = Category::where('slug', $slug)->first();
             if($category){
@@ -185,7 +184,7 @@ class ComerciosController extends Controller
                 $tagsString = implode(', ', $allTags);
                 $namesString = implode(', ', $commerceNames);
                 
-                $mergedString = $tagsString . ', ' . $namesString . ', ' . $category->name . ', ' . $category->name . ' en Venezuela' . ', ' . $category->name . ' en Caracas';
+                $mergedString = $tagsString . ', ' . $namesString . ', ' . $category->name . ', ' . $category->name . ' en Venezuela, ' . $category->name . ' en Caracas, ' . $category->name . ' cerca, ' . $category->name . ' en infoguia, ' . $category->name . ' a domicilio';
                 
                 $keywords = $mergedString;
                 $meta_description = $category->name . ' en CiudadGPS, más de ' . $commerces->count() . ' resultados de Búsqueda: ' . $namesString;
