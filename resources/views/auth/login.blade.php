@@ -15,29 +15,6 @@
                 <div class="page-title">
             		<h1 class="text-light text-capitalize">Inicia Sesión</h1>
                 </div>
-
-                <div class="row mt-4 d-md-flex d-none">
-                    <div class="col-md-3 pr-1">
-                        <a 
-                            href="https://play.google.com/store/apps/details?id=com.ciudadgps.app" 
-                            target="blank">
-                            <img 
-                                src="{{ asset('appButtons/play_store.png') }}" 
-                                alt="App Store Button" 
-                            />
-                        </a>
-                    </div>
-                    <div class="pl-1 col-md-3">
-                        <a 
-                            href="https://apps.apple.com/us/app/ciudadgps/id1643027976"
-                            target="blank">
-                            <img 
-                                src="{{ asset('appButtons/app_store.png') }}" 
-                                alt="App Store Button" 
-                            />
-                        </a>
-                    </div>
-                </div>
             </div>
             <div class="col-md-4">
                 <ol class="breadcrumb justify-content-md-end text-light">
