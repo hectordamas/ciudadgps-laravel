@@ -34,33 +34,10 @@
     <div style="position: absolute; top: 0; right: 0; width: 100%; height:100%; background: rgba(0,0,0,0.6);"></div>
 
     <div class="container"><!-- STRART CONTAINER -->
-        <div class="row align-items-center" style="height:10vh;">
+        <div class="row align-items-center">
         	<div class="col-md-8">
                 <div class="page-title">
             		<h1 class="text-light text-capitalize">Registra tu Negocio</h1>
-                </div>
-
-                <div class="row mt-4 d-md-flex d-none">
-                    <div class="col-md-3 pr-1">
-                        <a 
-                            href="https://play.google.com/store/apps/details?id=com.ciudadgps.app" 
-                            target="blank">
-                            <img 
-                                src="{{ asset('appButtons/play_store.png') }}" 
-                                alt="App Store Button" 
-                            />
-                        </a>
-                    </div>
-                    <div class="pl-1 col-md-3">
-                        <a 
-                            href="https://apps.apple.com/us/app/ciudadgps/id1643027976"
-                            target="blank">
-                            <img 
-                                src="{{ asset('appButtons/app_store.png') }}" 
-                                alt="App Store Button" 
-                            />
-                        </a>
-                    </div>
                 </div>
             </div>
             <div class="col-md-4">
@@ -75,6 +52,74 @@
 
 
 <div class="section">
+    <!-- START SECTION CONTACT
+    <div class="section pt-3">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-lg-6">
+                	<div class="heading_s1">
+                    	<h2 style="text-transform: none;">Únete a CiudadGPS</h2>
+                    </div>
+                    <p class="leads">CiudadGPS ayuda a los negocios locales a tener un mayor alcance y presencia en el mercado. Al proporcionar información detallada sobre cada negocio, los usuarios pueden conocer más sobre ellos y decidir si desean visitarlos. Además, los negocios también pueden recibir calificaciones y comentarios de los usuarios, lo que les permite mejorar su servicio y atraer a más clientes.</p>
+                    <div class="field_form">
+                        <form method="post" name="enq">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Nombre del Negocio *" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="text" class="form-control" name="rif" id="rif" placeholder="RIF o Documento de Identidad *" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="text" class="form-control" name="user_name" id="user_name" placeholder="Nombre y Apellido *" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="email" class="form-control" name="user_email" id="user_email" placeholder="Correo Electrónico *" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="hidden" name="telephone_number_code" id="telephone_number_code" value="+58">
+                                    <input type="hidden" name="telephone_code" id="telephone_code" value="VE">
+                                    <input type="hidden" name="telephone_number" id="telephone_number">
+                                    <input type="hidden" name="telephone" id="telephone">
+                                    <input type="text" id="telephoneFormatted" class="form-control" placeholder="Teléfono *">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="hidden" name="whatsapp_number_code" id="whatsapp_number_code" value="+58">
+                                    <input type="hidden" name="whatsapp_code" id="whatsapp_code" value="VE">
+                                    <input type="hidden" name="whatsapp_number" id="whatsapp_number">
+                                    <input type="hidden" name="whatsapp" id="whatsapp">
+                                    <input type="text" id="whatsappFormatted" class="form-control" placeholder="WhatsApp *">
+                                </div>
+
+                                <div class="col-md-12 form-group">                    
+                                    <textarea name="info" id="info" class="form-control" required rows="2" placeholder="Descripción Detallada del Negocio *"></textarea>
+                                </div>
+
+                                <div class="col-md-12 form-group">                    
+                                    <textarea name="address" id="address" class="form-control" required rows="2" placeholder="Dirección Exacta *"></textarea>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-fill-out">
+                                        <i class="linearicons-rocket"></i> Continuar
+                                     </button>                                
+                                </div>
+                            </div>
+                        </form>		
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-2 pt-lg-0 mt-4 mt-lg-0">
+                    <input type="hidden" name="lat" id="lat" value="{{$lat}}">
+                    <input type="hidden" name="lon" id="lng" value="{{$lon}}">
+                    <label for="" class="font-weight-bold">Agrega La Ubicación Exacta de tu Establecimiento: <span class="text-danger">*</span></label>
+                    <div id="map" class="w-100" style="height: 500px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    END SECTION CONTACT -->
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -127,10 +172,11 @@
                             <input type="hidden" name="whatsapp" id="whatsapp">
                             <input type="text" id="whatsappFormatted" class="form-control" placeholder="412-1234567">
                         </div>
-                        <div class="col-md-6 form-group">
-                            <label for="logo" class="font-weight-bold">Cargar Logo:</label>
-                            <input type="file" name="logo" id="logo" class="form-control" accept="image/*" required>
+
+                        <div class="col-md-12 form-group">
+                            <hr>
                         </div>
+
                         <div class="col-md-6 form-group">
                             <label for="facebook" class="font-weight-bold">Enlace Facebook:</label>
                             <input type="text" class="form-control" name="facebook" id="facebook">
@@ -159,13 +205,13 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="threads" class="font-weight-bold">Enlace de Interes:</label>
+                            <label for="threads" class="font-weight-bold">Enlace de Interés:</label>
                             <input type="text" class="form-control" name="url" id="url">
                         </div>
     
     
                         <div class="col-md-6 form-group">
-                            <label for="web" class="font-weight-bold">Nombre de enlace de interes:</label>
+                            <label for="web" class="font-weight-bold">Nombre de enlace de interés:</label>
                             <input type="text" class="form-control" name="urlName" id="urlName">
                         </div>
             
@@ -193,11 +239,15 @@
                         </div>
 
                         <div class="col-md-6 form-group">
+                            <label for="logo" class="font-weight-bold">Cargar Logo:</label>
+                            <input type="file" name="logo" id="logo" class="form-control" accept="image/*" required>
+                        </div>
+
+                        <div class="col-md-6 form-group">
                             <label for="images" class="font-weight-bold">Subir Imágenes de la fachada y el interior del local <span class="font-weight-normal">(preferiblemente horizontales con dimensiones de 640x450px)<span></label>
                             <input type="file" name="images[]" id="images" multiple class="form-control" accept="image/*">
                         </div>
 
-                        <div class="col-md-6"></div>
             
                         <div class="col-md-6 form-group">
                             <label for="info" class="font-weight-bold">Descripción:</label>

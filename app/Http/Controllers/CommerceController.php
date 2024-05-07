@@ -314,6 +314,10 @@ class CommerceController extends Controller
                     $commerce->commerce_codes()->delete();
                     $commerce->users()->detach();
                     $commerce->categories()->detach();
+
+                    $stories = Story::where('commerce_id', $commerce->id);
+
+                    $stories->delete();
                     $commerce->delete();
                 }else{
                     $commerce->paid = NULL;
