@@ -184,7 +184,7 @@ class ComerciosController extends Controller
                 $tagsString = implode(', ', $allTags);
                 $namesString = implode(', ', $commerceNames);
                 
-                $mergedString = $tagsString . ', ' . $namesString . ', ' . $category->name . ', ' . $category->name . ' cerca de mi, ' . $category->name . ' cerca, reservar, comida rapida, '  . $category->name . ' en Venezuela, ' . $category->name . ' en Caracas, ' . $category->name . ' en infoguia, ' . $category->name . ' a domicilio, ' . $category->name . ' en CiudadGPS';
+                $mergedString = $tagsString . ', ' . $namesString . ', ' . $category->name . ', ' . $category->name . ' cerca de mi, ' . $category->name . ' cerca, reservar, comida rapida, '  . $category->name . ' en Venezuela, ' . $category->name . ' en Caracas, ' . $category->name . ' en infoguia, ' . $category->name . ' a domicilio, ' . $category->name . ' en CiudadGPS, los mejores ' . $category->name . ' de caracas, las mejores ' . $category->name . ' de caracas, los mejores ' . $category->name . ' de venezuela, las mejores ' . $category->name . ' de venezuela';
                 
                 $keywords = $mergedString;
                 $meta_description = $category->name . ' en CiudadGPS, más de ' . $commerces->count() . ' resultados de Búsqueda: ' . $namesString;

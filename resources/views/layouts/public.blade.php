@@ -59,6 +59,7 @@
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/dropzone.min.css') }}" type="text/css" /> 
 <link href="{{ asset('assetsPublic/css/summernote.min.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+<link rel="canonical" href="https://ciudadgps.com" />
 
 </head>
 

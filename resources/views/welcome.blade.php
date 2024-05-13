@@ -37,6 +37,7 @@
 
 <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css?v=1') }}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/styles.min.css?v=1') }}"><!--Estilos con iconos--->
+<link rel="canonical" href="https://ciudadgps.com" />
 
 </head>
 
