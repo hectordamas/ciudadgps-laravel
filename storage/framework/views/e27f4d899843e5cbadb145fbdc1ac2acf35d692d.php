@@ -37,6 +37,7 @@
 
 <link href="<?php echo e(asset('assets/vendor/fontawesome-free/css/all.min.css?v=1')); ?>" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/styles.min.css?v=1')); ?>"><!--Estilos con iconos--->
+<link rel="canonical" href="<?php echo e(secure_url(url()->current())); ?>" />
 
 </head>
 

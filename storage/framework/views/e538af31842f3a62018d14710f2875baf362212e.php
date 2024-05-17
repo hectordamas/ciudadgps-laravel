@@ -59,6 +59,7 @@
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/dropzone.min.css')); ?>" type="text/css" /> 
 <link href="<?php echo e(asset('assetsPublic/css/summernote.min.css')); ?>" rel="stylesheet">
 <link href="<?php echo e(asset('assets/css/style.css')); ?>" rel="stylesheet">
+<link rel="canonical" href="<?php echo e(secure_url(url()->current())); ?>" />
 
 </head>
 
