@@ -72,7 +72,7 @@ class ComerciosAsociadosController extends BaseController
                 $data = [ 'code' => $codeNumber, 'commerce' => $commerce];
 
                 Mail::send('mail.asociar', $data , function($message) use ($commerce, $commerce_code, $email){
-                    $message->from('no-responder@ciudadgps.com', 'CiudadGPS');
+                    $message->from('no-reply@ciudadgps.com', 'CiudadGPS');
                     $message->to($email)->subject('Tu código para asociar '. $commerce->name .' a tu cuenta de CiudadGPS: ' . strval($commerce_code->code));
                 });
 
