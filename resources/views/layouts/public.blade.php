@@ -59,8 +59,12 @@
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/dropzone.min.css') }}" type="text/css" /> 
 <link href="{{ asset('assetsPublic/css/summernote.min.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-<link rel="canonical" href="{{ secure_url(url()->current()) }}" />
-
+<!-- Canonical URL -->
+<?php
+    $canonicalUrl = secure_url(request()->url());
+    Log::info('Canonical URL for page ' . request()->path() . ': ' . $canonicalUrl);
+?>
+<link rel="canonical" href="{{ $canonicalUrl }}" />
 </head>
 
 <body>

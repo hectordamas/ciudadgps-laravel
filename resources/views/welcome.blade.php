@@ -37,7 +37,12 @@
 
 <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css?v=1') }}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/styles.min.css?v=1') }}"><!--Estilos con iconos--->
-<link rel="canonical" href="{{ secure_url(url()->current()) }}" />
+<!-- Canonical URL -->
+<?php
+    $canonicalUrl = secure_url(request()->url());
+    Log::info('Canonical URL for page ' . request()->path() . ': ' . $canonicalUrl);
+?>
+<link rel="canonical" href="{{ $canonicalUrl }}" />
 
 </head>
 

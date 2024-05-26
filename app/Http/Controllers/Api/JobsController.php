@@ -156,8 +156,8 @@ class JobsController extends BaseController
             $job->whatsapp_number = ltrim($request->whatsapp_number, '0');
             $job->whatsapp = $this->formatPhoneNumber(str_replace('+', '', $request->whatsapp_number_code), $request->whatsapp_number);
         }else{
-            $job->whatsapp_number = NULL;
-            $job->whatsapp = NULL;
+            $job->whatsapp_number = $job->whatsapp_number;
+            $job->whatsapp = $job->whatsapp;
         }
         $job->email = $request->email;
         $job->save();

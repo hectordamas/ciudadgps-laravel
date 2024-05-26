@@ -37,6 +37,12 @@
 
 <link href="<?php echo e(asset('assets/vendor/fontawesome-free/css/all.min.css?v=1')); ?>" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/styles.min.css?v=1')); ?>"><!--Estilos con iconos--->
+<!-- Canonical URL -->
+<?php
+    $canonicalUrl = secure_url(request()->url());
+    Log::info('Canonical URL for page ' . request()->path() . ': ' . $canonicalUrl);
+?>
+<link rel="canonical" href="<?php echo e($canonicalUrl); ?>" />
 
 </head>
 
@@ -355,7 +361,7 @@ End Screen Load Popup Section -->
                             <div class="heading_s2">
                                 <h2 class="mb-4" style="text-transform: none; font-family: poppins;">¿Qué es CiudadGPS?</h2>
                                 <p class="leads mb-5">
-                                    <strong>CiudadGPS</strong> surge como una plataforma innovadora que conecta <strong>negocios</strong> y <strong>consumidores</strong> de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los <strong>productos, servicios</strong> y <strong>locales comerciales</strong> de los negocios, mientras que a los consumidores les brindamos las <strong>herramientas</strong> necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:
+                                    CiudadGPS surge como una plataforma innovadora que conecta negocios y consumidores de manera efectiva. Nuestro objetivo principal es facilitar la visibilidad de los productos, servicios y locales comerciales de los negocios, mientras que a los consumidores les brindamos las herramientas necesarias para encontrar lo que buscan de forma rápida y sencilla. Algunas de estas herramientas son:
                                 </p>
                             </div>
                         </div>
@@ -411,7 +417,7 @@ End Screen Load Popup Section -->
 
                     <div class="row">
                         <div class="col-lg-12">
-                            <p>Si tienes una <strong>empresa</strong>, es momento de inscribirla en <strong>CiudadGPS</strong>, se parte de la <strong>comunidad</strong> de comercios más grande de <strong>América Latina.</strong></p>
+                            <p>Si tienes una empresa, es momento de inscribirla en CiudadGPS, se parte de la comunidad de comercios más grande de América Latina.</p>
                             <a href="<?php echo e(url('registrar-comercio')); ?>" class="btn btn-fill-out">                                    
                                 <i class="linearicons-rocket" style="font-size: 25px;"></i> Afíliate Ahora!
                             </a>
