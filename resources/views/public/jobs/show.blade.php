@@ -34,7 +34,7 @@
                                     <h6>{{ $job->commerce->name }}</h6>
                                     <h6>{{ $job->created_at->diffForHumans() }}</h6>
                                     <div class="content-p">
-                                        <p>{{$job->description}}</p>
+                                        <p>{!! nl2br(e($job->description)) ?? 'No hay Descripción Disponible' !!}</p>
                                     </div>
 
                                     <h5>Información de Contacto:</h5>

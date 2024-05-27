@@ -221,7 +221,7 @@
                 </ul>
                 <div class="tab-content shop_info_tab">
                     <div class="tab-pane fade show active" id="Description" role="tabpanel" aria-labelledby="Description-tab">
-                      {!! $commerce->info !!}
+                      {!! nl2br(e($commerce->info))  ?? 'No hay Información Disponible' !!}
 
                       @if($commerce->youtube)
                         <div class="row mt-5">
