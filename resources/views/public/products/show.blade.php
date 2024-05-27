@@ -96,7 +96,7 @@
                             </ul>
                             <div class="tab-content shop_info_tab">
                                 <div class="tab-pane fade show active" id="Description" role="tabpanel" aria-labelledby="Description-tab">
-                                    <p>{!! $product->description ?? 'No hay Descripción Disponible' !!}</p>
+                                    <p>{!! nl2br(e($product->description)) ?? 'No hay Descripción Disponible' !!}</p>
                                 </div>
                             </div>
                         </div>
