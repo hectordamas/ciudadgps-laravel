@@ -40,7 +40,7 @@ class Commerce extends Model
     }
 
     public function imgs(){
-        return $this->hasMany(Img::class);
+        return $this->hasMany(Img::class)->orderBy('order');
     }
 
     public function likes(){

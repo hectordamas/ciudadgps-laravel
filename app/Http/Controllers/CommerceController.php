@@ -329,4 +329,18 @@ class CommerceController extends Controller
         return redirect()->back()->with('message', 'Comercios modificados con éxito');
     }
 
+    public function updateImageOrder(Request $request){
+        $order = $request->input('order');
+        
+        foreach ($order as $index => $id) {
+            $image = Img::find($id);
+            if ($image) {
+                $image->order = $index + 1;
+                $image->save();
+            }
+        }
+
+        return response()->json(['status' => 'success']);
+    }
+
 }

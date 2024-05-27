@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" /> 
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <link href="<?php echo e(asset('assets/css/style.css?v=2')); ?>" rel="stylesheet">
+    <link rel="canonical" href="<?php echo e(secure_url(url()->current())); ?>" />
+
 </head>
 
 <body id="page-top">
@@ -243,6 +245,7 @@
     <script src="<?php echo e(asset('assets/vendor/jquery/jquery.min.js')); ?>"></script>
     <script src="<?php echo e(asset('assets/vendor/jquery/jquery.form.js')); ?>"></script>
     <script src="<?php echo e(asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')); ?>"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="<?php echo e(asset('assets/vendor/jquery-easing/jquery.easing.min.js')); ?>"></script>

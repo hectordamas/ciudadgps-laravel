@@ -1,62 +1,63 @@
-@extends('layouts.app')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 <div class="row">
     <div class="col-md-12">
         <div class="card shadow">
             <div class="card-header font-weight-bold text-dark">
-                Modificar Comercio #{{$commerce->id}}
+                Modificar Comercio #<?php echo e($commerce->id); ?>
+
             </div>
             <div class="card-body">
                 <div class="row form-group">
                     <div class="col-md-12 text-center">
-                        <img src="{{$commerce->logo}}" style="width: 100px; height: 100px; border-radius:50%;">
+                        <img src="<?php echo e($commerce->logo); ?>" style="width: 100px; height: 100px; border-radius:50%;">
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-md-12">
                         <a 
-                            href="{{ url('/comercios/' . $commerce->id) }}" 
+                            href="<?php echo e(url('/comercios/' . $commerce->id)); ?>" 
                             class="btn btn-dark" target="blank">
                             <i class="fas fa-store"></i>
                             Ver Perfil del Establecimiento</a>
                     </div>
                 </div>
-                <form action="/commerces/{{$commerce->id}}/update" method="post" class="row" id="editCommerce" enctype="multipart/form-data">
-                    @csrf
+                <form action="/commerces/<?php echo e($commerce->id); ?>/update" method="post" class="row" id="editCommerce" enctype="multipart/form-data">
+                    <?php echo csrf_field(); ?>
                     <div class="col-md-3 form-group">
                         <label for="name" class="text-dark font-weight-bold">Nombre del Negocio:</label>
-                        <input type="text" class="form-control" name="name" id="name" value="{{$commerce->name}}">
+                        <input type="text" class="form-control" name="name" id="name" value="<?php echo e($commerce->name); ?>">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="rif" class="text-dark font-weight-bold">RIF o Documento de Identidad:</label>
-                        <input type="text" class="form-control" name="rif" id="rif" value="{{$commerce->rif}}">
+                        <input type="text" class="form-control" name="rif" id="rif" value="<?php echo e($commerce->rif); ?>">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="user_name" class="text-dark font-weight-bold">Nombre:</label>
-                        <input type="text" class="form-control" required name="user_name" id="user_name" value="{{$commerce->user_name}}">
+                        <input type="text" class="form-control" required name="user_name" id="user_name" value="<?php echo e($commerce->user_name); ?>">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="user_lastname" class="text-dark font-weight-bold">Apellido:</label>
-                        <input type="text" class="form-control" required name="user_lastname" id="user_lastname" value="{{$commerce->user_lastname}}">
+                        <input type="text" class="form-control" required name="user_lastname" id="user_lastname" value="<?php echo e($commerce->user_lastname); ?>">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="user_email" class="text-dark font-weight-bold">E-Mail:</label>
-                        <input type="email" class="form-control" name="user_email" id="user_email" value="{{$commerce->user_email}}">
+                        <input type="email" class="form-control" name="user_email" id="user_email" value="<?php echo e($commerce->user_email); ?>">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="telephone" class="text-dark font-weight-bold">Teléfono</label>
-                        <input type="hidden" name="telephone_number_code" id="telephone_number_code" value="{{$commerce->telephone_number_code}}">
-                        <input type="hidden" name="telephone_code" id="telephone_code" value="{{$commerce->telephone_code}}">
-                        <input type="hidden" name="telephone_number" id="telephone_number" value="{{$commerce->telephone_number}}">
-                        <input type="hidden" name="telephone" id="telephone" value="{{$commerce->telephone}}">
+                        <input type="hidden" name="telephone_number_code" id="telephone_number_code" value="<?php echo e($commerce->telephone_number_code); ?>">
+                        <input type="hidden" name="telephone_code" id="telephone_code" value="<?php echo e($commerce->telephone_code); ?>">
+                        <input type="hidden" name="telephone_number" id="telephone_number" value="<?php echo e($commerce->telephone_number); ?>">
+                        <input type="hidden" name="telephone" id="telephone" value="<?php echo e($commerce->telephone); ?>">
                         <input type="text" id="telephoneFormatted" class="form-control" placeholder="412-1234567">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="whatsapp" class="text-dark font-weight-bold">Whatsapp:</label>
-                        <input type="hidden" name="whatsapp_number_code" id="whatsapp_number_code" value="{{$commerce->whatsapp_number_code}}">
-                        <input type="hidden" name="whatsapp_code" id="whatsapp_code" value="{{$commerce->whatsapp_code}}">
-                        <input type="hidden" name="whatsapp_number" id="whatsapp_number" value="{{$commerce->whatsapp_number}}">
-                        <input type="hidden" name="whatsapp" id="whatsapp" value="{{$commerce->whatsapp}}">
+                        <input type="hidden" name="whatsapp_number_code" id="whatsapp_number_code" value="<?php echo e($commerce->whatsapp_number_code); ?>">
+                        <input type="hidden" name="whatsapp_code" id="whatsapp_code" value="<?php echo e($commerce->whatsapp_code); ?>">
+                        <input type="hidden" name="whatsapp_number" id="whatsapp_number" value="<?php echo e($commerce->whatsapp_number); ?>">
+                        <input type="hidden" name="whatsapp" id="whatsapp" value="<?php echo e($commerce->whatsapp); ?>">
                         <input type="text" id="whatsappFormatted" class="form-control" placeholder="412-1234567">
                     </div>
                     <div class="col-md-3 form-group">
@@ -65,33 +66,33 @@
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="facebook" class="text-dark font-weight-bold">Facebook:</label>
-                        <input type="text" class="form-control" name="facebook" id="facebook" value="{{$commerce->facebook}}">
+                        <input type="text" class="form-control" name="facebook" id="facebook" value="<?php echo e($commerce->facebook); ?>">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="tiktok" class="text-dark font-weight-bold">TikTok:</label>
-                        <input type="text" class="form-control" name="tiktok" id="tiktok" value="{{$commerce->tiktok}}">
+                        <input type="text" class="form-control" name="tiktok" id="tiktok" value="<?php echo e($commerce->tiktok); ?>">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="twitter" class="text-dark font-weight-bold">Twitter:</label>
-                        <input type="text" class="form-control" name="twitter" id="twitter" value="{{$commerce->twitter}}">
+                        <input type="text" class="form-control" name="twitter" id="twitter" value="<?php echo e($commerce->twitter); ?>">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="instagram" class="text-dark font-weight-bold">Instagram:</label>
-                        <input type="text" class="form-control" name="instagram" id="instagram" value="{{$commerce->instagram}}">
+                        <input type="text" class="form-control" name="instagram" id="instagram" value="<?php echo e($commerce->instagram); ?>">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="web" class="text-dark font-weight-bold">Página Web:</label>
-                        <input type="text" class="form-control" name="web" id="web" value="{{$commerce->web}}">
+                        <input type="text" class="form-control" name="web" id="web" value="<?php echo e($commerce->web); ?>">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="expiration_date" class="text-dark font-weight-bold">Fecha de Expiración:</label>
-                        <input type="date" class="form-control" name="expiration_date" id="expiration_date" value="{{$commerce->expiration_date}}">
+                        <input type="date" class="form-control" name="expiration_date" id="expiration_date" value="<?php echo e($commerce->expiration_date); ?>">
                     </div>
 
                     <div class="col-md-3 form-group">
                         <label for="destacar" class="text-dark font-weight-bold">Destacar Comercio:</label>
                         <select name="destacar" id="destacar" class="form-control">
-                            <option value="{{$commerce->destacar ? 'Destacar' : ''}}">{{$commerce->destacar ? 'Destacar' : 'No Destacar'}}</option>
+                            <option value="<?php echo e($commerce->destacar ? 'Destacar' : ''); ?>"><?php echo e($commerce->destacar ? 'Destacar' : 'No Destacar'); ?></option>
                             <option value="Destacar">Destacar</option>
                             <option value="">No Destacar</option>
                         </select>
@@ -99,18 +100,18 @@
 
                     <div class="col-md-3 form-group">
                         <label for="position" class="text-dark font-weight-bold">Posición</label>
-                        <input type="number" name="position" id="position" class="form-control" value="{{$commerce->position}}" max="3">
+                        <input type="number" name="position" id="position" class="form-control" value="<?php echo e($commerce->position); ?>" max="3">
                     </div>
 
                     <div class="col-md-3 form-group">
                         <label for="categories" class="text-dark font-weight-bold">Categoría:</label>
                         <select name="categories[]" id="categories" class="form-control js-example-tags" multiple>
-                            @foreach($categories->sortBy('name') as $c)
-                                @php
+                            <?php $__currentLoopData = $categories->sortBy('name'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php
                                     $selected = in_array($c->id, $commerce->categories->pluck('id')->toArray()) ? 'selected' : '';
-                                @endphp
-                                <option value="{{$c->id}}" {{$selected}}>{{$c->name}}</option>
-                            @endforeach
+                                ?>
+                                <option value="<?php echo e($c->id); ?>" <?php echo e($selected); ?>><?php echo e($c->name); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
                     </div>
 
@@ -118,28 +119,28 @@
                     <div class="col-md-3 form-group">
                         <label for="tags" class="text-dark font-weight-bold">Etiquetas:  separadas por Enter</label>
                         <select name="tags[]" id="tags" class="form-control js-example-tags" multiple>
-                            @foreach ($commerce->tags as $t)
-                                <option value="{{$t->name}}" selected>{{$t->name}}</option>
-                            @endforeach
+                            <?php $__currentLoopData = $commerce->tags; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $t): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <option value="<?php echo e($t->name); ?>" selected><?php echo e($t->name); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
                     </div>
 
                     <div class="col-md-3 form-group">
                         <label for="" class="text-dark font-weight-bold">ID de Youtube:</label>
-                        <input type="text" id="youtube" name="youtube" class="form-control" placeholder="" value="{{$commerce->youtube}}">
+                        <input type="text" id="youtube" name="youtube" class="form-control" placeholder="" value="<?php echo e($commerce->youtube); ?>">
                     </div>
 
                     <div class="col-md-3">
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 <label for="paid" style="font-size:11px;">
-                                    <input type="checkbox" name="paid" id="paid" value="Sí" @if($commerce->paid) checked @endif> Pagado
+                                    <input type="checkbox" name="paid" id="paid" value="Sí" <?php if($commerce->paid): ?> checked <?php endif; ?>> Pagado
                                 </label>
                             </div>
 
                             <div class="col-md-6 form-group">
                                 <label for="hide" style="font-size:13px;" class="text-dark font-weight-bold">
-                                    <input type="checkbox" name="hide" id="hide" value="Sí"  @if($commerce->hide) checked @endif> Ocultar
+                                    <input type="checkbox" name="hide" id="hide" value="Sí"  <?php if($commerce->hide): ?> checked <?php endif; ?>> Ocultar
                                 </label>
                             </div>
                         </div>
@@ -149,7 +150,7 @@
                     <div class="col-md-6 form-group">
                         <label for="address" class="text-dark font-weight-bold">Dirección:</label>
 
-                        <textarea name="address" class="form-control" rows="3">{{$commerce->address}}</textarea>
+                        <textarea name="address" class="form-control" rows="3"><?php echo e($commerce->address); ?></textarea>
                     </div>
 
 
@@ -162,11 +163,11 @@
 
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" class="form-control" value="{{ $commerce->url }}" name="url" placeholder="URL de enlace de interes">
+                                <input type="text" class="form-control" value="<?php echo e($commerce->url); ?>" name="url" placeholder="URL de enlace de interes">
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" value="{{ $commerce->urlName }}" name="urlName" placeholder="Nombre del enlace">
+                                <input type="text" class="form-control" value="<?php echo e($commerce->urlName); ?>" name="urlName" placeholder="Nombre del enlace">
                             </div>
                         </div>
                     </div>
@@ -174,14 +175,14 @@
                     <div class="col-md-6 form-group">
                         <label for="info" class="text-dark font-weight-bold">Descripción:</label>
 
-                        <textarea name="info" id="info" class="form-control" rows="8">{!! $commerce->info !!}</textarea>
+                        <textarea name="info" id="info" class="form-control" rows="8"><?php echo $commerce->info; ?></textarea>
                     </div>
 
                     <div class="col-md-6 form-group">
                         <label for="ubicacion" class="text-dark font-weight-bold">Ubicación:</label>
                         <div id="map" class="w-100" style="height:300px;"></div>
-                        <label for="lat">lat: <input type="text" name="lat" id="lat" value="{{$commerce->lat}}"></label>
-                        <label for="lng">lon: <input type="text" name="lon" id="lng" value="{{$commerce->lon}}"></label>
+                        <label for="lat">lat: <input type="text" name="lat" id="lat" value="<?php echo e($commerce->lat); ?>"></label>
+                        <label for="lng">lon: <input type="text" name="lon" id="lng" value="<?php echo e($commerce->lon); ?>"></label>
                     </div>
 
                     <div class="col-md-12">
@@ -200,26 +201,26 @@
 
                     <div class="col-md-12 form-group">
                         <div class="row" id="sortable-images">
-                            @foreach($commerce->imgs as $i)
-                            <div class="col-md-2 image{{$i->id}}">
-                                <img src="{{ url($i->uri) }}" class="w-100" alt="" srcset="">
-                                <a href="javascript:void(0);" class="text-danger destroy-image" data-id="{{$i->id}}" 
+                            <?php $__currentLoopData = $commerce->imgs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <div class="col-md-2 image<?php echo e($i->id); ?>">
+                                <img src="<?php echo e(url($i->uri)); ?>" class="w-100" alt="" srcset="">
+                                <a href="javascript:void(0);" class="text-danger destroy-image" data-id="<?php echo e($i->id); ?>" 
                                 data-toggle="modal" data-target="#destroyImage">
                                     <i class="fa fa-times"></i>
                                 </a>
                             </div>
-                            @endforeach
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
                     </div>
 
                     <div class="col-md-12 form-group">
-                        <form action="{{url('/images-upload')}}" class="dropzone" id="dropzone" enctype="multipart/form-data" method="post">
+                        <form action="<?php echo e(url('/images-upload')); ?>" class="dropzone" id="dropzone" enctype="multipart/form-data" method="post">
                             <div class="dz-message text-center">
                                 <i class="fa fa-upload" style="font-size:30px; margin-bottom:20px;"></i>
                                 <h4>Subir Imágenes</h4>
                             </div>
-                            @csrf
-                            <input type="hidden" name="commerce_id" id="commerce_id" value="{{$commerce->id}}">
+                            <?php echo csrf_field(); ?>
+                            <input type="hidden" name="commerce_id" id="commerce_id" value="<?php echo e($commerce->id); ?>">
                             <input type="file" name="file" multiple accept="images/*" style="display: none;"/>
                         </form>
                     </div>
@@ -232,7 +233,7 @@
 
 <!-- Modal -->
 <form class="modal fade" method="post" id="destroyImage" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    @csrf
+    <?php echo csrf_field(); ?>
     <input type="hidden" name="image_id" id="image_id">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -259,9 +260,9 @@
     </div>
   </div>
 </form>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('map')
+<?php $__env->startSection('map'); ?>
 <script>
     var latInput = document.getElementById('lat');
     var lonInput = document.getElementById('lng');
@@ -329,7 +330,7 @@
                     method: 'POST',
                     data: {
                         order: order,
-                        _token: '{{ csrf_token() }}'
+                        _token: '<?php echo e(csrf_token()); ?>'
                     },
                     success: function (response) {
                         console.log('Order updated successfully');
@@ -342,4 +343,5 @@
         });
     });
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Proyectos en Curso\ciudadgps\ciudadgps laravel\resources\views/commerces/edit.blade.php ENDPATH**/ ?>

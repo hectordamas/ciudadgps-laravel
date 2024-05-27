@@ -16,6 +16,8 @@ Route::group(['middleware' => 'auth'], function () {
             return view('home');
         });
 
+        Route::post('/update-image-order', [App\Http\Controllers\CommerceController::class, 'updateImageOrder']);
+
         Route::get('/commerces', [App\Http\Controllers\CommerceController::class, 'index'])->name('commerces.index');
         Route::get('/commerces/create', [App\Http\Controllers\CommerceController::class, 'create'])->name('commerces.create');
         Route::get('/commerces/filter', [App\Http\Controllers\CommerceController::class, 'filter'])->name('commerces.filter');
