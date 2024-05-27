@@ -39,10 +39,11 @@ class Commerce extends Model
         return $this->hasMany(Comment::class);
     }
 
-    public function imgs(){
-        return $this->hasMany(Img::class)->orderBy('order');
+    public function imgs()
+    {
+        return $this->hasMany(Img::class)->orderBy('order')->orderBy('id');
     }
-
+    
     public function likes(){
         return $this->hasMany(Like::class);
     }
