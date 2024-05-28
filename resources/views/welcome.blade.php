@@ -109,9 +109,9 @@ End Screen Load Popup Section -->
                         @include('layouts.megaMenu')
                         <li><a class="nav-link nav_item" href="{{ url('registrar-comercio') }}">Registrar Local</a></li> 
                         <li><a class="nav-link nav_item" href="{{ url('empleos') }}">Empleos</a></li> 
-                        <li><a class="nav-link nav_item" href="{{ url('nosotros') }}">Nosotros</a></li> 
                         <li><a class="nav-link nav_item" href="{{ url('planes') }}">Planes</a></li>
                         <li><a class="nav-link nav_item" href="{{ url('blog') }}">Blog</a></li> 
+                        <li><a class="nav-link nav_item" href="{{ url('politicas-de-privacidad') }}">Privacidad</a></li> 
                         @guest
                         <li><a class="nav-link nav_item" href="{{ route('login') }}">Inicia Sesión</a></li> 
                         @else

@@ -1,5 +1,5 @@
 <li class="dropdown dropdown-mega-menu">
-    <a class="dropdown-toggle nav-link" href="{{ url('categorias') }}" data-toggle="dropdown">Nuestras Categorías</a>
+    <a class="dropdown-toggle nav-link" href="{{ url('categorias') }}" data-toggle="dropdown">Categorías</a>
     <div class="dropdown-menu" style="margin-top:-15px;">
         <ul class="mega-menu d-lg-flex">
             @php

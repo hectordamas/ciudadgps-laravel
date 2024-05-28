@@ -85,9 +85,9 @@
                         <?php echo $__env->make('layouts.megaMenu', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                         <li><a class="nav-link nav_item" href="<?php echo e(url('registrar-comercio')); ?>">Registrar Local</a></li> 
                         <li><a class="nav-link nav_item" href="<?php echo e(url('empleos')); ?>">Empleos</a></li> 
-                        <li><a class="nav-link nav_item" href="<?php echo e(url('nosotros')); ?>">Nosotros</a></li> 
                         <li><a class="nav-link nav_item" href="<?php echo e(url('planes')); ?>">Planes</a></li>
                         <li><a class="nav-link nav_item" href="<?php echo e(url('blog')); ?>">Blog</a></li> 
+                        <li><a class="nav-link nav_item" href="<?php echo e(url('politicas-de-privacidad')); ?>">Privacidad</a></li> 
                         <?php if(auth()->guard()->guest()): ?>
                         <li><a class="nav-link nav_item" href="<?php echo e(route('login')); ?>">Inicia Sesión</a></li> 
                         <?php else: ?>
