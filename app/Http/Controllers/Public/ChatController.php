@@ -13,6 +13,7 @@ use DB;
 
 use App\Models\Product;
 use App\Models\Job;
+use App\Models\Category;
 use Auth;
 
 class ChatController extends Controller
@@ -69,9 +70,10 @@ class ChatController extends Controller
         $commerceData = $this->getCommerces($messageContent, $latitude, $longitude);
         $productsData = $this->getProducts($messageContent);
         $jobsData = $this->getJobs($messageContent);
+        $categoriesData = $this->getCategories($messageContent);
 
         // Create the prompt for OpenAI
-        $prompt = $this->createPrompt($messageContent, $commerceData, $conversation, $latitude, $longitude, $productsData, $jobsData);
+        $prompt = $this->createPrompt($messageContent, $commerceData, $conversation, $latitude, $longitude, $productsData, $jobsData, $categoriesData);
 
         $result = Gemini::geminiPro()->generateContent($prompt);
 
@@ -114,9 +116,9 @@ class ChatController extends Controller
                 + sin( radians(' . $latitude . ') ) 
                 * sin( radians(commerces.lat) ) ) ) * 100 AS distance');
             
-            $query->select('commerces.id', 'commerces.lat', 'commerces.lon', 'commerces.name', 'commerces.rating', 'commerces.logo', 'commerces.excerpt', 'commerces.info', 'commerces.expiration_date', 'commerces.category_id', 'commerces.slug', $distance, 'commerces.address');
+                $query->select('commerces.*')->addSelect($distance);        
         } else {
-            $query->select('commerces.id', 'commerces.lat', 'commerces.lon', 'commerces.name', 'commerces.rating', 'commerces.logo', 'commerces.excerpt', 'commerces.info', 'commerces.expiration_date', 'commerces.category_id', 'commerces.slug', 'commerces.address');
+                $query->select('commerces.*');        
         }
     
         $query->where(function ($query) use ($keywords) {
@@ -171,9 +173,20 @@ class ChatController extends Controller
     
         return $query->limit(10)->get();
     }
+
+    private function getCategories($messageContent){
+        $keywords = array_diff(explode(' ', $messageContent), $this->stopWords);
+        $query = Category::query();
+    
+        foreach ($keywords as $keyword) {
+            $query->orWhere('name', 'LIKE', "%$keyword%");
+        }
+    
+        return $query->limit(10)->get();
+    }
     
 
-    private function createPrompt($userMessage, $commerceData, $conversation, $latitude, $longitude, $productsData, $jobsData)
+    private function createPrompt($userMessage, $commerceData, $conversation, $latitude, $longitude, $productsData, $jobsData, $categoriesData)
     {
         $commerceInfo = "";
         foreach ($commerceData as $commerce) {
@@ -198,7 +211,9 @@ class ChatController extends Controller
                     ". Etiquetas: " . $tags . 
                     ". Empleos: " . $jobs . 
                     ". Productos: " . $products . 
-                    ". Enlace a página de CiudadGPS: https://ciudadgps.com/comercios/" . $commerce->id . "/redirect" .  
+                    ". Enlace a página de CiudadGPS: https://ciudadgps.com/slug-comercios/" . $commerce->slug .  
+                    ". Enlace a Instagram: " . $commerce->instagram .  
+                    ". Teléfonos: " . $commerce->telephone .  
                     ". Ubicación del comercio: latitud " . $commerce->lat . " longitud " . $commerce->lon.
                     "\n";
             }            
@@ -209,7 +224,9 @@ class ChatController extends Controller
             $productsInfo .= 
                 $product->name . ": " . $product->description . 
                 ". Empresa: ". $product->commerce->name .
-                '. Enlace a página de empresa: <a href="https://ciudadgps.com/comercios/' . $product->commerce->id . '/redirect" target="blank">'. $commerce->name .'</a>';
+                '. Enlace a página de empresa: https://ciudadgps.com/slug-comercios/' . $commerce->slug.
+                '. Enlace a página de producto: https://ciudadgps.com/slug-productos/' . $product->slug.
+                '. Precio: ' . $product->price;
         }
 
         $jobsInfo = "";
@@ -217,7 +234,15 @@ class ChatController extends Controller
             $jobsInfo .= 
                 $job->title . ": " . $job->description . 
                 ". Empresa: ". $job->commerce->name .
-                '. Enlace a página de empresa: <a href="https://ciudadgps.com/comercios/' . $job->commerce->id . '/redirect" target="blank">'. $commerce->name .'</a>';
+                '. Enlace a página de empresa: https://ciudadgps.com/slug-comercios/' . $job->commerce->slug.
+                '. Enlace a página de empleo: https://ciudadgps.com/empleo/' . $job->slug;     
+        }
+
+        $categoriesInfo = "";
+        foreach($categoriesData as $category){
+            $categoriesInfo .= 
+                $category->name .
+                '. Enlace a página de categoria: https://ciudadgps.com/comercios/slug-categorias/' . $category->slug;   
         }
 
         $conversationHistory = Message::where('conversation_id', $conversation->id)
@@ -237,6 +262,7 @@ class ChatController extends Controller
         "\n\nLa Ubicación del usuario: latitud: " . $latitude . " y longitud " . $longitude .
         "\n\nProductos Relacionados a la búsqueda: " . $productsInfo.
         "\n\nEmpleos Relacionados a la búsqueda: " . $jobsInfo.
+        "\n\categorias Relacionadas a la búsqueda: " . $categoriesInfo.
         "\n\nRecuerda ser cortés y tener buena atención con mi usuario final, cada vez que el use algún tipo de convencionalismo debes responder a él con educación. Si alguna información no está en CiudadGPS, es decir, en la información proporcionada anteriormente siéntete libre de usar google search/google maps para buscarla, siempre tomando en cuenta la data y ubicación del usuario. No incluyas enlaces entre paréntesis";
 
         return $context;
