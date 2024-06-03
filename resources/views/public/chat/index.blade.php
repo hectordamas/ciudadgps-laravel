@@ -3,61 +3,7 @@
 <title>CiudadGPS - Chatea con SofIA</title>
 <meta name="description" content="Descubre la IA de CiudadGPS, Sofia, ayuda a nuestros usuarios a encontrar comercios cercanos a su ubicación y te da sugerencias según lo que necesites" />
 <meta name="keywords" content="Inteligencia artificial, ia, ciudadgps, comercios">
-<style>
-    .message-card {
-        max-width: 75%;
-        padding: 10px;
-        border-radius: 12px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        background: #f5f5f5;
-    }
-    .user-message {
-        background-color: #e1ffc7;
-        align-self: flex-end;
-    }
-    .bot-message {
-        background-color: #fff;
-        align-self: flex-start;
-    }
-    .message-time {
-        display: block;
-        margin-top: 5px;
-        font-size: 0.85em;
-        text-align: right;
-    }
-    @media (max-width: 767.98px) {
-        .drawer-menu {
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 75%;
-            height: 100%;
-            background: #fff;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-            z-index: 1050;
-            overflow-y: auto;
-            transition: transform 0.3s ease-in-out;
-            transform: translateX(-100%);
-        }
-        .drawer-backdrop {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1040;
-            display: none;
-        }
-        .drawer-open .drawer-menu {
-            transform: translateX(0);
-        }
-        .drawer-open .drawer-backdrop {
-            display: block;
-        }
-    }
-</style>
+@include('public.chat.style')
 @endsection
 @section('content')
 @php
@@ -90,7 +36,7 @@
                                         <div class="d-flex flex-row">
                                             <div class="pt-1">
                                                 <p class="small text-muted">
-                                                    <i class="fas fa-comment-alt mr-1"></i> {{$conv->title}}
+                                                    {{$conv->title}}
                                                 </p>
                                             </div>
                                         </div>
@@ -157,6 +103,7 @@
                         </ul>
                     </div>
                     <div class="input-group shadow border-0" style="border-radius: 10px">
+                        <input type="hidden" name="conversationId" id="conversationId" value="{{ isset($conversation) ? $conversation->id : '' }}">
                         <input class="form-control border-0" id="messageInput" placeholder="Escribe tu Mensaje...">
                         <button type="button" id="sendButton" class="btn btn-fill-out rounded-0">
                             <span id="buttonText"><i class="fas fa-paper-plane"></i> Enviar</span>
@@ -184,27 +131,35 @@ document.getElementById('messageInput').addEventListener('keypress', function(ev
     }
 });
 
-function updateConversationList(conversation) {
-    const conversationList = document.querySelector('.drawer-menu ul');
 
-    const conversationItem = document.createElement('li');
-    conversationItem.className = 'border-bottom';
-    conversationItem.innerHTML = `
-        <a href="{{ url('conversations/${conversation.id}/show') }}" class="d-flex justify-content-between px-2 align-items-center">
-            <div class="d-flex flex-row">
-                <div class="pt-1">
-                    <p class="small text-muted">
-                        <i class="fas fa-comment-alt mr-1"></i> ${conversation.title}
-                    </p>
-                </div>
-            </div>
-            <div class="pt-1">
-                <p class="small text-muted mb-1">${moment(conversation.created_at).fromNow()}</p>
-            </div>
-        </a>
-    `;
-    conversationList.prepend(conversationItem);
+function updateConversationList(conversations) {
+    const conversationList = document.querySelector('.drawer-menu ul');
+    let newConversationList = "";
+
+    conversations.forEach((conversation) => {
+        const conversationItem = `
+            <li class="border-bottom">
+                <a href="{{ url('conversations/${conversation.id}/show') }}" class="d-flex justify-content-between px-2 align-items-center">
+                    <div class="d-flex flex-row">
+                        <div class="pt-1">
+                            <p class="small text-muted">
+                                ${conversation.title}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pt-1">
+                        <p class="small text-muted mb-1">${moment(conversation.created_at).fromNow()}</p>
+                    </div>
+                </a>
+            </li>
+        `;
+        newConversationList += conversationItem;
+    });
+
+    conversationList.innerHTML = newConversationList;
 }
+
+
 
 
 function formatMessageWithBoldAndLinks(text) {
@@ -224,10 +179,13 @@ function formatMessageWithBoldAndLinks(text) {
 // Ejemplo de uso en tu función sendMessage
 function sendMessage() {
     const messageInput = document.getElementById('messageInput');
+    const conversationId = document.getElementById('conversationId').value;
     const messageText = messageInput.value;
     const sendButton = document.getElementById('sendButton');
     const buttonText = document.getElementById('buttonText');
     const spinner = document.getElementById('spinner');
+
+    console.log(conversationId)
 
     if (messageText.trim() !== '') {
         const chatMessages = document.getElementById('chatMessages');
@@ -239,7 +197,7 @@ function sendMessage() {
             <div class="message-card user-message">
                 <h6 class="text-success">Tú:</h6>
                 <p class="mb-0">${formatMessageWithBoldAndLinks(messageText)}</p>
-                <span class="message-time text-muted small">Just now</span>
+                <span class="message-time text-muted small">Justo ahora</span>
             </div>
         `;
         chatMessages.appendChild(userMessage);
@@ -258,7 +216,10 @@ function sendMessage() {
                 'Content-Type': 'application/json',
                 'X-CSRF-TOKEN': '{{ csrf_token() }}'
             },
-            body: JSON.stringify({ message: messageText })
+            body: JSON.stringify({ 
+                message: messageText, 
+                conversation_id: conversationId 
+            })
         })
         .then(response => response.json())
         .then(data => {
@@ -285,7 +246,8 @@ function sendMessage() {
 
             //Titulo de la conversacion
             $('#titleChat').html(data?.conversation?.title);
-            updateConversationList(data?.conversation)
+            $('#conversationId').val(data?.conversation?.id);
+            updateConversationList(data?.conversations)
         })
         .catch(error => {
             console.log(error);
@@ -309,5 +271,16 @@ function sendMessage() {
         });
     }
 }
+
+    // Abrir y cerrar el drawer
+    const drawerButton = document.getElementById('drawerButton');
+    drawerButton.addEventListener('click', function() {
+        document.body.classList.toggle('drawer-open');
+    });
+
+    // Cerrar el drawer al hacer clic en el fondo
+    document.querySelector('.drawer-backdrop').addEventListener('click', function() {
+        document.body.classList.remove('drawer-open');
+    });
 </script>
 @endsection

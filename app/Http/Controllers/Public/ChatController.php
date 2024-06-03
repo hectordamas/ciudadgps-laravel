@@ -85,11 +85,14 @@ class ChatController extends Controller
         ]);
         $botMessage->save();
 
+        $conversations = Conversation::where('user_id', Auth::id())->orderBy('id', 'desc')->get();
+
         return response()->json([
             'response' => $botMessageContent, 
             'conversation_id' => $conversationId,
             'prompt' => $prompt,
-            'conversation' => $conversation
+            'conversation' => $conversation,
+            'conversations' => $conversations
         ]);
     }
 
