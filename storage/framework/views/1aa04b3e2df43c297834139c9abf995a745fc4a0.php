@@ -223,7 +223,7 @@
                 </ul>
                 <div class="tab-content shop_info_tab">
                     <div class="tab-pane fade show active" id="Description" role="tabpanel" aria-labelledby="Description-tab">
-                      <?php echo $commerce->info; ?>
+                      <?php echo nl2br(e($commerce->info))  ?? 'No hay Información Disponible'; ?>
 
 
                       <?php if($commerce->youtube): ?>

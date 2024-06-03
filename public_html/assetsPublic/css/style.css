@@ -1138,7 +1138,7 @@ button:focus {
 	font-weight: 500;
 	padding: 22px 10px;
 	text-transform: capitalize;
-	font-size: 14px;
+	font-size: 13px;
 }
 .navbar .navbar-nav > li > a.active, 
 .navbar .navbar-nav > li:hover > a,

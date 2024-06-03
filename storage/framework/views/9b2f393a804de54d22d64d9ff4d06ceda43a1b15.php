@@ -20,6 +20,7 @@
         ['url' => url('faq'), 'text' => 'FAQ'],
         ['url' => url('nosotros'), 'text' => 'Nosotros'],
         ['url' => url('blog'), 'text' => 'Blog'],
+        ['url' => url('privacidad'), 'text' => 'privacidad'],
     ];
 ?>
 <!-- START FOOTER -->

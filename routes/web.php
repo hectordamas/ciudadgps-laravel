@@ -62,6 +62,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/comment/store', [App\Http\Controllers\Public\CommentsController::class, 'store']);
 
     Route::get('cambiar-contraseña', [App\Http\Controllers\Public\AuthController::class, 'password']);
+
+    Route::get('chat', [App\Http\Controllers\Public\ChatController::class, 'chat']);
+    Route::post('handleChatRequest', [App\Http\Controllers\Public\ChatController::class, 'handleChatRequest']);
+    Route::get('/conversations/{id}/show', [App\Http\Controllers\Public\ChatController::class, 'show']);
+
 });
 
 Route::get('/comercios', [App\Http\Controllers\Public\ComerciosController::class, 'index']);
@@ -126,3 +131,4 @@ Route::get('/blog', [App\Http\Controllers\ArticleController::class, 'index']);
 Route::get('/blog/{slug}', [App\Http\Controllers\ArticleController::class, 'show']);
 Route::get('/search/blog', [App\Http\Controllers\ArticleController::class, 'search']);
 Route::get('/search/tags/{id}', [App\Http\Controllers\ArticleController::class, 'tags']);
+

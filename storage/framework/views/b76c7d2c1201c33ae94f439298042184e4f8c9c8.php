@@ -50,7 +50,7 @@
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/jquery-ui.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/slick.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/slick-theme.css')); ?>">
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/style.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/style.css?v=1')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/responsive.css')); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('style.css')); ?>">
 <link href="<?php echo e(asset('assets/vendor/datatables/dataTables.bootstrap4.css')); ?>" rel="stylesheet" type="text/css">
@@ -82,12 +82,13 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
+                        <li><a class="nav-link nav_item" href="<?php echo e(url('chat')); ?>">Chatea con SofIA</a></li>
                         <?php echo $__env->make('layouts.megaMenu', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                         <li><a class="nav-link nav_item" href="<?php echo e(url('registrar-comercio')); ?>">Registrar Local</a></li> 
                         <li><a class="nav-link nav_item" href="<?php echo e(url('empleos')); ?>">Empleos</a></li> 
-                        <li><a class="nav-link nav_item" href="<?php echo e(url('planes')); ?>">Planes</a></li>
                         <li><a class="nav-link nav_item" href="<?php echo e(url('blog')); ?>">Blog</a></li> 
                         <li><a class="nav-link nav_item" href="<?php echo e(url('politicas-de-privacidad')); ?>">Privacidad</a></li> 
+                        <li><a class="nav-link nav_item" href="<?php echo e(url('planes')); ?>">Planes</a></li>
                         <?php if(auth()->guard()->guest()): ?>
                         <li><a class="nav-link nav_item" href="<?php echo e(route('login')); ?>">Inicia Sesión</a></li> 
                         <?php else: ?>

@@ -36,7 +36,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
 <link href="<?php echo e(asset('assets/vendor/fontawesome-free/css/all.min.css?v=1')); ?>" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/styles.min.css?v=1')); ?>"><!--Estilos con iconos--->
+<link rel="stylesheet" href="<?php echo e(asset('assetsPublic/css/styles.min.css?v=2')); ?>"><!--Estilos con iconos--->
 <!-- Canonical URL -->
 <?php
     $canonicalUrl = secure_url(request()->url());
@@ -106,12 +106,13 @@ End Screen Load Popup Section -->
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
+                        <li><a class="nav-link nav_item" href="<?php echo e(url('chat')); ?>">Chatea con Sofia</a></li>
                         <?php echo $__env->make('layouts.megaMenu', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                         <li><a class="nav-link nav_item" href="<?php echo e(url('registrar-comercio')); ?>">Registrar Local</a></li> 
                         <li><a class="nav-link nav_item" href="<?php echo e(url('empleos')); ?>">Empleos</a></li> 
-                        <li><a class="nav-link nav_item" href="<?php echo e(url('planes')); ?>">Planes</a></li>
-                        <li><a class="nav-link nav_item" href="<?php echo e(url('blog')); ?>">Blog</a></li> 
                         <li><a class="nav-link nav_item" href="<?php echo e(url('politicas-de-privacidad')); ?>">Privacidad</a></li> 
+                        <li><a class="nav-link nav_item" href="<?php echo e(url('blog')); ?>">Blog</a></li> 
+                        <li><a class="nav-link nav_item" href="<?php echo e(url('planes')); ?>">Planes</a></li>
                         <?php if(auth()->guard()->guest()): ?>
                         <li><a class="nav-link nav_item" href="<?php echo e(route('login')); ?>">Inicia Sesión</a></li> 
                         <?php else: ?>
@@ -451,11 +452,13 @@ End Screen Load Popup Section -->
                 <?php $__empty_1 = true; $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                 <div class="col-xl-4 col-md-6">
                     <div class="blog_post blog_style2 box_shadow1">
+                        <?php if(!(url('/') == 'http://localhost:8000')): ?>
                         <div class="blog_img">
                             <a href="<?php echo e(url('blog/' . $article->slug )); ?>">
                                 <img src="<?php echo e($article->image); ?>" style="max-height: 200px; object-fit: cover;" alt="<?php echo e($article->title); ?> Imagen del Articulo" title="<?php echo e($article->title); ?> Imagen del Articulo">
                             </a>
                         </div>
+                        <?php endif; ?>
                         <div class="blog_content bg-white">
                             <div class="blog_text">
                                 <h6 class="blog_title"><a href="<?php echo e(url('blog/' . $article->slug )); ?>"><?php echo e(Illuminate\Support\Str::limit($article->title, 60)); ?></a></h6>

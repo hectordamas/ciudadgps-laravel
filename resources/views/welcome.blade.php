@@ -36,7 +36,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
 <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css?v=1') }}" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="{{ asset('assetsPublic/css/styles.min.css?v=1') }}"><!--Estilos con iconos--->
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/styles.min.css?v=2') }}"><!--Estilos con iconos--->
 <!-- Canonical URL -->
 <?php
     $canonicalUrl = secure_url(request()->url());
@@ -106,12 +106,13 @@ End Screen Load Popup Section -->
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
+                        <li><a class="nav-link nav_item" href="{{url('chat')}}">Chatea con Sofia</a></li>
                         @include('layouts.megaMenu')
                         <li><a class="nav-link nav_item" href="{{ url('registrar-comercio') }}">Registrar Local</a></li> 
                         <li><a class="nav-link nav_item" href="{{ url('empleos') }}">Empleos</a></li> 
-                        <li><a class="nav-link nav_item" href="{{ url('planes') }}">Planes</a></li>
-                        <li><a class="nav-link nav_item" href="{{ url('blog') }}">Blog</a></li> 
                         <li><a class="nav-link nav_item" href="{{ url('politicas-de-privacidad') }}">Privacidad</a></li> 
+                        <li><a class="nav-link nav_item" href="{{ url('blog') }}">Blog</a></li> 
+                        <li><a class="nav-link nav_item" href="{{ url('planes') }}">Planes</a></li>
                         @guest
                         <li><a class="nav-link nav_item" href="{{ route('login') }}">Inicia Sesión</a></li> 
                         @else
@@ -449,11 +450,13 @@ End Screen Load Popup Section -->
                 @forelse ($articles as $article)
                 <div class="col-xl-4 col-md-6">
                     <div class="blog_post blog_style2 box_shadow1">
+                        @if(!(url('/') == 'http://localhost:8000'))
                         <div class="blog_img">
                             <a href="{{ url('blog/' . $article->slug ) }}">
                                 <img src="{{  $article->image  }}" style="max-height: 200px; object-fit: cover;" alt="{{  $article->title }} Imagen del Articulo" title="{{  $article->title }} Imagen del Articulo">
                             </a>
                         </div>
+                        @endif
                         <div class="blog_content bg-white">
                             <div class="blog_text">
                                 <h6 class="blog_title"><a href="{{ url('blog/' . $article->slug ) }}">{{ Illuminate\Support\Str::limit($article->title, 60) }}</a></h6>

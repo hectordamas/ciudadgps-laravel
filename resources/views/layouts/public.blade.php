@@ -50,7 +50,7 @@
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/jquery-ui.css') }}">
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/slick.css') }}">
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/slick-theme.css') }}">
-<link rel="stylesheet" href="{{ asset('assetsPublic/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('assetsPublic/css/style.css?v=1') }}">
 <link rel="stylesheet" href="{{ asset('assetsPublic/css/responsive.css') }}">
 <link rel="stylesheet" href="{{ asset('style.css') }}">
 <link href="{{ asset('assets/vendor/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet" type="text/css">
@@ -82,12 +82,13 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
+                        <li><a class="nav-link nav_item" href="{{url('chat')}}">Chatea con SofIA</a></li>
                         @include('layouts.megaMenu')
                         <li><a class="nav-link nav_item" href="{{ url('registrar-comercio') }}">Registrar Local</a></li> 
                         <li><a class="nav-link nav_item" href="{{ url('empleos') }}">Empleos</a></li> 
-                        <li><a class="nav-link nav_item" href="{{ url('planes') }}">Planes</a></li>
                         <li><a class="nav-link nav_item" href="{{ url('blog') }}">Blog</a></li> 
                         <li><a class="nav-link nav_item" href="{{ url('politicas-de-privacidad') }}">Privacidad</a></li> 
+                        <li><a class="nav-link nav_item" href="{{ url('planes') }}">Planes</a></li>
                         @guest
                         <li><a class="nav-link nav_item" href="{{ route('login') }}">Inicia Sesión</a></li> 
                         @else
