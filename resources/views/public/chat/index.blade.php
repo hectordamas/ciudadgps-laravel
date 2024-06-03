@@ -25,8 +25,8 @@
     <div class="container-fluid contenedor">
         <div class="row px-lg-2">
             <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
-                <div class="drawer-menu shadow" style="border-radius: 10px;">
-                    <div class="card border-0" style="border-radius: 10px; height: 60vh; overflow-y: auto;">
+                <div class="drawer-menu shadow">
+                    <div class="card border-0">
                         <div class="card-body">
                             <h5 class="font-weight-bold mb-3">Conversaciones</h5>
                             <ul class="list-unstyled mb-0">
@@ -34,14 +34,9 @@
                                 <li class="border-bottom">
                                     <a href="{{ url('conversations/' . $conv->id. '/show') }}" class="d-flex justify-content-between px-2 align-items-center">
                                         <div class="d-flex flex-row">
-                                            <div class="pt-1">
-                                                <p class="small text-muted">
-                                                    {{$conv->title}}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="pt-1">
-                                            <p class="small text-muted mb-1">{{ $conv->created_at->diffForHumans() }}</p>
+                                            <p class="small text-muted pt-1 pb-1 mb-0">
+                                                <i class="fas fa-comment-alt mr-1"></i> {{$conv->title}}
+                                            </p>
                                         </div>
                                     </a>
                                 </li>

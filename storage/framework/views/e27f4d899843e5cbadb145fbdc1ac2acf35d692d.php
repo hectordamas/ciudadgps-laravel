@@ -106,7 +106,7 @@ End Screen Load Popup Section -->
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li><a class="nav-link nav_item" href="<?php echo e(url('chat')); ?>">Chatea con Sof.ia</a></li>
+                        <li><a class="nav-link nav_item" href="<?php echo e(url('chat')); ?>">Chatea con Sofia</a></li>
                         <?php echo $__env->make('layouts.megaMenu', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                         <li><a class="nav-link nav_item" href="<?php echo e(url('registrar-comercio')); ?>">Registrar Local</a></li> 
                         <li><a class="nav-link nav_item" href="<?php echo e(url('empleos')); ?>">Empleos</a></li> 

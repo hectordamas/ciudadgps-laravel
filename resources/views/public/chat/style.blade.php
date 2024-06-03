@@ -20,7 +20,19 @@
         font-size: 0.85em;
         text-align: right;
     }
+    .drawer-menu{
+        border-radius: 10px;
+    }
+    .drawer-menu .card{
+        height: 65vh;
+        border-radius: 10px; 
+        overflow-y: auto;
+    }
     @media (max-width: 767.98px) {
+        .drawer-menu .card{
+            position: relative;
+            height: 100%;
+        }
         .drawer-menu {
             display: block;
             position: fixed;

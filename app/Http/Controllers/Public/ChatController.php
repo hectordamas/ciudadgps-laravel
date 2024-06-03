@@ -237,7 +237,7 @@ class ChatController extends Controller
         "\n\nLa Ubicación del usuario: latitud: " . $latitude . " y longitud " . $longitude .
         "\n\nProductos Relacionados a la búsqueda: " . $productsInfo.
         "\n\nEmpleos Relacionados a la búsqueda: " . $jobsInfo.
-        "\n\nRecuerda ser cortés y tener buena atención con mi usuario final, cada vez que el use algún tipo de convencionalismo debes responder a él con educación.";
+        "\n\nRecuerda ser cortés y tener buena atención con mi usuario final, cada vez que el use algún tipo de convencionalismo debes responder a él con educación. Si alguna información no está en CiudadGPS, es decir, en la información proporcionada anteriormente siéntete libre de usar google search/google maps para buscarla, siempre tomando en cuenta la data y ubicación del usuario. No incluyas enlaces entre paréntesis";
 
         return $context;
     }
