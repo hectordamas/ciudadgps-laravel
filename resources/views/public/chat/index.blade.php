@@ -136,14 +136,9 @@ function updateConversationList(conversations) {
             <li class="border-bottom">
                 <a href="{{ url('conversations/${conversation.id}/show') }}" class="d-flex justify-content-between px-2 align-items-center">
                     <div class="d-flex flex-row">
-                        <div class="pt-1">
-                            <p class="small text-muted">
-                                ${conversation.title}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="pt-1">
-                        <p class="small text-muted mb-1">${moment(conversation.created_at).fromNow()}</p>
+                        <p class="small text-muted pt-1 pb-1 mb-0">
+                            <i class="fas fa-comment-alt mr-1"></i> ${conversation.title}
+                        </p>
                     </div>
                 </a>
             </li>
