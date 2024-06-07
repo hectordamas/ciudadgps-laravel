@@ -67,6 +67,32 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('handleChatRequest', [App\Http\Controllers\Public\ChatController::class, 'handleChatRequest']);
     Route::get('/conversations/{id}/show', [App\Http\Controllers\Public\ChatController::class, 'show']);
 
+    Route::get('locales-asociados', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'index']);
+    Route::get('locales-asociados/{id}/edit', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'edit']);
+    Route::post('/upload-logo', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'uploadLogo'])->name('upload-logo');
+
+    Route::post('locales-asociados/setIsEnable', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'setIsEnable']);
+    Route::get('locales-asociados/productos/{id}', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'productos']);
+    Route::post('locales-asociados/products/store', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'productsStore']);
+    Route::get('locales-asociados/productos/{id}/edit', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'productsEdit']);
+    Route::post('locales-asociados/productos/{id}/update', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'productsUpdate']);
+    Route::post('locales-asociados/productos/{id}/destroy', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'productsDestroy']);
+
+    Route::post('locales-asociados/categories/store', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'categoriesStore']);
+    Route::get('locales-asociados/categories/{id}/edit', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'categoriesEdit']);
+    Route::post('locales-asociados/categories/{id}/update', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'categoriesUpdate']);
+    Route::post('locales-asociados/categories/{id}/destroy', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'categoriesDestroy']);
+
+    Route::get('locales-asociados/jobs/{id}', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'jobs']);
+    Route::post('locales-asociados/jobs/store', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'jobsStore']);
+    Route::get('locales-asociados/jobs/{id}/edit', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'jobsEdit']);
+    Route::post('locales-asociados/jobs/{id}/update', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'jobsUpdate']);
+    Route::post('locales-asociados/jobs/{id}/destroy', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'jobsDestroy']);
+
+    Route::get('locales-asociados/horarios/{id}', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'horarios']);
+    Route::post('locales-asociados/cambiarHorarios', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'cambiarHorarios']);
+
+    Route::get('locales-asociados/performance/{id}', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'reporteDeVisitas']);
 });
 
 Route::get('/comercios', [App\Http\Controllers\Public\ComerciosController::class, 'index']);

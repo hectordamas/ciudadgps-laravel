@@ -199,7 +199,7 @@ class CommerceController extends Controller
 
         $commerce->excerpt = $request->excerpt;
         $commerce->rif = $request->rif;
-        $commerce->paid = $request->paid;
+        $commerce->paid = isset($request->paid) ? $request->paid : $commerce->paid;
             
         if($request->hasFile('logo')){
             $file = $request->file('logo');
@@ -225,11 +225,11 @@ class CommerceController extends Controller
         $commerce->category_id = $request->categories[0];
 
         $commerce->position = $request->position;
-        $commerce->destacar = $request->destacar;
-        $commerce->expiration_date = $request->expiration_date;
+        $commerce->destacar = isset($request->destacar) ? $request->destacar : $commerce->destacar;
+        $commerce->expiration_date = $request->expiration_date ? $request->expiration_date : $commerce->expiration_date;
 
         $commerce->created_by = Auth::user()->name;
-        $commerce->hide = $request->hide;
+        $commerce->hide = isset($request->hide) ? $request->hide : $commerce->hide;
 
         $commerce->url = $request->url;
         $commerce->urlName = $request->urlName;
@@ -264,10 +264,14 @@ class CommerceController extends Controller
             }
         }
 
-        return response()->json([
-            'message' => "Comercio modificado con éxito!",
-            'commerce' => $commerce,
-        ]);
+        if(!$request->userView){
+            return response()->json([
+                'message' => "Comercio modificado con éxito!",
+                'commerce' => $commerce,
+            ]);
+        }else{
+            return redirect()->back()->with('message', "Comercio modificado con éxito!");
+        }
 
     }
 

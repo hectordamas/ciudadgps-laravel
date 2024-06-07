@@ -120,11 +120,12 @@ End Screen Load Popup Section -->
                             <a class="dropdown-toggle nav-link" href="<?php echo e(url('mi-cuenta')); ?>" data-toggle="dropdown"><?php echo e(Auth::user()->name); ?></a>
                             <div class="dropdown-menu">
                                 <ul> 
+                                    <li class="border-bottom"><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="<?php echo e(url('locales-asociados')); ?>">Locales Asociados</a></li> 
                                     <?php if(Auth::user()->role == 'Administrador'): ?>
-                                    <li><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="<?php echo e(url('/administrador')); ?>">Administrador</a></li> 
+                                    <li class="border-bottom"><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="<?php echo e(url('/administrador')); ?>">Administrador</a></li> 
                                     <?php endif; ?>
-                                    <li><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="<?php echo e(url('mi-cuenta')); ?>">Mi Cuenta</a></li> 
-                                    <li><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="<?php echo e(url('favoritos')); ?>">Favoritos</a></li> 
+                                    <li class="border-bottom"><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="<?php echo e(url('mi-cuenta')); ?>">Mi Cuenta</a></li> 
+                                    <li class="border-bottom"><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="<?php echo e(url('favoritos')); ?>">Favoritos</a></li> 
                                     <li>
                                         <a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="<?php echo e(route('logout')); ?>"
                                         onclick="event.preventDefault();
