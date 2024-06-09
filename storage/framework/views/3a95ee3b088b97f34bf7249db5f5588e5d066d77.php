@@ -11,10 +11,10 @@
                 <img class="mb-3" src="<?php echo e(url($commerce->logo)); ?>" alt="<?php echo e($commerce->name); ?>" width="100" height="100" style="border-radius: 100%;">
                 <h6 class="mb-3">Rendimiento del perfil de <?php echo e($commerce->name); ?></h6>
                 <h5>
-                    <span class="btn btn-fill-line">
+                    <span class="btn btn-fill-line mt-2">
                         <i class="fas fa-chart-line"></i> Visitas <span class="badge badge-info"><?php echo e($visitasTotales); ?></span>
                     </span>
-                    <span class="btn btn-fill-line">
+                    <span class="btn btn-fill-line mt-2">
                         <i class="fas fa-heart"></i> Lista de Favoritos <span class="badge badge-info"><?php echo e($likes); ?></span>
                     </span>
                 </h5>

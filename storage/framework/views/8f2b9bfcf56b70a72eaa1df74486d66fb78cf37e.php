@@ -34,33 +34,10 @@
     <div style="position: absolute; top: 0; right: 0; width: 100%; height:100%; background: rgba(0,0,0,0.6);"></div>
 
     <div class="container"><!-- STRART CONTAINER -->
-        <div class="row align-items-center" style="height:10vh;">
+        <div class="row align-items-center">
         	<div class="col-md-8">
                 <div class="page-title">
             		<h1 class="text-light text-capitalize">Registra tu Negocio</h1>
-                </div>
-
-                <div class="row mt-4 d-md-flex d-none">
-                    <div class="col-md-3 pr-1">
-                        <a 
-                            href="https://play.google.com/store/apps/details?id=com.ciudadgps.app" 
-                            target="blank">
-                            <img 
-                                src="<?php echo e(asset('appButtons/play_store.png')); ?>" 
-                                alt="App Store Button" 
-                            />
-                        </a>
-                    </div>
-                    <div class="pl-1 col-md-3">
-                        <a 
-                            href="https://apps.apple.com/us/app/ciudadgps/id1643027976"
-                            target="blank">
-                            <img 
-                                src="<?php echo e(asset('appButtons/app_store.png')); ?>" 
-                                alt="App Store Button" 
-                            />
-                        </a>
-                    </div>
                 </div>
             </div>
             <div class="col-md-4">
@@ -75,6 +52,74 @@
 
 
 <div class="section">
+    <!-- START SECTION CONTACT
+    <div class="section pt-3">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-lg-6">
+                	<div class="heading_s1">
+                    	<h2 style="text-transform: none;">Únete a CiudadGPS</h2>
+                    </div>
+                    <p class="leads">CiudadGPS ayuda a los negocios locales a tener un mayor alcance y presencia en el mercado. Al proporcionar información detallada sobre cada negocio, los usuarios pueden conocer más sobre ellos y decidir si desean visitarlos. Además, los negocios también pueden recibir calificaciones y comentarios de los usuarios, lo que les permite mejorar su servicio y atraer a más clientes.</p>
+                    <div class="field_form">
+                        <form method="post" name="enq">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Nombre del Negocio *" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="text" class="form-control" name="rif" id="rif" placeholder="RIF o Documento de Identidad *" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="text" class="form-control" name="user_name" id="user_name" placeholder="Nombre y Apellido *" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="email" class="form-control" name="user_email" id="user_email" placeholder="Correo Electrónico *" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="hidden" name="telephone_number_code" id="telephone_number_code" value="+58">
+                                    <input type="hidden" name="telephone_code" id="telephone_code" value="VE">
+                                    <input type="hidden" name="telephone_number" id="telephone_number">
+                                    <input type="hidden" name="telephone" id="telephone">
+                                    <input type="text" id="telephoneFormatted" class="form-control" placeholder="Teléfono *">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="hidden" name="whatsapp_number_code" id="whatsapp_number_code" value="+58">
+                                    <input type="hidden" name="whatsapp_code" id="whatsapp_code" value="VE">
+                                    <input type="hidden" name="whatsapp_number" id="whatsapp_number">
+                                    <input type="hidden" name="whatsapp" id="whatsapp">
+                                    <input type="text" id="whatsappFormatted" class="form-control" placeholder="WhatsApp *">
+                                </div>
+
+                                <div class="col-md-12 form-group">                    
+                                    <textarea name="info" id="info" class="form-control" required rows="2" placeholder="Descripción Detallada del Negocio *"></textarea>
+                                </div>
+
+                                <div class="col-md-12 form-group">                    
+                                    <textarea name="address" id="address" class="form-control" required rows="2" placeholder="Dirección Exacta *"></textarea>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-fill-out">
+                                        <i class="linearicons-rocket"></i> Continuar
+                                     </button>                                
+                                </div>
+                            </div>
+                        </form>		
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-2 pt-lg-0 mt-4 mt-lg-0">
+                    <input type="hidden" name="lat" id="lat" value="<?php echo e($lat); ?>">
+                    <input type="hidden" name="lon" id="lng" value="<?php echo e($lon); ?>">
+                    <label for="" class="font-weight-bold">Agrega La Ubicación Exacta de tu Establecimiento: <span class="text-danger">*</span></label>
+                    <div id="map" class="w-100" style="height: 500px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    END SECTION CONTACT -->
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -96,23 +141,23 @@
                         </div>
     
                         <div class="col-md-6 form-group">
-                            <label for="name" class="font-weight-bold">Nombre del Negocio:</label>
+                            <label for="name" class="text-info">Nombre del Negocio:</label>
                             <input type="text" class="form-control" name="name" id="name" required>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="rif" class="font-weight-bold">RIF o Documento de Identidad:</label>
+                            <label for="rif" class="text-info">RIF o Documento de Identidad:</label>
                             <input type="text" class="form-control" name="rif" id="rif" required>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="user_name" class="font-weight-bold">Nombre y Apellido:</label>
+                            <label for="user_name" class="text-info">Nombre y Apellido:</label>
                             <input type="text" class="form-control" name="user_name" id="user_name" required>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="user_email" class="font-weight-bold">E-Mail:</label>
+                            <label for="user_email" class="text-info">E-Mail:</label>
                             <input type="email" class="form-control" name="user_email" id="user_email" required>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="telephone" class="font-weight-bold">Teléfono</label>
+                            <label for="telephone" class="text-info">Teléfono</label>
                             <input type="hidden" name="telephone_number_code" id="telephone_number_code" value="+58">
                             <input type="hidden" name="telephone_code" id="telephone_code" value="VE">
                             <input type="hidden" name="telephone_number" id="telephone_number">
@@ -120,62 +165,63 @@
                             <input type="text" id="telephoneFormatted" class="form-control" placeholder="412-1234567">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="whatsapp" class="font-weight-bold">WhatsApp:</label>
+                            <label for="whatsapp" class="text-info">WhatsApp:</label>
                             <input type="hidden" name="whatsapp_number_code" id="whatsapp_number_code" value="+58">
                             <input type="hidden" name="whatsapp_code" id="whatsapp_code" value="VE">
                             <input type="hidden" name="whatsapp_number" id="whatsapp_number">
                             <input type="hidden" name="whatsapp" id="whatsapp">
                             <input type="text" id="whatsappFormatted" class="form-control" placeholder="412-1234567">
                         </div>
-                        <div class="col-md-6 form-group">
-                            <label for="logo" class="font-weight-bold">Cargar Logo:</label>
-                            <input type="file" name="logo" id="logo" class="form-control" accept="image/*" required>
+
+                        <div class="col-md-12 form-group">
+                            <hr>
                         </div>
+
                         <div class="col-md-6 form-group">
-                            <label for="facebook" class="font-weight-bold">Enlace Facebook:</label>
+                            <label for="facebook" class="text-info">Enlace Facebook:</label>
                             <input type="text" class="form-control" name="facebook" id="facebook">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="twitter" class="font-weight-bold">Enlace Twitter:</label>
+                            <label for="twitter" class="text-info">Enlace Twitter:</label>
                             <input type="text" class="form-control" name="twitter" id="twitter">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="instagram" class="font-weight-bold">Enlace Instagram:</label>
+                            <label for="instagram" class="text-info">Enlace Instagram:</label>
                             <input type="text" class="form-control" name="instagram" id="instagram">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="tiktok" class="font-weight-bold">Enlace Tiktok:</label>
+                            <label for="tiktok" class="text-info">Enlace Tiktok:</label>
                             <input type="text" class="form-control" name="tiktok" id="tiktok">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="threads" class="font-weight-bold">Enlace Threads:</label>
+                            <label for="threads" class="text-info">Enlace Threads:</label>
                             <input type="text" class="form-control" name="threads" id="threads">
                         </div>
     
     
                         <div class="col-md-6 form-group">
-                            <label for="web" class="font-weight-bold">Enlace Página Web:</label>
+                            <label for="web" class="text-info">Enlace Página Web:</label>
                             <input type="text" class="form-control" name="web" id="web">
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="threads" class="font-weight-bold">Enlace de Interes:</label>
+                            <label for="threads" class="text-info">Enlace de Interés:</label>
                             <input type="text" class="form-control" name="url" id="url">
                         </div>
     
     
                         <div class="col-md-6 form-group">
-                            <label for="web" class="font-weight-bold">Nombre de enlace de interes:</label>
+                            <label for="web" class="text-info">Nombre de enlace de interés:</label>
                             <input type="text" class="form-control" name="urlName" id="urlName">
                         </div>
             
                         <div class="col-md-6 form-group">
-                            <label for="twitter" class="font-weight-bold">Video Promocional:</label>
+                            <label for="twitter" class="text-info">Video Promocional:</label>
                             <input type="text" class="form-control" name="youtube" id="youtube" placeholder="ID de Youtube o Enlace">
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="category" class="font-weight-bold">Categoría:</label>
+                            <label for="category" class="text-info">Categoría:</label>
                             <select name="categories[]" id="categories[]" multiple class="form-control js-example-tags" required>
                                 <?php $__currentLoopData = $categories->sortBy('name'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <option value="<?php echo e($c->id); ?>"><?php echo e($c->name); ?></option>
@@ -184,7 +230,7 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="tags" class="font-weight-bold">Etiquetas: separar cada etiqueta con Enter</label>
+                            <label for="tags" class="text-info">Etiquetas: separar cada etiqueta con Enter</label>
                             <select name="tags[]" id="tags" class="form-control js-example-tags" multiple required></select>
                         </div>
 
@@ -193,20 +239,24 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="images" class="font-weight-bold">Subir Imágenes de la fachada y el interior del local <span class="font-weight-normal">(preferiblemente horizontales con dimensiones de 640x450px)<span></label>
+                            <label for="logo" class="text-info">Cargar Logo:</label>
+                            <input type="file" name="logo" id="logo" class="form-control" accept="image/*" required>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="images" class="text-info"">Subir Imágenes de la fachada y el interior del local <span class="font-weight-normal">(preferiblemente horizontales con dimensiones de 640x450px)<span></label>
                             <input type="file" name="images[]" id="images" multiple class="form-control" accept="image/*">
                         </div>
 
-                        <div class="col-md-6"></div>
             
                         <div class="col-md-6 form-group">
-                            <label for="info" class="font-weight-bold">Descripción:</label>
+                            <label for="info" class="text-info">Descripción:</label>
             
                             <textarea name="info" id="info" class="form-control" required rows="6"></textarea>
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="address" class="font-weight-bold">Dirección:</label>
+                            <label for="address" class="text-info">Dirección:</label>
             
                             <textarea name="address" id="address" class="form-control" required rows="6"></textarea>
                         </div>
@@ -214,7 +264,7 @@
                         <div class="col-md-12 form-group">
                             <input type="hidden" name="lat" id="lat" value="<?php echo e($lat); ?>">
                             <input type="hidden" name="lon" id="lng" value="<?php echo e($lon); ?>">
-                            <label for="ubicacion" class="font-weight-bold">Ubicación:</label>
+                            <label for="ubicacion" class="text-info">Ubicación:</label>
                             <div id="map" class="w-100" style="height:300px;"></div>
                         </div>
             

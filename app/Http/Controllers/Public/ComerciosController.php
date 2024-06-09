@@ -11,6 +11,7 @@ use App\Models\Img;
 use App\Models\Tag;
 use App\Models\User;
 use App\Models\Product;
+use App\Models\Weekday;
 use GeoIP;
 use DB;
 use Illuminate\Support\Str;
@@ -243,11 +244,44 @@ class ComerciosController extends Controller
         $keywords = implode(', ', array_merge($categories, $categoriesInVenezuela, $categoriesInCaracas, [$commerce->name], $tags));
         
         $meta_description = $commerce->name .' en CiudadGPS: '. $commerce->info;
+
+        $weekdays = Weekday::all();
+        $firstDay = $weekdays->shift();
+        $weekdays->push($firstDay);
+
+        $hours = $commerce->weekdays;
+
+        $days = $weekdays->map(function($day) use ($hours) {
+            $weekday = $hours->where('name', $day->name)->first();
+
+            if ($weekday) {
+                return [
+                    'id' => $day->id,
+                    'name' => $day->name,
+                    'hour_open' => $weekday->pivot->hour_open,
+                    'minute_open' => $weekday->pivot->minute_open,
+                    'hour_close' => $weekday->pivot->hour_close,
+                    'minute_close' => $weekday->pivot->minute_close,
+                    'isSelected' => true
+                ];
+            }else {
+                return [
+                    'id' => $day->id,
+                    'name' => $day->name,
+                    'hour_open' => null,
+                    'minute_open' => null,
+                    'hour_close' => null,
+                    'minute_close' => null,
+                    'isSelected' => false
+                ];
+            }
+        });
     
         return view('public.commerces.show', [
             'commerce' => $commerce,
             'keywords' => $keywords,
-            'meta_description' => $meta_description
+            'meta_description' => $meta_description,
+            'days' => $days,
         ]);
     }
 

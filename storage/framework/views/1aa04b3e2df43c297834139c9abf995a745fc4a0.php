@@ -54,8 +54,49 @@
        height: 100%;
     }
 </style>
+
+<?php if($commerce->hourEnable): ?>
+    <!-- Modal -->
+    <div class="modal fade" id="Horario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Horario de Atención</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <?php $__currentLoopData = $days; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $day): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <div class="row">
+                        <div class="col-4">
+                            <h6><?php echo e($day['name']); ?></h6>
+                        </div>
+                        <div class="col-8 text-right">
+                            <?php if(($day['hour_open'] !== null && $day['minute_open'] !== null) && ($day['hour_close'] !== null && $day['minute_close'] !== null) && $day['isSelected']): ?>
+                                <h6 class="text-success">
+                                    <?php echo e(Carbon::now()->setHour($day['hour_open'])->setMinute($day['minute_open'])->format('g:i a')); ?>
+
+                                    - 
+                                    <?php echo e(Carbon::now()->setHour($day['hour_close'])->setMinute($day['minute_close'])->format('g:i a')); ?>
+
+                                </h6>
+                            <?php else: ?>
+                                <h6 class="text-danger">
+                                    Cerrado
+                                </h6>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </div>
+          </div>
+        </div>
+    </div>
+<?php endif; ?>
+
 <div class="section">
-<div class="container pb-5">
+    <div class="container pb-5">
     <div class="row">
         <div class="col-lg-5 col-md-5 mb-4 mb-md-0">
             <div class="product-image">
@@ -200,9 +241,27 @@
 
             <div id="map1" class="w-100" style="height:300px;"></div>
         </div>
-        <div class="col-12">
+        <div class="col-12 d-none d-md-block">
             <hr>
             <a href="https://www.google.com/maps/search/?api=1&query=<?php echo e($commerce->lat); ?>,<?php echo e($commerce->lon); ?>" target="blank" class="btn btn-fill-out btn-radius"><i class="fas fa-map-marked-alt"></i> Ver en Google Maps</a>
+
+            <?php if($commerce->hourEnable): ?>
+            <a href="javascript:void(0)" class="btn btn-fill-line btn-radius" data-toggle="modal" data-target="#Horario">
+                <i class="far fa-clock"></i> Horarios de Atención
+            </a>
+            <?php endif; ?>
+        </div>
+        <div class="col-12 d-block d-md-none">
+            <hr>
+            <a href="https://www.google.com/maps/search/?api=1&query=<?php echo e($commerce->lat); ?>,<?php echo e($commerce->lon); ?>" target="blank" class="btn btn-block btn-fill-out btn-radius">
+                <i class="fas fa-map-marked-alt"></i> Ver en Google Maps
+            </a>
+
+            <?php if($commerce->hourEnable): ?>
+            <a href="javascript:void(0)" class="btn btn-block mt-2 btn-fill-line btn-radius" data-toggle="modal" data-target="#Horario">
+                <i class="far fa-clock"></i> Horarios de Atención
+            </a>
+            <?php endif; ?>
         </div>
     </div>
     <div class="row">

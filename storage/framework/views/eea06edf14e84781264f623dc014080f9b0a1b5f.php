@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-12 py-3">
             <h1>Privacy Policy</h1>
-            <p>Last updated: September 09, 2022</p>
+            <p>Last updated: June 09, 2024</p>
             <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
             <p>
                 We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of
@@ -95,14 +95,7 @@
             <p>We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p>
             <h3>Information Collected while Using the Application</h3>
             <p>While using Our Application, in order to provide features of Our Application, We may collect, with Your prior permission:</p>
-            <!--
-                
-                
-                
-                Información sobre localización
-            
-            
-            -->
+
             <ul>
                 <li>Information regarding your location</li>
             </ul>
@@ -117,10 +110,6 @@
             </p>
             
             <p>You can enable or disable access to this information at any time, through Your Device settings.</p>
-    
-    
-    
-    
     
     
             <h2>Use of Your Personal Data</h2>
@@ -203,6 +192,14 @@
                 The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country
                 unless there are adequate controls in place including the security of Your data and other personal information.
             </p>
+            <h2>Deleting Your Personal Data</h2>
+            <p>
+                In the CiudadGPS mobile application found in the Play Store and App Store, users can delete their data and account through the main menu. Go to "Ver cuenta -> Eliminar Cuenta" in the lower right button. This deletes the data in both the mobile app and the web application.
+            </p>
+            <p>
+                Once the deletion process is initiated, all your personal data stored in our servers will be permanently removed. Please note that once your data is deleted, it cannot be recovered.
+            </p>
+            
             <h2>Disclosure of Your Personal Data</h2>
             <h3>Business Transactions</h3>
             <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
