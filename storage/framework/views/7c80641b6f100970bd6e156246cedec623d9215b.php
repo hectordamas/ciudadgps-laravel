@@ -1,8 +1,8 @@
-@extends('layouts.public')
-@section('title')
+
+<?php $__env->startSection('title'); ?>
 <title>Configurar Horarios de Atención - CiudadGPS</title>
-@endsection
-@section('content')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
 <div class="section py-5">
     <div class="container">
         <div class="row justify-content-center">
@@ -12,38 +12,39 @@
                         Horarios de Atención
                     </div>
                     <div class="card-body">
-                        <input type="hidden" name="commerce_id" value={{ $commerce->id }} id="commerce_id">
+                        <input type="hidden" name="commerce_id" value=<?php echo e($commerce->id); ?> id="commerce_id">
                         <div class="row">
                             <div class="col-md-12 pb-3 text-center">
                                 <div class="form-check">
                                     <input 
                                         class="form-check-input" 
-                                        @if($commerce->hourEnable) 
+                                        <?php if($commerce->hourEnable): ?> 
                                             checked
-                                        @endif
+                                        <?php endif; ?>
                                         type="checkbox" 
                                         value="active" 
                                         id="activarHorario"
                                     >
-                                    <input type="hidden" value="{{ $commerce->id }}" id="commerce_id" />
+                                    <input type="hidden" value="<?php echo e($commerce->id); ?>" id="commerce_id" />
                                     <label class="form-check-label" for="activarHorario">
                                       Activar Horario
                                     </label>
                                 </div>
                             </div>
                         </div>
-                        @foreach ($days as $day)
-                            <div class="row day-row" data-day-id="{{ $day['id'] }}">
+                        <?php $__currentLoopData = $days; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $day): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <div class="row day-row" data-day-id="<?php echo e($day['id']); ?>">
                                 <div class="col-md-12 pb-2">
                                     <div class="form-check d-flex justify-content-between align-items-center">
                                         <label class="form-check-label" for="activarCatalogo">
-                                            {{ $day["name"] }}
+                                            <?php echo e($day["name"]); ?>
+
                                         </label>
                                         <input 
                                             class="form-check-input enable-checkbox" 
-                                            @if($day["isSelected"]) 
+                                            <?php if($day["isSelected"]): ?> 
                                                 checked
-                                            @endif
+                                            <?php endif; ?>
                                             type="checkbox" 
                                             value="active" 
                                         >
@@ -52,19 +53,19 @@
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="col-sm-6 col-lg-6 form-group">
-                                            <label for="open-time-{{ $day['id'] }}">Hora de Apertura</label>
-                                            <input type="time" id="open-time-{{ $day['id'] }}" class="form-control open-time" 
-                                                value="{{ sprintf('%02d:%02d', $day['hour_open'], $day['minute_open']) }}">
+                                            <label for="open-time-<?php echo e($day['id']); ?>">Hora de Apertura</label>
+                                            <input type="time" id="open-time-<?php echo e($day['id']); ?>" class="form-control open-time" 
+                                                value="<?php echo e(sprintf('%02d:%02d', $day['hour_open'], $day['minute_open'])); ?>">
                                         </div>
                                         <div class="col-sm-6 col-lg-6 form-group">
-                                            <label for="close-time-{{ $day['id'] }}">Hora de Cierre</label>
-                                            <input type="time" id="close-time-{{ $day['id'] }}" class="form-control close-time" 
-                                                value="{{ sprintf('%02d:%02d', $day['hour_close'], $day['minute_close']) }}">
+                                            <label for="close-time-<?php echo e($day['id']); ?>">Hora de Cierre</label>
+                                            <input type="time" id="close-time-<?php echo e($day['id']); ?>" class="form-control close-time" 
+                                                value="<?php echo e(sprintf('%02d:%02d', $day['hour_close'], $day['minute_close'])); ?>">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
                     </div>
@@ -73,10 +74,10 @@
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
 
-@section('map')
+<?php $__env->startSection('map'); ?>
 <script>
     $(document).ready(function() {
         $('.enable-checkbox, .open-time, .close-time').on('input', function() {
@@ -90,10 +91,10 @@
             let commerce_id = $('#commerce_id').val();
 
             $.ajax({
-                url: "{{ url('locales-asociados/cambiarHorarios') }}",
+                url: "<?php echo e(url('locales-asociados/cambiarHorarios')); ?>",
                 method: 'POST',
                 data: {
-                    _token: '{{ csrf_token() }}',
+                    _token: '<?php echo e(csrf_token()); ?>',
                     id: dayId,
                     is_selected: isSelected,
                     hour_open: hourOpen,
@@ -117,7 +118,7 @@
             formData.append('commerce_id', $('#commerce_id').val());
             console.log($('#enable').is(':checked'))
             $.ajax({
-                url: "{{ url('locales-asociados/setIsHourEnable') }}",
+                url: "<?php echo e(url('locales-asociados/setIsHourEnable')); ?>",
                 type: 'POST',
                 data: formData,
                 contentType: false,
@@ -135,4 +136,5 @@
         });
     });
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.public', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH E:\Proyectos en Curso\ciudadgps\ciudadgps laravel\resources\views/public/localesAsociados/hours/index.blade.php ENDPATH**/ ?>

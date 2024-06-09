@@ -357,6 +357,16 @@ class LocalesAsociadosController extends Controller
     
     }
 
+    public function setIsHourEnable(Request $request){
+        $commerce = Commerce::find($request->commerce_id);
+        $commerce->hourEnable = $request->hourEnable == 'active' ? 'Y' : NULL;
+        $commerce->save();
+
+        return response()->json([
+            'message' => 'horario activado con exito',
+        ]);
+    }
+
     public function reporteDeVisitas($id, Request $request){
         $commerce = Commerce::find($id);
         

@@ -91,8 +91,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('locales-asociados/horarios/{id}', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'horarios']);
     Route::post('locales-asociados/cambiarHorarios', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'cambiarHorarios']);
+    Route::post('locales-asociados/cambiarHorarios', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'cambiarHorarios']);
 
-    Route::get('locales-asociados/performance/{id}', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'reporteDeVisitas']);
+    Route::post('locales-asociados/setIsHourEnable', [App\Http\Controllers\Public\LocalesAsociadosController::class, 'setIsHourEnable']);
 });
 
 Route::get('/comercios', [App\Http\Controllers\Public\ComerciosController::class, 'index']);
