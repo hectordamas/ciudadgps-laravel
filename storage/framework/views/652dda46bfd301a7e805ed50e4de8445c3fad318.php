@@ -126,6 +126,30 @@ use Illuminate\Support\Str;
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             </div>
+            <?php else: ?>
+            <div class="row shop_container justify-content-center mt-2">
+                <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="col-lg-3 col-md-5 col-5 grid_item px-2">
+                    <div class="product shadow product_box border-0">
+                        <div class="product_img" style="aspect-ratio: 1;">
+                            <a href="<?php echo e(url('/slug-productos/' . $product->slug)); ?>" style="position: relative; height: 100%;">
+                                <img src="<?php echo e(asset($product->image)); ?>" style="object-fit: cover; height: 100%; aspect-ratio: 1;" alt="<?php echo e($product->name); ?>">
+                            </a>
+                            
+                            <a href="javascript:void(0)" class="btn btn-sm addToCart" data-commerce="<?php echo e($product->commerce_id); ?>" data-id="<?php echo e($product->id); ?>" style="background-color: rgba(0,0,0,0.5); position: absolute; top: 0; right: 0; border-radius: 0;">
+                                <i class="icon-basket-loaded text-light" style="font-size: 30px;"></i>
+                            </a>
+                        </div>
+                        <div class="product_info">
+                            <h6 class="product_title"><a href="/slug-productos/<?php echo e($product->slug); ?>"><?php echo e($product->name); ?></a></h6>
+                            <div class="product_price">
+                                <span class="price">$<?php echo e(number_format($product->price, 2, '.', ',')); ?></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </div>
             <?php endif; ?>
     
 
