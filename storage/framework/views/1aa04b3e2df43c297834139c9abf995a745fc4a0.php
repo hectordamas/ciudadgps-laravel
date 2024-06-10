@@ -241,6 +241,7 @@
 
             <div id="map1" class="w-100" style="height:300px;"></div>
         </div>
+        <!-- Horarios  y Map en Desktop -->
         <div class="col-12 d-none d-md-block">
             <hr>
             <a href="https://www.google.com/maps/search/?api=1&query=<?php echo e($commerce->lat); ?>,<?php echo e($commerce->lon); ?>" target="blank" class="btn btn-fill-out btn-radius"><i class="fas fa-map-marked-alt"></i> Ver en Google Maps</a>
@@ -251,6 +252,7 @@
             </a>
             <?php endif; ?>
         </div>
+        <!-- Horarios  y Map en Mobile -->
         <div class="col-12 d-block d-md-none">
             <hr>
             <a href="https://www.google.com/maps/search/?api=1&query=<?php echo e($commerce->lat); ?>,<?php echo e($commerce->lon); ?>" target="blank" class="btn btn-block btn-fill-out btn-radius">
