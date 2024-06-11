@@ -13,7 +13,7 @@
                 <li class="mega-menu-col col-lg-3">
                     <ul>
                         @foreach($catHeader->skip($section)->take(12) as $cat)
-                            <li><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="{{ url('/comercios/slug-categorias/' . $cat->slug) }}">{{$cat->name}}</a></li>
+                            <li><a class="dropdown-item nav-link nav_item" href="{{ url('/comercios/slug-categorias/' . $cat->slug) }}">{{$cat->name}}</a></li>
                         @endforeach
                     </ul>
                 </li>

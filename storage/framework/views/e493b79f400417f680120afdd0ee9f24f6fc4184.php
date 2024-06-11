@@ -13,7 +13,7 @@
                 <li class="mega-menu-col col-lg-3">
                     <ul>
                         <?php $__currentLoopData = $catHeader->skip($section)->take(12); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cat): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <li><a class="dropdown-item nav-link nav_item font-weight-bold text-secondary" href="<?php echo e(url('/comercios/slug-categorias/' . $cat->slug)); ?>"><?php echo e($cat->name); ?></a></li>
+                            <li><a class="dropdown-item nav-link nav_item" href="<?php echo e(url('/comercios/slug-categorias/' . $cat->slug)); ?>"><?php echo e($cat->name); ?></a></li>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </ul>
                 </li>
