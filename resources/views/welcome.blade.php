@@ -112,9 +112,9 @@ End Screen Load Popup Section -->
                         <li><a class="nav-link nav_item" href="{{ url('empleos') }}">Empleos</a></li> 
                         <li><a class="nav-link nav_item" href="{{ url('politicas-de-privacidad') }}">Privacidad</a></li> 
                         <li><a class="nav-link nav_item" href="{{ url('blog') }}">Blog</a></li> 
-                        <li><a class="nav-link nav_item" href="{{ url('planes') }}">Planes</a></li>
                         @guest
                         <li><a class="nav-link nav_item" href="{{ route('login') }}">Inicia Sesión</a></li> 
+                        <li><a class="nav-link nav_item" href="{{ route('register') }}">Regístrate</a></li>                         
                         @else
                         <li class="dropdown">
                             <a class="dropdown-toggle nav-link" href="{{ url('mi-cuenta') }}" data-toggle="dropdown">{{ Auth::user()->name }}</a>

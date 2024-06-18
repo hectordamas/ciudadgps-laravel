@@ -88,9 +88,9 @@
                         <li><a class="nav-link nav_item" href="<?php echo e(url('empleos')); ?>">Empleos</a></li> 
                         <li><a class="nav-link nav_item" href="<?php echo e(url('blog')); ?>">Blog</a></li> 
                         <li><a class="nav-link nav_item" href="<?php echo e(url('politicas-de-privacidad')); ?>">Privacidad</a></li> 
-                        <li><a class="nav-link nav_item" href="<?php echo e(url('planes')); ?>">Planes</a></li>
                         <?php if(auth()->guard()->guest()): ?>
                         <li><a class="nav-link nav_item" href="<?php echo e(route('login')); ?>">Inicia Sesión</a></li> 
+                        <li><a class="nav-link nav_item" href="<?php echo e(route('register')); ?>">Regístrate</a></li> 
                         <?php else: ?>
                         <li class="dropdown">
                             <a class="dropdown-toggle nav-link" href="<?php echo e(url('mi-cuenta')); ?>" data-toggle="dropdown"><?php echo e(Auth::user()->name); ?></a>
